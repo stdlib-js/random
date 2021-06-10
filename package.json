@@ -52,7 +52,6 @@
     "readable-stream": "^2.1.4"
   },
   "devDependencies": {
-    "@stdlib/_tools": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
     "@stdlib/number": "^0.0.x",
     "@stdlib/string": "^0.0.x",
