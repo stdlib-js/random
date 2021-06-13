@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/laplace' );
+var rand = require( './../../../base/laplace' );
 var validate = require( './../lib/validate.js' );
 
 

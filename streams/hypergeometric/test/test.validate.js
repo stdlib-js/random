@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/hypergeometric' );
+var rand = require( './../../../base/hypergeometric' );
 var validate = require( './../lib/validate.js' );
 
 

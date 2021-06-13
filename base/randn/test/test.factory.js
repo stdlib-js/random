@@ -27,7 +27,7 @@ var kstest = require( '@stdlib/stats/kstest' );
 var isArrayLikeObject = require( '@stdlib/assert/is-array-like-object' );
 var Uint32Array = require( '@stdlib/array/uint32' );
 var typedarray2json = require( '@stdlib/array/to-json' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var factory = require( './../lib/factory.js' );
 
 

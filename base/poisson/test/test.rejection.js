@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var randu = require( '@stdlib/random/base/randu' ).factory;
+var randu = require( './../../../base/randu' ).factory;
 var isNonNegativeInteger = require( '@stdlib/math/base/assert/is-nonnegative-integer' );
 var poisson = require( './../lib/rejection.js' );
 

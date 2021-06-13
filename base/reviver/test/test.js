@@ -22,11 +22,11 @@
 
 var tape = require( 'tape' );
 var copy = require( '@stdlib/utils/copy' );
-var randu = require( '@stdlib/random/base/randu' );
-var randn = require( '@stdlib/random/base/randn' );
-var minstd = require( '@stdlib/random/base/minstd' );
-var randexp = require( '@stdlib/random/base/exponential' );
-var discreteUniform = require( '@stdlib/random/base/discrete-uniform' );
+var randu = require( './../../../base/randu' );
+var randn = require( './../../../base/randn' );
+var minstd = require( './../../../base/minstd' );
+var randexp = require( './../../../base/exponential' );
+var discreteUniform = require( './../../../base/discrete-uniform' );
 var parseJSON = require( '@stdlib/utils/parse-json' );
 var typedarray2json = require( '@stdlib/array/to-json' );
 var isPRNGLike = require( '@stdlib/assert/is-prng-like' );

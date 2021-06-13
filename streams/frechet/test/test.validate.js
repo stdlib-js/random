@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/frechet' );
+var rand = require( './../../../base/frechet' );
 var validate = require( './../lib/validate.js' );
 
 

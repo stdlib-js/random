@@ -43,7 +43,7 @@ var ns = {};
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/arcsine}
 */
-setReadOnly( ns, 'arcsine', require( '@stdlib/random/iter/arcsine' ) );
+setReadOnly( ns, 'arcsine', require( './../../iter/arcsine' ) );
 
 /**
 * @name bernoulli
@@ -52,7 +52,7 @@ setReadOnly( ns, 'arcsine', require( '@stdlib/random/iter/arcsine' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/bernoulli}
 */
-setReadOnly( ns, 'bernoulli', require( '@stdlib/random/iter/bernoulli' ) );
+setReadOnly( ns, 'bernoulli', require( './../../iter/bernoulli' ) );
 
 /**
 * @name beta
@@ -61,7 +61,7 @@ setReadOnly( ns, 'bernoulli', require( '@stdlib/random/iter/bernoulli' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/beta}
 */
-setReadOnly( ns, 'beta', require( '@stdlib/random/iter/beta' ) );
+setReadOnly( ns, 'beta', require( './../../iter/beta' ) );
 
 /**
 * @name betaprime
@@ -70,7 +70,7 @@ setReadOnly( ns, 'beta', require( '@stdlib/random/iter/beta' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/betaprime}
 */
-setReadOnly( ns, 'betaprime', require( '@stdlib/random/iter/betaprime' ) );
+setReadOnly( ns, 'betaprime', require( './../../iter/betaprime' ) );
 
 /**
 * @name binomial
@@ -79,7 +79,7 @@ setReadOnly( ns, 'betaprime', require( '@stdlib/random/iter/betaprime' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/binomial}
 */
-setReadOnly( ns, 'binomial', require( '@stdlib/random/iter/binomial' ) );
+setReadOnly( ns, 'binomial', require( './../../iter/binomial' ) );
 
 /**
 * @name boxMuller
@@ -88,7 +88,7 @@ setReadOnly( ns, 'binomial', require( '@stdlib/random/iter/binomial' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/box-muller}
 */
-setReadOnly( ns, 'boxMuller', require( '@stdlib/random/iter/box-muller' ) );
+setReadOnly( ns, 'boxMuller', require( './../../iter/box-muller' ) );
 
 /**
 * @name cauchy
@@ -97,7 +97,7 @@ setReadOnly( ns, 'boxMuller', require( '@stdlib/random/iter/box-muller' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/cauchy}
 */
-setReadOnly( ns, 'cauchy', require( '@stdlib/random/iter/cauchy' ) );
+setReadOnly( ns, 'cauchy', require( './../../iter/cauchy' ) );
 
 /**
 * @name chi
@@ -106,7 +106,7 @@ setReadOnly( ns, 'cauchy', require( '@stdlib/random/iter/cauchy' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/chi}
 */
-setReadOnly( ns, 'chi', require( '@stdlib/random/iter/chi' ) );
+setReadOnly( ns, 'chi', require( './../../iter/chi' ) );
 
 /**
 * @name chisquare
@@ -115,7 +115,7 @@ setReadOnly( ns, 'chi', require( '@stdlib/random/iter/chi' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/chisquare}
 */
-setReadOnly( ns, 'chisquare', require( '@stdlib/random/iter/chisquare' ) );
+setReadOnly( ns, 'chisquare', require( './../../iter/chisquare' ) );
 
 /**
 * @name cosine
@@ -124,7 +124,7 @@ setReadOnly( ns, 'chisquare', require( '@stdlib/random/iter/chisquare' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/cosine}
 */
-setReadOnly( ns, 'cosine', require( '@stdlib/random/iter/cosine' ) );
+setReadOnly( ns, 'cosine', require( './../../iter/cosine' ) );
 
 /**
 * @name discreteUniform
@@ -133,7 +133,7 @@ setReadOnly( ns, 'cosine', require( '@stdlib/random/iter/cosine' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/discrete-uniform}
 */
-setReadOnly( ns, 'discreteUniform', require( '@stdlib/random/iter/discrete-uniform' ) );
+setReadOnly( ns, 'discreteUniform', require( './../../iter/discrete-uniform' ) );
 
 /**
 * @name erlang
@@ -142,7 +142,7 @@ setReadOnly( ns, 'discreteUniform', require( '@stdlib/random/iter/discrete-unifo
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/erlang}
 */
-setReadOnly( ns, 'erlang', require( '@stdlib/random/iter/erlang' ) );
+setReadOnly( ns, 'erlang', require( './../../iter/erlang' ) );
 
 /**
 * @name exponential
@@ -151,7 +151,7 @@ setReadOnly( ns, 'erlang', require( '@stdlib/random/iter/erlang' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/exponential}
 */
-setReadOnly( ns, 'exponential', require( '@stdlib/random/iter/exponential' ) );
+setReadOnly( ns, 'exponential', require( './../../iter/exponential' ) );
 
 /**
 * @name f
@@ -160,7 +160,7 @@ setReadOnly( ns, 'exponential', require( '@stdlib/random/iter/exponential' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/f}
 */
-setReadOnly( ns, 'f', require( '@stdlib/random/iter/f' ) );
+setReadOnly( ns, 'f', require( './../../iter/f' ) );
 
 /**
 * @name frechet
@@ -169,7 +169,7 @@ setReadOnly( ns, 'f', require( '@stdlib/random/iter/f' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/frechet}
 */
-setReadOnly( ns, 'frechet', require( '@stdlib/random/iter/frechet' ) );
+setReadOnly( ns, 'frechet', require( './../../iter/frechet' ) );
 
 /**
 * @name gamma
@@ -178,7 +178,7 @@ setReadOnly( ns, 'frechet', require( '@stdlib/random/iter/frechet' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/gamma}
 */
-setReadOnly( ns, 'gamma', require( '@stdlib/random/iter/gamma' ) );
+setReadOnly( ns, 'gamma', require( './../../iter/gamma' ) );
 
 /**
 * @name geometric
@@ -187,7 +187,7 @@ setReadOnly( ns, 'gamma', require( '@stdlib/random/iter/gamma' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/geometric}
 */
-setReadOnly( ns, 'geometric', require( '@stdlib/random/iter/geometric' ) );
+setReadOnly( ns, 'geometric', require( './../../iter/geometric' ) );
 
 /**
 * @name gumbel
@@ -196,7 +196,7 @@ setReadOnly( ns, 'geometric', require( '@stdlib/random/iter/geometric' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/gumbel}
 */
-setReadOnly( ns, 'gumbel', require( '@stdlib/random/iter/gumbel' ) );
+setReadOnly( ns, 'gumbel', require( './../../iter/gumbel' ) );
 
 /**
 * @name hypergeometric
@@ -205,7 +205,7 @@ setReadOnly( ns, 'gumbel', require( '@stdlib/random/iter/gumbel' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/hypergeometric}
 */
-setReadOnly( ns, 'hypergeometric', require( '@stdlib/random/iter/hypergeometric' ) );
+setReadOnly( ns, 'hypergeometric', require( './../../iter/hypergeometric' ) );
 
 /**
 * @name improvedZiggurat
@@ -214,7 +214,7 @@ setReadOnly( ns, 'hypergeometric', require( '@stdlib/random/iter/hypergeometric'
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/improved-ziggurat}
 */
-setReadOnly( ns, 'improvedZiggurat', require( '@stdlib/random/iter/improved-ziggurat' ) );
+setReadOnly( ns, 'improvedZiggurat', require( './../../iter/improved-ziggurat' ) );
 
 /**
 * @name invgamma
@@ -223,7 +223,7 @@ setReadOnly( ns, 'improvedZiggurat', require( '@stdlib/random/iter/improved-zigg
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/invgamma}
 */
-setReadOnly( ns, 'invgamma', require( '@stdlib/random/iter/invgamma' ) );
+setReadOnly( ns, 'invgamma', require( './../../iter/invgamma' ) );
 
 /**
 * @name kumaraswamy
@@ -232,7 +232,7 @@ setReadOnly( ns, 'invgamma', require( '@stdlib/random/iter/invgamma' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/kumaraswamy}
 */
-setReadOnly( ns, 'kumaraswamy', require( '@stdlib/random/iter/kumaraswamy' ) );
+setReadOnly( ns, 'kumaraswamy', require( './../../iter/kumaraswamy' ) );
 
 /**
 * @name laplace
@@ -241,7 +241,7 @@ setReadOnly( ns, 'kumaraswamy', require( '@stdlib/random/iter/kumaraswamy' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/laplace}
 */
-setReadOnly( ns, 'laplace', require( '@stdlib/random/iter/laplace' ) );
+setReadOnly( ns, 'laplace', require( './../../iter/laplace' ) );
 
 /**
 * @name levy
@@ -250,7 +250,7 @@ setReadOnly( ns, 'laplace', require( '@stdlib/random/iter/laplace' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/levy}
 */
-setReadOnly( ns, 'levy', require( '@stdlib/random/iter/levy' ) );
+setReadOnly( ns, 'levy', require( './../../iter/levy' ) );
 
 /**
 * @name logistic
@@ -259,7 +259,7 @@ setReadOnly( ns, 'levy', require( '@stdlib/random/iter/levy' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/logistic}
 */
-setReadOnly( ns, 'logistic', require( '@stdlib/random/iter/logistic' ) );
+setReadOnly( ns, 'logistic', require( './../../iter/logistic' ) );
 
 /**
 * @name lognormal
@@ -268,7 +268,7 @@ setReadOnly( ns, 'logistic', require( '@stdlib/random/iter/logistic' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/lognormal}
 */
-setReadOnly( ns, 'lognormal', require( '@stdlib/random/iter/lognormal' ) );
+setReadOnly( ns, 'lognormal', require( './../../iter/lognormal' ) );
 
 /**
 * @name minstd
@@ -277,7 +277,7 @@ setReadOnly( ns, 'lognormal', require( '@stdlib/random/iter/lognormal' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/minstd}
 */
-setReadOnly( ns, 'minstd', require( '@stdlib/random/iter/minstd' ) );
+setReadOnly( ns, 'minstd', require( './../../iter/minstd' ) );
 
 /**
 * @name minstdShuffle
@@ -286,7 +286,7 @@ setReadOnly( ns, 'minstd', require( '@stdlib/random/iter/minstd' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/minstd-shuffle}
 */
-setReadOnly( ns, 'minstdShuffle', require( '@stdlib/random/iter/minstd-shuffle' ) );
+setReadOnly( ns, 'minstdShuffle', require( './../../iter/minstd-shuffle' ) );
 
 /**
 * @name mt19937
@@ -295,7 +295,7 @@ setReadOnly( ns, 'minstdShuffle', require( '@stdlib/random/iter/minstd-shuffle' 
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/mt19937}
 */
-setReadOnly( ns, 'mt19937', require( '@stdlib/random/iter/mt19937' ) );
+setReadOnly( ns, 'mt19937', require( './../../iter/mt19937' ) );
 
 /**
 * @name negativeBinomial
@@ -304,7 +304,7 @@ setReadOnly( ns, 'mt19937', require( '@stdlib/random/iter/mt19937' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/negative-binomial}
 */
-setReadOnly( ns, 'negativeBinomial', require( '@stdlib/random/iter/negative-binomial' ) );
+setReadOnly( ns, 'negativeBinomial', require( './../../iter/negative-binomial' ) );
 
 /**
 * @name normal
@@ -313,7 +313,7 @@ setReadOnly( ns, 'negativeBinomial', require( '@stdlib/random/iter/negative-bino
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/normal}
 */
-setReadOnly( ns, 'normal', require( '@stdlib/random/iter/normal' ) );
+setReadOnly( ns, 'normal', require( './../../iter/normal' ) );
 
 /**
 * @name pareto1
@@ -322,7 +322,7 @@ setReadOnly( ns, 'normal', require( '@stdlib/random/iter/normal' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/pareto-type1}
 */
-setReadOnly( ns, 'pareto1', require( '@stdlib/random/iter/pareto-type1' ) );
+setReadOnly( ns, 'pareto1', require( './../../iter/pareto-type1' ) );
 
 /**
 * @name poisson
@@ -331,7 +331,7 @@ setReadOnly( ns, 'pareto1', require( '@stdlib/random/iter/pareto-type1' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/poisson}
 */
-setReadOnly( ns, 'poisson', require( '@stdlib/random/iter/poisson' ) );
+setReadOnly( ns, 'poisson', require( './../../iter/poisson' ) );
 
 /**
 * @name randi
@@ -340,7 +340,7 @@ setReadOnly( ns, 'poisson', require( '@stdlib/random/iter/poisson' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/randi}
 */
-setReadOnly( ns, 'randi', require( '@stdlib/random/iter/randi' ) );
+setReadOnly( ns, 'randi', require( './../../iter/randi' ) );
 
 /**
 * @name randn
@@ -349,7 +349,7 @@ setReadOnly( ns, 'randi', require( '@stdlib/random/iter/randi' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/randn}
 */
-setReadOnly( ns, 'randn', require( '@stdlib/random/iter/randn' ) );
+setReadOnly( ns, 'randn', require( './../../iter/randn' ) );
 
 /**
 * @name randu
@@ -358,7 +358,7 @@ setReadOnly( ns, 'randn', require( '@stdlib/random/iter/randn' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/randu}
 */
-setReadOnly( ns, 'randu', require( '@stdlib/random/iter/randu' ) );
+setReadOnly( ns, 'randu', require( './../../iter/randu' ) );
 
 /**
 * @name rayleigh
@@ -367,7 +367,7 @@ setReadOnly( ns, 'randu', require( '@stdlib/random/iter/randu' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/rayleigh}
 */
-setReadOnly( ns, 'rayleigh', require( '@stdlib/random/iter/rayleigh' ) );
+setReadOnly( ns, 'rayleigh', require( './../../iter/rayleigh' ) );
 
 /**
 * @name t
@@ -376,7 +376,7 @@ setReadOnly( ns, 'rayleigh', require( '@stdlib/random/iter/rayleigh' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/t}
 */
-setReadOnly( ns, 't', require( '@stdlib/random/iter/t' ) );
+setReadOnly( ns, 't', require( './../../iter/t' ) );
 
 /**
 * @name triangular
@@ -385,7 +385,7 @@ setReadOnly( ns, 't', require( '@stdlib/random/iter/t' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/triangular}
 */
-setReadOnly( ns, 'triangular', require( '@stdlib/random/iter/triangular' ) );
+setReadOnly( ns, 'triangular', require( './../../iter/triangular' ) );
 
 /**
 * @name uniform
@@ -394,7 +394,7 @@ setReadOnly( ns, 'triangular', require( '@stdlib/random/iter/triangular' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/uniform}
 */
-setReadOnly( ns, 'uniform', require( '@stdlib/random/iter/uniform' ) );
+setReadOnly( ns, 'uniform', require( './../../iter/uniform' ) );
 
 /**
 * @name weibull
@@ -403,7 +403,7 @@ setReadOnly( ns, 'uniform', require( '@stdlib/random/iter/uniform' ) );
 * @type {Function}
 * @see {@link module:@stdlib/random/iter/weibull}
 */
-setReadOnly( ns, 'weibull', require( '@stdlib/random/iter/weibull' ) );
+setReadOnly( ns, 'weibull', require( './../../iter/weibull' ) );
 
 
 // EXPORTS //

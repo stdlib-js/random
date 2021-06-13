@@ -18,7 +18,7 @@
 
 'use strict';
 
-var randu = require( '@stdlib/random/base/randu' );
+var randu = require( './../../../base/randu' );
 var parseJSON = require( '@stdlib/utils/parse-json' );
 var reviveBasePRNG = require( './../lib' );
 

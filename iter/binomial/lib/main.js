@@ -32,7 +32,7 @@ var isPositiveInteger = require( '@stdlib/assert/is-positive-integer' ).isPrimit
 var isNonNegativeInteger = require( '@stdlib/assert/is-nonnegative-integer' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var MAX_VALUE = require( '@stdlib/constants/float64/max' );
-var rbinom = require( '@stdlib/random/base/binomial' ).factory;
+var rbinom = require( './../../../base/binomial' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 
 

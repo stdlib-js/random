@@ -31,7 +31,7 @@ var isObject = require( '@stdlib/assert/is-plain-object' );
 var isNonNegativeInteger = require( '@stdlib/assert/is-nonnegative-integer' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var MAX_VALUE = require( '@stdlib/constants/float64/max' );
-var rrayleigh = require( '@stdlib/random/base/rayleigh' ).factory;
+var rrayleigh = require( './../../../base/rayleigh' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 
 

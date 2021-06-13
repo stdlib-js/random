@@ -30,7 +30,7 @@ var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var constantFunction = require( '@stdlib/utils/constant-function' );
 var noop = require( '@stdlib/utils/noop' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
-var gamma = require( '@stdlib/random/base/gamma' ).factory;
+var gamma = require( './../../../base/gamma' ).factory;
 var typedarray2json = require( '@stdlib/array/to-json' );
 
 

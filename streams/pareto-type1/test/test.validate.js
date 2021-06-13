@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/pareto-type1' );
+var rand = require( './../../../base/pareto-type1' );
 var validate = require( './../lib/validate.js' );
 
 

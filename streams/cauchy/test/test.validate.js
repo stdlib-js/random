@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/cauchy' );
+var rand = require( './../../../base/cauchy' );
 var validate = require( './../lib/validate.js' );
 
 

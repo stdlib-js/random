@@ -21,7 +21,7 @@
 // MODULES //
 
 var bench = require( '@stdlib/bench' );
-var randu = require( '@stdlib/random/base/randu' );
+var randu = require( './../../base/randu' );
 var floor = require( '@stdlib/math/base/special/floor' );
 var isArray = require( '@stdlib/assert/is-array' );
 var pkg = require( './../package.json' ).name;

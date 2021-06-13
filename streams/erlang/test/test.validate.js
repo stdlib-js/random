@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/erlang' );
+var rand = require( './../../../base/erlang' );
 var validate = require( './../lib/validate.js' );
 
 

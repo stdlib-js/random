@@ -23,7 +23,7 @@
 var tape = require( 'tape' );
 var proxyquire = require( 'proxyquire' );
 var floor = require( '@stdlib/math/base/special/floor' );
-var randi = require( '@stdlib/random/base/minstd-shuffle' );
+var randi = require( './../../../base/minstd-shuffle' );
 var isInteger = require( '@stdlib/assert/is-integer' ).isPrimitive;
 var rand = require( './../lib/discrete_uniform.js' );
 

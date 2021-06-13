@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var uniform = require( '@stdlib/random/base/uniform' ).factory;
+var uniform = require( './../../../base/uniform' ).factory;
 var round = require( '@stdlib/math/base/special/round' );
 var isNonNegativeInteger = require( '@stdlib/math/base/assert/is-nonnegative-integer' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );

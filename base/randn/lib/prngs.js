@@ -22,8 +22,8 @@
 
 var prngs = {};
 
-prngs[ 'box-muller' ] = require( '@stdlib/random/base/box-muller' );
-prngs[ 'improved-ziggurat' ] = require( '@stdlib/random/base/improved-ziggurat' );
+prngs[ 'box-muller' ] = require( './../../../base/box-muller' );
+prngs[ 'improved-ziggurat' ] = require( './../../../base/improved-ziggurat' );
 
 
 // EXPORTS //

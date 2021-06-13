@@ -23,12 +23,12 @@
 var tape = require( 'tape' );
 var proxyquire = require( 'proxyquire' );
 var now = require( '@stdlib/time/now' );
-var betaprime = require( '@stdlib/random/base/betaprime' ).factory;
+var betaprime = require( './../../../base/betaprime' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
 var Uint32Array = require( '@stdlib/array/uint32' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var iterator = require( './../lib' );
 
 

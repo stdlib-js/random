@@ -23,7 +23,7 @@
 var tape = require( 'tape' );
 var ENV = require( '@stdlib/process/env' );
 var now = require( '@stdlib/time/now' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var kstest = require( '@stdlib/stats/kstest' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
 var Uint32Array = require( '@stdlib/array/uint32' );

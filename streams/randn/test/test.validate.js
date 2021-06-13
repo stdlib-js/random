@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/improved-ziggurat' );
+var rand = require( './../../../base/improved-ziggurat' );
 var validate = require( './../lib/validate.js' );
 
 

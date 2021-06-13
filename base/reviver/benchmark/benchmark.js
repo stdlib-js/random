@@ -21,9 +21,9 @@
 // MODULES //
 
 var bench = require( '@stdlib/bench' );
-var randu = require( '@stdlib/random/base/randu' );
-var randn = require( '@stdlib/random/base/randn' );
-var randexp = require( '@stdlib/random/base/exponential' );
+var randu = require( './../../../base/randu' );
+var randn = require( './../../../base/randn' );
+var randexp = require( './../../../base/exponential' );
 var parseJSON = require( '@stdlib/utils/parse-json' );
 var pkg = require( './../package.json' ).name;
 var reviver = require( './../lib' );

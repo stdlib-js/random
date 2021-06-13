@@ -29,7 +29,7 @@ var isUint32Array = require( '@stdlib/assert/is-uint32array' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
 var Uint32Array = require( '@stdlib/array/uint32' );
 var typedarray2json = require( '@stdlib/array/to-json' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var factory = require( './../lib/factory.js' );
 
 

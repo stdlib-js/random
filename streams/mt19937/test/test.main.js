@@ -23,7 +23,7 @@
 var tape = require( 'tape' );
 var Readable = require( 'readable-stream' ).Readable;
 var now = require( '@stdlib/time/now' );
-var mt19937 = require( '@stdlib/random/base/mt19937' ).factory;
+var mt19937 = require( './../../../base/mt19937' ).factory;
 var isBuffer = require( '@stdlib/assert/is-buffer' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );

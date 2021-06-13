@@ -21,11 +21,11 @@
 /* tslint:disable:max-line-length */
 /* tslint:disable:max-file-line-count */
 
-import base = require( '@stdlib/random/base' );
-import iterators = require( '@stdlib/random/iter' );
-import sample = require( '@stdlib/random/sample' );
-import shuffle = require( '@stdlib/random/shuffle' );
-import streams = require( '@stdlib/random/streams' );
+import base = require( './../../base' );
+import iterators = require( './../../iter' );
+import sample = require( './../../sample' );
+import shuffle = require( './../../shuffle' );
+import streams = require( './../../streams' );
 
 /**
 * Interface describing the `random` namespace.

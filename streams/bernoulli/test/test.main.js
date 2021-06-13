@@ -23,13 +23,13 @@
 var tape = require( 'tape' );
 var Readable = require( 'readable-stream' ).Readable;
 var now = require( '@stdlib/time/now' );
-var bernoulli = require( '@stdlib/random/base/bernoulli' ).factory;
+var bernoulli = require( './../../../base/bernoulli' ).factory;
 var isBuffer = require( '@stdlib/assert/is-buffer' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
 var Uint32Array = require( '@stdlib/array/uint32' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var inspectStream = require( '@stdlib/streams/node/inspect-sink' );
 var randomStream = require( './../lib/main.js' );
 

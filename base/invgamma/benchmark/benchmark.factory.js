@@ -23,7 +23,7 @@
 var bench = require( '@stdlib/bench' );
 var Uint32Array = require( '@stdlib/array/uint32' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
-var minstd = require( '@stdlib/random/base/minstd-shuffle' );
+var minstd = require( './../../../base/minstd-shuffle' );
 var pkg = require( './../package.json' ).name;
 var factory = require( './../lib' ).factory;
 

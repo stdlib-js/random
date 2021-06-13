@@ -26,7 +26,7 @@ var isTypedArrayLike = require( '@stdlib/assert/is-typed-array-like' );
 var isString = require( '@stdlib/assert/is-string' ).isPrimitive;
 var deepCopy = require( '@stdlib/utils/copy' );
 var floor = require( '@stdlib/math/base/special/floor' );
-var randu = require( '@stdlib/random/base/mt19937' ).factory;
+var randu = require( './../../base/mt19937' ).factory;
 var defaults = require( './defaults.json' );
 var validate = require( './validate.js' );
 

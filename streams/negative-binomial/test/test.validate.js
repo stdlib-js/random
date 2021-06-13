@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/negative-binomial' );
+var rand = require( './../../../base/negative-binomial' );
 var validate = require( './../lib/validate.js' );
 
 

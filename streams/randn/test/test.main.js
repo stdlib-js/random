@@ -23,14 +23,14 @@
 var tape = require( 'tape' );
 var Readable = require( 'readable-stream' ).Readable;
 var now = require( '@stdlib/time/now' );
-var boxMuller = require( '@stdlib/random/base/box-muller' ).factory;
-var improvedZiggurat = require( '@stdlib/random/base/improved-ziggurat' ).factory;
+var boxMuller = require( './../../../base/box-muller' ).factory;
+var improvedZiggurat = require( './../../../base/improved-ziggurat' ).factory;
 var isBuffer = require( '@stdlib/assert/is-buffer' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
 var Uint32Array = require( '@stdlib/array/uint32' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var inspectStream = require( '@stdlib/streams/node/inspect-sink' );
 var randomStream = require( './../lib/main.js' );
 

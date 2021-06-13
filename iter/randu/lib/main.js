@@ -28,7 +28,7 @@ var isObject = require( '@stdlib/assert/is-plain-object' );
 var isNonNegativeInteger = require( '@stdlib/assert/is-nonnegative-integer' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var MAX_VALUE = require( '@stdlib/constants/float64/max' );
-var randu = require( '@stdlib/random/base/randu' ).factory;
+var randu = require( './../../../base/randu' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 
 

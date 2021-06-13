@@ -21,7 +21,7 @@
 // MODULES //
 
 var bench = require( '@stdlib/bench' );
-var randu = require( '@stdlib/random/base/randu' );
+var randu = require( './../../../base/randu' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var floor = require( '@stdlib/math/base/special/floor' );
 var round = require( '@stdlib/math/base/special/round' );

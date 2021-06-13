@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var rand = require( '@stdlib/random/base/bernoulli' );
+var rand = require( './../../../base/bernoulli' );
 var validate = require( './../lib/validate.js' );
 
 

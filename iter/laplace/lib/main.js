@@ -33,7 +33,7 @@ var isNonNegativeInteger = require( '@stdlib/assert/is-nonnegative-integer' ).is
 var isPositive = require( '@stdlib/assert/is-positive-number' ).isPrimitive;
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var MAX_VALUE = require( '@stdlib/constants/float64/max' );
-var rlaplace = require( '@stdlib/random/base/laplace' ).factory;
+var rlaplace = require( './../../../base/laplace' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 
 

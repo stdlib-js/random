@@ -22,9 +22,9 @@
 
 var prngs = {};
 
-prngs[ 'minstd' ] = require( '@stdlib/random/base/minstd' );
-prngs[ 'minstd-shuffle' ] = require( '@stdlib/random/base/minstd-shuffle' );
-prngs[ 'mt19937' ] = require( '@stdlib/random/base/mt19937' );
+prngs[ 'minstd' ] = require( './../../../base/minstd' );
+prngs[ 'minstd-shuffle' ] = require( './../../../base/minstd-shuffle' );
+prngs[ 'mt19937' ] = require( './../../../base/mt19937' );
 
 
 // EXPORTS //

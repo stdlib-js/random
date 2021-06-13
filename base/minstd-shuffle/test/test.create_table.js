@@ -21,7 +21,7 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var minstd = require( '@stdlib/random/base/minstd' );
+var minstd = require( './../../../base/minstd' );
 var isInt32Array = require( '@stdlib/assert/is-int32array' );
 var Int32Array = require( '@stdlib/array/int32' );
 var createTable = require( './../lib/create_table.js' );

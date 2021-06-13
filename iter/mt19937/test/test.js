@@ -23,7 +23,7 @@
 var tape = require( 'tape' );
 var proxyquire = require( 'proxyquire' );
 var now = require( '@stdlib/time/now' );
-var mt19937 = require( '@stdlib/random/base/mt19937' ).factory;
+var mt19937 = require( './../../../base/mt19937' ).factory;
 var iteratorSymbol = require( '@stdlib/symbol/iterator' );
 var isUint32Array = require( '@stdlib/assert/is-uint32array' );
 var UINT32_MAX = require( '@stdlib/constants/uint32/max' );
