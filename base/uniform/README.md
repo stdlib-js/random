@@ -402,6 +402,13 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform`][@stdlib/random/base/discrete-uniform
+-   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu`][@stdlib/random/base/randu
+
 </section>
 
 <!-- /.related -->
@@ -413,6 +420,14 @@ for ( i = 0; i < 100; i++ ) {
 [uniform]: https://en.wikipedia.org/wiki/Uniform_distribution_%28continuous%29
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform
+
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu
+
+<!-- </related-links> -->
 
 </section>
 

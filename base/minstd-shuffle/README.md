@@ -308,6 +308,14 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/minstd`][@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd`][@stdlib/random/base/minstd
+-   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937`][@stdlib/random/base/mt19937
+-   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi`][@stdlib/random/base/randi
+
 </section>
 
 <!-- /.related -->
@@ -325,6 +333,16 @@ for ( i = 0; i < 100; i++ ) {
 [@herzog:2002]: https://books.google.com/books?id=vC7I_gdX-A0C
 
 [@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
+
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
+
+[@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi
+
+<!-- </related-links> -->
 
 </section>
 

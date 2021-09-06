@@ -382,6 +382,13 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat
+-   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu`][@stdlib/random/base/randu
+
 </section>
 
 <!-- /.related -->
@@ -393,6 +400,14 @@ for ( i = 0; i < 100; i++ ) {
 [@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
 
 [@stdlib/random/base/box-muller]: https://github.com/stdlib-js/random/tree/main/base/box-muller
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
+
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu
+
+<!-- </related-links> -->
 
 </section>
 

@@ -402,6 +402,12 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/beta`][@stdlib/random/base/beta]: https://github.com/stdlib-js/random/tree/main/base/beta`][@stdlib/random/base/beta
+
 </section>
 
 <!-- /.related -->
@@ -413,6 +419,12 @@ for ( i = 0; i < 100; i++ ) {
 [arcsine]: https://en.wikipedia.org/wiki/Arcsine_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/beta]: https://github.com/stdlib-js/random/tree/main/base/beta
+
+<!-- </related-links> -->
 
 </section>
 

@@ -405,6 +405,12 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/binomial`][@stdlib/random/base/binomial]: https://github.com/stdlib-js/random/tree/main/base/binomial`][@stdlib/random/base/binomial
+
 </section>
 
 <!-- /.related -->
@@ -416,6 +422,12 @@ for ( i = 0; i < 100; i++ ) {
 [bernoulli]: https://en.wikipedia.org/wiki/Bernoulli_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/binomial]: https://github.com/stdlib-js/random/tree/main/base/binomial
+
+<!-- </related-links> -->
 
 </section>
 

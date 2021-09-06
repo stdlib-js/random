@@ -305,6 +305,14 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle
+-   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937`][@stdlib/random/base/mt19937
+-   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi`][@stdlib/random/base/randi
+
 </section>
 
 <!-- /.related -->
@@ -320,6 +328,16 @@ for ( i = 0; i < 100; i++ ) {
 [@park:1988]: http://dx.doi.org/10.1145/63039.63042
 
 [@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
+
+[@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi
+
+<!-- </related-links> -->
 
 </section>
 

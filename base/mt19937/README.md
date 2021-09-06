@@ -307,6 +307,13 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/minstd`][@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd`][@stdlib/random/base/minstd
+-   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi`][@stdlib/random/base/randi
+
 </section>
 
 <!-- /.related -->
@@ -320,6 +327,14 @@ for ( i = 0; i < 100; i++ ) {
 [@matsumoto:1998a]: https://doi.org/10.1145/272991.272995
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
+
+[@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi
+
+<!-- </related-links> -->
 
 </section>
 

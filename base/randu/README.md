@@ -308,6 +308,13 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform`][@stdlib/random/base/discrete-uniform
+-   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn`][@stdlib/random/base/randn
+
 </section>
 
 <!-- /.related -->
@@ -321,6 +328,14 @@ for ( i = 0; i < 100; i++ ) {
 [@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
 
 [@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform
+
+[@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn
+
+<!-- </related-links> -->
 
 </section>
 
