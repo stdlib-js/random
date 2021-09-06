@@ -203,11 +203,33 @@ while ( true ) {
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/t`][@stdlib/random/base/t]: https://github.com/stdlib-js/random/tree/main/base/t`][@stdlib/random/base/t
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [t]: https://en.wikipedia.org/wiki/Student%27s_t-distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/t]: https://github.com/stdlib-js/random/tree/main/base/t
+
+<!-- </related-links> -->
 
 </section>
 

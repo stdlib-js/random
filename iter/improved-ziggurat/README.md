@@ -205,6 +205,22 @@ while ( true ) {
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [ziggurat-algorithm]: https://en.wikipedia.org/wiki/Ziggurat_algorithm
@@ -218,6 +234,12 @@ while ( true ) {
 [@marsaglia:1964b]: https://doi.org/10.1080/00401706.1964.10490150
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
+
+<!-- </related-links> -->
 
 </section>
 

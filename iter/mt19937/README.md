@@ -203,6 +203,26 @@ while ( true ) {
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937`][@stdlib/random/base/mt19937
+-   [`@stdlib/random/iter/minstd`][@stdlib/random/iter/minstd]: https://github.com/stdlib-js/random/tree/main/iter/minstd`][@stdlib/random/iter/minstd
+-   [`@stdlib/random/iter/minstd-shuffle`][@stdlib/random/iter/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/iter/minstd-shuffle`][@stdlib/random/iter/minstd-shuffle
+-   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi`][@stdlib/random/iter/randi
+-   [`@stdlib/random/iter/randu`][@stdlib/random/iter/randu]: https://github.com/stdlib-js/random/tree/main/iter/randu`][@stdlib/random/iter/randu
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [mersenne-twister]: https://en.wikipedia.org/wiki/Mersenne_Twister
@@ -210,6 +230,20 @@ while ( true ) {
 [@matsumoto:1998a]: https://doi.org/10.1145/272991.272995
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
+
+[@stdlib/random/iter/minstd]: https://github.com/stdlib-js/random/tree/main/iter/minstd
+
+[@stdlib/random/iter/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/iter/minstd-shuffle
+
+[@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi
+
+[@stdlib/random/iter/randu]: https://github.com/stdlib-js/random/tree/main/iter/randu
+
+<!-- </related-links> -->
 
 </section>
 

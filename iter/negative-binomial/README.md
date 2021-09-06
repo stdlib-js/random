@@ -203,11 +203,33 @@ while ( true ) {
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/negative-binomial`][@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random/tree/main/base/negative-binomial`][@stdlib/random/base/negative-binomial
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [negative-binomial]: https://en.wikipedia.org/wiki/Negative_binomial_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random/tree/main/base/negative-binomial
+
+<!-- </related-links> -->
 
 </section>
 

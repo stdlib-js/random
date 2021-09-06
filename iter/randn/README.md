@@ -217,6 +217,22 @@ while ( true ) {
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn`][@stdlib/random/base/randn
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
@@ -224,6 +240,12 @@ while ( true ) {
 [@stdlib/random/base/box-muller]: https://github.com/stdlib-js/random/tree/main/base/box-muller
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn
+
+<!-- </related-links> -->
 
 </section>
 

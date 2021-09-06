@@ -203,6 +203,23 @@ while ( true ) {
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu`][@stdlib/random/base/randu
+-   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi`][@stdlib/random/iter/randi
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
@@ -210,6 +227,14 @@ while ( true ) {
 [@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
 
 [@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu
+
+[@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi
+
+<!-- </related-links> -->
 
 </section>
 

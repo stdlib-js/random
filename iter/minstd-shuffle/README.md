@@ -205,6 +205,26 @@ while ( true ) {
 
 <!-- /.references -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle
+-   [`@stdlib/random/iter/minstd`][@stdlib/random/iter/minstd]: https://github.com/stdlib-js/random/tree/main/iter/minstd`][@stdlib/random/iter/minstd
+-   [`@stdlib/random/iter/mt19937`][@stdlib/random/iter/mt19937]: https://github.com/stdlib-js/random/tree/main/iter/mt19937`][@stdlib/random/iter/mt19937
+-   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi`][@stdlib/random/iter/randi
+-   [`@stdlib/random/iter/randu`][@stdlib/random/iter/randu]: https://github.com/stdlib-js/random/tree/main/iter/randu`][@stdlib/random/iter/randu
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 <section class="links">
 
 [lcg]: https://en.wikipedia.org/wiki/Linear_congruential_generator
@@ -216,6 +236,20 @@ while ( true ) {
 [@herzog:2002]: https://books.google.com/books?id=vC7I_gdX-A0C
 
 [@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+
+[@stdlib/random/iter/minstd]: https://github.com/stdlib-js/random/tree/main/iter/minstd
+
+[@stdlib/random/iter/mt19937]: https://github.com/stdlib-js/random/tree/main/iter/mt19937
+
+[@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi
+
+[@stdlib/random/iter/randu]: https://github.com/stdlib-js/random/tree/main/iter/randu
+
+<!-- </related-links> -->
 
 </section>
 
