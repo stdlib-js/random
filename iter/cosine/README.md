@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/cosine`][@stdlib/random/base/cosine]: https://github.com/stdlib-js/random/tree/main/base/cosine`][@stdlib/random/base/cosine
+-   [`@stdlib/random/base/cosine`][@stdlib/random/base/cosine]: raised cosine distributed pseudorandom numbers.
 
 </section>
 

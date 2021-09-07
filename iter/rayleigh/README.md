@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/rayleigh`][@stdlib/random/base/rayleigh]: https://github.com/stdlib-js/random/tree/main/base/rayleigh`][@stdlib/random/base/rayleigh
+-   [`@stdlib/random/base/rayleigh`][@stdlib/random/base/rayleigh]: Rayleigh distributed pseudorandom numbers.
 
 </section>
 

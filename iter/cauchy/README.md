@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/cauchy`][@stdlib/random/base/cauchy]: https://github.com/stdlib-js/random/tree/main/base/cauchy`][@stdlib/random/base/cauchy
+-   [`@stdlib/random/base/cauchy`][@stdlib/random/base/cauchy]: Cauchy distributed pseudorandom numbers.
 
 </section>
 

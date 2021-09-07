@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/levy`][@stdlib/random/base/levy]: https://github.com/stdlib-js/random/tree/main/base/levy`][@stdlib/random/base/levy
+-   [`@stdlib/random/base/levy`][@stdlib/random/base/levy]: Lévy distributed pseudorandom numbers.
 
 </section>
 

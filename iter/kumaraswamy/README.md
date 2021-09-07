@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/kumaraswamy`][@stdlib/random/base/kumaraswamy]: https://github.com/stdlib-js/random/tree/main/base/kumaraswamy`][@stdlib/random/base/kumaraswamy
+-   [`@stdlib/random/base/kumaraswamy`][@stdlib/random/base/kumaraswamy]: Kumaraswamy's double bounded distributed pseudorandom numbers.
 
 </section>
 

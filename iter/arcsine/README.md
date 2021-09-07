@@ -202,7 +202,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/arcsine`][@stdlib/random/base/arcsine]: https://github.com/stdlib-js/random/tree/main/base/arcsine`][@stdlib/random/base/arcsine
+-   [`@stdlib/random/base/arcsine`][@stdlib/random/base/arcsine]: arcsine distributed pseudorandom numbers.
 
 </section>
 

@@ -525,6 +525,13 @@ $ random-gumbel 0.0 1.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/gumbel`][@stdlib/random/base/gumbel]: Gumbel distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/gumbel`][@stdlib/random/iter/gumbel]: create an iterator for generating pseudorandom numbers drawn from a Gumbel distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-gumbel 0.0 1.0 -n 10 --seed 1234
 [gumbel]: https://en.wikipedia.org/wiki/Gumbel_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/gumbel]: https://github.com/stdlib-js/random/tree/main/base/gumbel
+
+[@stdlib/random/iter/gumbel]: https://github.com/stdlib-js/random/tree/main/iter/gumbel
+
+<!-- </related-links> -->
 
 </section>
 

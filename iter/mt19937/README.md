@@ -211,11 +211,11 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937`][@stdlib/random/base/mt19937
--   [`@stdlib/random/iter/minstd`][@stdlib/random/iter/minstd]: https://github.com/stdlib-js/random/tree/main/iter/minstd`][@stdlib/random/iter/minstd
--   [`@stdlib/random/iter/minstd-shuffle`][@stdlib/random/iter/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/iter/minstd-shuffle`][@stdlib/random/iter/minstd-shuffle
--   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi`][@stdlib/random/iter/randi
--   [`@stdlib/random/iter/randu`][@stdlib/random/iter/randu]: https://github.com/stdlib-js/random/tree/main/iter/randu`][@stdlib/random/iter/randu
+-   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: A 32-bit Mersenne Twister pseudorandom number generator.
+-   [`@stdlib/random/iter/minstd`][@stdlib/random/iter/minstd]: create an iterator for a linear congruential pseudorandom number generator (LCG) based on Park and Miller.
+-   [`@stdlib/random/iter/minstd-shuffle`][@stdlib/random/iter/minstd-shuffle]: create an iterator for a linear congruential pseudorandom number generator (LCG) whose output is shuffled.
+-   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: create an iterator for generating pseudorandom numbers having integer values.
+-   [`@stdlib/random/iter/randu`][@stdlib/random/iter/randu]: create an iterator for generating uniformly distributed pseudorandom numbers between 0 and 1.
 
 </section>
 

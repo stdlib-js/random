@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/geometric`][@stdlib/random/base/geometric]: https://github.com/stdlib-js/random/tree/main/base/geometric`][@stdlib/random/base/geometric
+-   [`@stdlib/random/base/geometric`][@stdlib/random/base/geometric]: geometric distributed pseudorandom numbers.
 
 </section>
 

@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/binomial`][@stdlib/random/base/binomial]: https://github.com/stdlib-js/random/tree/main/base/binomial`][@stdlib/random/base/binomial
+-   [`@stdlib/random/base/binomial`][@stdlib/random/base/binomial]: binomial distributed pseudorandom numbers.
 
 </section>
 

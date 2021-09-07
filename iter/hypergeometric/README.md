@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/hypergeometric`][@stdlib/random/base/hypergeometric]: https://github.com/stdlib-js/random/tree/main/base/hypergeometric`][@stdlib/random/base/hypergeometric
+-   [`@stdlib/random/base/hypergeometric`][@stdlib/random/base/hypergeometric]: hypergeometric distributed pseudorandom numbers.
 
 </section>
 

@@ -525,6 +525,13 @@ $ random-t 2.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/t`][@stdlib/random/base/t]: Student's t-distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/t`][@stdlib/random/iter/t]: create an iterator for generating pseudorandom numbers drawn from a Student's t distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-t 2.0 -n 10 --seed 1234
 [t]: https://en.wikipedia.org/wiki/Rayleigh_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/t]: https://github.com/stdlib-js/random/tree/main/base/t
+
+[@stdlib/random/iter/t]: https://github.com/stdlib-js/random/tree/main/iter/t
+
+<!-- </related-links> -->
 
 </section>
 

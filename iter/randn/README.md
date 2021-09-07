@@ -54,8 +54,8 @@ The function accepts the following `options`:
 
 -   **name**: name of a supported pseudorandom number generator (PRNG), which will serve as the underlying source of pseudorandom numbers. The following PRNGs are supported:
 
-    -   [`improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
-    -   [`box-muller`][@stdlib/random/base/box-muller]: https://github.com/stdlib-js/random/tree/main/base/box-muller
+    -   [`improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: improved ziggurat method.
+    -   [`box-muller`][@stdlib/random/base/box-muller]: Box-Muller transform.  
 
     Default: [`'improved-ziggurat'`][@stdlib/random/base/improved-ziggurat].
 
@@ -225,7 +225,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn`][@stdlib/random/base/randn
+-   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: standard normal pseudorandom numbers.
 
 </section>
 

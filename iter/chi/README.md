@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/chi`][@stdlib/random/base/chi]: https://github.com/stdlib-js/random/tree/main/base/chi`][@stdlib/random/base/chi
+-   [`@stdlib/random/base/chi`][@stdlib/random/base/chi]: Chi distributed pseudorandom numbers.
 
 </section>
 

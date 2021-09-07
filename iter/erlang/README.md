@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/erlang`][@stdlib/random/base/erlang]: https://github.com/stdlib-js/random/tree/main/base/erlang`][@stdlib/random/base/erlang
+-   [`@stdlib/random/base/erlang`][@stdlib/random/base/erlang]: Erlang distributed pseudorandom numbers.
 
 </section>
 

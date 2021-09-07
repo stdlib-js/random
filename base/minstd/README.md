@@ -309,9 +309,9 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle
--   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937`][@stdlib/random/base/mt19937
--   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi`][@stdlib/random/base/randi
+-   [`@stdlib/random/base/minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: A linear congruential pseudorandom number generator (LCG) whose output is shuffled.
+-   [`@stdlib/random/base/mt19937`][@stdlib/random/base/mt19937]: A 32-bit Mersenne Twister pseudorandom number generator.
+-   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: pseudorandom numbers having integer values.
 
 </section>
 

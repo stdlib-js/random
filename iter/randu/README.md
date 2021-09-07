@@ -54,9 +54,9 @@ The function accepts the following `options`:
 
 -   **name**: name of a supported pseudorandom number generator (PRNG), which will serve as the underlying source of pseudorandom numbers. The following generators are supported:
 
-    -   [`mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
-    -   [`minstd`][@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
-    -   [`minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+    -   [`mt19937`][@stdlib/random/base/mt19937]: 32-bit Mersenne Twister.
+    -   [`minstd`][@stdlib/random/base/minstd]: linear congruential pseudorandom number generator (LCG) based on Park and Miller.
+    -   [`minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: linear congruential pseudorandom number generator (LCG) whose output is shuffled.
 
     Default: [`'mt19937'`][@stdlib/random/base/mt19937].
 
@@ -211,8 +211,8 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu`][@stdlib/random/base/randu
--   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: https://github.com/stdlib-js/random/tree/main/iter/randi`][@stdlib/random/iter/randi
+-   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: uniformly distributed pseudorandom numbers between 0 and 1.
+-   [`@stdlib/random/iter/randi`][@stdlib/random/iter/randi]: create an iterator for generating pseudorandom numbers having integer values.
 
 </section>
 

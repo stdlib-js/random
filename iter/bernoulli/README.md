@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/bernoulli`][@stdlib/random/base/bernoulli]: https://github.com/stdlib-js/random/tree/main/base/bernoulli`][@stdlib/random/base/bernoulli
+-   [`@stdlib/random/base/bernoulli`][@stdlib/random/base/bernoulli]: Bernoulli distributed pseudorandom numbers.
 
 </section>
 

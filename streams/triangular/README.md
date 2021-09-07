@@ -525,6 +525,13 @@ $ random-triangular 2.0 5.0 4.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/triangular`][@stdlib/random/base/triangular]: triangular distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/triangular`][@stdlib/random/iter/triangular]: create an iterator for generating pseudorandom numbers drawn from a triangular distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-triangular 2.0 5.0 4.0 -n 10 --seed 1234
 [triangular]: https://en.wikipedia.org/wiki/Triangular_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/triangular]: https://github.com/stdlib-js/random/tree/main/base/triangular
+
+[@stdlib/random/iter/triangular]: https://github.com/stdlib-js/random/tree/main/iter/triangular
+
+<!-- </related-links> -->
 
 </section>
 

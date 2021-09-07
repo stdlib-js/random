@@ -525,6 +525,13 @@ $ random-negative-binomial 20 0.1 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/negative-binomial`][@stdlib/random/base/negative-binomial]: negative binomial distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/negative-binomial`][@stdlib/random/iter/negative-binomial]: create an iterator for generating pseudorandom numbers drawn from a negative binomial distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-negative-binomial 20 0.1 -n 10 --seed 1234
 [negative-binomial]: https://en.wikipedia.org/wiki/Negative_binomial_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random/tree/main/base/negative-binomial
+
+[@stdlib/random/iter/negative-binomial]: https://github.com/stdlib-js/random/tree/main/iter/negative-binomial
+
+<!-- </related-links> -->
 
 </section>
 

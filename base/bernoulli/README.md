@@ -409,7 +409,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/binomial`][@stdlib/random/base/binomial]: https://github.com/stdlib-js/random/tree/main/base/binomial`][@stdlib/random/base/binomial
+-   [`@stdlib/random/base/binomial`][@stdlib/random/base/binomial]: binomial distributed pseudorandom numbers.
 
 </section>
 

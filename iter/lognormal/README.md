@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/lognormal`][@stdlib/random/base/lognormal]: https://github.com/stdlib-js/random/tree/main/base/lognormal`][@stdlib/random/base/lognormal
+-   [`@stdlib/random/base/lognormal`][@stdlib/random/base/lognormal]: log-normally distributed pseudorandom numbers.
 
 </section>
 

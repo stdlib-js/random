@@ -311,8 +311,8 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/minstd`][@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd`][@stdlib/random/base/minstd
--   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: https://github.com/stdlib-js/random/tree/main/base/randi`][@stdlib/random/base/randi
+-   [`@stdlib/random/base/minstd`][@stdlib/random/base/minstd]: A linear congruential pseudorandom number generator (LCG) based on Park and Miller.
+-   [`@stdlib/random/base/randi`][@stdlib/random/base/randi]: pseudorandom numbers having integer values.
 
 </section>
 

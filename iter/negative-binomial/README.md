@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/negative-binomial`][@stdlib/random/base/negative-binomial]: https://github.com/stdlib-js/random/tree/main/base/negative-binomial`][@stdlib/random/base/negative-binomial
+-   [`@stdlib/random/base/negative-binomial`][@stdlib/random/base/negative-binomial]: negative binomial distributed pseudorandom numbers.
 
 </section>
 

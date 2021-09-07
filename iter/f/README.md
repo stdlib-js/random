@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/f`][@stdlib/random/base/f]: https://github.com/stdlib-js/random/tree/main/base/f`][@stdlib/random/base/f
+-   [`@stdlib/random/base/f`][@stdlib/random/base/f]: F distributed pseudorandom numbers.
 
 </section>
 

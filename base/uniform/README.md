@@ -406,8 +406,8 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform`][@stdlib/random/base/discrete-uniform
--   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu`][@stdlib/random/base/randu
+-   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: discrete uniform distributed pseudorandom numbers.
+-   [`@stdlib/random/base/randu`][@stdlib/random/base/randu]: uniformly distributed pseudorandom numbers between 0 and 1.
 
 </section>
 

@@ -525,6 +525,13 @@ $ random-erlang 2 1.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/erlang`][@stdlib/random/base/erlang]: Erlang distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/erlang`][@stdlib/random/iter/erlang]: create an iterator for generating pseudorandom numbers drawn from an Erlang distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-erlang 2 1.0 -n 10 --seed 1234
 [erlang]: https://en.wikipedia.org/wiki/Erlang_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/erlang]: https://github.com/stdlib-js/random/tree/main/base/erlang
+
+[@stdlib/random/iter/erlang]: https://github.com/stdlib-js/random/tree/main/iter/erlang
+
+<!-- </related-links> -->
 
 </section>
 

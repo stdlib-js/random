@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/t`][@stdlib/random/base/t]: https://github.com/stdlib-js/random/tree/main/base/t`][@stdlib/random/base/t
+-   [`@stdlib/random/base/t`][@stdlib/random/base/t]: Student's t-distributed pseudorandom numbers.
 
 </section>
 

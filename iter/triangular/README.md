@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/triangular`][@stdlib/random/base/triangular]: https://github.com/stdlib-js/random/tree/main/base/triangular`][@stdlib/random/base/triangular
+-   [`@stdlib/random/base/triangular`][@stdlib/random/base/triangular]: triangular distributed pseudorandom numbers.
 
 </section>
 

@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/gumbel`][@stdlib/random/base/gumbel]: https://github.com/stdlib-js/random/tree/main/base/gumbel`][@stdlib/random/base/gumbel
+-   [`@stdlib/random/base/gumbel`][@stdlib/random/base/gumbel]: Gumbel distributed pseudorandom numbers.
 
 </section>
 

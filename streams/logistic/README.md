@@ -525,6 +525,13 @@ $ random-logistic 0.0 1.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/logistic`][@stdlib/random/base/logistic]: logistic distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/logistic`][@stdlib/random/iter/logistic]: create an iterator for generating pseudorandom numbers drawn from a logistic distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-logistic 0.0 1.0 -n 10 --seed 1234
 [logistic]: https://en.wikipedia.org/wiki/Logistic_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/logistic]: https://github.com/stdlib-js/random/tree/main/base/logistic
+
+[@stdlib/random/iter/logistic]: https://github.com/stdlib-js/random/tree/main/iter/logistic
+
+<!-- </related-links> -->
 
 </section>
 

@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/betaprime`][@stdlib/random/base/betaprime]: https://github.com/stdlib-js/random/tree/main/base/betaprime`][@stdlib/random/base/betaprime
+-   [`@stdlib/random/base/betaprime`][@stdlib/random/base/betaprime]: beta prime distributed pseudorandom numbers.
 
 </section>
 

@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/laplace`][@stdlib/random/base/laplace]: https://github.com/stdlib-js/random/tree/main/base/laplace`][@stdlib/random/base/laplace
+-   [`@stdlib/random/base/laplace`][@stdlib/random/base/laplace]: Laplace (double exponential) distributed pseudorandom numbers.
 
 </section>
 

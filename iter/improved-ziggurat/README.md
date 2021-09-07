@@ -213,7 +213,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat
+-   [`@stdlib/random/base/improved-ziggurat`][@stdlib/random/base/improved-ziggurat]: normally distributed pseudorandom numbers using the improved Ziggurat method.
 
 </section>
 

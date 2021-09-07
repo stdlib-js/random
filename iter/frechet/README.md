@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/frechet`][@stdlib/random/base/frechet]: https://github.com/stdlib-js/random/tree/main/base/frechet`][@stdlib/random/base/frechet
+-   [`@stdlib/random/base/frechet`][@stdlib/random/base/frechet]: Fréchet distributed pseudorandom numbers.
 
 </section>
 

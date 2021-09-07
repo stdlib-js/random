@@ -406,7 +406,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/beta`][@stdlib/random/base/beta]: https://github.com/stdlib-js/random/tree/main/base/beta`][@stdlib/random/base/beta
+-   [`@stdlib/random/base/beta`][@stdlib/random/base/beta]: beta distributed pseudorandom numbers.
 
 </section>
 

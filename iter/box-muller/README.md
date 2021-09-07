@@ -215,7 +215,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/box-muller`][@stdlib/random/base/box-muller]: https://github.com/stdlib-js/random/tree/main/base/box-muller`][@stdlib/random/base/box-muller
+-   [`@stdlib/random/base/box-muller`][@stdlib/random/base/box-muller]: normally distributed pseudorandom numbers using the Box-Muller transform.
 
 </section>
 

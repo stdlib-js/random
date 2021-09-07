@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/weibull`][@stdlib/random/base/weibull]: https://github.com/stdlib-js/random/tree/main/base/weibull`][@stdlib/random/base/weibull
+-   [`@stdlib/random/base/weibull`][@stdlib/random/base/weibull]: Weibull distributed pseudorandom numbers.
 
 </section>
 

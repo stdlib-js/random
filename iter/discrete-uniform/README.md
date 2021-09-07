@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform`][@stdlib/random/base/discrete-uniform
+-   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: discrete uniform distributed pseudorandom numbers.
 
 </section>
 

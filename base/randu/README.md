@@ -51,9 +51,9 @@ The function accepts the following `options`:
 
 -   **name**: name of a supported pseudorandom number generator (PRNG), which will serve as the underlying source of pseudorandom numbers. The following generators are supported:
 
-    -   [`mt19937`][@stdlib/random/base/mt19937]: https://github.com/stdlib-js/random/tree/main/base/mt19937
-    -   [`minstd`][@stdlib/random/base/minstd]: https://github.com/stdlib-js/random/tree/main/base/minstd
-    -   [`minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: https://github.com/stdlib-js/random/tree/main/base/minstd-shuffle
+    -   [`mt19937`][@stdlib/random/base/mt19937]: 32-bit Mersenne Twister.
+    -   [`minstd`][@stdlib/random/base/minstd]: linear congruential pseudorandom number generator (LCG) based on Park and Miller.
+    -   [`minstd-shuffle`][@stdlib/random/base/minstd-shuffle]: linear congruential pseudorandom number generator (LCG) whose output is shuffled.
 
     Default: [`'mt19937'`][@stdlib/random/base/mt19937].
 
@@ -312,8 +312,8 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: https://github.com/stdlib-js/random/tree/main/base/discrete-uniform`][@stdlib/random/base/discrete-uniform
--   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: https://github.com/stdlib-js/random/tree/main/base/randn`][@stdlib/random/base/randn
+-   [`@stdlib/random/base/discrete-uniform`][@stdlib/random/base/discrete-uniform]: discrete uniform distributed pseudorandom numbers.
+-   [`@stdlib/random/base/randn`][@stdlib/random/base/randn]: standard normal pseudorandom numbers.
 
 </section>
 

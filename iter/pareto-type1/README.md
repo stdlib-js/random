@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/pareto-type1`][@stdlib/random/base/pareto-type1]: https://github.com/stdlib-js/random/tree/main/base/pareto-type1`][@stdlib/random/base/pareto-type1
+-   [`@stdlib/random/base/pareto-type1`][@stdlib/random/base/pareto-type1]: Pareto (Type I) distributed pseudorandom numbers.
 
 </section>
 

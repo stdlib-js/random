@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/exponential`][@stdlib/random/base/exponential]: https://github.com/stdlib-js/random/tree/main/base/exponential`][@stdlib/random/base/exponential
+-   [`@stdlib/random/base/exponential`][@stdlib/random/base/exponential]: exponentially distributed pseudorandom numbers.
 
 </section>
 

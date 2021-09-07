@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/gamma`][@stdlib/random/base/gamma]: https://github.com/stdlib-js/random/tree/main/base/gamma`][@stdlib/random/base/gamma
+-   [`@stdlib/random/base/gamma`][@stdlib/random/base/gamma]: gamma distributed pseudorandom numbers.
 
 </section>
 

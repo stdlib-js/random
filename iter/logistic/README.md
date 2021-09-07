@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/logistic`][@stdlib/random/base/logistic]: https://github.com/stdlib-js/random/tree/main/base/logistic`][@stdlib/random/base/logistic
+-   [`@stdlib/random/base/logistic`][@stdlib/random/base/logistic]: logistic distributed pseudorandom numbers.
 
 </section>
 

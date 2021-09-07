@@ -525,6 +525,13 @@ $ random-uniform 2.0 5.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/uniform`][@stdlib/random/base/uniform]: uniformly distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/uniform`][@stdlib/random/iter/uniform]: create an iterator for generating pseudorandom numbers drawn from a continuous uniform distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-uniform 2.0 5.0 -n 10 --seed 1234
 [uniform]: https://en.wikipedia.org/wiki/Uniform_distribution_%28continuous%29
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/uniform]: https://github.com/stdlib-js/random/tree/main/base/uniform
+
+[@stdlib/random/iter/uniform]: https://github.com/stdlib-js/random/tree/main/iter/uniform
+
+<!-- </related-links> -->
 
 </section>
 

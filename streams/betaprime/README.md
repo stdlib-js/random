@@ -525,6 +525,13 @@ $ random-betaprime 2.0 1.0 -n 10 --seed 1234
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/random/base/betaprime`][@stdlib/random/base/betaprime]: beta prime distributed pseudorandom numbers.
+-   [`@stdlib/random/iter/betaprime`][@stdlib/random/iter/betaprime]: create an iterator for generating pseudorandom numbers drawn from a beta prime distribution.
+
 </section>
 
 <!-- /.related -->
@@ -542,6 +549,14 @@ $ random-betaprime 2.0 1.0 -n 10 --seed 1234
 [betaprime]: https://en.wikipedia.org/wiki/Beta_prime_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/base/betaprime]: https://github.com/stdlib-js/random/tree/main/base/betaprime
+
+[@stdlib/random/iter/betaprime]: https://github.com/stdlib-js/random/tree/main/iter/betaprime
+
+<!-- </related-links> -->
 
 </section>
 

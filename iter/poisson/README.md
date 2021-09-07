@@ -211,7 +211,7 @@ while ( true ) {
 
 ## See Also
 
--   [`@stdlib/random/base/poisson`][@stdlib/random/base/poisson]: https://github.com/stdlib-js/random/tree/main/base/poisson`][@stdlib/random/base/poisson
+-   [`@stdlib/random/base/poisson`][@stdlib/random/base/poisson]: Poisson distributed random numbers.
 
 </section>
 
