@@ -1036,7 +1036,7 @@ interface Namespace {
 }
 
 /**
-* Standard library base pseudorandom number generators.
+* Base pseudorandom number generators.
 */
 declare var ns: Namespace;
 
