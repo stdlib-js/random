@@ -88,14 +88,14 @@ function factory() {
 		}
 		if ( hasOwnProp( opts, 'prng' ) ) {
 			if ( !isFunction( opts.prng ) ) {
-				throw new TypeError( format( 'invalid option. `prng` option must be a pseudorandom number generator function. Option: `%s`.', opts.prng ) );
+				throw new TypeError( format( 'invalid option. `%s` option must be a pseudorandom number generator function. Option: `%s`.', 'prng', opts.prng ) );
 			}
 			rand = opts.prng;
 			if ( !isInteger( rand.MIN ) ) {
-				throw new TypeError( 'invalid option. `prng` option must have a `MIN` property specifying the minimum possible pseudorandom integer value.' );
+				throw new TypeError( format( 'invalid option. `%s` option must have a `MIN` property specifying the minimum possible pseudorandom integer value.', 'prng' ) );
 			}
 			if ( !isInteger( rand.MAX ) ) {
-				throw new TypeError( 'invalid option. `prng` option must have a `MAX` property specifying the maximum possible pseudorandom integer value.' );
+				throw new TypeError( format( 'invalid option. `%s` option must have a `MAX` property specifying the maximum possible pseudorandom integer value.', 'prng' ) );
 			}
 		} else {
 			rand = randi( opts );
@@ -114,14 +114,14 @@ function factory() {
 			}
 			if ( hasOwnProp( opts, 'prng' ) ) {
 				if ( !isFunction( opts.prng ) ) {
-					throw new TypeError( format( 'invalid option. `prng` option must be a pseudorandom number generator function. Option: `%s`.', opts.prng ) );
+					throw new TypeError( format( 'invalid option. `%s` option must be a pseudorandom number generator function. Option: `%s`.', 'prng', opts.prng ) );
 				}
 				rand = opts.prng;
 				if ( !isInteger( rand.MIN ) ) {
-					throw new TypeError( 'invalid option. `prng` option must have a `MIN` property specifying the minimum possible pseudorandom integer value.' );
+					throw new TypeError( format( 'invalid option. `%s` option must have a `MIN` property specifying the minimum possible pseudorandom integer value.', 'prng' ) );
 				}
 				if ( !isInteger( rand.MAX ) ) {
-					throw new TypeError( 'invalid option. `prng` option must have a `MAX` property specifying the maximum possible pseudorandom integer value.' );
+					throw new TypeError( format( 'invalid option. `%s` option must have a `MAX` property specifying the maximum possible pseudorandom integer value.', 'prng' ) );
 				}
 			} else {
 				rand = randi( opts );

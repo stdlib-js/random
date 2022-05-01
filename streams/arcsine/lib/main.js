@@ -236,10 +236,10 @@ function RandomStream( a, b, options ) {
 		return new RandomStream( a, b );
 	}
 	if ( !isNumber( a ) || isnan( a ) ) {
-		throw new TypeError( format( 'invalid argument. First argument must be a number and not `NaN`. Value: `%s`.', a ) );
+		throw new TypeError( format( 'invalid argument. First argument must be a number and not NaN. Value: `%s`.', a ) );
 	}
 	if ( !isNumber( b ) || isnan( b ) ) {
-		throw new TypeError( format( 'invalid argument. Second argument must be a number and not `NaN`. Value: `%s`.', b ) );
+		throw new TypeError( format( 'invalid argument. Second argument must be a number and not NaN. Value: `%s`.', b ) );
 	}
 	if ( a >= b ) {
 		throw new RangeError( format( 'invalid argument. Minimum support must be less than maximum support. Value: `[%s,%s]`.', a, b ) );

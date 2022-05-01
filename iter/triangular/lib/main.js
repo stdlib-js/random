@@ -80,16 +80,16 @@ function iterator( a, b, c, options ) {
 	var FLG;
 	var i;
 	if ( !isNumber( a ) || isnan( a ) ) {
-		throw new TypeError( format( 'invalid argument. First argument must be a number and not `NaN`. Value: `%s`.', a ) );
+		throw new TypeError( format( 'invalid argument. First argument must be a number and not NaN. Value: `%s`.', a ) );
 	}
 	if ( !isNumber( b ) || isnan( b ) ) {
-		throw new TypeError( format( 'invalid argument. Second argument must be a number and not `NaN`. Value: `%s`.', b ) );
+		throw new TypeError( format( 'invalid argument. Second argument must be a number and not NaN. Value: `%s`.', b ) );
 	}
 	if ( !isNumber( c ) || isnan( c ) ) {
-		throw new TypeError( format( 'invalid argument. Third argument must be a number and not `NaN`. Value: `%s`.', c ) );
+		throw new TypeError( format( 'invalid argument. Third argument must be a number and not NaN. Value: `%s`.', c ) );
 	}
 	if ( !(a <= c && c <= b) ) {
-		throw new RangeError( format( 'invalid arguments. The condition `a <= c <= b` must be satisfied. Value: `[%f,%f,%f]`.', a, b, c ) );
+		throw new RangeError( format( 'invalid arguments. Parameters must satisfy the following condition: %s. Value: `[%f, %f, %f]`.', 'a <= c <= b', a, b, c ) );
 	}
 	if ( arguments.length > 3 ) {
 		if ( !isObject( options ) ) {

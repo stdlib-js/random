@@ -47,10 +47,10 @@ function validate( r, p ) {
 		return new TypeError( format( 'invalid argument. First argument must be a positive number. Value: `%s`.', r ) );
 	}
 	if ( !isNumber( p ) || isnan( p ) ) {
-		return new TypeError( format( 'invalid argument. Second argument must be a number and not `NaN`. Value: `%s`.', p ) );
+		return new TypeError( format( 'invalid argument. Second argument must be a number and not NaN. Value: `%s`.', p ) );
 	}
 	if ( p <= 0.0 || p >= 1.0 ) {
-		return new RangeError( format( 'invalid argument. Second argument must be on the interval `(0,1)`. Value: `%f`.', p ) );
+		return new RangeError( format( 'invalid argument. Second argument must be on the interval: (0, 1). Value: `%f`.', p ) );
 	}
 	return null;
 }

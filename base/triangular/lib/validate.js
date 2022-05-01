@@ -44,16 +44,16 @@ var isnan = require( '@stdlib/assert/is-nan' );
 */
 function validate( a, b, c ) {
 	if ( !isNumber( a ) || isnan( a ) ) {
-		return new TypeError( format( 'invalid argument. First argument must be a number and not `NaN`. Value: `%s`.', a ) );
+		return new TypeError( format( 'invalid argument. First argument must be a number and not NaN. Value: `%s`.', a ) );
 	}
 	if ( !isNumber( b ) || isnan( b ) ) {
-		return new TypeError( format( 'invalid argument. Second argument must be a number and not `NaN`. Value: `%s`.', b ) );
+		return new TypeError( format( 'invalid argument. Second argument must be a number and not NaN. Value: `%s`.', b ) );
 	}
 	if ( !isNumber( c ) || isnan( c ) ) {
-		return new TypeError( format( 'invalid argument. Third argument must be a number and not `NaN`. Value: `%s`.', c ) );
+		return new TypeError( format( 'invalid argument. Third argument must be a number and not NaN. Value: `%s`.', c ) );
 	}
 	if ( !(a <= c && c <= b) ) {
-		return new RangeError( format( 'invalid arguments. The condition `a <= c <= b` must be satisfied. Value: `[%f,%f,%f]`.', a, b, c ) );
+		return new RangeError( format( 'invalid arguments. Parameters must satisfy the following condition: %s. Value: `[%f, %f, %f]`.', 'a <= c <= b', a, b, c ) );
 	}
 	return null;
 }
