@@ -18,12 +18,18 @@
 
 'use strict';
 
+// MODULES //
+
+var boxMuller = require( './../../../base/box-muller' );
+var improvedZiggurat = require( './../../../base/improved-ziggurat' );
+
+
 // MAIN //
 
 var prngs = {};
 
-prngs[ 'box-muller' ] = require( './../../../base/box-muller' );
-prngs[ 'improved-ziggurat' ] = require( './../../../base/improved-ziggurat' );
+prngs[ 'box-muller' ] = boxMuller;
+prngs[ 'improved-ziggurat' ] = improvedZiggurat;
 
 
 // EXPORTS //

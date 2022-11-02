@@ -18,13 +18,20 @@
 
 'use strict';
 
+// MODULES //
+
+var minstd = require( './../../../base/minstd' );
+var minstdShuffle = require( './../../../base/minstd-shuffle' );
+var mt19937 = require( './../../../base/mt19937' );
+
+
 // MAIN //
 
 var prngs = {};
 
-prngs[ 'minstd' ] = require( './../../../base/minstd' );
-prngs[ 'minstd-shuffle' ] = require( './../../../base/minstd-shuffle' );
-prngs[ 'mt19937' ] = require( './../../../base/mt19937' );
+prngs[ 'minstd' ] = minstd;
+prngs[ 'minstd-shuffle' ] = minstdShuffle;
+prngs[ 'mt19937' ] = mt19937;
 
 
 // EXPORTS //
