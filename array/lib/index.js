@@ -46,6 +46,15 @@ var ns = {};
 setReadOnly( ns, 'arcsine', require( './../../array/arcsine' ) );
 
 /**
+* @name discreteUniform
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/discrete-uniform}
+*/
+setReadOnly( ns, 'discreteUniform', require( './../../array/discrete-uniform' ) );
+
+/**
 * @name normal
 * @memberof ns
 * @readonly
