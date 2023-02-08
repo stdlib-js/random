@@ -45,6 +45,15 @@ var ns = {};
 */
 setReadOnly( ns, 'arcsine', require( './../../array/arcsine' ) );
 
+/**
+* @name uniform
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/uniform}
+*/
+setReadOnly( ns, 'uniform', require( './../../array/uniform' ) );
+
 
 // EXPORTS //
 
