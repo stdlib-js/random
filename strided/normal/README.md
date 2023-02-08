@@ -18,21 +18,21 @@ limitations under the License.
 
 -->
 
-# Arcsine Random Numbers
+# Normal Random Numbers
 
-> Fill a strided array with pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution.
+> Fill a strided array with pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var arcsine = require( '@stdlib/random/strided/arcsine' );
+var normal = require( '@stdlib/random/strided/normal' );
 ```
 
-#### arcsine( N, a, sa, b, sb, out, so\[, options] )
+#### normal( N, mu, sm, sigma, ss, out, so\[, options] )
 
-Fills a strided array with pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution.
+Fills a strided array with pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
@@ -41,16 +41,16 @@ var Float64Array = require( '@stdlib/array/float64' );
 var out = new Float64Array( 10 );
 
 // Fill the array with pseudorandom numbers:
-arcsine( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 ```
 
 The function has the following parameters:
 
 -   **N**: number of indexed elements.
--   **a**: minimum support.
--   **sa**: index increment for `a`.
--   **b**: maximum support.
--   **sb**: index increment for `b`.
+-   **mu**: mean.
+-   **sm**: index increment for `mu`.
+-   **sigma**: standard deviation.
+-   **ss**: index increment for `sigma`.
 -   **out**: output array.
 -   **so**: index increment for `out`.
 
@@ -59,7 +59,7 @@ The `N` and stride parameters determine which strided array elements are accesse
 ```javascript
 var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
 
-arcsine( 3, [ 2.0 ], 0, [ 5.0 ], 0, out, 2 );
+normal( 3, [ 2.0 ], 0, [ 5.0 ], 0, out, 2 );
 ```
 
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
@@ -70,18 +70,18 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 var Float64Array = require( '@stdlib/array/float64' );
 
 // Initial arrays...
-var a0 = new Float64Array( [ 0.0, 0.0, 0.0, 2.0, 2.0, 2.0 ] );
-var b0 = new Float64Array( [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ] );
+var mu0 = new Float64Array( [ 0.0, 0.0, 0.0, 2.0, 2.0, 2.0 ] );
+var sigma0 = new Float64Array( [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ] );
 
 // Create offset views...
-var a1 = new Float64Array( a0.buffer, a0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
-var b1 = new Float64Array( b0.buffer, b0.BYTES_PER_ELEMENT*3 ); // start at 4th element
+var mu1 = new Float64Array( mu0.buffer, mu0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
+var sigma1 = new Float64Array( sigma0.buffer, sigma0.BYTES_PER_ELEMENT*3 ); // start at 4th element
 
 // Create an output array:
 var out = new Float64Array( 3 );
 
 // Fill the output array:
-arcsine( out.length, a1, -2, b1, 1, out, 1 );
+normal( out.length, mu1, -2, sigma1, 1, out, 1 );
 ```
 
 The function accepts the following `options`:
@@ -102,7 +102,7 @@ var opts = {
 };
 
 var out = new Float64Array( 10 );
-arcsine( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1, opts );
+normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1, opts );
 ```
 
 To seed the underlying pseudorandom number generator, set the `seed` option.
@@ -115,12 +115,12 @@ var opts = {
 };
 
 var out = new Float64Array( 10 );
-arcsine( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1, opts );
+normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1, opts );
 ```
 
-#### arcsine.ndarray( N, a, sa, oa, b, sb, ob, out, so, oo\[, options] )
+#### normal.ndarray( N, mu, sm, om, sigma, ss, os, out, so, oo\[, options] )
 
-Fills a strided array with pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution using alternative indexing semantics.
+Fills a strided array with pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution using alternative indexing semantics.
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
@@ -129,13 +129,13 @@ var Float64Array = require( '@stdlib/array/float64' );
 var out = new Float64Array( 10 );
 
 // Fill the array with pseudorandom numbers:
-arcsine.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+normal.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 ```
 
 The function has the following additional parameters:
 
--   **oa**: starting index for `a`.
--   **ob**: starting index for `b`.
+-   **om**: starting index for `mu`.
+-   **os**: starting index for `sigma`.
 -   **oo**: starting index for `out`.
 
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to access every other value in `out` starting from the second value,
@@ -143,10 +143,10 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 ```javascript
 var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
 
-arcsine.ndarray( 3, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 2, 1 );
+normal.ndarray( 3, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 2, 1 );
 ```
 
-The function accepts the same `options` as documented above for `arcsine()`.
+The function accepts the same `options` as documented above for `normal()`.
 
 </section>
 
@@ -173,7 +173,7 @@ The function accepts the same `options` as documented above for `arcsine()`.
 var zeros = require( '@stdlib/array/zeros' );
 var zeroTo = require( '@stdlib/array/base/zero-to' );
 var logEach = require( '@stdlib/console/log-each' );
-var arcsine = require( '@stdlib/random/strided/arcsine' );
+var normal = require( '@stdlib/random/strided/normal' );
 
 // Specify a PRNG seed:
 var opts = {
@@ -187,13 +187,13 @@ var x1 = zeros( 10, 'float64' );
 var idx = zeroTo( x1.length );
 
 // Fill the array with pseudorandom numbers:
-arcsine( x1.length, [ 2.0 ], 0, [ 5.0 ], 0, x1, 1, opts );
+normal( x1.length, [ 2.0 ], 0, [ 5.0 ], 0, x1, 1, opts );
 
 // Create a second array:
 var x2 = zeros( 10, 'generic' );
 
 // Fill the array with the same pseudorandom numbers:
-arcsine( x2.length, [ 2.0 ], 0, [ 5.0 ], 0, x2, 1, opts );
+normal( x2.length, [ 2.0 ], 0, [ 5.0 ], 0, x2, 1, opts );
 
 // Print the array contents:
 logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
@@ -217,7 +217,7 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/random/base/arcsine]: https://github.com/stdlib-js/random/tree/main/base/arcsine
+[@stdlib/random/base/normal]: https://github.com/stdlib-js/random/tree/main/base/normal
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 

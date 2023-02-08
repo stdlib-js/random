@@ -53,7 +53,7 @@ interface Options {
 */
 interface Routine {
 	/**
-	* Fills a strided array with arcsine distributed pseudorandom numbers.
+	* Fills a strided array with pseudorandom numbers drawn from an arcsine distribution.
 	*
 	* @param N - number of indexed elements
 	* @param a - minimum support
@@ -80,15 +80,15 @@ interface Routine {
 	( N: number, a: Collection, sa: number, b: Collection, sb: number, out: Collection, so: number, options?: Options ): Collection; // tslint:disable-line:max-line-length
 
 	/**
-	* Fills a strided array with arcsine distributed pseudorandom numbers using alternative indexing semantics.
+	* Fills a strided array with pseudorandom numbers drawn from an arcsine distribution using alternative indexing semantics.
 	*
 	* @param N - number of indexed elements
 	* @param a - minimum support
 	* @param sa - `a` stride length
-	* @param oa - starting index for `x`
+	* @param oa - starting index for `a`
 	* @param b - maximum support
 	* @param sb - `b` stride length
-	* @param ob - starting index for `y`
+	* @param ob - starting index for `b`
 	* @param out - output array
 	* @param so - `out` stride length
 	* @param oo - starting index for `out`
@@ -111,7 +111,7 @@ interface Routine {
 }
 
 /**
-* Fills a strided array with arcsine distributed pseudorandom numbers.
+* Fills a strided array with pseudorandom numbers drawn from an arcsine distribution.
 *
 * @param N - number of indexed elements
 * @param a - minimum support

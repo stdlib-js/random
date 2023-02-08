@@ -26,13 +26,13 @@ var factory = require( './factory.js' );
 // MAIN //
 
 /**
-* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 *
-* @name arcsine
+* @name normal
 * @type {Function}
 * @param {NonNegativeInteger} len - array length
-* @param {number} a - minimum support
-* @param {number} b - maximum support
+* @param {number} mu - mean
+* @param {PositiveNumber} sigma - standard deviation
 * @param {Options} [options] - options
 * @param {string} [options.dtype="float64"] - output array data type
 * @throws {TypeError} first argument must be a nonnegative integer
@@ -41,18 +41,18 @@ var factory = require( './factory.js' );
 * @returns {(Array|TypedArray)} output array
 *
 * @example
-* var arr = arcsine( 10, 2.0, 5.0 );
+* var arr = normal( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var arr = arcsine( 10, 2.0, 5.0, {
+* var arr = normal( 10, 2.0, 5.0, {
 *     'dtype': 'generic'
 * });
 * // returns [...]
 */
-var arcsine = factory();
+var normal = factory();
 
 
 // EXPORTS //
 
-module.exports = arcsine;
+module.exports = normal;

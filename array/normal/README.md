@@ -18,32 +18,32 @@ limitations under the License.
 
 -->
 
-# Arcsine Random Numbers
+# Normal Random Numbers
 
-> Create an array containing pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution.
+> Create an array containing pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var arcsine = require( '@stdlib/random/array/arcsine' );
+var normal = require( '@stdlib/random/array/normal' );
 ```
 
-#### arcsine( len, a, b\[, options] )
+#### normal( len, mu, sigma\[, options] )
 
-Returns an array containing pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution.
+Returns an array containing pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
 
 ```javascript
-var out = arcsine( 10, 2.0, 5.0 );
+var out = normal( 10, 2.0, 5.0 );
 // returns <Float64Array>
 ```
 
 The function has the following parameters:
 
 -   **len**: output array length.
--   **a**: minimum support.
--   **b**: maximum support.
+-   **mu**: mean.
+-   **sigma**: standard deviation.
 -   **options**: function options.
 
 The function accepts the following `options`:
@@ -57,16 +57,16 @@ var opts = {
     'dtype': 'generic'
 };
 
-var out = arcsine( 10, 2.0, 5.0, opts );
+var out = normal( 10, 2.0, 5.0, opts );
 // returns [...]
 ```
 
-#### arcsine.factory( \[a, b, ]\[options] )
+#### normal.factory( \[mu, sigma, ]\[options] )
 
-Returns a function for creating arrays containing pseudorandom numbers drawn from an [arcsine][@stdlib/random/base/arcsine] distribution.
+Returns a function for creating arrays containing pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
 
 ```javascript
-var random = arcsine.factory();
+var random = normal.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -75,10 +75,10 @@ var len = out.length;
 // returns 10
 ```
 
-If provided `a` and `b`, the returned generator returns random variates from the specified distribution.
+If provided `mu` and `sigma`, the returned generator returns random variates from the specified distribution.
 
 ```javascript
-var random = arcsine.factory( 2.0, 5.0 );
+var random = normal.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -87,10 +87,10 @@ out = random( 10 );
 // returns <Float64Array>
 ```
 
-If not provided `a` and `b`, the returned generator requires that both parameters be provided at each invocation.
+If not provided `mu` and `sigma`, the returned generator requires that both parameters be provided at each invocation.
 
 ```javascript
-var random = arcsine.factory();
+var random = normal.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -115,7 +115,7 @@ var minstd = require( '@stdlib/random/base/minstd' );
 var opts = {
     'prng': minstd.normalized
 };
-var random = arcsine.factory( 2.0, 5.0, opts );
+var random = normal.factory( 2.0, 5.0, opts );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -127,7 +127,7 @@ To seed the underlying pseudorandom number generator, set the `seed` option.
 var opts = {
     'seed': 12345
 };
-var random = arcsine.factory( 2.0, 5.0, opts );
+var random = normal.factory( 2.0, 5.0, opts );
 
 var out = random( 10, opts );
 // returns <Float64Array>
@@ -140,7 +140,7 @@ The returned function accepts the following `options`:
 To override the default output array data type, set the `dtype` option.
 
 ```javascript
-var random = arcsine.factory( 2.0, 5.0 );
+var random = normal.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -152,21 +152,21 @@ out = random( 10, opts );
 // returns [...]
 ```
 
-#### arcsine.PRNG
+#### normal.PRNG
 
 The underlying pseudorandom number generator.
 
 ```javascript
-var prng = arcsine.PRNG;
+var prng = normal.PRNG;
 // returns <Function>
 ```
 
-#### arcsine.seed
+#### normal.seed
 
 The value used to seed the underlying pseudorandom number generator.
 
 ```javascript
-var seed = arcsine.seed;
+var seed = normal.seed;
 // returns <Uint32Array>
 ```
 
@@ -175,7 +175,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = arcsine.factory( 2.0, 5.0, {
+var random = normal.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -183,12 +183,12 @@ var seed = random.seed;
 // returns null
 ```
 
-#### arcsine.seedLength
+#### normal.seedLength
 
 Length of underlying pseudorandom number generator seed.
 
 ```javascript
-var len = arcsine.seedLength;
+var len = normal.seedLength;
 // returns <number>
 ```
 
@@ -197,7 +197,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = arcsine.factory( 2.0, 5.0, {
+var random = normal.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -205,12 +205,12 @@ var len = random.seedLength;
 // returns null
 ```
 
-#### arcsine.state
+#### normal.state
 
 Writable property for getting and setting the underlying pseudorandom number generator state.
 
 ```javascript
-var state = arcsine.state;
+var state = normal.state;
 // returns <Uint32Array>
 ```
 
@@ -219,7 +219,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = arcsine.factory( 2.0, 5.0, {
+var random = normal.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -227,12 +227,12 @@ var state = random.state;
 // returns null
 ```
 
-#### arcsine.stateLength
+#### normal.stateLength
 
 Length of underlying pseudorandom number generator state.
 
 ```javascript
-var len = arcsine.stateLength;
+var len = normal.stateLength;
 // returns <number>
 ```
 
@@ -241,7 +241,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = arcsine.factory( 2.0, 5.0, {
+var random = normal.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -249,12 +249,12 @@ var len = random.stateLength;
 // returns null
 ```
 
-#### arcsine.byteLength
+#### normal.byteLength
 
 Size (in bytes) of underlying pseudorandom number generator state.
 
 ```javascript
-var sz = arcsine.byteLength;
+var sz = normal.byteLength;
 // returns <number>
 ```
 
@@ -263,7 +263,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = arcsine.factory( 2.0, 5.0, {
+var random = normal.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -294,11 +294,11 @@ var sz = random.byteLength;
 
 ```javascript
 var logEach = require( '@stdlib/console/log-each' );
-var arcsine = require( '@stdlib/random/array/arcsine' );
+var normal = require( '@stdlib/random/array/normal' );
 
 // Create a function for generating random arrays originating from the same state:
-var random = arcsine.factory( 2.0, 5.0, {
-    'state': arcsine.state,
+var random = normal.factory( 2.0, 5.0, {
+    'state': normal.state,
     'copy': true
 });
 
@@ -311,8 +311,8 @@ var x3 = random( 5 );
 logEach( '%f, %f, %f', x1, x2, x3 );
 
 // Create another function for generating random arrays with the original state:
-random = arcsine.factory( 2.0, 5.0, {
-    'state': arcsine.state,
+random = normal.factory( 2.0, 5.0, {
+    'state': normal.state,
     'copy': true
 });
 
@@ -339,7 +339,7 @@ logEach( '%f', x4 );
 
 <section class="links">
 
-[@stdlib/random/base/arcsine]: https://github.com/stdlib-js/random/tree/main/base/arcsine
+[@stdlib/random/base/normal]: https://github.com/stdlib-js/random/tree/main/base/normal
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 

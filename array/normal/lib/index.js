@@ -19,37 +19,37 @@
 'use strict';
 
 /**
-* Create an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+* Create an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 *
-* @module @stdlib/random/array/arcsine
+* @module @stdlib/random/array/normal
 *
 * @example
-* var arcsine = require( '@stdlib/random/array/arcsine' );
+* var normal = require( '@stdlib/random/array/normal' );
 *
-* var arr = arcsine( 10, 2.0, 5.0 );
+* var arr = normal( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var arcsine = require( '@stdlib/random/array/arcsine' );
+* var normal = require( '@stdlib/random/array/normal' );
 *
-* var arr = arcsine( 10, 2.0, 5.0, {
+* var arr = normal( 10, 2.0, 5.0, {
 *     'dtype': 'generic'
 * });
 * // returns [...]
 *
 * @example
-* var arcsine = require( '@stdlib/random/array/arcsine' );
+* var normal = require( '@stdlib/random/array/normal' );
 *
-* var rand = arcsine.factory( 2.0, 5.0 );
+* var rand = normal.factory( 2.0, 5.0 );
 * // returns <Function>
 *
 * var arr = rand( 10 );
 * // returns <Float64Array>
 *
 * @example
-* var arcsine = require( '@stdlib/random/array/arcsine' );
+* var normal = require( '@stdlib/random/array/normal' );
 *
-* var rand = arcsine.factory( 2.0, 5.0 );
+* var rand = normal.factory( 2.0, 5.0 );
 * // returns <Function>
 *
 * var arr = rand( 10, {

@@ -1,7 +1,7 @@
 
-{{alias}}( N, a, sa, b, sb, out, so[, options] )
-    Fills a strided array with pseudorandom numbers drawn from a continuous
-    uniform distribution.
+{{alias}}( N, mu, sm, sigma, ss, out, so[, options] )
+    Fills a strided array with pseudorandom numbers drawn from a normal
+    distribution.
 
     The `N` and stride parameters determine which elements in the provided
     strided arrays are accessed at runtime.
@@ -17,17 +17,17 @@
     N: integer
         Number of indexed elements.
 
-    a: ArrayLikeObject
-        Minimum support.
+    mu: ArrayLikeObject
+        Mean.
 
-    sa: integer
-        Index increment for `a`.
+    sm: integer
+        Index increment for `mu`.
 
-    b: ArrayLikeObject
-        Maximum support.
+    sigma: ArrayLikeObject
+        Standard deviation.
 
-    sb: integer
-        Index increment for `b`.
+    ss: integer
+        Index increment for `sigma`.
 
     out: ArrayLikeObject
         Output array.
@@ -69,23 +69,23 @@
     Examples
     --------
     // Standard usage:
-    > var a = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 5 );
-    > var b = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 5 );
+    > var mu = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 5 );
+    > var sigma = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 5 );
     > var out = {{alias:@stdlib/array/zeros}}( 5, 'generic' );
-    > {{alias}}( out.length, a, 1, b, 1, out, 1 )
+    > {{alias}}( out.length, mu, 1, sigma, 1, out, 1 )
     [...]
 
     // Advanced indexing:
-    > a = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 6 );
-    > b = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 6 );
+    > mu = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 6 );
+    > sigma = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 6 );
     > out = {{alias:@stdlib/array/zeros}}( 6, 'generic' );
-    > {{alias}}( 3, a, -2, b, 1, out, 1 )
+    > {{alias}}( 3, mu, -2, sigma, 1, out, 1 )
     [...]
 
 
-{{alias}}.ndarray( N, a, sa, oa, b, sb, ob, out, so, oo[, options] )
-    Fills a strided array with pseudorandom numbers drawn from a continuous
-    uniform distribution using alternative indexing semantics.
+{{alias}}.ndarray( N, mu, sm, om, sigma, ss, os, out, so, oo[, options] )
+    Fills a strided array with pseudorandom numbers drawn from a normal
+    distribution using alternative indexing semantics.
 
     While typed array views mandate a view offset based on the underlying
     buffer, the offset parameters support indexing semantics based on starting
@@ -96,23 +96,23 @@
     N: integer
         Number of indexed elements.
 
-    a: ArrayLikeObject
-        Minimum support.
+    mu: ArrayLikeObject
+        Mean.
 
-    sa: integer
-        Index increment for `a`.
+    sm: integer
+        Index increment for `mu`.
 
-    oa: integer
-        Starting index for `a`.
+    om: integer
+        Starting index for `mu`.
 
-    b: ArrayLikeObject
-        Maximum support.
+    sigma: ArrayLikeObject
+        Standard deviation.
 
-    sb: integer
-        Index increment for `b`.
+    ss: integer
+        Index increment for `sigma`.
 
-    ob: integer
-        Starting index for `b`.
+    os: integer
+        Starting index for `sigma`.
 
     out: ArrayLikeObject
         Output array.
@@ -157,17 +157,17 @@
     Examples
     --------
     // Standard usage:
-    > var a = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 5 );
-    > var b = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 5 );
+    > var mu = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 5 );
+    > var sigma = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 5 );
     > var out = {{alias:@stdlib/array/zeros}}( 5, 'generic' );
-    > {{alias}}.ndarray( out.length, a, 1, 0, b, 1, 0, out, 1, 0 )
+    > {{alias}}.ndarray( out.length, mu, 1, 0, sigma, 1, 0, out, 1, 0 )
     [...]
 
     // Advanced indexing:
-    > a = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 6 );
-    > b = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 6 );
+    > mu = {{alias:@stdlib/array/linspace}}( 0.0, 1.0, 6 );
+    > sigma = {{alias:@stdlib/array/linspace}}( 2.0, 5.0, 6 );
     > out = {{alias:@stdlib/array/zeros}}( 6, 'generic' );
-    > {{alias}}.ndarray( 3, a, 2, 1, b, -1, b.length-1, out, 1, 0 )
+    > {{alias}}.ndarray( 3, mu, 2, 1, sigma, -1, sigma.length-1, out, 1, 0 )
     [...]
 
     See Also

@@ -114,11 +114,11 @@ interface PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from an arcsine distribution with pre-specified parameter values.
+* Interface for generating normally distributed pseudorandom numbers with pre-specified parameter values.
 */
 interface UnaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 	*
 	* @param len - array length
 	* @param options - function options
@@ -128,88 +128,88 @@ interface UnaryFunction extends PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from an arcsine distribution without pre-specified parameter values.
+* Interface for generating normally distributed pseudorandom numbers without pre-specified parameter values.
 */
 interface TernaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 	*
 	* @param len - array length
-	* @param a - minimum support
-	* @param b - maximum support
+	* @param mu - mean
+	* @param sigma - standard deviation
 	* @param options - function options
 	* @returns output array
 	*/
-	( len: number, a: number, b: number, options?: Options ): RandomArray;
+	( len: number, mu: number, sigma: number, options?: Options ): RandomArray;
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from an arcsine distribution.
+* Interface for generating pseudorandom numbers drawn from a normal distribution.
 */
 interface Random extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 	*
 	* @param len - array length
-	* @param a - minimum support
-	* @param b - maximum support
+	* @param mu - mean
+	* @param sigma - standard deviation
 	* @param options - function options
 	* @returns output array
 	*
 	* @example
-	* var out = arcsine( 10, 2.0, 5.0 );
+	* var out = normal( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*/
-	( len: number, a: number, b: number, options?: Options ): RandomArray;
+	( len: number, mu: number, sigma: number, options?: Options ): RandomArray;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from an arcsine distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a normal distribution.
 	*
 	* ## Notes
 	*
-	* -   When provided `a` and `b`, the returned function returns random variates drawn from the specified distribution.
+	* -   When provided `mu` and `sigma`, the returned function returns random variates drawn from the specified distribution.
 	*
-	* @param a - minimum support
-	* @param b - maximum support
+	* @param mu - mean
+	* @param sigma - standard deviation
 	* @param options - function options
-	* @throws `a` must be less than `b`
+	* @throws `sigma` must be a positive number
 	* @throws must provide a valid state
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = arcsine.factory( 2.0, 5.0 );
+	* var random = normal.factory( 2.0, 5.0 );
 	*
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = arcsine.factory( 2.0, 5.0, {
+	* var random = normal.factory( 2.0, 5.0, {
 	*     'seed': 297
 	* });
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*/
-	factory( a: number, b: number, options?: FactoryOptions ): UnaryFunction;
+	factory( mu: number, sigma: number, options?: FactoryOptions ): UnaryFunction;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from an arcsine distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a normal distribution.
 	*
 	* ## Notes
 	*
-	* -   When not provided `a` and `b`, the returned function requires that both `a` and `b` be provided at each invocation.
+	* -   When not provided `mu` and `sigma`, the returned function requires that both `mu` and `sigma` be provided at each invocation.
 	*
 	* @param options - function options
 	* @throws must provide a valid state
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = arcsine.factory();
+	* var random = normal.factory();
 	*
 	* var out = random( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = arcsine.factory({
+	* var random = normal.factory({
 	*     'seed': 297
 	* });
 	* var out = random( 10, 2.0, 5.0 );
@@ -219,27 +219,27 @@ interface Random extends PRNG {
 }
 
 /**
-* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 *
 * @param len - array length
-* @param a - minimum support
-* @param b - maximum support
+* @param mu - mean
+* @param sigma - standard deviation
 * @param options - function options
 * @returns output array
 *
 * @example
-* var out = arcsine( 10, 2.0, 5.0 );
+* var out = normal( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var random = arcsine.factory( 2.0, 5.0 );
+* var random = normal.factory( 2.0, 5.0 );
 *
 * var out = random( 10 );
 * // returns <Float64Array>
 */
-declare var arcsine: Random;
+declare var normal: Random;
 
 
 // EXPORTS //
 
-export = arcsine;
+export = normal;

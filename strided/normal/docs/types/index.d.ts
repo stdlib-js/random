@@ -49,21 +49,21 @@ interface Options {
 }
 
 /**
-* Interface describing `uniform`.
+* Interface describing `normal`.
 */
 interface Routine {
 	/**
-	* Fills a strided array with pseudorandom numbers drawn from a continuous uniform distribution.
+	* Fills a strided array with pseudorandom numbers drawn from a normal distribution.
 	*
 	* @param N - number of indexed elements
-	* @param a - minimum support
-	* @param sa - `a` stride length
-	* @param b - maximum support
-	* @param sb - `b` stride length
+	* @param mu - mean
+	* @param sm - `mu` stride length
+	* @param sigma - standard deviation
+	* @param ss - `sigma` stride length
 	* @param out - output array
 	* @param so - `out` stride length
 	* @param options - function options
-	* @throws minimum support must be less than maximum support
+	* @throws must provide valid distribution parameters
 	* @throws must provide valid options
 	* @throws must provide a valid state
 	* @returns output array
@@ -75,25 +75,25 @@ interface Routine {
 	* var out = new Float64Array( 10 );
 	*
 	* // Fill the array with pseudorandom numbers:
-	* uniform( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+	* normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 	*/
-	( N: number, a: Collection, sa: number, b: Collection, sb: number, out: Collection, so: number, options?: Options ): Collection; // tslint:disable-line:max-line-length
+	( N: number, mu: Collection, sm: number, sigma: Collection, ss: number, out: Collection, so: number, options?: Options ): Collection; // tslint:disable-line:max-line-length
 
 	/**
-	* Fills a strided array with pseudorandom numbers drawn from a continuous uniform distribution using alternative indexing semantics.
+	* Fills a strided array with pseudorandom numbers drawn from a normal distribution using alternative indexing semantics.
 	*
 	* @param N - number of indexed elements
-	* @param a - minimum support
-	* @param sa - `a` stride length
-	* @param oa - starting index for `a`
-	* @param b - maximum support
-	* @param sb - `b` stride length
-	* @param ob - starting index for `b`
+	* @param mu - mean
+	* @param sm - `mu` stride length
+	* @param om - starting index for `mu`
+	* @param sigma - standard deviation
+	* @param ss - `sigma` stride length
+	* @param os - starting index for `sigma`
 	* @param out - output array
 	* @param so - `out` stride length
 	* @param oo - starting index for `out`
 	* @param options - function options
-	* @throws minimum support must be less than maximum support
+	* @throws must provide valid distribution parameters
 	* @throws must provide valid options
 	* @throws must provide a valid state
 	* @returns output array
@@ -105,23 +105,23 @@ interface Routine {
 	* var out = new Float64Array( 10 );
 	*
 	* // Fill the array with pseudorandom numbers:
-	* uniform.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+	* normal.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 	*/
-	ndarray( N: number, a: Collection, sa: number, oa: number, b: Collection, sb: number, ob: number, out: Collection, so: number, oo: number, options?: Options ): Collection; // tslint:disable-line:max-line-length
+	ndarray( N: number, mu: Collection, sm: number, om: number, sigma: Collection, ss: number, os: number, out: Collection, so: number, oo: number, options?: Options ): Collection; // tslint:disable-line:max-line-length
 }
 
 /**
-* Fills a strided array with pseudorandom numbers drawn from a continuous uniform distribution.
+* Fills a strided array with pseudorandom numbers drawn from a normal distribution.
 *
 * @param N - number of indexed elements
-* @param a - minimum support
-* @param sa - `a` stride length
-* @param b - maximum support
-* @param sb - `b` stride length
+* @param mu - mean
+* @param sm - `mu` stride length
+* @param sigma - standard deviation
+* @param ss - `sigma` stride length
 * @param out - output array
 * @param so - `out` stride length
 * @param options - function options
-* @throws minimum support must be less than maximum support
+* @throws must provide valid distribution parameters
 * @throws must provide valid options
 * @throws must provide a valid state
 * @returns output array
@@ -133,7 +133,7 @@ interface Routine {
 * var out = new Float64Array( 10 );
 *
 * // Fill the array with pseudorandom numbers:
-* uniform( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+* normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 *
 * @example
 * var Float64Array = require( `@stdlib/array/float64` );
@@ -142,11 +142,11 @@ interface Routine {
 * var out = new Float64Array( 10 );
 *
 * // Fill the array with pseudorandom numbers:
-* uniform.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+* normal.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 */
-declare var uniform: Routine;
+declare var normal: Routine;
 
 
 // EXPORTS //
 
-export = uniform;
+export = normal;

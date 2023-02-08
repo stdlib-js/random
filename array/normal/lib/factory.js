@@ -26,7 +26,7 @@ var setReadOnlyAccessor = require( '@stdlib/utils/define-nonenumerable-read-only
 var setReadWriteAccessor = require( '@stdlib/utils/define-nonenumerable-read-write-accessor' );
 var constantFunction = require( '@stdlib/utils/constant-function' );
 var noop = require( '@stdlib/utils/noop' );
-var base = require( './../../../base/arcsine' );
+var base = require( './../../../base/normal' );
 var ctors = require( '@stdlib/array/typed-real-float-ctors' );
 var filledBy = require( '@stdlib/array/base/filled-by' );
 var nullary = require( '@stdlib/strided/base/nullary' );
@@ -39,36 +39,35 @@ var validate = require( './validate.js' );
 // MAIN //
 
 /**
-* Returns a function for creating arrays containing pseudorandom numbers drawn from an arcsine distribution.
+* Returns a function for creating arrays containing pseudorandom numbers drawn from a normal distribution.
 *
-* @param {number} [a] - minimum support
-* @param {number} [b] - maximum support
+* @param {number} [mu] - mean
+* @param {PositiveNumber} [sigma] - standard deviation
 * @param {Options} [options] - function options
 * @param {PRNG} [options.prng] - pseudorandom number generator which generates uniformly distributed pseudorandom numbers
 * @param {PRNGSeedMT19937} [options.seed] - pseudorandom number generator seed
 * @param {PRNGStateMT19937} [options.state] - pseudorandom number generator state
 * @param {boolean} [options.copy=true] - boolean indicating whether to copy a provided pseudorandom number generator state
 * @param {string} [options.dtype="float64"] - default data type
-* @throws {TypeError} `a` must be a number
-* @throws {TypeError} `b` must be a number
-* @throws {RangeError} `a` must be less than `b`
+* @throws {TypeError} `mu` must be a number
+* @throws {TypeError} `sigma` must be a positive number
 * @throws {TypeError} options argument must be an object
 * @throws {TypeError} must provide valid options
 * @throws {Error} must provide a valid state
 * @returns {Function} function for creating arrays
 *
 * @example
-* var arcsine = factory( 2.0, 5.0 );
+* var normal = factory( 2.0, 5.0 );
 * // returns <Function>
 *
-* var arr = arcsine( 10 );
+* var arr = normal( 10 );
 * // returns <Float64Array>
 *
 * @example
-* var arcsine = factory( 2.0, 5.0 );
+* var normal = factory( 2.0, 5.0 );
 * // returns <Function>
 *
-* var arr = arcsine( 10, {
+* var arr = normal( 10, {
 *     'dtype': 'generic'
 * });
 * // returns [...]
@@ -88,7 +87,7 @@ function factory() {
 	nargs = arguments.length;
 	if ( nargs === 0 ) {
 		prng = base;
-		rand = arcsine2;
+		rand = normal2;
 	} else if ( nargs === 1 ) {
 		options = arguments[ 0 ];
 		prng = base.factory( options );
@@ -96,10 +95,10 @@ function factory() {
 		if ( err ) {
 			throw err;
 		}
-		rand = arcsine2;
+		rand = normal2;
 	} else if ( nargs === 2 ) {
 		prng = base.factory( arguments[ 0 ], arguments[ 1 ] );
-		rand = arcsine1;
+		rand = normal1;
 	} else if ( nargs === 3 ) {
 		options = arguments[ 2 ];
 		prng = base.factory( arguments[ 0 ], arguments[ 1 ], options );
@@ -107,7 +106,7 @@ function factory() {
 		if ( err ) {
 			throw err;
 		}
-		rand = arcsine1;
+		rand = normal1;
 	}
 	if ( options && options.prng ) {
 		setReadOnly( rand, 'seed', null );
@@ -126,7 +125,7 @@ function factory() {
 	return rand;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 	*
 	* @private
 	* @param {NonNegativeInteger} len - array length
@@ -137,7 +136,7 @@ function factory() {
 	* @throws {TypeError} must provide valid options
 	* @returns {(Array|TypedArray)} output array
 	*/
-	function arcsine1( len, options ) {
+	function normal1( len, options ) {
 		var ctor;
 		var out;
 		var err;
@@ -164,12 +163,12 @@ function factory() {
 	}
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
 	*
 	* @private
 	* @param {NonNegativeInteger} len - array length
-	* @param {number} a - minimum support
-	* @param {number} b - maximum support
+	* @param {number} mu - mean
+	* @param {PositiveNumber} sigma - standard deviation
 	* @param {Options} [options] - function options
 	* @param {string} [options.dtype] - output array data type
 	* @throws {TypeError} first argument must be a nonnegative integer
@@ -177,7 +176,7 @@ function factory() {
 	* @throws {TypeError} must provide valid options
 	* @returns {(Array|TypedArray)} output array
 	*/
-	function arcsine2( len, a, b, options ) {
+	function normal2( len, mu, sigma, options ) {
 		var ctor;
 		var out;
 		var err;
@@ -200,7 +199,7 @@ function factory() {
 		}
 		ctor = ctors( dt );
 		out = new ctor( len );
-		binary( [ [ a ], [ b ], out ], [ len ], [ 0, 0, 1 ], prng );
+		binary( [ [ mu ], [ sigma ], out ], [ len ], [ 0, 0, 1 ], prng );
 		return out;
 
 		/**
@@ -210,7 +209,7 @@ function factory() {
 		* @returns {number} pseudorandom number
 		*/
 		function wrapper() {
-			return prng( a, b );
+			return prng( mu, sigma );
 		}
 	}
 

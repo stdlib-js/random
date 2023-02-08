@@ -19,29 +19,29 @@
 'use strict';
 
 /**
-* Fill a strided array with pseudorandom numbers drawn from an arcsine distribution.
+* Fill a strided array with pseudorandom numbers drawn from a normal distribution.
 *
-* @module @stdlib/random/strided/arcsine
+* @module @stdlib/random/strided/normal
 *
 * @example
 * var Float64Array = require( '@stdlib/array/float64' );
-* var arcsine = require( '@stdlib/random/strided/arcsine' );
+* var normal = require( '@stdlib/random/strided/normal' );
 *
 * // Create an array:
 * var out = new Float64Array( 10 );
 *
 * // Fill the array with pseudorandom numbers:
-* arcsine( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+* normal( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 *
 * @example
 * var Float64Array = require( '@stdlib/array/float64' );
-* var arcsine = require( '@stdlib/random/strided/arcsine' );
+* var normal = require( '@stdlib/random/strided/normal' );
 *
 * // Create an array:
 * var out = new Float64Array( 10 );
 *
 * // Fill the array with pseudorandom numbers:
-* arcsine.factory( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+* normal.factory( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 */
 
 // MODULES //
