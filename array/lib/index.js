@@ -55,6 +55,15 @@ setReadOnly( ns, 'arcsine', require( './../../array/arcsine' ) );
 setReadOnly( ns, 'discreteUniform', require( './../../array/discrete-uniform' ) );
 
 /**
+* @name lognormal
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/lognormal}
+*/
+setReadOnly( ns, 'lognormal', require( './../../array/lognormal' ) );
+
+/**
 * @name normal
 * @memberof ns
 * @readonly

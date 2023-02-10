@@ -114,11 +114,11 @@ interface PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a normal distribution with pre-specified parameter values.
+* Interface for generating pseudorandom numbers drawn from a lognormal distribution with pre-specified parameter values.
 */
 interface UnaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
+	* Returns an array containing pseudorandom numbers drawn from a lognormal distribution with parameters `mu` (location parameter) and `sigma` (scale parameter).
 	*
 	* @param len - array length
 	* @param options - function options
@@ -128,15 +128,15 @@ interface UnaryFunction extends PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a normal distribution without pre-specified parameter values.
+* Interface for generating pseudorandom numbers drawn from a lognormal distribution without pre-specified parameter values.
 */
 interface TernaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
+	* Returns an array containing pseudorandom numbers drawn from a lognormal distribution with parameters `mu` (location parameter) and `sigma` (scale parameter).
 	*
 	* @param len - array length
-	* @param mu - mean
-	* @param sigma - standard deviation
+	* @param mu - location parameter
+	* @param sigma - scale parameter
 	* @param options - function options
 	* @returns output array
 	*/
@@ -144,46 +144,46 @@ interface TernaryFunction extends PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a normal distribution.
+* Interface for generating pseudorandom numbers drawn from a lognormal distribution.
 */
 interface Random extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
+	* Returns an array containing pseudorandom numbers drawn from a lognormal distribution with parameters `mu` (location parameter) and `sigma` (scale parameter).
 	*
 	* @param len - array length
-	* @param mu - mean
-	* @param sigma - standard deviation
+	* @param mu - location parameter
+	* @param sigma - scale parameter
 	* @param options - function options
 	* @returns output array
 	*
 	* @example
-	* var out = normal( 10, 2.0, 5.0 );
+	* var out = lognormal( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*/
 	( len: number, mu: number, sigma: number, options?: Options ): RandomArray;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from a normal distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a lognormal distribution.
 	*
 	* ## Notes
 	*
 	* -   When provided `mu` and `sigma`, the returned function returns random variates drawn from the specified distribution.
 	*
-	* @param mu - mean
-	* @param sigma - standard deviation
+	* @param mu - location parameter
+	* @param sigma - scale parameter
 	* @param options - function options
 	* @throws `sigma` must be a positive number
 	* @throws must provide a valid state
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = normal.factory( 2.0, 5.0 );
+	* var random = lognormal.factory( 2.0, 5.0 );
 	*
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = normal.factory( 2.0, 5.0, {
+	* var random = lognormal.factory( 2.0, 5.0, {
 	*     'seed': 297
 	* });
 	* var out = random( 10 );
@@ -192,7 +192,7 @@ interface Random extends PRNG {
 	factory( mu: number, sigma: number, options?: FactoryOptions ): UnaryFunction;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from a normal distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a lognormal distribution.
 	*
 	* ## Notes
 	*
@@ -203,13 +203,13 @@ interface Random extends PRNG {
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = normal.factory();
+	* var random = lognormal.factory();
 	*
 	* var out = random( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = normal.factory({
+	* var random = lognormal.factory({
 	*     'seed': 297
 	* });
 	* var out = random( 10, 2.0, 5.0 );
@@ -219,27 +219,27 @@ interface Random extends PRNG {
 }
 
 /**
-* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
+* Returns an array containing pseudorandom numbers drawn from a lognormal distribution with parameters `mu` (location parameter) and `sigma` (scale parameter).
 *
 * @param len - array length
-* @param mu - mean
-* @param sigma - standard deviation
+* @param mu - location parameter
+* @param sigma - scale parameter
 * @param options - function options
 * @returns output array
 *
 * @example
-* var out = normal( 10, 2.0, 5.0 );
+* var out = lognormal( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var random = normal.factory( 2.0, 5.0 );
+* var random = lognormal.factory( 2.0, 5.0 );
 *
 * var out = random( 10 );
 * // returns <Float64Array>
 */
-declare var normal: Random;
+declare var lognormal: Random;
 
 
 // EXPORTS //
 
-export = normal;
+export = lognormal;
