@@ -82,6 +82,15 @@ setReadOnly( ns, 'lognormal', require( './../../array/lognormal' ) );
 setReadOnly( ns, 'normal', require( './../../array/normal' ) );
 
 /**
+* @name randu
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/randu}
+*/
+setReadOnly( ns, 'randu', require( './../../array/randu' ) );
+
+/**
 * @name uniform
 * @memberof ns
 * @readonly
