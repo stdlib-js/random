@@ -1,18 +1,15 @@
 
-{{alias}}( len, a, b[, options] )
-    Returns an array containing pseudorandom numbers drawn from a continuous
-    uniform distribution.
+{{alias}}( len, lambda[, options] )
+    Returns an array containing pseudorandom numbers drawn from an exponential
+    distribution.
 
     Parameters
     ----------
     len: integer
         Output array length.
 
-    a: number
-        Minimum support.
-
-    b: number
-        Maximum support.
+    lambda: number
+        Rate parameter.
 
     options: Object (optional)
         Options.
@@ -50,19 +47,19 @@
 
     Examples
     --------
-    > var out = {{alias}}( 3, 2.0, 5.0 )
+    > var out = {{alias}}( 3, 2.0 )
     <Float64Array>
 
 
-{{alias}}.factory( [a, b, ][options] )
+{{alias}}.factory( [lambda, ][options] )
     Returns a function for creating arrays containing pseudorandom numbers drawn
-    from a continuous uniform distribution.
+    from an exponential distribution.
 
-    If provided `a` and `b`, the returned function returns random variates drawn
+    If provided `lambda`, the returned function returns random variates drawn
     from the specified distribution.
 
-    If not provided `a` and `b`, the returned function requires that both `a`
-    and `b` be provided at each invocation.
+    If not provided `lambda`, the returned function requires that `lambda` be
+    provided at each invocation.
 
     The returned function accepts the following options:
 
@@ -71,11 +68,8 @@
 
     Parameters
     ----------
-    a: number (optional)
-        Minimum support.
-
-    b: number (optional)
-        Maximum support.
+    lambda: number (optional)
+        Rate parameter.
 
     options: Object (optional)
         Options.
@@ -114,11 +108,11 @@
     Examples
     --------
     > var fcn = {{alias}}.factory();
-    > var out = fcn( 3, 2.0, 5.0 )
+    > var out = fcn( 3, 2.0 )
     <Float64Array>
 
     // Provide distribution parameters:
-    > fcn = {{alias}}.factory( 2.0, 5.0 );
+    > fcn = {{alias}}.factory( 2.0 );
     > out = fcn( 3 )
     <Float64Array>
 
@@ -152,23 +146,23 @@
 
     Examples
     --------
-    > var out = {{alias}}( 3, 2.0, 5.0 )
+    > var out = {{alias}}( 3, 2.0 )
     <Float64Array>
 
     // Get a copy of the current state:
     > var state = {{alias}}.state
     <Uint32Array>
 
-    > out = {{alias}}( 3, 2.0, 5.0 )
+    > out = {{alias}}( 3, 2.0 )
     <Float64Array>
-    > out = {{alias}}( 3, 2.0, 5.0 )
+    > out = {{alias}}( 3, 2.0 )
     <Float64Array>
 
     // Set the state:
     > {{alias}}.state = state;
 
     // Regenerate a previous array:
-    > out = {{alias}}( 3, 2.0, 5.0 )
+    > out = {{alias}}( 3, 2.0 )
     <Float64Array>
 
 

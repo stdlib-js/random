@@ -64,6 +64,15 @@ setReadOnly( ns, 'beta', require( './../../array/beta' ) );
 setReadOnly( ns, 'discreteUniform', require( './../../array/discrete-uniform' ) );
 
 /**
+* @name exponential
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/exponential}
+*/
+setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
+
+/**
 * @name lognormal
 * @memberof ns
 * @readonly
