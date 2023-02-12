@@ -64,6 +64,15 @@ setReadOnly( ns, 'beta', require( './../../strided/beta' ) );
 setReadOnly( ns, 'discreteUniform', require( './../../strided/discrete-uniform' ) );
 
 /**
+* @name exponential
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/exponential}
+*/
+setReadOnly( ns, 'exponential', require( './../../strided/exponential' ) );
+
+/**
 * @name lognormal
 * @memberof ns
 * @readonly
