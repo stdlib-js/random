@@ -24,20 +24,30 @@ limitations under the License.
 
 > Random numbers.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { array, base, iterators, sample, shuffle, streams, strided } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
+var random = require( '@stdlib/random' );
 ```
 
 #### random
@@ -68,9 +78,11 @@ It also contains the following sub-namespaces:
 
 <div class="namespace-toc">
 
+-   <span class="signature">[`array`][@stdlib/random/array]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) array creation functions.</span>
 -   <span class="signature">[`base`][@stdlib/random/base]</span><span class="delimiter">: </span><span class="description">base (i.e., lower-level) pseudorandom number generators (PRNGs).</span>
 -   <span class="signature">[`iterators`][@stdlib/random/iter]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) iterators.</span>
 -   <span class="signature">[`streams`][@stdlib/random/streams]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) streams.</span>
+-   <span class="signature">[`strided`][@stdlib/random/strided]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) strided array functions.</span>
 
 </div>
 
@@ -89,8 +101,8 @@ It also contains the following sub-namespaces:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import objectKeys from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils/keys@deno/mod.js';
-import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
+var objectKeys = require( '@stdlib/utils/keys' );
+var ns = require( '@stdlib/random' );
 
 console.log( objectKeys( ns ) );
 ```
@@ -116,7 +128,7 @@ console.log( objectKeys( ns ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -178,11 +190,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <toc-links> -->
 
+[@stdlib/random/array]: https://github.com/stdlib-js/random/tree/main/array
+
 [@stdlib/random/base]: https://github.com/stdlib-js/random/tree/main/base
 
 [@stdlib/random/iter]: https://github.com/stdlib-js/random/tree/main/iter
 
 [@stdlib/random/streams]: https://github.com/stdlib-js/random/tree/main/streams
+
+[@stdlib/random/strided]: https://github.com/stdlib-js/random/tree/main/strided
 
 [@stdlib/random/sample]: https://github.com/stdlib-js/random/tree/main/sample
 
