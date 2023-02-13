@@ -78,9 +78,11 @@ It also contains the following sub-namespaces:
 
 <div class="namespace-toc">
 
+-   <span class="signature">[`array`][@stdlib/random/array]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) array creation functions.</span>
 -   <span class="signature">[`base`][@stdlib/random/base]</span><span class="delimiter">: </span><span class="description">base (i.e., lower-level) pseudorandom number generators (PRNGs).</span>
 -   <span class="signature">[`iterators`][@stdlib/random/iter]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) iterators.</span>
 -   <span class="signature">[`streams`][@stdlib/random/streams]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) streams.</span>
+-   <span class="signature">[`strided`][@stdlib/random/strided]</span><span class="delimiter">: </span><span class="description">pseudorandom number generator (PRNG) strided array functions.</span>
 
 </div>
 
@@ -188,11 +190,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <toc-links> -->
 
+[@stdlib/random/array]: https://github.com/stdlib-js/random/tree/main/array
+
 [@stdlib/random/base]: https://github.com/stdlib-js/random/tree/main/base
 
 [@stdlib/random/iter]: https://github.com/stdlib-js/random/tree/main/iter
 
 [@stdlib/random/streams]: https://github.com/stdlib-js/random/tree/main/streams
+
+[@stdlib/random/strided]: https://github.com/stdlib-js/random/tree/main/strided
 
 [@stdlib/random/sample]: https://github.com/stdlib-js/random/tree/main/sample
 
