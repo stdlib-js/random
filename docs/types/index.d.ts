@@ -21,16 +21,23 @@
 /* tslint:disable:max-line-length */
 /* tslint:disable:max-file-line-count */
 
+import array = require( './../../array' );
 import base = require( './../../base' );
 import iterators = require( './../../iter' );
 import sample = require( './../../sample' );
 import shuffle = require( './../../shuffle' );
 import streams = require( './../../streams' );
+import strided = require( './../../strided' );
 
 /**
 * Interface describing the `random` namespace.
 */
 interface Namespace {
+	/**
+	* Pseudorandom number generator array creation functions.
+	*/
+	array: typeof array;
+
 	/**
 	* Base pseudorandom number generators.
 	*/
@@ -87,6 +94,11 @@ interface Namespace {
 	* Pseudorandom number generator streams.
 	*/
 	streams: typeof streams;
+
+	/**
+	* todo.
+	*/
+	strided: typeof strided;
 }
 
 /**
