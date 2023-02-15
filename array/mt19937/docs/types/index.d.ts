@@ -20,37 +20,42 @@
 
 /// <reference types="@stdlib/types"/>
 
-import { FloatDataType, FloatTypedArray } from '@stdlib/types/array';
+import { FloatDataType, FloatTypedArray, RealDataType, RealTypedArray } from '@stdlib/types/array';
 import * as random from '@stdlib/types/random';
 
 /**
 * Supported data types.
 */
-type DataType = FloatDataType | 'generic';
+type DataType = RealDataType | 'generic';
+
+/**
+* Supported floating-point data types.
+*/
+type NormalizedDataType = FloatDataType | 'generic';
 
 /**
 * Output array.
 */
-type RandomArray = FloatTypedArray | Array<number>;
+type RandomArray = RealTypedArray | Array<number>;
+
+/**
+* Output array.
+*/
+type NormalizedRandomArray = FloatTypedArray | Array<number>;
 
 /**
 * Interface defining PRNG options.
 */
 interface PRNGOptions {
 	/**
-	* Name of pseudorandom number generator (PRNG), which will serve as the underlying source of pseudorandom numbers. Default: 'mt19937'.
-	*/
-	name?: 'mt19937' | 'minstd' | 'minstd-shuffle';
-
-	/**
 	* Pseudorandom number generator seed.
 	*/
-	seed?: random.PRNGSeedMT19937 | random.PRNGSeedMINSTD;
+	seed?: random.PRNGSeedMT19937;
 
 	/**
 	* Pseudorandom number generator state.
 	*/
-	state?: random.PRNGStateMT19937 | random.PRNGStateMINSTD;
+	state?: random.PRNGStateMT19937;
 
 	/**
 	* Specifies whether to copy a provided pseudorandom number generator state. Default: true.
@@ -63,9 +68,14 @@ interface PRNGOptions {
 */
 interface FactoryOptions extends PRNGOptions {
 	/**
-	* Default output array data type. Default: 'float64'.
+	* Default output array data type when generating integer values. Default: 'float64'.
 	*/
-	dtype?: DataType;
+	idtype?: DataType;
+
+	/**
+	* Default output array data type when generating normalized values. Default: 'float64'.
+	*/
+	ndtype?: NormalizedDataType;
 }
 
 /**
@@ -76,6 +86,16 @@ interface Options {
 	* Output array data type.
 	*/
 	dtype?: DataType;
+}
+
+/**
+* Interface defining options.
+*/
+interface NormalizedOptions {
+	/**
+	* Output array data type.
+	*/
+	dtype?: NormalizedDataType;
 }
 
 /**
@@ -90,7 +110,7 @@ interface PRNG {
 	/**
 	* PRNG seed.
 	*/
-	readonly seed: random.PRNGSeedMT19937 | random.PRNGSeedMINSTD;
+	readonly seed: random.PRNGSeedMT19937;
 
 	/**
 	* PRNG seed length.
@@ -100,7 +120,7 @@ interface PRNG {
 	/**
 	* PRNG state.
 	*/
-	state: random.PRNGStateMT19937 | random.PRNGStateMINSTD;
+	state: random.PRNGStateMT19937;
 
 	/**
 	* PRNG state length.
@@ -114,51 +134,79 @@ interface PRNG {
 }
 
 /**
-* Interface for generating uniformly distributed pseudorandom numbers between `0` and `1`.
+* Interface for generating pseudorandom numbers using a 32-bit Mersenne Twister pseudorandom number generator.
 */
 interface UnaryFunction extends PRNG {
 	/**
-	* Returns an array containing uniformly distributed pseudorandom numbers between `0` and `1`.
+	* Returns an array containing pseudorandom integers on the interval `[0, 4294967295]`.
 	*
 	* @param len - array length
 	* @param options - function options
 	* @returns output array
 	*/
 	( len: number, options?: Options ): RandomArray;
+
+	/**
+	* Returns an array containing pseudorandom numbers on the interval `[0,1)` with 53-bit precision.
+	*
+	* @param len - array length
+	* @param options - function options
+	* @returns output array
+	*/
+	normalized( len: number, options?: NormalizedOptions ): NormalizedRandomArray; // tslint:disable-line:max-line-length
 }
 
 /**
-* Interface for generating uniformly distributed pseudorandom numbers between `0` and `1`.
+* Interface for generating pseudorandom numbers using a 32-bit Mersenne Twister pseudorandom number generator.
 */
 interface Random extends PRNG {
 	/**
-	* Returns an array containing uniformly distributed pseudorandom numbers between `0` and `1`.
+	* Returns an array containing pseudorandom integers on the interval `[0, 4294967295]`.
 	*
 	* @param len - array length
 	* @param options - function options
 	* @returns output array
 	*
 	* @example
-	* var out = randu( 10 );
+	* var out = mt19937( 10 );
 	* // returns <Float64Array>
 	*/
 	( len: number, options?: Options ): RandomArray;
 
 	/**
-	* Returns a function for creating arrays containing uniformly distributed pseudorandom numbers between `0` and `1`.
+	* Returns an array containing pseudorandom numbers on the interval `[0,1)` with 53-bit precision.
+	*
+	* @param len - array length
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = mt19937.normalized( 10 );
+	* // returns <Float64Array>
+	*/
+	normalized( len: number, options?: NormalizedOptions ): NormalizedRandomArray; // tslint:disable-line:max-line-length
+
+	/**
+	* Returns a function for creating arrays containing pseudorandom numbers generated using a 32-bit Mersenne Twister pseudorandom number generator.
 	*
 	* @param options - function options
 	* @throws must provide a valid state
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = randu.factory();
+	* var random = mt19937.factory();
 	*
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = randu.factory({
+	* var random = mt19937.factory();
+	*
+	* var out = random.normalized( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = mt19937.factory({
 	*     'seed': 297
 	* });
 	* var out = random( 10 );
@@ -168,25 +216,29 @@ interface Random extends PRNG {
 }
 
 /**
-* Returns an array containing uniformly distributed pseudorandom numbers between `0` and `1`.
+* Returns an array containing pseudorandom numbers using a 32-bit Mersenne Twister pseudorandom number generator.
 *
 * @param len - array length
 * @param options - function options
 * @returns output array
 *
 * @example
-* var out = randu( 10 );
+* var out = mt19937( 10 );
 * // returns <Float64Array>
 *
 * @example
-* var random = randu.factory();
+* var out = mt19937.normalized( 10 );
+* // returns <Float64Array>
+*
+* @example
+* var random = mt19937.factory();
 *
 * var out = random( 10 );
 * // returns <Float64Array>
 */
-declare var randu: Random;
+declare var mt19937: Random;
 
 
 // EXPORTS //
 
-export = randu;
+export = mt19937;

@@ -82,6 +82,15 @@ setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
 setReadOnly( ns, 'lognormal', require( './../../array/lognormal' ) );
 
 /**
+* @name mt19937
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/mt19937}
+*/
+setReadOnly( ns, 'mt19937', require( './../../array/mt19937' ) );
+
+/**
 * @name normal
 * @memberof ns
 * @readonly
