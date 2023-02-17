@@ -24,7 +24,7 @@ var isNonNegativeInteger = require( '@stdlib/assert/is-nonnegative-integer' ).is
 var setReadOnly = require( '@stdlib/utils/define-nonenumerable-read-only-property' );
 var setReadOnlyAccessor = require( '@stdlib/utils/define-nonenumerable-read-only-accessor' );
 var setReadWriteAccessor = require( '@stdlib/utils/define-nonenumerable-read-write-accessor' );
-var base = require( './../../../base/mt19937' );
+var base = require( './../../../base/minstd' );
 var ctors = require( '@stdlib/array/typed-real-ctors' );
 var filledBy = require( '@stdlib/array/base/filled-by' );
 var nullary = require( '@stdlib/strided/base/nullary' );
@@ -36,11 +36,11 @@ var validate = require( './validate.js' );
 // MAIN //
 
 /**
-* Returns a function for creating arrays containing pseudorandom numbers generated using a 32-bit Mersenne Twister pseudorandom number generator.
+* Returns a function for creating arrays containing pseudorandom numbers generated using a linear congruential pseudorandom number generator (LCG).
 *
 * @param {Options} [options] - function options
-* @param {PRNGSeedMT19937} [options.seed] - pseudorandom number generator seed
-* @param {PRNGStateMT19937} [options.state] - pseudorandom number generator state
+* @param {PRNGSeedMINSTD} [options.seed] - pseudorandom number generator seed
+* @param {PRNGStateMINSTD} [options.state] - pseudorandom number generator state
 * @param {boolean} [options.copy=true] - boolean indicating whether to copy a provided pseudorandom number generator state
 * @param {string} [options.idtype="float64"] - default data type when generating integers
 * @param {string} [options.ndtype="float64"] - default data type when generating normalized numbers
@@ -50,26 +50,26 @@ var validate = require( './validate.js' );
 * @returns {Function} function for creating arrays
 *
 * @example
-* var mt19937 = factory();
+* var minstd = factory();
 * // returns <Function>
 *
-* var arr = mt19937( 10 );
+* var arr = minstd( 10 );
 * // returns <Float64Array>
 *
 * @example
-* var mt19937 = factory();
+* var minstd = factory();
 * // returns <Function>
 *
-* var arr = mt19937( 10, {
+* var arr = minstd( 10, {
 *     'dtype': 'generic'
 * });
 * // returns [...]
 *
 * @example
-* var mt19937 = factory();
+* var minstd = factory();
 * // returns <Function>
 *
-* var arr = mt19937.normalized( 10 );
+* var arr = minstd.normalized( 10 );
 * // returns <Float64Array>
 */
 function factory() {
@@ -86,7 +86,7 @@ function factory() {
 	};
 
 	nargs = arguments.length;
-	rand = mt19937;
+	rand = minstd;
 	if ( nargs === 0 ) {
 		prng = base;
 	} else if ( nargs === 1 ) {
@@ -107,7 +107,7 @@ function factory() {
 	return rand;
 
 	/**
-	* Returns an array containing pseudorandom integers on the interval `[0, 4294967295]`.
+	* Returns an array containing pseudorandom integers on the interval `[1, 2147483646]`.
 	*
 	* @private
 	* @param {NonNegativeInteger} len - array length
@@ -118,7 +118,7 @@ function factory() {
 	* @throws {TypeError} must provide valid options
 	* @returns {(Array|TypedArray)} output array
 	*/
-	function mt19937( len, options ) {
+	function minstd( len, options ) {
 		var ctor;
 		var out;
 		var err;
@@ -145,7 +145,7 @@ function factory() {
 	}
 
 	/**
-	* Returns an array containing pseudorandom numbers on the interval `[0, 1)` with 53-bit precision.
+	* Returns an array containing pseudorandom numbers on the interval `[0, 1)`.
 	*
 	* @private
 	* @param {NonNegativeInteger} len - array length
@@ -186,7 +186,7 @@ function factory() {
 	* Returns the PRNG seed.
 	*
 	* @private
-	* @returns {Uint32Array} seed
+	* @returns {Int32Array} seed
 	*/
 	function getSeed() {
 		return rand.PRNG.seed;
@@ -226,7 +226,7 @@ function factory() {
 	* Returns the current pseudorandom number generator state.
 	*
 	* @private
-	* @returns {Uint32Array} current state
+	* @returns {Int32Array} current state
 	*/
 	function getState() {
 		return rand.PRNG.state;
@@ -236,7 +236,7 @@ function factory() {
 	* Sets the pseudorandom number generator state.
 	*
 	* @private
-	* @param {Uint32Array} s - generator state
+	* @param {Int32Array} s - generator state
 	* @throws {Error} must provide a valid state
 	*/
 	function setState( s ) {
