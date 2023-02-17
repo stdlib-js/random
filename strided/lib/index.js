@@ -82,6 +82,15 @@ setReadOnly( ns, 'exponential', require( './../../strided/exponential' ) );
 setReadOnly( ns, 'lognormal', require( './../../strided/lognormal' ) );
 
 /**
+* @name minstd
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/minstd}
+*/
+setReadOnly( ns, 'minstd', require( './../../strided/minstd' ) );
+
+/**
 * @name mt19937
 * @memberof ns
 * @readonly
