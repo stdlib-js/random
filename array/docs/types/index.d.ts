@@ -26,6 +26,8 @@ import beta = require( './../../../array/beta' );
 import discreteUniform = require( './../../../array/discrete-uniform' );
 import exponential = require( './../../../array/exponential' );
 import lognormal = require( './../../../array/lognormal' );
+import minstd = require( './../../../array/minstd' );
+import mt19937 = require( './../../../array/mt19937' );
 import normal = require( './../../../array/normal' );
 import randu = require( './../../../array/randu' );
 import uniform = require( './../../../array/uniform' );
@@ -137,6 +139,52 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	lognormal: typeof lognormal;
+
+	/**
+	* Returns an array containing pseudorandom numbers using a linear congruential pseudorandom number generator (LCG).
+	*
+	* @param len - array length
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.minstd( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var out = ns.minstd.normalized( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.minstd.factory();
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	minstd: typeof minstd;
+
+	/**
+	* Returns an array containing pseudorandom numbers using a 32-bit Mersenne Twister pseudorandom number generator.
+	*
+	* @param len - array length
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.mt19937( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var out = ns.mt19937.normalized( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.mt19937.factory();
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	mt19937: typeof mt19937;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
