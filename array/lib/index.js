@@ -55,6 +55,15 @@ setReadOnly( ns, 'arcsine', require( './../../array/arcsine' ) );
 setReadOnly( ns, 'beta', require( './../../array/beta' ) );
 
 /**
+* @name betaprime
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/betaprime}
+*/
+setReadOnly( ns, 'betaprime', require( './../../array/betaprime' ) );
+
+/**
 * @name discreteUniform
 * @memberof ns
 * @readonly
@@ -73,6 +82,24 @@ setReadOnly( ns, 'discreteUniform', require( './../../array/discrete-uniform' ) 
 setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
 
 /**
+* @name gamma
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/gamma}
+*/
+setReadOnly( ns, 'gamma', require( './../../array/gamma' ) );
+
+/**
+* @name invgamma
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/invgamma}
+*/
+setReadOnly( ns, 'invgamma', require( './../../array/invgamma' ) );
+
+/**
 * @name lognormal
 * @memberof ns
 * @readonly
@@ -89,6 +116,15 @@ setReadOnly( ns, 'lognormal', require( './../../array/lognormal' ) );
 * @see {@link module:@stdlib/random/array/minstd}
 */
 setReadOnly( ns, 'minstd', require( './../../array/minstd' ) );
+
+/**
+* @name minstdShuffle
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/minstd-shuffle}
+*/
+setReadOnly( ns, 'minstdShuffle', require( './../../array/minstd-shuffle' ) );
 
 /**
 * @name mt19937

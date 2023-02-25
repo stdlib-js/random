@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/random",
-  "version": null,
+  "version": "0.0.12",
   "description": "Random numbers.",
   "license": "Apache-2.0",
   "author": {

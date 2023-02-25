@@ -55,6 +55,15 @@ setReadOnly( ns, 'arcsine', require( './../../strided/arcsine' ) );
 setReadOnly( ns, 'beta', require( './../../strided/beta' ) );
 
 /**
+* @name betaprime
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/betaprime}
+*/
+setReadOnly( ns, 'betaprime', require( './../../strided/betaprime' ) );
+
+/**
 * @name discreteUniform
 * @memberof ns
 * @readonly
