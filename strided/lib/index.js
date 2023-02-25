@@ -100,6 +100,15 @@ setReadOnly( ns, 'lognormal', require( './../../strided/lognormal' ) );
 setReadOnly( ns, 'minstd', require( './../../strided/minstd' ) );
 
 /**
+* @name minstdShuffle
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/minstd-shuffle}
+*/
+setReadOnly( ns, 'minstdShuffle', require( './../../strided/minstd-shuffle' ) );
+
+/**
 * @name mt19937
 * @memberof ns
 * @readonly
