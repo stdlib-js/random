@@ -64,6 +64,15 @@ setReadOnly( ns, 'beta', require( './../../strided/beta' ) );
 setReadOnly( ns, 'betaprime', require( './../../strided/betaprime' ) );
 
 /**
+* @name cosine
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/cosine}
+*/
+setReadOnly( ns, 'cosine', require( './../../strided/cosine' ) );
+
+/**
 * @name discreteUniform
 * @memberof ns
 * @readonly
@@ -80,6 +89,24 @@ setReadOnly( ns, 'discreteUniform', require( './../../strided/discrete-uniform' 
 * @see {@link module:@stdlib/random/strided/exponential}
 */
 setReadOnly( ns, 'exponential', require( './../../strided/exponential' ) );
+
+/**
+* @name gamma
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/gamma}
+*/
+setReadOnly( ns, 'gamma', require( './../../strided/gamma' ) );
+
+/**
+* @name invgamma
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/invgamma}
+*/
+setReadOnly( ns, 'invgamma', require( './../../strided/invgamma' ) );
 
 /**
 * @name lognormal

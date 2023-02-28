@@ -64,6 +64,15 @@ setReadOnly( ns, 'beta', require( './../../array/beta' ) );
 setReadOnly( ns, 'betaprime', require( './../../array/betaprime' ) );
 
 /**
+* @name cosine
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/cosine}
+*/
+setReadOnly( ns, 'cosine', require( './../../array/cosine' ) );
+
+/**
 * @name discreteUniform
 * @memberof ns
 * @readonly
