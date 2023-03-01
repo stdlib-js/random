@@ -24,10 +24,14 @@
 import arcsine = require( './../../../strided/arcsine' );
 import beta = require( './../../../strided/beta' );
 import betaprime = require( './../../../strided/betaprime' );
+import cosine = require( './../../../strided/cosine' );
 import discreteUniform = require( './../../../strided/discrete-uniform' );
 import exponential = require( './../../../strided/exponential' );
+import gamma = require( './../../../strided/gamma' );
+import invgamma = require( './../../../strided/invgamma' );
 import lognormal = require( './../../../strided/lognormal' );
 import minstd = require( './../../../strided/minstd' );
+import minstdShuffle = require( './../../../strided/minstd-shuffle' );
 import mt19937 = require( './../../../strided/mt19937' );
 import normal = require( './../../../strided/normal' );
 import randu = require( './../../../strided/randu' );
@@ -146,6 +150,42 @@ interface Namespace {
 	betaprime: typeof betaprime;
 
 	/**
+	* Fills a strided array with pseudorandom numbers drawn from a raised cosine distribution.
+	*
+	* @param N - number of indexed elements
+	* @param mu - mean
+	* @param sm - `mu` stride length
+	* @param s - scale parameter
+	* @param ss - `s` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @param options - function options
+	* @throws must provide valid distribution parameters
+	* @throws must provide valid options
+	* @throws must provide a valid state
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.cosine( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.cosine.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+	*/
+	cosine: typeof cosine;
+
+	/**
 	* Fills a strided array with pseudorandom numbers drawn from a discrete uniform distribution.
 	*
 	* @param N - number of indexed elements
@@ -214,6 +254,78 @@ interface Namespace {
 	* ns.exponential.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
 	*/
 	exponential: typeof exponential;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a gamma distribution.
+	*
+	* @param N - number of indexed elements
+	* @param alpha - shape parameter
+	* @param sa - `alpha` stride length
+	* @param beta - rate parameter
+	* @param sb - `beta` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @param options - function options
+	* @throws must provide valid distribution parameters
+	* @throws must provide valid options
+	* @throws must provide a valid state
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.gamma( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.gamma.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+	*/
+	gamma: typeof gamma;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from an inverse gamma distribution.
+	*
+	* @param N - number of indexed elements
+	* @param alpha - shape parameter
+	* @param sa - `alpha` stride length
+	* @param beta - scale parameter
+	* @param sb - `beta` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @param options - function options
+	* @throws must provide valid distribution parameters
+	* @throws must provide valid options
+	* @throws must provide a valid state
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.invgamma( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.invgamma.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
+	*/
+	invgamma: typeof invgamma;
 
 	/**
 	* Fills a strided array with pseudorandom numbers drawn from a lognormal distribution.
@@ -299,6 +411,55 @@ interface Namespace {
 	* ns.minstd.normalized.ndarray( out.length, out, 1, 0 );
 	*/
 	minstd: typeof minstd;
+
+	/**
+	* Fills a strided array with pseudorandom integers on the interval `[1, 2147483646]`.
+	*
+	* @param N - number of indexed elements
+	* @param out - output array
+	* @param so - `out` stride length
+	* @param options - function options
+	* @throws must provide valid options
+	* @throws must provide a valid state
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.minstdShuffle( out.length, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.minstdShuffle.ndarray( out.length, out, 1, 0 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.minstdShuffle.normalized( out.length, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( `@stdlib/array/float64` );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.minstdShuffle.normalized.ndarray( out.length, out, 1, 0 );
+	*/
+	minstdShuffle: typeof minstdShuffle;
 
 	/**
 	* Fills a strided array with pseudorandom integers on the interval `[0, 4294967295]`.

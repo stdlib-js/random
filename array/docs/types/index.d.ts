@@ -24,12 +24,14 @@
 import arcsine = require( './../../../array/arcsine' );
 import beta = require( './../../../array/beta' );
 import betaprime = require( './../../../array/betaprime' );
+import cosine = require( './../../../array/cosine' );
 import discreteUniform = require( './../../../array/discrete-uniform' );
 import exponential = require( './../../../array/exponential' );
 import gamma = require( './../../../array/gamma' );
 import invgamma = require( './../../../array/invgamma' );
 import lognormal = require( './../../../array/lognormal' );
 import minstd = require( './../../../array/minstd' );
+import minstdShuffle = require( './../../../array/minstd-shuffle' );
 import mt19937 = require( './../../../array/mt19937' );
 import normal = require( './../../../array/normal' );
 import randu = require( './../../../array/randu' );
@@ -101,6 +103,27 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	betaprime: typeof betaprime;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a raised cosine distribution with parameters `mu` (mean) and `s` (scale parameter).
+	*
+	* @param len - array length
+	* @param mu - mean
+	* @param s - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.cosine( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.cosine.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	cosine: typeof cosine;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a discrete uniform distribution with minimum support `a` and maximum support `b`.
@@ -228,6 +251,29 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	minstd: typeof minstd;
+
+	/**
+	* Returns an array containing pseudorandom numbers using a linear congruential pseudorandom number generator (LCG) whose output is shuffled.
+	*
+	* @param len - array length
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.minstdShuffle( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var out = ns.minstdShuffle.normalized( 10 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.minstdShuffle.factory();
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	minstdShuffle: typeof minstdShuffle;
 
 	/**
 	* Returns an array containing pseudorandom numbers using a 32-bit Mersenne Twister pseudorandom number generator.
