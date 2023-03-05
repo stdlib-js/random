@@ -58,6 +58,7 @@
   "devDependencies": {
     "@stdlib/bench": "github:stdlib-js/bench#main",
     "@stdlib/console": "github:stdlib-js/console#main",
+    "@stdlib/ndarray": "github:stdlib-js/ndarray#main",
     "@stdlib/number": "github:stdlib-js/number#main",
     "@stdlib/time": "github:stdlib-js/time#main",
     "proxyquire": "^2.0.0",
