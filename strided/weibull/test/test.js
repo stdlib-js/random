@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,24 +16,23 @@
 * limitations under the License.
 */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include "stdlib/random/base.h"
-#include "stdlib/random/base/randu.h"
-#include "stdlib/random/base/uniform.h"
+'use strict';
 
-int main( void ) {
-	int32_t i;
-	double d;
+// MODULES //
 
-	struct BasePRNGObject *randu = stdlib_base_random_randu_allocate( 0 );
-	if ( randu == NULL ) {
-		fprintf( stderr, "Error allocating PRNG.\n" );
-		exit( 1 );
-	}
-	for ( i = 0; i < 10; i++ ) {
-		d = stdlib_base_random_uniform( randu, -10.0, 10.0 );
-		printf( "%0.16f\n", d );
-	}
-	stdlib_base_random_randu_free( randu );
-}
+var tape = require( 'tape' );
+var random = require( './../lib' );
+
+
+// TESTS //
+
+tape( 'main export is a function', function test( t ) {
+	t.ok( true, __filename );
+	t.strictEqual( typeof random, 'function', 'main export is a function' );
+	t.end();
+});
+
+tape( 'attached to the main export is a method providing an ndarray interface', function test( t ) {
+	t.strictEqual( typeof random.ndarray, 'function', 'method is a function' );
+	t.end();
+});
