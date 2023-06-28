@@ -171,6 +171,15 @@ setReadOnly( ns, 'randu', require( './../../strided/randu' ) );
 */
 setReadOnly( ns, 'uniform', require( './../../strided/uniform' ) );
 
+/**
+* @name weibull
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/weibull}
+*/
+setReadOnly( ns, 'weibull', require( './../../strided/weibull' ) );
+
 
 // EXPORTS //
 
