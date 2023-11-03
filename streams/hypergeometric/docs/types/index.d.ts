@@ -300,7 +300,7 @@ interface Constructor {
 	*     streams.push( createStream() );
 	* }
 	*/
-	factory( N: number, K: number, n: number, options?: Options ): ( ...args: Array<any> ) => RandomStream; // tslint:disable-line: max-line-length
+	factory( N: number, K: number, n: number, options?: Options ): ( ...args: Array<any> ) => RandomStream;
 
 	/**
 	* Returns a function for creating readable streams which generate pseudorandom numbers drawn from a hypergeometric distribution.
@@ -325,7 +325,7 @@ interface Constructor {
 	*     streams.push( createStream( 20, 10, 7 ) );
 	* }
 	*/
-	factory( options?: Options ): ( N: number, K: number, n: number ) => RandomStream; // tslint-disable-line max-line-length
+	factory( options?: Options ): ( N: number, K: number, n: number ) => RandomStream;
 
 	/**
 	* Returns an "objectMode" readable stream for generating a stream of pseudorandom numbers drawn from a hypergeometric distribution.
@@ -359,7 +359,7 @@ interface Constructor {
 	*
 	* stream.pipe( inspectStream.objectMode( log )  );
 	*/
-	objectMode( N: number, K: number, n: number, options?: Options ): RandomStream; // tslint-disable-line max-line-length
+	objectMode( N: number, K: number, n: number, options?: Options ): RandomStream;
 }
 
 /**
