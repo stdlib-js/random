@@ -207,6 +207,13 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/base/beta`][@stdlib/random/base/beta]</span><span class="delimiter">: </span><span class="description">beta distributed pseudorandom numbers.</span>
+-   <span class="package-name">[`@stdlib/random/array/beta`][@stdlib/random/array/beta]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a beta distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -220,6 +227,12 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 [@stdlib/random/base/beta]: https://github.com/stdlib-js/random/tree/main/base/beta
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/beta]: https://github.com/stdlib-js/random/tree/main/array/beta
+
+<!-- </related-links> -->
 
 </section>
 
