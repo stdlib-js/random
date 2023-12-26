@@ -100,6 +100,15 @@ setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
 setReadOnly( ns, 'gamma', require( './../../array/gamma' ) );
 
 /**
+* @name geometric
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/geometric}
+*/
+setReadOnly( ns, 'geometric', require( './../../array/geometric' ) );
+
+/**
 * @name invgamma
 * @memberof ns
 * @readonly
