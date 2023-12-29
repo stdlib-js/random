@@ -403,8 +403,6 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- <related-links> -->
 
-[@stdlib/random/base/improved-ziggurat]: https://github.com/stdlib-js/random/tree/main/base/improved-ziggurat
-
 [@stdlib/random/base/randu]: https://github.com/stdlib-js/random/tree/main/base/randu
 
 <!-- </related-links> -->
