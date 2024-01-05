@@ -20,16 +20,10 @@
 
 // MODULES //
 
-var dtypes = require( '@stdlib/array/typed-real-float-dtypes' );
 var isObject = require( '@stdlib/assert/is-plain-object' );
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
+var contains = require( '@stdlib/array/base/assert/contains' );
 var format = require( '@stdlib/string/format' );
-
-
-// VARIABLES //
-
-var DTYPES = dtypes();
-DTYPES.push( 'generic' );
 
 
 // MAIN //
@@ -39,28 +33,30 @@ DTYPES.push( 'generic' );
 *
 * @private
 * @param {Object} opts - destination object
+* @param {Array} dtypes - list of supported output data types
 * @param {Options} options - function options
 * @param {string} [options.dtype] - output array data type
 * @returns {(Error|null)} null or an error object
 *
 * @example
 * var opts = {};
+* var dtypes = [ 'float64', 'float32', 'generic' ];
 * var options = {
 *     'dtype': 'float64'
 * };
-* var err = validate( opts, options );
+* var err = validate( opts, dtypes, options );
 * if ( err ) {
 *     throw err;
 * }
 */
-function validate( opts, options ) {
+function validate( opts, dtypes, options ) {
 	if ( !isObject( options ) ) {
 		return new TypeError( format( 'invalid argument. Options argument must be an object. Value: `%s`.', options ) );
 	}
 	if ( hasOwnProp( options, 'dtype' ) ) {
 		opts.dtype = options.dtype;
-		if ( DTYPES.indexOf( opts.dtype ) < 0 ) {
-			return new TypeError( format( 'invalid option. `%s` option must be one of the following: "%s". Option: `%s`.', 'dtype', DTYPES.join( '", "' ), opts.dtype ) );
+		if ( !contains( dtypes, opts.dtype ) ) {
+			return new TypeError( format( 'invalid option. `%s` option must be one of the following: "%s". Option: `%s`.', 'dtype', dtypes.join( '", "' ), opts.dtype ) );
 		}
 	}
 	return null;
