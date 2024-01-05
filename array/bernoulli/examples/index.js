@@ -19,11 +19,11 @@
 'use strict';
 
 var logEach = require( '@stdlib/console/log-each' );
-var geometric = require( './../lib' );
+var bernoulli = require( './../lib' );
 
 // Create a function for generating random arrays originating from the same state:
-var random = geometric.factory( 0.01, {
-	'state': geometric.state,
+var random = bernoulli.factory( 0.5, {
+	'state': bernoulli.state,
 	'copy': true
 });
 
@@ -36,8 +36,8 @@ var x3 = random( 5 );
 logEach( '%f, %f, %f', x1, x2, x3 );
 
 // Create another function for generating random arrays with the original state:
-random = geometric.factory( 0.01, {
-	'state': geometric.state,
+random = bernoulli.factory( 0.5, {
+	'state': bernoulli.state,
 	'copy': true
 });
 

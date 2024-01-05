@@ -46,6 +46,15 @@ var ns = {};
 setReadOnly( ns, 'arcsine', require( './../../array/arcsine' ) );
 
 /**
+* @name bernoulli
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/bernoulli}
+*/
+setReadOnly( ns, 'bernoulli', require( './../../array/bernoulli' ) );
+
+/**
 * @name beta
 * @memberof ns
 * @readonly

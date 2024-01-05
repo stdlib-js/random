@@ -24,7 +24,7 @@ var bench = require( '@stdlib/bench' );
 var isnanf = require( '@stdlib/math/base/assert/is-nanf' );
 var pow = require( '@stdlib/math/base/special/pow' );
 var pkg = require( './../package.json' ).name;
-var geometric = require('./../lib');
+var bernoulli = require('./../lib');
 
 
 // FUNCTIONS //
@@ -37,9 +37,6 @@ var geometric = require('./../lib');
 * @returns {Function} benchmark function
 */
 function createBenchmark( len ) {
-	var fcn = geometric.factory( 0.01, {
-		'dtype': 'float32'
-	});
 	return benchmark;
 
 	/**
@@ -49,12 +46,17 @@ function createBenchmark( len ) {
 	* @param {Benchmark} b - benchmark instance
 	*/
 	function benchmark( b ) {
+		var opts;
 		var o;
 		var i;
 
+		opts = {
+			'dtype': 'float32'
+		};
+
 		b.tic();
 		for ( i = 0; i < b.iterations; i++ ) {
-			o = fcn( len );
+			o = bernoulli( len, 0.5, opts );
 			if ( isnanf( o[ i%len ] ) ) {
 				b.fail( 'should not return NaN' );
 			}
@@ -89,7 +91,7 @@ function main() {
 	for ( i = min; i <= max; i++ ) {
 		len = pow( 10, i );
 		f = createBenchmark( len );
-		bench( pkg+'::factory:dtype=float32,len='+len, f );
+		bench( pkg+':dtype=float32,len='+len, f );
 	}
 }
 
