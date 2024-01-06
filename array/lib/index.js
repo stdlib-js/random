@@ -190,6 +190,15 @@ setReadOnly( ns, 'poisson', require( './../../array/poisson' ) );
 setReadOnly( ns, 'randu', require( './../../array/randu' ) );
 
 /**
+* @name rayleigh
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/rayleigh}
+*/
+setReadOnly( ns, 'rayleigh', require( './../../array/rayleigh' ) );
+
+/**
 * @name uniform
 * @memberof ns
 * @readonly
