@@ -172,6 +172,15 @@ setReadOnly( ns, 'mt19937', require( './../../array/mt19937' ) );
 setReadOnly( ns, 'normal', require( './../../array/normal' ) );
 
 /**
+* @name poisson
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/poisson}
+*/
+setReadOnly( ns, 'poisson', require( './../../array/poisson' ) );
+
+/**
 * @name randu
 * @memberof ns
 * @readonly

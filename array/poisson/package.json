@@ -1,7 +1,7 @@
 {
-  "name": "@stdlib/random/array/geometric",
+  "name": "@stdlib/random/array/poisson",
   "version": "0.0.0",
-  "description": "Create an array containing pseudorandom numbers drawn from a geometric distribution.",
+  "description": "Create an array containing pseudorandom numbers drawn from a Poisson distribution.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -60,8 +60,8 @@
     "pseudorandom",
     "random",
     "rand",
-    "geometric",
-    "bernoulli",
+    "poisson",
+    "poiss",
     "discrete",
     "generator",
     "seed",
