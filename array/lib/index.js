@@ -82,6 +82,15 @@ setReadOnly( ns, 'betaprime', require( './../../array/betaprime' ) );
 setReadOnly( ns, 'chi', require( './../../array/chi' ) );
 
 /**
+* @name chisquare
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/chisquare}
+*/
+setReadOnly( ns, 'chisquare', require( './../../array/chisquare' ) );
+
+/**
 * @name cosine
 * @memberof ns
 * @readonly
@@ -206,6 +215,15 @@ setReadOnly( ns, 'randu', require( './../../array/randu' ) );
 * @see {@link module:@stdlib/random/array/rayleigh}
 */
 setReadOnly( ns, 'rayleigh', require( './../../array/rayleigh' ) );
+
+/**
+* @name t
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/t}
+*/
+setReadOnly( ns, 't', require( './../../array/t' ) );
 
 /**
 * @name uniform
