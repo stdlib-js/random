@@ -62,7 +62,7 @@ var format = require( '@stdlib/string/format' );
 * var random = factory();
 * // returns <Function>
 *
-* var x = random( 10, 2.0 );
+* var x = random( 10, 0.2 );
 * // returns <Float64Array>
 *
 * @example
@@ -76,7 +76,7 @@ var format = require( '@stdlib/string/format' );
 * var random = factory();
 * // returns <Function>
 *
-* var x = random( 10, 2.0, {
+* var x = random( 10, 0.2, {
 *     'dtype': 'float32'
 * });
 * // returns <Float32Array>
