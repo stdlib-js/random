@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -19,23 +19,23 @@
 'use strict';
 
 /**
-* Create a factory function for generating pseudorandom values drawn from a unary PRNG.
+* Create a factory function for generating pseudorandom values drawn from a binary PRNG.
 *
-* @module @stdlib/random/array/tools/unary-factory
+* @module @stdlib/random/array/tools/binary-factory
 *
 * @example
-* var exponential = require( '@stdlib/random/base/exponential' );
-* var unaryFactory = require( '@stdlib/random/array/tools/unary-factory' );
+* var arcsine = require( '@stdlib/random/base/arcsine' );
+* var binaryFactory = require( '@stdlib/random/array/tools/binary-factory' );
 *
 * var dtypes = [ 'float64', 'float32', 'generic' ];
 *
-* var factory = unaryFactory( exponential, dtypes, 'float64' );
+* var factory = binaryFactory( arcsine, dtypes, 'float64' );
 * // returns <Function>
 *
 * var random = factory();
 * // returns <Function>
 *
-* var x = random( 10, 2.0 );
+* var x = random( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 */
 

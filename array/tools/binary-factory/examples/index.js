@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -18,24 +18,29 @@
 
 'use strict';
 
-var exponential = require( './../../../../base/exponential' );
+var arcsine = require( './../../../../base/arcsine' );
 var dtypes = require( '@stdlib/array/dtypes' );
-var Random = require( './../lib' );
+var binaryFactory = require( './../lib' );
 
 var dt = dtypes( 'real_floating_point_and_generic' );
-var random = new Random( exponential.factory( 2.0 ), dt, 'float64' );
 
-var x = random.generate( 10 );
+var factory = binaryFactory( arcsine, dt, 'float64' );
+// returns <Function>
+
+var random = factory();
+// returns <Function>
+
+var x = random( 10, 2.0, 5.0 );
 console.log( x );
 // => <Float64Array>
 
-x = random.generate( 10, {
+x = random( 10, 2.0, 5.0, {
 	'dtype': 'float32'
 });
 console.log( x );
 // => <Float32Array>
 
-x = random.generate( 10, {
+x = random( 10, 2.0, 5.0, {
 	'dtype': 'generic'
 });
 console.log( x );

@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,11 +21,13 @@
 // MODULES //
 
 var bench = require( '@stdlib/bench' );
-var isnanf = require( '@stdlib/math/base/assert/is-nanf' );
+var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var pow = require( '@stdlib/math/base/special/pow' );
+var arcsine = require( './../../../../base/arcsine' );
+var dtypes = require( '@stdlib/array/dtypes' );
 var zeros = require( '@stdlib/array/zeros' );
 var pkg = require( './../package.json' ).name;
-var random = require( './../lib' );
+var Random = require( './../lib' );
 
 
 // FUNCTIONS //
@@ -38,6 +40,12 @@ var random = require( './../lib' );
 * @returns {Function} benchmark function
 */
 function createBenchmark( len ) {
+	var random;
+	var dt;
+
+	dt = dtypes( 'real_floating_point' );
+	random = new Random( arcsine, dt, 'float64' );
+
 	return benchmark;
 
 	/**
@@ -51,17 +59,17 @@ function createBenchmark( len ) {
 		var o;
 		var i;
 
-		out = zeros( len, 'float32' );
+		out = zeros( len, 'float64' );
 
 		b.tic();
 		for ( i = 0; i < b.iterations; i++ ) {
-			o = random.assign( 2.0, out );
-			if ( isnanf( o[ i%len ] ) ) {
+			o = random.assign( 2.0, 5.0, out );
+			if ( isnan( o[ i%len ] ) ) {
 				b.fail( 'should not return NaN' );
 			}
 		}
 		b.toc();
-		if ( isnanf( o[ i%len ] ) ) {
+		if ( isnan( o[ i%len ] ) ) {
 			b.fail( 'should not return NaN' );
 		}
 		b.pass( 'benchmark finished' );
@@ -90,7 +98,7 @@ function main() {
 	for ( i = min; i <= max; i++ ) {
 		len = pow( 10, i );
 		f = createBenchmark( len );
-		bench( pkg+':assign:dtype=float32,len='+len, f );
+		bench( pkg+':assign:len='+len, f );
 	}
 }
 

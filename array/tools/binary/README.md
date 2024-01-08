@@ -2,7 +2,7 @@
 
 @license Apache-2.0
 
-Copyright (c) 2023 The Stdlib Authors.
+Copyright (c) 2024 The Stdlib Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,57 +18,58 @@ limitations under the License.
 
 -->
 
-# Unary
+# Binary
 
-> Constructor for creating arrays filled with pseudorandom values drawn from a unary PRNG.
+> Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var Random = require( '@stdlib/random/array/tools/unary' );
+var Random = require( '@stdlib/random/array/tools/binary' );
 ```
 
 #### Random( prng, dtypes, dtype )
 
-Constructor for creating arrays filled with pseudorandom values drawn from a unary PRNG.
+Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
 var dtypes = [ 'float64', 'float32', 'generic' ];
 var defaultDType = 'float64';
 
-var random = new Random( exponential, dtypes, defaultDType );
+var random = new Random( arcsine, dtypes, defaultDType );
 ```
 
 The constructor has the following parameters:
 
--   **prng**: unary pseudorandom value generator.
+-   **prng**: binary pseudorandom value generator.
 -   **dtypes**: list of supported output data types.
 -   **dtype**: default output data type.
 
-#### Random.prototype.generate( len, param1\[, options] )
+#### Random.prototype.generate( len, param1, param2\[, options] )
 
-Returns an array filled with pseudorandom values drawn from a unary PRNG.
+Returns an array filled with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
 var dtypes = [ 'float64', 'float32', 'generic' ];
 var defaultDType = 'float64';
 
-var random = new Random( exponential, dtypes, defaultDType );
+var random = new Random( arcsine, dtypes, defaultDType );
 
-var v = random.generate( 10, 2.0 );
+var v = random.generate( 10, 2.0, 5.0 );
 // returns <Float64Array>
 ```
 
 The method has the following parameters:
 
 -   **len**: output array length.
--   **param1**: PRNG parameter.
+-   **param1**: first PRNG parameter.
+-   **param2**: second PRNG parameter.
 -   **options**: function options.
 
 The method accepts the following options:
@@ -78,36 +79,36 @@ The method accepts the following options:
 By default, the method returns an array having the default output array data type. To override the default, set the `dtype` option.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
 var dtypes = [ 'float64', 'float32', 'generic' ];
 var defaultDType = 'float64';
 
-var random = new Random( exponential, dtypes, defaultDType );
+var random = new Random( arcsine, dtypes, defaultDType );
 
-var v = random.generate( 10, 2.0, {
+var v = random.generate( 10, 2.0, 5.0, {
     'dtype': 'float32'
 });
 // returns <Float32Array>
 ```
 
-#### Random.prototype.assign( param1, out )
+#### Random.prototype.assign( param1, param2, out )
 
-Fills an array with pseudorandom values drawn from a unary PRNG.
+Fills an array with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 var zeros = require( '@stdlib/array/zeros' );
 
 var dtypes = [ 'float64', 'float32', 'generic' ];
 var defaultDType = 'float64';
 
-var random = new Random( exponential, dtypes, defaultDType );
+var random = new Random( arcsine, dtypes, defaultDType );
 
 var out = zeros( 10, 'float64' );
 // returns <Float64Array>
 
-var v = random.assign( 2.0, out );
+var v = random.assign( 2.0, 5.0, out );
 // returns <Float64Array>
 
 var bool = ( v === out );
@@ -116,7 +117,8 @@ var bool = ( v === out );
 
 The method has the following parameters:
 
--   **param1**: PRNG parameter.
+-   **param1**: first PRNG parameter.
+-   **param2**: second PRNG parameter.
 -   **out**: output array.
 
 </section>
@@ -136,22 +138,22 @@ The method has the following parameters:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 var dtypes = require( '@stdlib/array/dtypes' );
-var Random = require( '@stdlib/random/array/tools/unary' );
+var Random = require( '@stdlib/random/array/tools/binary' );
 
 var dt = dtypes( 'real_floating_point_and_generic' );
-var random = new Random( exponential, dt, 'float64' );
+var random = new Random( arcsine, dt, 'float64' );
 
-var x = random.generate( 10, 2.0 );
+var x = random.generate( 10, 2.0, 5.0 );
 // returns <Float64Array>
 
-x = random.generate( 10, 2.0, {
+x = random.generate( 10, 2.0, 5.0, {
     'dtype': 'float32'
 });
 // returns <Float32Array>
 
-x = random.generate( 10, 2.0, {
+x = random.generate( 10, 2.0, 5.0, {
     'dtype': 'generic'
 });
 // returns [...]

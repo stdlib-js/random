@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -26,12 +26,11 @@ var setReadOnly = require( '@stdlib/utils/define-nonenumerable-read-only-propert
 var isStringArray = require( '@stdlib/assert/is-string-array' ).primitives;
 var isFunction = require( '@stdlib/assert/is-function' );
 var isMethodIn = require( '@stdlib/assert/is-method-in' );
-var isPlainObject = require( '@stdlib/assert/is-plain-object' );
 var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var contains = require( '@stdlib/array/base/assert/contains' ).factory;
 var constantFunction = require( '@stdlib/utils/constant-function' );
 var noop = require( '@stdlib/utils/noop' );
-var UnaryRandom = require( './../../../../array/tools/unary' );
+var BinaryRandom = require( './../../../../array/tools/binary' );
 var NullaryRandom = require( './../../../../array/tools/nullary' );
 var format = require( '@stdlib/string/format' );
 
@@ -39,10 +38,10 @@ var format = require( '@stdlib/string/format' );
 // MAIN //
 
 /**
-* Returns a factory function for generating pseudorandom values drawn from a unary PRNG.
+* Returns a factory function for generating pseudorandom values drawn from a binary PRNG.
 *
-* @param {Function} prng - unary pseudorandom value generator
-* @param {Function} prng.factory - method which returns a new unary pseudorandom value generator
+* @param {Function} prng - binary pseudorandom value generator
+* @param {Function} prng.factory - method which returns a new binary pseudorandom value generator
 * @param {StringArray} dtypes - list of supported output array data types
 * @param {string} dtype - default output array data type
 * @throws {TypeError} first argument must be a function
@@ -52,31 +51,31 @@ var format = require( '@stdlib/string/format' );
 * @returns {Function} function which returns a function for creating arrays
 *
 * @example
-* var exponential = require( '@stdlib/random/base/exponential' );
+* var arcsine = require( '@stdlib/random/base/arcsine' );
 *
 * var dtypes = [ 'float64', 'float32', 'generic' ];
 *
-* var factory = createFactory( exponential, dtypes, 'float64' );
+* var factory = createFactory( arcsine, dtypes, 'float64' );
 * // returns <Function>
 *
 * var random = factory();
 * // returns <Function>
 *
-* var x = random( 10, 2.0 );
+* var x = random( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var exponential = require( '@stdlib/random/base/exponential' );
+* var arcsine = require( '@stdlib/random/base/arcsine' );
 *
 * var dtypes = [ 'float64', 'float32', 'generic' ];
 *
-* var factory = createFactory( exponential, dtypes, 'float64' );
+* var factory = createFactory( arcsine, dtypes, 'float64' );
 * // returns <Function>
 *
 * var random = factory();
 * // returns <Function>
 *
-* var x = random( 10, 2.0, {
+* var x = random( 10, 2.0, 5.0, {
 *     'dtype': 'float32'
 * });
 * // returns <Float32Array>
@@ -104,7 +103,8 @@ function createFactory( prng, dtypes, dtype ) {
 	* Returns a function for generating pseudorandom values drawn from a PRNG.
 	*
 	* @private
-	* @param {*} [param1] - PRNG parameter
+	* @param {*} [param1] - first PRNG parameter
+	* @param {*} [param2] - second PRNG parameter
 	* @param {Options} [options] - function options
 	* @param {PRNG} [options.prng] - pseudorandom number generator which generates uniformly distributed pseudorandom numbers
 	* @param {*} [options.seed] - pseudorandom value generator seed
@@ -120,6 +120,7 @@ function createFactory( prng, dtypes, dtype ) {
 		var Random;
 		var random;
 		var param1;
+		var param2;
 		var assign;
 		var nargs;
 		var base;
@@ -132,19 +133,21 @@ function createFactory( prng, dtypes, dtype ) {
 			opts = {};
 			base = prng;
 			rand = rand1;
-		} else if ( nargs > 1 ) {                       // e.g., factory( param1, {} )
-			param1 = arguments[ 0 ];
-			opts = arguments[ 1 ];
-			base = prng.factory( param1, opts );
-			rand = rand2;
-		} else if ( isPlainObject( arguments[ 0 ] ) ) { // e.g., factory( {} )
+		} else if ( nargs === 1 ) {                     // e.g., factory( {} )
 			opts = arguments[ 0 ];
 			base = prng.factory( opts );
 			rand = rand1;
-		} else {                                        // e.g., factory( param1 )
+		} else if ( nargs === 2 ) {                     // e.g., factory( param1, param2 )
 			param1 = arguments[ 0 ];
+			param2 = arguments[ 1 ];
 			opts = {};
-			base = prng.factory( param1 );
+			base = prng.factory( param1, param2 );
+			rand = rand2;
+		} else {                                        // e.g., factory( param1, param2, {} )
+			param1 = arguments[ 0 ];
+			param2 = arguments[ 1 ];
+			opts = arguments[ 2 ];
+			base = prng.factory( param1, param2, opts );
 			rand = rand2;
 		}
 		if ( hasOwnProp( opts, 'dtype' ) ) {
@@ -157,7 +160,7 @@ function createFactory( prng, dtypes, dtype ) {
 		}
 		if ( rand === rand1 ) {
 			assign = assign1;
-			Random = UnaryRandom;
+			Random = BinaryRandom;
 		} else {
 			assign = assign2;
 			Random = NullaryRandom;
@@ -185,7 +188,8 @@ function createFactory( prng, dtypes, dtype ) {
 		*
 		* @private
 		* @param {NonNegativeInteger} len - output array length
-		* @param {*} param1 - PRNG parameter
+		* @param {*} param1 - first PRNG parameter
+		* @param {*} param2 - second PRNG parameter
 		* @param {Options} [options] - function options
 		* @param {string} [options.dtype] - output array data type
 		* @throws {TypeError} first argument must be a nonnegative integer
@@ -193,11 +197,11 @@ function createFactory( prng, dtypes, dtype ) {
 		* @throws {TypeError} must provide valid options
 		* @returns {Collection} output array
 		*/
-		function rand1( len, param1, options ) {
-			if ( arguments.length < 3 ) {
-				return random.generate( len, param1 );
+		function rand1( len, param1, param2, options ) {
+			if ( arguments.length < 4 ) {
+				return random.generate( len, param1, param2 );
 			}
-			return random.generate( len, param1, options );
+			return random.generate( len, param1, param2, options );
 		}
 
 		/**
@@ -223,13 +227,14 @@ function createFactory( prng, dtypes, dtype ) {
 		* Fills an array with pseudorandom values drawn from a PRNG.
 		*
 		* @private
-		* @param {*} param1 - PRNG parameter
+		* @param {*} param1 - first PRNG parameter
+		* @param {*} param2 - second PRNG parameter
 		* @param {Collection} out - output array
-		* @throws {TypeError} second argument must be a collection
+		* @throws {TypeError} third argument must be a collection
 		* @returns {Collection} output array
 		*/
-		function assign1( param1, out ) {
-			return random.assign( param1, out );
+		function assign1( param1, param2, out ) {
+			return random.assign( param1, param2, out );
 		}
 
 		/**
