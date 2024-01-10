@@ -163,6 +163,15 @@ setReadOnly( ns, 'gamma', require( './../../array/gamma' ) );
 setReadOnly( ns, 'geometric', require( './../../array/geometric' ) );
 
 /**
+* @name gumbel
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/gumbel}
+*/
+setReadOnly( ns, 'gumbel', require( './../../array/gumbel' ) );
+
+/**
 * @name invgamma
 * @memberof ns
 * @readonly
