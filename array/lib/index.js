@@ -297,6 +297,15 @@ setReadOnly( ns, 't', require( './../../array/t' ) );
 */
 setReadOnly( ns, 'uniform', require( './../../array/uniform' ) );
 
+/**
+* @name weibull
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/weibull}
+*/
+setReadOnly( ns, 'weibull', require( './../../array/weibull' ) );
+
 
 // EXPORTS //
 
