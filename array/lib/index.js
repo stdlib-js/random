@@ -181,6 +181,15 @@ setReadOnly( ns, 'gumbel', require( './../../array/gumbel' ) );
 setReadOnly( ns, 'invgamma', require( './../../array/invgamma' ) );
 
 /**
+* @name kumaraswamy
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/kumaraswamy}
+*/
+setReadOnly( ns, 'kumaraswamy', require( './../../array/kumaraswamy' ) );
+
+/**
 * @name laplace
 * @memberof ns
 * @readonly
