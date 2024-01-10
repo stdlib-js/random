@@ -118,6 +118,15 @@ setReadOnly( ns, 'cosine', require( './../../array/cosine' ) );
 setReadOnly( ns, 'discreteUniform', require( './../../array/discrete-uniform' ) );
 
 /**
+* @name erlang
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/erlang}
+*/
+setReadOnly( ns, 'erlang', require( './../../array/erlang' ) );
+
+/**
 * @name exponential
 * @memberof ns
 * @readonly
