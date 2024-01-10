@@ -136,6 +136,15 @@ setReadOnly( ns, 'erlang', require( './../../array/erlang' ) );
 setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
 
 /**
+* @name f
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/f}
+*/
+setReadOnly( ns, 'f', require( './../../array/f' ) );
+
+/**
 * @name gamma
 * @memberof ns
 * @readonly
