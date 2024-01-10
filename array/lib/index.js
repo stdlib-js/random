@@ -181,6 +181,24 @@ setReadOnly( ns, 'gumbel', require( './../../array/gumbel' ) );
 setReadOnly( ns, 'invgamma', require( './../../array/invgamma' ) );
 
 /**
+* @name laplace
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/laplace}
+*/
+setReadOnly( ns, 'laplace', require( './../../array/laplace' ) );
+
+/**
+* @name levy
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/levy}
+*/
+setReadOnly( ns, 'levy', require( './../../array/levy' ) );
+
+/**
 * @name lognormal
 * @memberof ns
 * @readonly

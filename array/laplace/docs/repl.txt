@@ -1,7 +1,7 @@
 
-{{alias}}( len, mu, beta[, options] )
-    Returns an array containing pseudorandom numbers drawn from a Gumbel
-    distribution.
+{{alias}}( len, mu, b[, options] )
+    Returns an array containing pseudorandom numbers drawn from a Laplace
+    (double exponential) distribution.
 
     Parameters
     ----------
@@ -11,7 +11,7 @@
     mu: number
         Mean.
 
-    beta: number
+    b: number
         Scale parameter.
 
     options: Object (optional)
@@ -31,15 +31,16 @@
     <Float64Array>
 
 
-{{alias}}.assign( mu, beta, out )
-    Fills an array with pseudorandom numbers drawn from a Gumbel distribution.
+{{alias}}.assign( mu, b, out )
+    Fills an array with pseudorandom numbers drawn from a Laplace (double
+    exponential) distribution.
 
     Parameters
     ----------
     mu: number
         Mean.
 
-    beta: number
+    b: number
         Scale parameter.
 
     out: Array<number>|Float64Array|Float32Array
@@ -59,9 +60,9 @@
     true
 
 
-{{alias}}.factory( [mu, beta, ][options] )
+{{alias}}.factory( [mu, b, ][options] )
     Returns a function for creating arrays containing pseudorandom numbers drawn
-    from a Gumbel distribution.
+    from a Laplace (double exponential) distribution.
 
     If provided distribution parameters, the returned function returns random
     variates drawn from the specified distribution.
@@ -79,7 +80,7 @@
     mu: number (optional)
         Mean.
 
-    beta: number (optional)
+    b: number (optional)
         Scale parameter.
 
     options: Object (optional)

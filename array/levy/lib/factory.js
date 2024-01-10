@@ -23,7 +23,7 @@
 var binaryFactory = require( './../../../array/tools/binary-factory' );
 var dtypes = require( '@stdlib/array/dtypes' );
 var defaults = require( '@stdlib/array/defaults' );
-var base = require( './../../../base/gumbel' );
+var base = require( './../../../base/levy' );
 
 
 // VARIABLES //
@@ -34,12 +34,12 @@ var DTYPES = dtypes( 'real_floating_point_and_generic' );
 // MAIN //
 
 /**
-* Returns a function for creating arrays containing pseudorandom numbers drawn from a Gumbel distribution.
+* Returns a function for creating arrays containing pseudorandom numbers drawn from a Lévy distribution.
 *
 * @name factory
 * @type {Function}
-* @param {number} [mu] - mean
-* @param {PositiveNumber} [beta] - scale parameter
+* @param {number} [mu] - location parameter
+* @param {PositiveNumber} [c] - scale parameter
 * @param {Options} [options] - function options
 * @param {PRNG} [options.prng] - pseudorandom number generator which generates uniformly distributed pseudorandom numbers
 * @param {PRNGSeedMT19937} [options.seed] - pseudorandom number generator seed
@@ -47,24 +47,24 @@ var DTYPES = dtypes( 'real_floating_point_and_generic' );
 * @param {boolean} [options.copy=true] - boolean indicating whether to copy a provided pseudorandom number generator state
 * @param {string} [options.dtype="float64"] - default data type
 * @throws {TypeError} `mu` must be a number
-* @throws {TypeError} `beta` must be a positive number
+* @throws {TypeError} `c` must be a positive number
 * @throws {TypeError} options argument must be an object
 * @throws {TypeError} must provide valid options
 * @throws {Error} must provide a valid state
 * @returns {Function} function for creating arrays
 *
 * @example
-* var gumbel = factory( 2.0, 5.0 );
+* var levy = factory( 2.0, 5.0 );
 * // returns <Function>
 *
-* var arr = gumbel( 10 );
+* var arr = levy( 10 );
 * // returns <Float64Array>
 *
 * @example
-* var gumbel = factory( 2.0, 5.0 );
+* var levy = factory( 2.0, 5.0 );
 * // returns <Function>
 *
-* var arr = gumbel( 10, {
+* var arr = levy( 10, {
 *     'dtype': 'generic'
 * });
 * // returns [...]

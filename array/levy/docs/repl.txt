@@ -1,6 +1,6 @@
 
-{{alias}}( len, mu, beta[, options] )
-    Returns an array containing pseudorandom numbers drawn from a Gumbel
+{{alias}}( len, mu, c[, options] )
+    Returns an array containing pseudorandom numbers drawn from a Lévy
     distribution.
 
     Parameters
@@ -9,9 +9,9 @@
         Output array length.
 
     mu: number
-        Mean.
+        Location parameter.
 
-    beta: number
+    c: number
         Scale parameter.
 
     options: Object (optional)
@@ -31,15 +31,15 @@
     <Float64Array>
 
 
-{{alias}}.assign( mu, beta, out )
-    Fills an array with pseudorandom numbers drawn from a Gumbel distribution.
+{{alias}}.assign( mu, c, out )
+    Fills an array with pseudorandom numbers drawn from a Lévy distribution.
 
     Parameters
     ----------
     mu: number
-        Mean.
+        Location parameter.
 
-    beta: number
+    c: number
         Scale parameter.
 
     out: Array<number>|Float64Array|Float32Array
@@ -59,9 +59,9 @@
     true
 
 
-{{alias}}.factory( [mu, beta, ][options] )
+{{alias}}.factory( [mu, c, ][options] )
     Returns a function for creating arrays containing pseudorandom numbers drawn
-    from a Gumbel distribution.
+    from a Lévy distribution.
 
     If provided distribution parameters, the returned function returns random
     variates drawn from the specified distribution.
@@ -77,9 +77,9 @@
     Parameters
     ----------
     mu: number (optional)
-        Mean.
+        Location parameter.
 
-    beta: number (optional)
+    c: number (optional)
         Scale parameter.
 
     options: Object (optional)

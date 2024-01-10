@@ -18,32 +18,32 @@ limitations under the License.
 
 -->
 
-# Gumbel Random Numbers
+# Lévy Random Numbers
 
-> Create an array containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+> Create an array containing pseudorandom numbers drawn from a [Lévy][@stdlib/random/base/levy] distribution.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var gumbel = require( '@stdlib/random/array/gumbel' );
+var levy = require( '@stdlib/random/array/levy' );
 ```
 
-#### gumbel( len, mu, beta\[, options] )
+#### levy( len, mu, c\[, options] )
 
-Returns an array containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Returns an array containing pseudorandom numbers drawn from a [Lévy][@stdlib/random/base/levy] distribution.
 
 ```javascript
-var out = gumbel( 10, 2.0, 5.0 );
+var out = levy( 10, 2.0, 5.0 );
 // returns <Float64Array>
 ```
 
 The function has the following parameters:
 
 -   **len**: output array length.
--   **mu**: mean.
--   **beta**: scale parameter.
+-   **mu**: location parameter.
+-   **c**: scale parameter.
 -   **options**: function options.
 
 The function accepts the following `options`:
@@ -57,13 +57,13 @@ var opts = {
     'dtype': 'generic'
 };
 
-var out = gumbel( 10, 2.0, 5.0, opts );
+var out = levy( 10, 2.0, 5.0, opts );
 // returns [...]
 ```
 
-#### gumbel.assign( mu, beta, out )
+#### levy.assign( mu, c, out )
 
-Fills an array with pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Fills an array with pseudorandom numbers drawn from a [Lévy][@stdlib/random/base/levy] distribution.
 
 ```javascript
 var zeros = require( '@stdlib/array/zeros' );
@@ -71,7 +71,7 @@ var zeros = require( '@stdlib/array/zeros' );
 var x = zeros( 10, 'float64' );
 // returns <Float64Array>
 
-var out = gumbel.assign( 2.0, 5.0, x );
+var out = levy.assign( 2.0, 5.0, x );
 // returns <Float64Array>
 
 var bool = ( out === x );
@@ -80,16 +80,16 @@ var bool = ( out === x );
 
 The function has the following parameters:
 
--   **mu**: mean.
--   **beta**: scale parameter.
+-   **mu**: location parameter.
+-   **c**: scale parameter.
 -   **out**: output array.
 
-#### gumbel.factory( \[mu, beta, ]\[options] )
+#### levy.factory( \[mu, c, ]\[options] )
 
-Returns a function for creating arrays containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Returns a function for creating arrays containing pseudorandom numbers drawn from a [Lévy][@stdlib/random/base/levy] distribution.
 
 ```javascript
-var random = gumbel.factory();
+var random = levy.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -101,7 +101,7 @@ var len = out.length;
 If provided distribution parameters, the returned generator returns random variates from the specified distribution.
 
 ```javascript
-var random = gumbel.factory( 2.0, 5.0 );
+var random = levy.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -113,7 +113,7 @@ out = random( 10 );
 If not provided distribution parameters, the returned generator requires that distribution parameters be provided at each invocation.
 
 ```javascript
-var random = gumbel.factory();
+var random = levy.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -138,7 +138,7 @@ var minstd = require( '@stdlib/random/base/minstd' );
 var opts = {
     'prng': minstd.normalized
 };
-var random = gumbel.factory( 2.0, 5.0, opts );
+var random = levy.factory( 2.0, 5.0, opts );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -150,7 +150,7 @@ To seed the underlying pseudorandom number generator, set the `seed` option.
 var opts = {
     'seed': 12345
 };
-var random = gumbel.factory( 2.0, 5.0, opts );
+var random = levy.factory( 2.0, 5.0, opts );
 
 var out = random( 10, opts );
 // returns <Float64Array>
@@ -163,7 +163,7 @@ The returned function accepts the following `options`:
 To override the default output array data type, set the `dtype` option.
 
 ```javascript
-var random = gumbel.factory( 2.0, 5.0 );
+var random = levy.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -175,21 +175,21 @@ out = random( 10, opts );
 // returns [...]
 ```
 
-#### gumbel.PRNG
+#### levy.PRNG
 
 The underlying pseudorandom number generator.
 
 ```javascript
-var prng = gumbel.PRNG;
+var prng = levy.PRNG;
 // returns <Function>
 ```
 
-#### gumbel.seed
+#### levy.seed
 
 The value used to seed the underlying pseudorandom number generator.
 
 ```javascript
-var seed = gumbel.seed;
+var seed = levy.seed;
 // returns <Uint32Array>
 ```
 
@@ -198,7 +198,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = levy.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -206,12 +206,12 @@ var seed = random.seed;
 // returns null
 ```
 
-#### gumbel.seedLength
+#### levy.seedLength
 
 Length of underlying pseudorandom number generator seed.
 
 ```javascript
-var len = gumbel.seedLength;
+var len = levy.seedLength;
 // returns <number>
 ```
 
@@ -220,7 +220,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = levy.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -228,12 +228,12 @@ var len = random.seedLength;
 // returns null
 ```
 
-#### gumbel.state
+#### levy.state
 
 Writable property for getting and setting the underlying pseudorandom number generator state.
 
 ```javascript
-var state = gumbel.state;
+var state = levy.state;
 // returns <Uint32Array>
 ```
 
@@ -242,7 +242,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = levy.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -250,12 +250,12 @@ var state = random.state;
 // returns null
 ```
 
-#### gumbel.stateLength
+#### levy.stateLength
 
 Length of underlying pseudorandom number generator state.
 
 ```javascript
-var len = gumbel.stateLength;
+var len = levy.stateLength;
 // returns <number>
 ```
 
@@ -264,7 +264,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = levy.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -272,12 +272,12 @@ var len = random.stateLength;
 // returns null
 ```
 
-#### gumbel.byteLength
+#### levy.byteLength
 
 Size (in bytes) of underlying pseudorandom number generator state.
 
 ```javascript
-var sz = gumbel.byteLength;
+var sz = levy.byteLength;
 // returns <number>
 ```
 
@@ -286,7 +286,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = levy.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -317,11 +317,11 @@ var sz = random.byteLength;
 
 ```javascript
 var logEach = require( '@stdlib/console/log-each' );
-var gumbel = require( '@stdlib/random/array/gumbel' );
+var levy = require( '@stdlib/random/array/levy' );
 
 // Create a function for generating random arrays originating from the same state:
-var random = gumbel.factory( 2.0, 5.0, {
-    'state': gumbel.state,
+var random = levy.factory( 2.0, 5.0, {
+    'state': levy.state,
     'copy': true
 });
 
@@ -334,8 +334,8 @@ var x3 = random( 5 );
 logEach( '%f, %f, %f', x1, x2, x3 );
 
 // Create another function for generating random arrays with the original state:
-random = gumbel.factory( 2.0, 5.0, {
-    'state': gumbel.state,
+random = levy.factory( 2.0, 5.0, {
+    'state': levy.state,
     'copy': true
 });
 
@@ -362,7 +362,7 @@ logEach( '%f', x4 );
 
 <section class="links">
 
-[@stdlib/random/base/gumbel]: https://github.com/stdlib-js/random/tree/main/base/gumbel
+[@stdlib/random/base/levy]: https://github.com/stdlib-js/random/tree/main/base/levy
 
 [@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes
 

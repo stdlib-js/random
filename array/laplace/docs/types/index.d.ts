@@ -109,11 +109,11 @@ interface PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a Gumbel distribution with pre-specified parameter values.
+* Interface for generating pseudorandom numbers drawn from a Laplace (double exponential) distribution with pre-specified parameter values.
 */
 interface UnaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+	* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param len - array length
 	* @param options - function options
@@ -122,7 +122,7 @@ interface UnaryFunction extends PRNG {
 	( len: number, options?: Options ): RandomArray;
 
 	/**
-	* Fills an array with pseudorandom numbers drawn from a Gumbel distribution.
+	* Fills an array with pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param out - output array
 	* @returns output array
@@ -131,55 +131,55 @@ interface UnaryFunction extends PRNG {
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a Gumbel distribution without pre-specified parameter values.
+* Interface for generating pseudorandom numbers drawn from a Laplace (double exponential) distribution without pre-specified parameter values.
 */
 interface TernaryFunction extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+	* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param len - array length
 	* @param mu - mean
-	* @param beta - scale parameter
+	* @param b - scale parameter
 	* @param options - function options
 	* @returns output array
 	*/
-	( len: number, mu: number, beta: number, options?: Options ): RandomArray;
+	( len: number, mu: number, b: number, options?: Options ): RandomArray;
 
 	/**
-	* Fills an array with pseudorandom numbers drawn from a Gumbel distribution.
+	* Fills an array with pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param mu - mean
-	* @param beta - scale parameter
+	* @param b - scale parameter
 	* @param out - output array
 	* @returns output array
 	*/
-	assign( mu: number, beta: number, out: RandomArray ): RandomArray;
+	assign( mu: number, b: number, out: RandomArray ): RandomArray;
 }
 
 /**
-* Interface for generating pseudorandom numbers drawn from a Gumbel distribution.
+* Interface for generating pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 */
 interface Random extends PRNG {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+	* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param len - array length
 	* @param mu - mean
-	* @param beta - scale parameter
+	* @param b - scale parameter
 	* @param options - function options
 	* @returns output array
 	*
 	* @example
-	* var out = gumbel( 10, 2.0, 5.0 );
+	* var out = laplace( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*/
-	( len: number, mu: number, beta: number, options?: Options ): RandomArray;
+	( len: number, mu: number, b: number, options?: Options ): RandomArray;
 
 	/**
-	* Fills an array with pseudorandom numbers drawn from a Gumbel distribution.
+	* Fills an array with pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* @param mu - mean
-	* @param beta - scale parameter
+	* @param b - scale parameter
 	* @param out - output array
 	* @returns output array
 	*
@@ -189,44 +189,44 @@ interface Random extends PRNG {
 	* var x = zeros( 10, 'float64' );
 	* // returns <Float64Array>
 	*
-	* var out = gumbel( 2.0, 5.0, out );
+	* var out = laplace( 2.0, 5.0, out );
 	* // returns <Float64Array>
 	*
 	* var bool = ( out === x );
 	* // returns true
 	*/
-	assign( mu: number, beta: number, out: RandomArray ): RandomArray;
+	assign( mu: number, b: number, out: RandomArray ): RandomArray;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from a Gumbel distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* ## Notes
 	*
 	* -   When provided distribution parameters, the returned function returns random variates drawn from the specified distribution.
 	*
 	* @param mu - mean
-	* @param beta - scale parameter
+	* @param b - scale parameter
 	* @param options - function options
 	* @throws must provide a valid state
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = gumbel.factory( 2.0, 5.0 );
+	* var random = laplace.factory( 2.0, 5.0 );
 	*
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = gumbel.factory( 2.0, 5.0, {
+	* var random = laplace.factory( 2.0, 5.0, {
 	*     'seed': 297
 	* });
 	* var out = random( 10 );
 	* // returns <Float64Array>
 	*/
-	factory( mu: number, beta: number, options?: FactoryOptions ): UnaryFunction;
+	factory( mu: number, b: number, options?: FactoryOptions ): UnaryFunction;
 
 	/**
-	* Returns a function for creating arrays containing pseudorandom numbers drawn from a Gumbel distribution.
+	* Returns a function for creating arrays containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 	*
 	* ## Notes
 	*
@@ -237,13 +237,13 @@ interface Random extends PRNG {
 	* @returns function for creating arrays
 	*
 	* @example
-	* var random = gumbel.factory();
+	* var random = laplace.factory();
 	*
 	* var out = random( 10, 2.0, 5.0 );
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = gumbel.factory({
+	* var random = laplace.factory({
 	*     'seed': 297
 	* });
 	* var out = random( 10, 2.0, 5.0 );
@@ -253,27 +253,27 @@ interface Random extends PRNG {
 }
 
 /**
-* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 *
 * @param len - array length
 * @param mu - mean
-* @param beta - scale parameter
+* @param b - scale parameter
 * @param options - function options
 * @returns output array
 *
 * @example
-* var out = gumbel( 10, 2.0, 5.0 );
+* var out = laplace( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var random = gumbel.factory( 2.0, 5.0 );
+* var random = laplace.factory( 2.0, 5.0 );
 *
 * var out = random( 10 );
 * // returns <Float64Array>
 */
-declare var gumbel: Random;
+declare var laplace: Random;
 
 
 // EXPORTS //
 
-export = gumbel;
+export = laplace;

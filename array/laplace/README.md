@@ -18,24 +18,24 @@ limitations under the License.
 
 -->
 
-# Gumbel Random Numbers
+# Laplace Random Numbers
 
-> Create an array containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+> Create an array containing pseudorandom numbers drawn from a [Laplace (double exponential)][@stdlib/random/base/laplace] distribution.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var gumbel = require( '@stdlib/random/array/gumbel' );
+var laplace = require( '@stdlib/random/array/laplace' );
 ```
 
-#### gumbel( len, mu, beta\[, options] )
+#### laplace( len, mu, b\[, options] )
 
-Returns an array containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Returns an array containing pseudorandom numbers drawn from a [Laplace (double exponential)][@stdlib/random/base/laplace] distribution.
 
 ```javascript
-var out = gumbel( 10, 2.0, 5.0 );
+var out = laplace( 10, 2.0, 5.0 );
 // returns <Float64Array>
 ```
 
@@ -43,7 +43,7 @@ The function has the following parameters:
 
 -   **len**: output array length.
 -   **mu**: mean.
--   **beta**: scale parameter.
+-   **b**: scale parameter.
 -   **options**: function options.
 
 The function accepts the following `options`:
@@ -57,13 +57,13 @@ var opts = {
     'dtype': 'generic'
 };
 
-var out = gumbel( 10, 2.0, 5.0, opts );
+var out = laplace( 10, 2.0, 5.0, opts );
 // returns [...]
 ```
 
-#### gumbel.assign( mu, beta, out )
+#### laplace.assign( mu, b, out )
 
-Fills an array with pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Fills an array with pseudorandom numbers drawn from a [Laplace (double exponential)][@stdlib/random/base/laplace] distribution.
 
 ```javascript
 var zeros = require( '@stdlib/array/zeros' );
@@ -71,7 +71,7 @@ var zeros = require( '@stdlib/array/zeros' );
 var x = zeros( 10, 'float64' );
 // returns <Float64Array>
 
-var out = gumbel.assign( 2.0, 5.0, x );
+var out = laplace.assign( 2.0, 5.0, x );
 // returns <Float64Array>
 
 var bool = ( out === x );
@@ -81,15 +81,15 @@ var bool = ( out === x );
 The function has the following parameters:
 
 -   **mu**: mean.
--   **beta**: scale parameter.
+-   **b**: scale parameter.
 -   **out**: output array.
 
-#### gumbel.factory( \[mu, beta, ]\[options] )
+#### laplace.factory( \[mu, b, ]\[options] )
 
-Returns a function for creating arrays containing pseudorandom numbers drawn from a [Gumbel][@stdlib/random/base/gumbel] distribution.
+Returns a function for creating arrays containing pseudorandom numbers drawn from a [Laplace (double exponential)][@stdlib/random/base/laplace] distribution.
 
 ```javascript
-var random = gumbel.factory();
+var random = laplace.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -101,7 +101,7 @@ var len = out.length;
 If provided distribution parameters, the returned generator returns random variates from the specified distribution.
 
 ```javascript
-var random = gumbel.factory( 2.0, 5.0 );
+var random = laplace.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -113,7 +113,7 @@ out = random( 10 );
 If not provided distribution parameters, the returned generator requires that distribution parameters be provided at each invocation.
 
 ```javascript
-var random = gumbel.factory();
+var random = laplace.factory();
 
 var out = random( 10, 2.0, 5.0 );
 // returns <Float64Array>
@@ -138,7 +138,7 @@ var minstd = require( '@stdlib/random/base/minstd' );
 var opts = {
     'prng': minstd.normalized
 };
-var random = gumbel.factory( 2.0, 5.0, opts );
+var random = laplace.factory( 2.0, 5.0, opts );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -150,7 +150,7 @@ To seed the underlying pseudorandom number generator, set the `seed` option.
 var opts = {
     'seed': 12345
 };
-var random = gumbel.factory( 2.0, 5.0, opts );
+var random = laplace.factory( 2.0, 5.0, opts );
 
 var out = random( 10, opts );
 // returns <Float64Array>
@@ -163,7 +163,7 @@ The returned function accepts the following `options`:
 To override the default output array data type, set the `dtype` option.
 
 ```javascript
-var random = gumbel.factory( 2.0, 5.0 );
+var random = laplace.factory( 2.0, 5.0 );
 
 var out = random( 10 );
 // returns <Float64Array>
@@ -175,21 +175,21 @@ out = random( 10, opts );
 // returns [...]
 ```
 
-#### gumbel.PRNG
+#### laplace.PRNG
 
 The underlying pseudorandom number generator.
 
 ```javascript
-var prng = gumbel.PRNG;
+var prng = laplace.PRNG;
 // returns <Function>
 ```
 
-#### gumbel.seed
+#### laplace.seed
 
 The value used to seed the underlying pseudorandom number generator.
 
 ```javascript
-var seed = gumbel.seed;
+var seed = laplace.seed;
 // returns <Uint32Array>
 ```
 
@@ -198,7 +198,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = laplace.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -206,12 +206,12 @@ var seed = random.seed;
 // returns null
 ```
 
-#### gumbel.seedLength
+#### laplace.seedLength
 
 Length of underlying pseudorandom number generator seed.
 
 ```javascript
-var len = gumbel.seedLength;
+var len = laplace.seedLength;
 // returns <number>
 ```
 
@@ -220,7 +220,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = laplace.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -228,12 +228,12 @@ var len = random.seedLength;
 // returns null
 ```
 
-#### gumbel.state
+#### laplace.state
 
 Writable property for getting and setting the underlying pseudorandom number generator state.
 
 ```javascript
-var state = gumbel.state;
+var state = laplace.state;
 // returns <Uint32Array>
 ```
 
@@ -242,7 +242,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = laplace.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -250,12 +250,12 @@ var state = random.state;
 // returns null
 ```
 
-#### gumbel.stateLength
+#### laplace.stateLength
 
 Length of underlying pseudorandom number generator state.
 
 ```javascript
-var len = gumbel.stateLength;
+var len = laplace.stateLength;
 // returns <number>
 ```
 
@@ -264,7 +264,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = laplace.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -272,12 +272,12 @@ var len = random.stateLength;
 // returns null
 ```
 
-#### gumbel.byteLength
+#### laplace.byteLength
 
 Size (in bytes) of underlying pseudorandom number generator state.
 
 ```javascript
-var sz = gumbel.byteLength;
+var sz = laplace.byteLength;
 // returns <number>
 ```
 
@@ -286,7 +286,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = gumbel.factory( 2.0, 5.0, {
+var random = laplace.factory( 2.0, 5.0, {
     'prng': minstd
 });
 
@@ -317,11 +317,11 @@ var sz = random.byteLength;
 
 ```javascript
 var logEach = require( '@stdlib/console/log-each' );
-var gumbel = require( '@stdlib/random/array/gumbel' );
+var laplace = require( '@stdlib/random/array/laplace' );
 
 // Create a function for generating random arrays originating from the same state:
-var random = gumbel.factory( 2.0, 5.0, {
-    'state': gumbel.state,
+var random = laplace.factory( 2.0, 5.0, {
+    'state': laplace.state,
     'copy': true
 });
 
@@ -334,8 +334,8 @@ var x3 = random( 5 );
 logEach( '%f, %f, %f', x1, x2, x3 );
 
 // Create another function for generating random arrays with the original state:
-random = gumbel.factory( 2.0, 5.0, {
-    'state': gumbel.state,
+random = laplace.factory( 2.0, 5.0, {
+    'state': laplace.state,
     'copy': true
 });
 
@@ -362,7 +362,7 @@ logEach( '%f', x4 );
 
 <section class="links">
 
-[@stdlib/random/base/gumbel]: https://github.com/stdlib-js/random/tree/main/base/gumbel
+[@stdlib/random/base/laplace]: https://github.com/stdlib-js/random/tree/main/base/laplace
 
 [@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes
 

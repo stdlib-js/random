@@ -26,13 +26,13 @@ var factory = require( './factory.js' );
 // MAIN //
 
 /**
-* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
 *
-* @name gumbel
+* @name laplace
 * @type {Function}
 * @param {NonNegativeInteger} len - array length
 * @param {number} mu - mean
-* @param {PositiveNumber} beta - scale parameter
+* @param {PositiveNumber} b - scale parameter
 * @param {Options} [options] - options
 * @param {string} [options.dtype="float64"] - output array data type
 * @throws {TypeError} first argument must be a nonnegative integer
@@ -41,18 +41,18 @@ var factory = require( './factory.js' );
 * @returns {(Array|TypedArray)} output array
 *
 * @example
-* var arr = gumbel( 10, 2.0, 5.0 );
+* var arr = laplace( 10, 2.0, 5.0 );
 * // returns <Float64Array>
 *
 * @example
-* var arr = gumbel( 10, 2.0, 5.0, {
+* var arr = laplace( 10, 2.0, 5.0, {
 *     'dtype': 'generic'
 * });
 * // returns [...]
 */
-var gumbel = factory();
+var laplace = factory();
 
 
 // EXPORTS //
 
-module.exports = gumbel;
+module.exports = laplace;
