@@ -199,6 +199,15 @@ setReadOnly( ns, 'laplace', require( './../../array/laplace' ) );
 setReadOnly( ns, 'levy', require( './../../array/levy' ) );
 
 /**
+* @name logistic
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/logistic}
+*/
+setReadOnly( ns, 'logistic', require( './../../array/logistic' ) );
+
+/**
 * @name lognormal
 * @memberof ns
 * @readonly
