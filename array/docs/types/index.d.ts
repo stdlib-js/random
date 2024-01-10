@@ -21,19 +21,26 @@
 /* eslint-disable max-lines */
 
 import arcsine = require( './../../../array/arcsine' );
+import bernoulli = require( './../../../array/bernoulli' );
 import beta = require( './../../../array/beta' );
 import betaprime = require( './../../../array/betaprime' );
+import chi = require( './../../../array/chi' );
+import chisquare = require( './../../../array/chisquare' );
 import cosine = require( './../../../array/cosine' );
 import discreteUniform = require( './../../../array/discrete-uniform' );
 import exponential = require( './../../../array/exponential' );
 import gamma = require( './../../../array/gamma' );
+import geometric = require( './../../../array/geometric' );
 import invgamma = require( './../../../array/invgamma' );
 import lognormal = require( './../../../array/lognormal' );
 import minstd = require( './../../../array/minstd' );
 import minstdShuffle = require( './../../../array/minstd-shuffle' );
 import mt19937 = require( './../../../array/mt19937' );
 import normal = require( './../../../array/normal' );
+import poisson = require( './../../../array/poisson' );
 import randu = require( './../../../array/randu' );
+import rayleigh = require( './../../../array/rayleigh' );
+import t = require( './../../../array/t' );
 import uniform = require( './../../../array/uniform' );
 
 /**
@@ -41,7 +48,7 @@ import uniform = require( './../../../array/uniform' );
 */
 interface Namespace {
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from an arcsine distribution.
 	*
 	* @param len - array length
 	* @param a - minimum support
@@ -60,6 +67,26 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	arcsine: typeof arcsine;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Bernoulli distribution.
+	*
+	* @param len - array length
+	* @param p - success probability
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.bernoulli( 10, 0.5 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.bernoulli.factory( 0.5 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	bernoulli: typeof bernoulli;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a beta distribution with parameters `alpha` (first shape parameter) and `beta` (second shape parameter).
@@ -104,6 +131,46 @@ interface Namespace {
 	betaprime: typeof betaprime;
 
 	/**
+	* Returns an array containing pseudorandom numbers drawn from a chi distribution.
+	*
+	* @param len - array length
+	* @param k - degrees of freedom
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.chi( 10, 2.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.chi.factory( 2.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	chi: typeof chi;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a chi-square distribution.
+	*
+	* @param len - array length
+	* @param k - degrees of freedom
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.chisquare( 10, 2.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.chisquare.factory( 2.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	chisquare: typeof chisquare;
+
+	/**
 	* Returns an array containing pseudorandom numbers drawn from a raised cosine distribution with parameters `mu` (mean) and `s` (scale parameter).
 	*
 	* @param len - array length
@@ -146,7 +213,7 @@ interface Namespace {
 	discreteUniform: typeof discreteUniform;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an exponential distribution with rate parameter `lambda`.
+	* Returns an array containing pseudorandom numbers drawn from an exponential distribution.
 	*
 	* @param len - array length
 	* @param lambda - rate parameter
@@ -185,6 +252,26 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	gamma: typeof gamma;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a geometric distribution.
+	*
+	* @param len - array length
+	* @param p - success probability
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.geometric( 10, 0.01 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.geometric.factory( 0.01 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	geometric: typeof geometric;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from an inverse gamma distribution with parameters `alpha` (shape parameter) and `beta` (scale parameter).
@@ -319,6 +406,26 @@ interface Namespace {
 	normal: typeof normal;
 
 	/**
+	* Returns an array containing pseudorandom numbers drawn from a Poisson distribution.
+	*
+	* @param len - array length
+	* @param lambda - mean parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.poisson( 10, 2.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.poisson.factory( 2.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	poisson: typeof poisson;
+
+	/**
 	* Returns an array containing uniformly distributed pseudorandom numbers between `0` and `1`.
 	*
 	* @param len - array length
@@ -336,6 +443,46 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	randu: typeof randu;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Rayleigh distribution.
+	*
+	* @param len - array length
+	* @param sigma - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.rayleigh( 10, 2.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.rayleigh.factory( 2.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	rayleigh: typeof rayleigh;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Student's t-distribution.
+	*
+	* @param len - array length
+	* @param v - degrees of freedom
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.t( 10, 2.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.t.factory( 2.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	t: typeof t;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a continuous uniform distribution with minimum support `a` and maximum support `b`.
