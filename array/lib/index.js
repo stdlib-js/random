@@ -253,6 +253,15 @@ setReadOnly( ns, 'mt19937', require( './../../array/mt19937' ) );
 setReadOnly( ns, 'normal', require( './../../array/normal' ) );
 
 /**
+* @name pareto1
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/pareto-type1}
+*/
+setReadOnly( ns, 'pareto1', require( './../../array/pareto-type1' ) );
+
+/**
 * @name poisson
 * @memberof ns
 * @readonly
