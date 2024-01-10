@@ -73,6 +73,15 @@ setReadOnly( ns, 'beta', require( './../../array/beta' ) );
 setReadOnly( ns, 'betaprime', require( './../../array/betaprime' ) );
 
 /**
+* @name binomial
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/binomial}
+*/
+setReadOnly( ns, 'binomial', require( './../../array/binomial' ) );
+
+/**
 * @name cauchy
 * @memberof ns
 * @readonly
