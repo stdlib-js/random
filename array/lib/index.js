@@ -262,6 +262,15 @@ setReadOnly( ns, 'minstdShuffle', require( './../../array/minstd-shuffle' ) );
 setReadOnly( ns, 'mt19937', require( './../../array/mt19937' ) );
 
 /**
+* @name negativeBinomial
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/negative-binomial}
+*/
+setReadOnly( ns, 'negativeBinomial', require( './../../array/negative-binomial' ) );
+
+/**
 * @name normal
 * @memberof ns
 * @readonly
