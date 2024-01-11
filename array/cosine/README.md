@@ -18,9 +18,9 @@ limitations under the License.
 
 -->
 
-# Cosine Random Numbers
+# Raised Cosine Random Numbers
 
-> Create an array containing pseudorandom numbers drawn from a [cosine][@stdlib/random/base/cosine] distribution.
+> Create an array containing pseudorandom numbers drawn from a [raised cosine][@stdlib/random/base/cosine] distribution.
 
 <section class="usage">
 
@@ -32,7 +32,7 @@ var cosine = require( '@stdlib/random/array/cosine' );
 
 #### cosine( len, mu, s\[, options] )
 
-Returns an array containing pseudorandom numbers drawn from a [cosine][@stdlib/random/base/cosine] distribution.
+Returns an array containing pseudorandom numbers drawn from a [raised cosine][@stdlib/random/base/cosine] distribution.
 
 ```javascript
 var out = cosine( 10, 2.0, 5.0 );
@@ -63,7 +63,7 @@ var out = cosine( 10, 2.0, 5.0, opts );
 
 #### cosine.assign( mu, s, out )
 
-Fills an array with pseudorandom numbers drawn from a [cosine][@stdlib/random/base/cosine] distribution.
+Fills an array with pseudorandom numbers drawn from a [raised cosine][@stdlib/random/base/cosine] distribution.
 
 ```javascript
 var zeros = require( '@stdlib/array/zeros' );
@@ -86,7 +86,7 @@ The function has the following parameters:
 
 #### cosine.factory( \[mu, s, ]\[options] )
 
-Returns a function for creating arrays containing pseudorandom numbers drawn from a [cosine][@stdlib/random/base/cosine] distribution.
+Returns a function for creating arrays containing pseudorandom numbers drawn from a [raised cosine][@stdlib/random/base/cosine] distribution.
 
 ```javascript
 var random = cosine.factory();
