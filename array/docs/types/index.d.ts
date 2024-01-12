@@ -24,24 +24,36 @@ import arcsine = require( './../../../array/arcsine' );
 import bernoulli = require( './../../../array/bernoulli' );
 import beta = require( './../../../array/beta' );
 import betaprime = require( './../../../array/betaprime' );
+import binomial = require( './../../../array/binomial' );
+import cauchy = require( './../../../array/cauchy' );
 import chi = require( './../../../array/chi' );
 import chisquare = require( './../../../array/chisquare' );
 import cosine = require( './../../../array/cosine' );
 import discreteUniform = require( './../../../array/discrete-uniform' );
+import erlang = require( './../../../array/erlang' );
 import exponential = require( './../../../array/exponential' );
+import f = require( './../../../array/f' );
 import gamma = require( './../../../array/gamma' );
 import geometric = require( './../../../array/geometric' );
+import gumbel = require( './../../../array/gumbel' );
 import invgamma = require( './../../../array/invgamma' );
+import kumaraswamy = require( './../../../array/kumaraswamy' );
+import laplace = require( './../../../array/laplace' );
+import levy = require( './../../../array/levy' );
+import logistic = require( './../../../array/logistic' );
 import lognormal = require( './../../../array/lognormal' );
 import minstd = require( './../../../array/minstd' );
 import minstdShuffle = require( './../../../array/minstd-shuffle' );
 import mt19937 = require( './../../../array/mt19937' );
+import negativeBinomial = require( './../../../array/negative-binomial' );
 import normal = require( './../../../array/normal' );
+import pareto1 = require( './../../../array/pareto-type1' );
 import poisson = require( './../../../array/poisson' );
 import randu = require( './../../../array/randu' );
 import rayleigh = require( './../../../array/rayleigh' );
 import t = require( './../../../array/t' );
 import uniform = require( './../../../array/uniform' );
+import weibull = require( './../../../array/weibull' );
 
 /**
 * Interface describing the `array` namespace.
@@ -89,7 +101,7 @@ interface Namespace {
 	bernoulli: typeof bernoulli;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a beta distribution with parameters `alpha` (first shape parameter) and `beta` (second shape parameter).
+	* Returns an array containing pseudorandom numbers drawn from a beta distribution.
 	*
 	* @param len - array length
 	* @param alpha - first shape parameter
@@ -110,7 +122,7 @@ interface Namespace {
 	beta: typeof beta;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a beta prime distribution with parameters `alpha` (first shape parameter) and `beta` (second shape parameter).
+	* Returns an array containing pseudorandom numbers drawn from a beta prime distribution.
 	*
 	* @param len - array length
 	* @param alpha - first shape parameter
@@ -129,6 +141,48 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	betaprime: typeof betaprime;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a binomial distribution.
+	*
+	* @param len - array length
+	* @param n - number of trials
+	* @param p - success probability
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.binomial( 10, 17, 0.5 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.binomial.factory( 17, 0.5 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	binomial: typeof binomial;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Cauchy distribution.
+	*
+	* @param len - array length
+	* @param x0 - location parameter
+	* @param gamma - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.cauchy( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.cauchy.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	cauchy: typeof cauchy;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a chi distribution.
@@ -171,7 +225,7 @@ interface Namespace {
 	chisquare: typeof chisquare;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a raised cosine distribution with parameters `mu` (mean) and `s` (scale parameter).
+	* Returns an array containing pseudorandom numbers drawn from a raised cosine distribution.
 	*
 	* @param len - array length
 	* @param mu - mean
@@ -192,7 +246,7 @@ interface Namespace {
 	cosine: typeof cosine;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a discrete uniform distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a discrete uniform distribution.
 	*
 	* @param len - array length
 	* @param a - minimum support
@@ -211,6 +265,27 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	discreteUniform: typeof discreteUniform;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from an Erlang distribution.
+	*
+	* @param len - array length
+	* @param k - shape parameter
+	* @param lambda - rate parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.erlang( 10, 2, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.erlang.factory( 2, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	erlang: typeof erlang;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from an exponential distribution.
@@ -233,7 +308,28 @@ interface Namespace {
 	exponential: typeof exponential;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a gamma distribution with parameters `alpha` (shape parameter) and `beta` (rate parameter).
+	* Returns an array containing pseudorandom numbers drawn from an F distribution.
+	*
+	* @param len - array length
+	* @param d1 - degrees of freedom
+	* @param d2 - degrees of freedom
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.f( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.f.ns.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	f: typeof f;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a gamma distribution.
 	*
 	* @param len - array length
 	* @param alpha - shape parameter
@@ -274,7 +370,28 @@ interface Namespace {
 	geometric: typeof geometric;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from an inverse gamma distribution with parameters `alpha` (shape parameter) and `beta` (scale parameter).
+	* Returns an array containing pseudorandom numbers drawn from a Gumbel distribution.
+	*
+	* @param len - array length
+	* @param mu - mean
+	* @param beta - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.gumbel( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.gumbel.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	gumbel: typeof gumbel;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from an inverse gamma distribution.
 	*
 	* @param len - array length
 	* @param alpha - shape parameter
@@ -295,7 +412,91 @@ interface Namespace {
 	invgamma: typeof invgamma;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a lognormal distribution with parameters `mu` (location parameter) and `sigma` (scale parameter).
+	* Returns an array containing pseudorandom numbers drawn from Kumaraswamy's double bounded distribution.
+	*
+	* @param len - array length
+	* @param a - first shape parameter
+	* @param b - second shape parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.kumaraswamy( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.kumaraswamy.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	kumaraswamy: typeof kumaraswamy;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Laplace (double exponential) distribution.
+	*
+	* @param len - array length
+	* @param mu - mean
+	* @param b - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.laplace( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.laplace.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	laplace: typeof laplace;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Lévy distribution.
+	*
+	* @param len - array length
+	* @param mu - location parameter
+	* @param c - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.levy( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.levy.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	levy: typeof levy;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a logistic distribution.
+	*
+	* @param len - array length
+	* @param mu - mean parameter
+	* @param s - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.logistic( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.logistic.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	logistic: typeof logistic;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a lognormal distribution.
 	*
 	* @param len - array length
 	* @param mu - location parameter
@@ -385,7 +586,28 @@ interface Namespace {
 	mt19937: typeof mt19937;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a normal distribution with parameters `mu` (mean) and `sigma` (standard deviation).
+	* Returns an array containing pseudorandom numbers drawn from a negative binomial distribution.
+	*
+	* @param len - array length
+	* @param r - number of successes until experiment is stopped
+	* @param p - success probability
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.negativeBinomial( 10, 10, 0.5 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.negativeBinomial.factory( 10, 0.5 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	negativeBinomial: typeof negativeBinomial;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a normal distribution.
 	*
 	* @param len - array length
 	* @param mu - mean
@@ -404,6 +626,27 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	normal: typeof normal;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Pareto (Type I) distribution.
+	*
+	* @param len - array length
+	* @param alpha - shape parameter
+	* @param beta - scale parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.pareto1( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.pareto1.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	pareto1: typeof pareto1;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a Poisson distribution.
@@ -485,7 +728,7 @@ interface Namespace {
 	t: typeof t;
 
 	/**
-	* Returns an array containing pseudorandom numbers drawn from a continuous uniform distribution with minimum support `a` and maximum support `b`.
+	* Returns an array containing pseudorandom numbers drawn from a continuous uniform distribution.
 	*
 	* @param len - array length
 	* @param a - minimum support
@@ -504,6 +747,27 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	uniform: typeof uniform;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a Weibull distribution.
+	*
+	* @param len - array length
+	* @param k - scale parameter
+	* @param lambda - shape parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.weibull( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.weibull.factory( 2.0, 5.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	weibull: typeof weibull;
 }
 
 /**
