@@ -39,93 +39,96 @@ interface Options {
 }
 
 /**
-* Interface for generating pseudorandom values drawn from a binary PRNG.
+* Interface for generating pseudorandom values drawn from a ternary PRNG.
 */
-interface BinaryPRNG<T, U, V> extends PRNG {
+interface TernaryPRNG<T, U, V, W> extends PRNG {
 	/**
 	* Returns a pseudorandom value.
 	*
 	* @param param1 - first PRNG parameter
 	* @param param2 - second PRNG parameter
+	* @param param3 - third PRNG parameter
 	* @returns pseudorandom value
 	*/
-	( param1: T, param2: U ): V;
+	( param1: T, param2: U, param3: V ): W;
 }
 
 /**
-* Class for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+* Class for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
 */
-declare class RandomArray<T, U, V> {
+declare class RandomArray<T, U, V, W> {
 	/**
-	* Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+	* Constructor for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
 	*
-	* @param prng - binary pseudorandom value generator
+	* @param prng - ternary pseudorandom value generator
 	* @param dtypes - list of supported output data types
 	* @param dtype - default output data type
 	* @returns instance
 	*
 	* @example
-	* var arcsine = require( './../../../../../base/arcsine' );
+	* var triangular = require( './../../../../../base/triangular' );
 	*
 	* var dtypes = [ 'float64', 'float32', 'generic' ];
 	* var defaultDType = 'float64';
 	*
-	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
 	*
-	* var v = rand.generate( 10, 2.0, 5.0 );
+	* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
 	* // returns <Float64Array>
 	*/
-	constructor( prng: BinaryPRNG<T, U, V>, dtypes: ArrayLike<DataType>, dtype: DataType );
+	constructor( prng: TernaryPRNG<T, U, V, W>, dtypes: ArrayLike<DataType>, dtype: DataType );
 
 	/**
-	* Returns an array filled with pseudorandom values drawn from a binary PRNG.
+	* Returns an array filled with pseudorandom values drawn from a ternary PRNG.
 	*
 	* @param len - number of elements
 	* @param param1 - first PRNG parameter
 	* @param param2 - second PRNG parameter
+	* @param param3 - third PRNG parameter
 	* @param options - function options
 	* @returns output array
 	*
 	* @example
-	* var arcsine = require( './../../../../../base/arcsine' );
+	* var triangular = require( './../../../../../base/triangular' );
 	*
 	* var dtypes = [ 'float64', 'float32', 'generic' ];
 	* var defaultDType = 'float64';
 	*
-	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
 	*
-	* var v = rand.generate( 10, 2.0, 5.0 );
+	* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
 	* // returns <Float64Array>
 	*/
-	generate( len: number, param1: T, param2: U, options?: Options ): OutputArray<V>;
+	generate( len: number, param1: T, param2: U, param3: V, options?: Options ): OutputArray<W>;
 
 	/**
-	* Fills an array with pseudorandom values drawn from a binary PRNG.
+	* Fills an array with pseudorandom values drawn from a ternary PRNG.
 	*
 	* @param param1 - first PRNG parameter
 	* @param param2 - second PRNG parameter
+	* @param param3 - third PRNG parameter
 	* @param out - output array
 	* @returns output array
 	*
 	* @example
-	* var arcsine = require( './../../../../../base/arcsine' );
+	* var triangular = require( './../../../../../base/triangular' );
 	* var zeros = require( '@stdlib/array/zeros' );
 	*
 	* var dtypes = [ 'float64', 'float32', 'generic' ];
 	* var defaultDType = 'float64';
 	*
-	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
 	*
 	* var out = zeros( 10, 'float64' );
 	* // returns <Float64Array>
 	*
-	* var v = rand.assign( 2.0, 5.0, out );
+	* var v = rand.assign( 2.0, 5.0, 3.33, out );
 	* // returns <Float64Array>
 	*
 	* var bool = ( v === out );
 	* // returns true
 	*/
-	assign( param1: T, param2: U, out: OutputArray<V> ): OutputArray<V>;
+	assign( param1: T, param2: U, param3: V, out: OutputArray<W> ): OutputArray<W>;
 }
 
 /**
@@ -133,65 +136,65 @@ declare class RandomArray<T, U, V> {
 */
 interface RandomArrayConstructor {
 	/**
-	* Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+	* Constructor for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
 	*
-	* @param prng - binary pseudorandom value generator
+	* @param prng - ternary pseudorandom value generator
 	* @param dtypes - list of supported output data types
 	* @param dtype - default output data type
 	* @returns instance
 	*
 	* @example
-	* var arcsine = require( './../../../../../base/arcsine' );
+	* var triangular = require( './../../../../../base/triangular' );
 	*
 	* var dtypes = [ 'float64', 'float32', 'generic' ];
 	* var defaultDType = 'float64';
 	*
-	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
 	*
-	* var v = rand.generate( 10, 2.0, 5.0 );
+	* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
 	* // returns <Float64Array>
 	*/
-	new<T = unknown, U = unknown, V = unknown>( prng: BinaryPRNG<T, U, V>, dtypes: ArrayLike<DataType>, dtype: DataType ): RandomArray<T, U, V>;
+	new<T = unknown, U = unknown, V = unknown, W = unknown>( prng: TernaryPRNG<T, U, V, W>, dtypes: ArrayLike<DataType>, dtype: DataType ): RandomArray<T, U, V, W>;
 
 	/**
-	* Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+	* Constructor for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
 	*
-	* @param prng - binary pseudorandom value generator
+	* @param prng - ternary pseudorandom value generator
 	* @param dtypes - list of supported output data types
 	* @param dtype - default output data type
 	* @returns instance
 	*
 	* @example
-	* var arcsine = require( './../../../../../base/arcsine' );
+	* var triangular = require( './../../../../../base/triangular' );
 	*
 	* var dtypes = [ 'float64', 'float32', 'generic' ];
 	* var defaultDType = 'float64';
 	*
-	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
 	*
-	* var v = rand.generate( 10, 2.0, 5.0 );
+	* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
 	* // returns <Float64Array>
 	*/
-	<T = unknown, U = unknown, V = unknown>( prng: BinaryPRNG<T, U, V>, dtypes: ArrayLike<DataType>, dtype: DataType ): RandomArray<T, U, V>;
+	<T = unknown, U = unknown, V = unknown, W = unknown>( prng: TernaryPRNG<T, U, V, W>, dtypes: ArrayLike<DataType>, dtype: DataType ): RandomArray<T, U, V, W>;
 }
 
 /**
-* Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+* Constructor for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
 *
-* @param prng - binary pseudorandom value generator
+* @param prng - ternary pseudorandom value generator
 * @param dtypes - list of supported output data types
 * @param dtype - default output data type
 * @returns instance
 *
 * @example
-* var arcsine = require( '@stdlib/random/base/arcsine' );
+* var triangular = require( '@stdlib/random/base/triangular' );
 *
 * var dtypes = [ 'float64', 'float32', 'generic' ];
 * var defaultDType = 'float64';
 *
-* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+* var rand = new RandomArray( triangular, dtypes, defaultDType );
 *
-* var v = rand.generate( 10, 2.0, 5.0 );
+* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
 * // returns <Float64Array>
 */
 declare var ctor: RandomArrayConstructor;
