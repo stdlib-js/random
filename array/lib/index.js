@@ -154,6 +154,15 @@ setReadOnly( ns, 'exponential', require( './../../array/exponential' ) );
 setReadOnly( ns, 'f', require( './../../array/f' ) );
 
 /**
+* @name frechet
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/frechet}
+*/
+setReadOnly( ns, 'frechet', require( './../../array/frechet' ) );
+
+/**
 * @name gamma
 * @memberof ns
 * @readonly
