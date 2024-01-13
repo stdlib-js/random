@@ -325,6 +325,15 @@ setReadOnly( ns, 'rayleigh', require( './../../array/rayleigh' ) );
 setReadOnly( ns, 't', require( './../../array/t' ) );
 
 /**
+* @name triangular
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/triangular}
+*/
+setReadOnly( ns, 'triangular', require( './../../array/triangular' ) );
+
+/**
 * @name uniform
 * @memberof ns
 * @readonly
