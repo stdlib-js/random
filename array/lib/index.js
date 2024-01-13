@@ -190,6 +190,15 @@ setReadOnly( ns, 'geometric', require( './../../array/geometric' ) );
 setReadOnly( ns, 'gumbel', require( './../../array/gumbel' ) );
 
 /**
+* @name hypergeometric
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/array/hypergeometric}
+*/
+setReadOnly( ns, 'hypergeometric', require( './../../array/hypergeometric' ) );
+
+/**
 * @name invgamma
 * @memberof ns
 * @readonly
