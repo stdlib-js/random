@@ -421,6 +421,14 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/array/binomial`][@stdlib/random/array/binomial]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a binomial distribution.</span>
+-   <span class="package-name">[`@stdlib/random/iter/binomial`][@stdlib/random/iter/binomial]</span><span class="delimiter">: </span><span class="description">create an iterator for generating pseudorandom numbers drawn from a binomial distribution.</span>
+-   <span class="package-name">[`@stdlib/random/streams/binomial`][@stdlib/random/streams/binomial]</span><span class="delimiter">: </span><span class="description">create a readable stream for generating pseudorandom numbers drawn from a binomial distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -434,6 +442,16 @@ for ( i = 0; i < 100; i++ ) {
 [@hormann:1993a]: http://dx.doi.org/10.1080/00949659308811496
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/binomial]: https://github.com/stdlib-js/random/tree/main/array/binomial
+
+[@stdlib/random/iter/binomial]: https://github.com/stdlib-js/random/tree/main/iter/binomial
+
+[@stdlib/random/streams/binomial]: https://github.com/stdlib-js/random/tree/main/streams/binomial
+
+<!-- </related-links> -->
 
 </section>
 
