@@ -422,6 +422,14 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/array/beta`][@stdlib/random/array/beta]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a beta distribution.</span>
+-   <span class="package-name">[`@stdlib/random/iter/beta`][@stdlib/random/iter/beta]</span><span class="delimiter">: </span><span class="description">create an iterator for generating pseudorandom numbers drawn from a beta distribution.</span>
+-   <span class="package-name">[`@stdlib/random/streams/beta`][@stdlib/random/streams/beta]</span><span class="delimiter">: </span><span class="description">create a readable stream for generating pseudorandom numbers drawn from a beta distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -437,6 +445,16 @@ for ( i = 0; i < 100; i++ ) {
 [@joehnk:1964]: http://eudml.org/doc/175224
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/beta]: https://github.com/stdlib-js/random/tree/main/array/beta
+
+[@stdlib/random/iter/beta]: https://github.com/stdlib-js/random/tree/main/iter/beta
+
+[@stdlib/random/streams/beta]: https://github.com/stdlib-js/random/tree/main/streams/beta
+
+<!-- </related-links> -->
 
 </section>
 
