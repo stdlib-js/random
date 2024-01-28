@@ -190,6 +190,15 @@ setReadOnly( ns, 'mt19937', require( './../../strided/mt19937' ) );
 setReadOnly( ns, 'normal', require( './../../strided/normal' ) );
 
 /**
+* @name poisson
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/poisson}
+*/
+setReadOnly( ns, 'poisson', require( './../../strided/poisson' ) );
+
+/**
 * @name randu
 * @memberof ns
 * @readonly

@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ var Float64Array = require( '@stdlib/array/float64' );
 var zeros = require( '@stdlib/array/zeros' );
 var toAccessorArray = require( '@stdlib/array/base/to-accessor-array' );
 var randomArray = require( './../../../array/uniform' );
-var prng = require( './../../../base/exponential' );
+var prng = require( './../../../base/poisson' );
 var factory = require( './../lib' ).factory;
 
 
