@@ -18,43 +18,43 @@ limitations under the License.
 
 -->
 
-# unaryFactory
+# binaryFactory
 
-> Create a factory function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
+> Create a factory function for filling strided arrays with pseudorandom values drawn from a binary PRNG.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var unaryFactory = require( '@stdlib/random/strided/tools/unary-factory' );
+var binaryFactory = require( '@stdlib/random/strided/tools/binary-factory' );
 ```
 
-#### unaryFactory( prng )
+#### binaryFactory( prng )
 
-Returns a factory function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
+Returns a factory function for filling strided arrays with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 ```
 
 The function has the following parameters:
 
--   **prng**: unary pseudorandom number generator.
+-   **prng**: binary pseudorandom number generator.
 
 * * *
 
 #### factory( \[options] )
 
-Returns a function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
+Returns a function for filling strided arrays with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -77,9 +77,9 @@ To use a custom PRNG as the underlying source of uniformly distributed pseudoran
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
 var minstd = require( '@stdlib/random/base/minstd' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var opts = {
@@ -90,16 +90,16 @@ var random = factory( opts );
 // returns <Function>
 
 var out = new Float64Array( 10 );
-random( out.length, [ 2.0 ], 0, out, 1 );
+random( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 ```
 
 To seed the underlying pseudorandom number generator, set the `seed` option.
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var opts = {
@@ -110,20 +110,20 @@ var random = factory( opts );
 // returns <Function>
 
 var out = new Float64Array( 10 );
-random( out.length, [ 2.0 ], 0, out, 1 );
+random( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 ```
 
 * * *
 
-#### random( N, param1, sp1, out, so )
+#### random( N, param1, sp1, param2, sp2, out, so )
 
-Fills a strided array with pseudorandom values drawn from a unary PRNG.
+Fills a strided array with pseudorandom values drawn from a binary PRNG.
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -132,15 +132,17 @@ var random = factory();
 var out = new Float64Array( 10 );
 // returns <Float64Array>
 
-var v = random( out.length, [ 2.0 ], 0, out, 1 );
+var v = random( out.length, [ 2.0 ], 0, [ 5.0 ], 0, out, 1 );
 // returns <Float64Array>
 ```
 
 The function has the following parameters:
 
 -   **N**: number of indexed elements.
--   **param1**: PRNG parameter.
+-   **param1**: first PRNG parameter.
 -   **sp1**: index increment for `param1`.
+-   **param2**: second PRNG parameter.
+-   **sp2**: index increment for `param2`.
 -   **out**: output array.
 -   **so**: index increment for `out`.
 
@@ -148,9 +150,9 @@ The `N` and stride parameters determine which strided array elements are accesse
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -158,7 +160,7 @@ var random = factory();
 
 var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
 
-random( 3, [ 2.0 ], 0, out, 2 );
+random( 3, [ 2.0 ], 0, [ 5.0 ], 0, out, 2 );
 ```
 
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
@@ -167,36 +169,38 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
 // returns <Function>
 
-// Initial array:
-var param0 = new Float64Array( [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ] );
+// Initial arrays:
+var param1 = new Float64Array( [ 2.0, 2.0, 2.0, 2.0, 2.0, 2.0 ] );
+var param2 = new Float64Array( [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ] );
 
-// Create offset view:
-var param1 = new Float64Array( param0.buffer, param0.BYTES_PER_ELEMENT*3 ); // start at 4th element
+// Create offset views:
+var view1 = new Float64Array( param1.buffer, param1.BYTES_PER_ELEMENT*3 ); // start at 4th element
+var view2 = new Float64Array( param2.buffer, param2.BYTES_PER_ELEMENT*2 ); // start at 3rd element
 
 // Create an output array:
 var out = new Float64Array( 3 );
 
 // Fill the output array:
-random( out.length, param1, -1, out, 1 );
+random( out.length, view1, -1, view2, 1, out, 1 );
 ```
 
-#### random.ndarray( N, param1, sp1, op1, out, so, oo )
+#### random.ndarray( N, param1, sp1, op1, param2, sp2, op2, out, so, oo )
 
-Fills a strided array with pseudorandom values drawn from a unary PRNG using alternative indexing semantics.
+Fills a strided array with pseudorandom values drawn from a binary PRNG using alternative indexing semantics.
 
 ```javascript
 var Float64Array = require( '@stdlib/array/float64' );
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -205,21 +209,22 @@ var random = factory();
 var out = new Float64Array( 10 );
 // returns <Float64Array>
 
-var v = random.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+var v = random.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 // returns <Float64Array>
 ```
 
 The function has the following additional parameters:
 
 -   **op1**: starting index for `param1`.
+-   **op2**: starting index for `param2`.
 -   **oo**: starting index for `out`.
 
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to access every other value in `out` starting from the second value,
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -227,7 +232,7 @@ var random = factory();
 
 var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
 
-random.ndarray( 3, [ 2.0 ], 0, 0, out, 2, 1 );
+random.ndarray( 3, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 2, 1 );
 ```
 
 * * *
@@ -237,9 +242,9 @@ random.ndarray( 3, [ 2.0 ], 0, 0, out, 2, 1 );
 The underlying pseudorandom number generator.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -254,9 +259,9 @@ var prng = random.PRNG;
 The value used to seed the underlying pseudorandom number generator.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -270,9 +275,9 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory({
@@ -289,9 +294,9 @@ var seed = random.seed;
 Length of underlying pseudorandom number generator seed.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -305,9 +310,9 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory({
@@ -324,9 +329,9 @@ var len = random.seedLength;
 Writable property for getting and setting the underlying pseudorandom number generator state.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -340,9 +345,9 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory({
@@ -359,9 +364,9 @@ var state = random.state;
 Length of underlying pseudorandom number generator state.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -375,9 +380,9 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory({
@@ -394,9 +399,9 @@ var len = random.stateLength;
 Size (in bytes) of underlying pseudorandom number generator state.
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory();
@@ -410,9 +415,9 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 var random = factory({
@@ -443,14 +448,14 @@ var sz = random.byteLength;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
+var arcsine = require( '@stdlib/random/base/arcsine' );
 var zeros = require( '@stdlib/array/zeros' );
 var zeroTo = require( '@stdlib/array/zero-to' );
 var logEach = require( '@stdlib/console/log-each' );
-var unaryFactory = require( '@stdlib/random/strided/tools/unary-factory' );
+var binaryFactory = require( '@stdlib/random/strided/tools/binary-factory' );
 
 // Create a PRNG factory function:
-var factory = unaryFactory( exponential );
+var factory = binaryFactory( arcsine );
 // returns <Function>
 
 // Specify a PRNG seed:
@@ -466,7 +471,7 @@ var rand1 = factory( opts );
 var x1 = zeros( 10, 'float64' );
 
 // Fill the array with pseudorandom numbers:
-rand1( x1.length, [ 2.0 ], 0, x1, 1 );
+rand1( x1.length, [ 2.0 ], 0, [ 5.0 ], 0, x1, 1 );
 
 // Create another function for filling strided arrays:
 var rand2 = factory( opts );
@@ -476,7 +481,7 @@ var rand2 = factory( opts );
 var x2 = zeros( 10, 'generic' );
 
 // Fill the array with the same pseudorandom numbers:
-rand2( x2.length, [ 2.0 ], 0, x2, 1 );
+rand2( x2.length, [ 2.0 ], 0, [ 5.0 ], 0, x2, 1 );
 
 // Create a list of indices:
 var idx = zeroTo( x1.length, 'generic' );
