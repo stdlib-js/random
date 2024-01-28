@@ -2,7 +2,7 @@
 
 @license Apache-2.0
 
-Copyright (c) 2023 The Stdlib Authors.
+Copyright (c) 2024 The Stdlib Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,47 +20,41 @@ limitations under the License.
 
 # unaryFactory
 
-> Create a factory function for generating pseudorandom values drawn from a unary PRNG.
+> Create a factory function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var unaryFactory = require( '@stdlib/random/array/tools/unary-factory' );
+var unaryFactory = require( '@stdlib/random/strided/tools/unary-factory' );
 ```
 
-#### unaryFactory( prng, dtypes, dtype )
+#### unaryFactory( prng )
 
-Returns a factory function for generating pseudorandom values drawn from a unary PRNG.
+Returns a factory function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, 'float64' );
+var factory = unaryFactory( exponential );
 // returns <Function>
 ```
 
 The function has the following parameters:
 
 -   **prng**: unary pseudorandom number generator.
--   **dtypes**: list of supported output data types.
--   **dtype**: default output array data type.
 
 * * *
 
-#### factory( \[param1, ]\[options] )
+#### factory( \[options] )
 
-Returns a function for generating pseudorandom values drawn from a unary PRNG.
+Returns a function for filling strided arrays with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -69,7 +63,6 @@ var random = factory();
 
 The function has the following parameters:
 
--   **param1**: PRNG parameter. If provided a PRNG parameter, the function returns a partially applied function for creating arrays, which can be useful when wanting to pass around a parameterized function for array creation.
 -   **options**: function options.
 
 The function supports the following options:
@@ -78,173 +71,164 @@ The function supports the following options:
 -   **seed**: pseudorandom value generator seed.
 -   **state**: pseudorandom value generator state.
 -   **copy**: boolean indicating whether to copy a provided pseudorandom value generator state.
--   **dtype**: default output array data type. Setting this option overrides the default output array data type provided to the parent function.
+
+To use a custom PRNG as the underlying source of uniformly distributed pseudorandom numbers, set the `prng` option.
+
+```javascript
+var Float64Array = require( '@stdlib/array/float64' );
+var minstd = require( '@stdlib/random/base/minstd' );
+var exponential = require( '@stdlib/random/base/exponential' );
+
+var factory = unaryFactory( exponential );
+// returns <Function>
+
+var opts = {
+    'prng': minstd.normalized
+};
+
+var random = factory( opts );
+// returns <Function>
+
+var out = new Float64Array( 10 );
+random( out.length, [ 2.0 ], 0, out, 1 );
+```
+
+To seed the underlying pseudorandom number generator, set the `seed` option.
+
+```javascript
+var Float64Array = require( '@stdlib/array/float64' );
+var exponential = require( '@stdlib/random/base/exponential' );
+
+var factory = unaryFactory( exponential );
+// returns <Function>
+
+var opts = {
+    'seed': 12345
+};
+
+var random = factory( opts );
+// returns <Function>
+
+var out = new Float64Array( 10 );
+random( out.length, [ 2.0 ], 0, out, 1 );
+```
 
 * * *
 
-### Full Arity
+#### random( N, param1, sp1, out, so )
 
-#### random( len, param1\[, options] )
-
-Returns an array of pseudorandom values drawn from a unary PRNG.
+Fills a strided array with pseudorandom values drawn from a unary PRNG.
 
 ```javascript
+var Float64Array = require( '@stdlib/array/float64' );
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
 // returns <Function>
 
-var v = random( 10, 2.0 );
+var out = new Float64Array( 10 );
+// returns <Float64Array>
+
+var v = random( out.length, [ 2.0 ], 0, out, 1 );
 // returns <Float64Array>
 ```
 
 The function has the following parameters:
 
--   **len**: output array length.
+-   **N**: number of indexed elements.
 -   **param1**: PRNG parameter.
--   **options**: function options.
+-   **sl**: index increment for `param1`.
+-   **out**: output array.
+-   **so**: index increment for `out`.
 
-The function accepts the following options:
-
--   **dtype**: output array data type. Setting this option overrides the default output array data type.
+The `N` and stride parameters determine which strided array elements are accessed at runtime. For example, to access every other value in `out`,
 
 ```javascript
+var Float64Array = require( '@stdlib/array/float64' );
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
 // returns <Function>
 
-var v = random( 10, 2.0, {
-    'dtype': 'float32'
-});
-// returns <Float32Array>
+var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
+
+random( 3, [ 2.0 ], 0, out, 2 );
 ```
 
-#### random.assign( param1, out )
+Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
-Fills an array with pseudorandom values drawn from a unary PRNG.
+<!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
+var Float64Array = require( '@stdlib/array/float64' );
 var exponential = require( '@stdlib/random/base/exponential' );
-var zeros = require( '@stdlib/array/zeros' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
 // returns <Function>
 
-var out = zeros( 10, 'float64' );
-// returns <Float64Array>
+// Initial array:
+var param0 = new Float64Array( [ 5.0, 5.0, 5.0, 5.0, 5.0, 5.0 ] );
 
-var v = random.assign( 2.0, out );
-// returns <Float64Array>
+// Create offset view:
+var param1 = new Float64Array( param0.buffer, param0.BYTES_PER_ELEMENT*3 ); // start at 4th element
 
-var bool = ( out === v );
-// returns true
+// Create an output array:
+var out = new Float64Array( 3 );
+
+// Fill the output array:
+random( out.length, param1, -1, out, 1 );
 ```
 
-The method has the following parameters:
+#### random.ndarray( N, param1, sp1, op1, out, so, oo )
 
--   **param1**: PRNG parameter.
--   **out**: output array.
+Fills a strided array with pseudorandom values drawn from a unary PRNG using alternative indexing semantics.
 
-### Partial Application
+```javascript
+var Float64Array = require( '@stdlib/array/float64' );
+var exponential = require( '@stdlib/random/base/exponential' );
 
-#### random( len\[, options] )
+var factory = unaryFactory( exponential );
+// returns <Function>
 
-Returns an array of pseudorandom values drawn from a unary PRNG.
+var random = factory();
+// returns <Function>
+
+var out = new Float64Array( 10 );
+// returns <Float64Array>
+
+var v = random.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+// returns <Float64Array>
+```
+
+The function has the following additional parameters:
+
+-   **op1**: starting index for `param1`.
+-   **oo**: starting index for `out`.
+
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to access every other value in `out` starting from the second value,
 
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
-var random = factory( 2.0 );
+var random = factory();
 // returns <Function>
 
-var v = random( 10 );
-// returns <Float64Array>
+var out = [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ];
 
-v = random( 10 );
-// returns <Float64Array>
+random.ndarray( 3, [ 2.0 ], 0, 0, out, 2, 1 );
 ```
-
-The function has the following parameters:
-
--   **len**: output array length.
--   **options**: function options.
-
-The function accepts the following options:
-
--   **dtype**: output array data type. Setting this option overrides the default output array data type.
-
-```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
-
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
-// returns <Function>
-
-var random = factory( 2.0 );
-// returns <Function>
-
-var v = random( 10, {
-    'dtype': 'float32'
-});
-// returns <Float32Array>
-
-v = random( 10, {
-    'dtype': 'generic'
-});
-// returns [...]
-```
-
-#### random.assign( out )
-
-Fills an array with pseudorandom values drawn from a unary PRNG.
-
-```javascript
-var exponential = require( '@stdlib/random/base/exponential' );
-var zeros = require( '@stdlib/array/zeros' );
-
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
-// returns <Function>
-
-var random = factory( 2.0 );
-// returns <Function>
-
-var out = zeros( 10, 'float64' );
-// returns <Float64Array>
-
-var v = random.assign( out );
-// returns <Float64Array>
-
-var bool = ( out === v );
-// returns true
-```
-
-The method has the following parameters:
-
--   **out**: output array.
 
 * * *
 
@@ -255,9 +239,7 @@ The underlying pseudorandom number generator.
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -274,9 +256,7 @@ The value used to seed the underlying pseudorandom number generator.
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -292,9 +272,7 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory({
@@ -313,9 +291,7 @@ Length of underlying pseudorandom number generator seed.
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -331,9 +307,7 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory({
@@ -352,9 +326,7 @@ Writable property for getting and setting the underlying pseudorandom number gen
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -370,9 +342,7 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory({
@@ -391,9 +361,7 @@ Length of underlying pseudorandom number generator state.
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -409,9 +377,7 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory({
@@ -430,9 +396,7 @@ Size (in bytes) of underlying pseudorandom number generator state.
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory();
@@ -448,9 +412,7 @@ If the `factory` function is provided a PRNG for uniformly distributed numbers, 
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 var exponential = require( '@stdlib/random/base/exponential' );
 
-var dtypes = [ 'float64', 'float32', 'generic' ];
-
-var factory = unaryFactory( exponential, dtypes, dtypes[ 0 ] );
+var factory = unaryFactory( exponential );
 // returns <Function>
 
 var random = factory({
@@ -482,29 +444,45 @@ var sz = random.byteLength;
 
 ```javascript
 var exponential = require( '@stdlib/random/base/exponential' );
-var dtypes = require( '@stdlib/array/dtypes' );
-var unaryFactory = require( '@stdlib/random/array/tools/unary-factory' );
+var zeros = require( '@stdlib/array/zeros' );
+var zeroTo = require( '@stdlib/array/zero-to' );
+var logEach = require( '@stdlib/console/log-each' );
+var unaryFactory = require( '@stdlib/random/strided/tools/unary-factory' );
 
-var dt = dtypes( 'real_floating_point_and_generic' );
-
-var factory = unaryFactory( exponential, dt, 'float64' );
+// Create a PRNG factory function:
+var factory = unaryFactory( exponential );
 // returns <Function>
 
-var random = factory();
+// Specify a PRNG seed:
+var opts = {
+    'seed': 1234
+};
+
+// Create a function for filling strided arrays:
+var rand1 = factory( opts );
 // returns <Function>
 
-var x = random( 10, 2.0 );
-// returns <Float64Array>
+// Create an array:
+var x1 = zeros( 10, 'float64' );
 
-x = random( 10, 2.0, {
-    'dtype': 'float32'
-});
-// returns <Float32Array>
+// Fill the array with pseudorandom numbers:
+rand1( x1.length, [ 2.0 ], 0, x1, 1 );
 
-x = random( 10, 2.0, {
-    'dtype': 'generic'
-});
-// returns [...]
+// Create another function for filling strided arrays:
+var rand2 = factory( opts );
+// returns <Function>
+
+// Create a second array:
+var x2 = zeros( 10, 'generic' );
+
+// Fill the array with the same pseudorandom numbers:
+rand2( x2.length, [ 2.0 ], 0, x2, 1 );
+
+// Create a list of indices:
+var idx = zeroTo( x1.length, 'generic' );
+
+// Print the array contents:
+logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 ```
 
 </section>
@@ -522,6 +500,8 @@ x = random( 10, 2.0, {
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 <section class="links">
+
+[mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 </section>
 
