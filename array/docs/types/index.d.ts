@@ -33,9 +33,11 @@ import discreteUniform = require( './../../../array/discrete-uniform' );
 import erlang = require( './../../../array/erlang' );
 import exponential = require( './../../../array/exponential' );
 import f = require( './../../../array/f' );
+import frechet = require( './../../../array/frechet' );
 import gamma = require( './../../../array/gamma' );
 import geometric = require( './../../../array/geometric' );
 import gumbel = require( './../../../array/gumbel' );
+import hypergeometric = require( './../../../array/hypergeometric' );
 import invgamma = require( './../../../array/invgamma' );
 import kumaraswamy = require( './../../../array/kumaraswamy' );
 import laplace = require( './../../../array/laplace' );
@@ -52,6 +54,7 @@ import poisson = require( './../../../array/poisson' );
 import randu = require( './../../../array/randu' );
 import rayleigh = require( './../../../array/rayleigh' );
 import t = require( './../../../array/t' );
+import triangular = require( './../../../array/triangular' );
 import uniform = require( './../../../array/uniform' );
 import weibull = require( './../../../array/weibull' );
 
@@ -329,6 +332,28 @@ interface Namespace {
 	f: typeof f;
 
 	/**
+	* Returns an array containing pseudorandom numbers drawn from a Fréchet distribution.
+	*
+	* @param len - array length
+	* @param alpha - shape parameter
+	* @param s - scale parameter
+	* @param m - location parameter
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.frechet( 10, 2.0, 5.0, 3.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.frechet.factory( 2.0, 5.0, 3.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	frechet: typeof frechet;
+
+	/**
 	* Returns an array containing pseudorandom numbers drawn from a gamma distribution.
 	*
 	* @param len - array length
@@ -389,6 +414,28 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	gumbel: typeof gumbel;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a hypergeometric distribution.
+	*
+	* @param len - array length
+	* @param N - population size
+	* @param K - subpopulation size
+	* @param n - number of draws
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.hypergeometric( 10, 20, 10, 7 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.hypergeometric.factory( 20, 10, 7 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	hypergeometric: typeof hypergeometric;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from an inverse gamma distribution.
@@ -726,6 +773,28 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	t: typeof t;
+
+	/**
+	* Returns an array containing pseudorandom numbers drawn from a triangular distribution.
+	*
+	* @param len - array length
+	* @param a - minimum support
+	* @param b - maximum support
+	* @param c - mode
+	* @param options - function options
+	* @returns output array
+	*
+	* @example
+	* var out = ns.triangular( 10, 2.0, 5.0, 3.0 );
+	* // returns <Float64Array>
+	*
+	* @example
+	* var random = ns.triangular.factory( 2.0, 5.0, 3.0 );
+	*
+	* var out = random( 10 );
+	* // returns <Float64Array>
+	*/
+	triangular: typeof triangular;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a continuous uniform distribution.
