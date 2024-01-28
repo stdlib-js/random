@@ -208,6 +208,24 @@ setReadOnly( ns, 'poisson', require( './../../strided/poisson' ) );
 setReadOnly( ns, 'randu', require( './../../strided/randu' ) );
 
 /**
+* @name rayleigh
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/rayleigh}
+*/
+setReadOnly( ns, 'rayleigh', require( './../../strided/rayleigh' ) );
+
+/**
+* @name t
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/t}
+*/
+setReadOnly( ns, 't', require( './../../strided/t' ) );
+
+/**
 * @name uniform
 * @memberof ns
 * @readonly
