@@ -127,6 +127,15 @@ setReadOnly( ns, 'exponential', require( './../../strided/exponential' ) );
 setReadOnly( ns, 'gamma', require( './../../strided/gamma' ) );
 
 /**
+* @name geometric
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/geometric}
+*/
+setReadOnly( ns, 'geometric', require( './../../strided/geometric' ) );
+
+/**
 * @name invgamma
 * @memberof ns
 * @readonly
