@@ -73,6 +73,15 @@ setReadOnly( ns, 'beta', require( './../../strided/beta' ) );
 setReadOnly( ns, 'betaprime', require( './../../strided/betaprime' ) );
 
 /**
+* @name chi
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/chi}
+*/
+setReadOnly( ns, 'chi', require( './../../strided/chi' ) );
+
+/**
 * @name cosine
 * @memberof ns
 * @readonly
