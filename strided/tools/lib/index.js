@@ -46,6 +46,15 @@ var ns = {};
 setReadOnly( ns, 'binaryFactory', require( './../../../strided/tools/binary-factory' ) );
 
 /**
+* @name ternaryFactory
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/strided/tools/ternary-factory}
+*/
+setReadOnly( ns, 'ternaryFactory', require( './../../../strided/tools/ternary-factory' ) );
+
+/**
 * @name unaryFactory
 * @memberof ns
 * @readonly
