@@ -408,6 +408,14 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/array/pareto-type1`][@stdlib/random/array/pareto-type1]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a Pareto (Type I) distribution.</span>
+-   <span class="package-name">[`@stdlib/random/iter/pareto-type1`][@stdlib/random/iter/pareto-type1]</span><span class="delimiter">: </span><span class="description">create an iterator for generating pseudorandom numbers drawn from a Pareto (Type I) distribution.</span>
+-   <span class="package-name">[`@stdlib/random/streams/pareto-type1`][@stdlib/random/streams/pareto-type1]</span><span class="delimiter">: </span><span class="description">create a readable stream for generating pseudorandom numbers drawn from a Pareto (Type I) distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -419,6 +427,16 @@ for ( i = 0; i < 100; i++ ) {
 [pareto]: https://en.wikipedia.org/wiki/Pareto_distribution
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/pareto-type1]: https://github.com/stdlib-js/random/tree/main/array/pareto-type1
+
+[@stdlib/random/iter/pareto-type1]: https://github.com/stdlib-js/random/tree/main/iter/pareto-type1
+
+[@stdlib/random/streams/pareto-type1]: https://github.com/stdlib-js/random/tree/main/streams/pareto-type1
+
+<!-- </related-links> -->
 
 </section>
 
