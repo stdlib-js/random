@@ -356,6 +356,13 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/base/rayleigh`][@stdlib/random/base/rayleigh]</span><span class="delimiter">: </span><span class="description">Rayleigh distributed pseudorandom numbers.</span>
+-   <span class="package-name">[`@stdlib/random/array/rayleigh`][@stdlib/random/array/rayleigh]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a Rayleigh distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -369,6 +376,12 @@ logEach( 'x1[%d] = %.2f; x2[%d] = %.2f', idx, x1, idx, x2 );
 [@stdlib/random/base/rayleigh]: https://github.com/stdlib-js/random/tree/main/base/rayleigh
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/rayleigh]: https://github.com/stdlib-js/random/tree/main/array/rayleigh
+
+<!-- </related-links> -->
 
 </section>
 
