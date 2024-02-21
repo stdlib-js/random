@@ -21,19 +21,105 @@
 /* eslint-disable max-lines */
 
 import binary = require( './../../../../array/tools/binary' );
+import binaryFactory = require( './../../../../array/tools/binary-factory' );
+import nullary = require( './../../../../array/tools/nullary' );
+import ternary = require( './../../../../array/tools/ternary' );
+import ternaryFactory = require( './../../../../array/tools/ternary-factory' );
+import unary = require( './../../../../array/tools/unary' );
+import unaryFactory = require( './../../../../array/tools/unary-factory' );
 
 /**
 * Interface describing the `tools` namespace.
 */
 interface Namespace {
 	/**
-	* TODO
+	* Constructor for creating arrays filled with pseudorandom values drawn from a binary PRNG.
+	*
+	* @param prng - binary pseudorandom value generator
+	* @param dtypes - list of supported output data types
+	* @param dtype - default output data type
+	* @returns instance
+	*
+	* @example
+	* var arcsine = require( './../../../../base/arcsine' );
+	*
+	* var dtypes = [ 'float64', 'float32', 'generic' ];
+	* var defaultDType = 'float64';
+	*
+	* var rand = new RandomArray( arcsine, dtypes, defaultDType );
+	*
+	* var v = rand.generate( 10, 2.0, 5.0 );
+	* // returns <Float64Array>
 	*/
 	binary: typeof binary;
+
+	/**
+	* Constructor for creating arrays filled with pseudorandom values drawn from a nullary PRNG.
+	*
+	* @param prng - nullary pseudorandom value generator
+	* @param dtypes - list of supported output data types
+	* @param dtype - default output data type
+	* @returns instance
+	*
+	* @example
+	* var exponential = require( './../../../../base/exponential' );
+	*
+	* var dtypes = [ 'float64', 'float32', 'generic' ];
+	* var defaultDType = 'float64';
+	*
+	* var rand = new RandomArray( exponential.fanullaryy( 2.0 ), dtypes, defaultDType );
+	*
+	* var v = rand.generate( 10 );
+	* // returns <Float64Array>
+	*/
+	nullary: typeof nullary;
+
+	/**
+	* Constructor for creating arrays filled with pseudorandom values drawn from a ternary PRNG.
+	*
+	* @param prng - ternary pseudorandom value generator
+	* @param dtypes - list of supported output data types
+	* @param dtype - default output data type
+	* @returns instance
+	*
+	* @example
+	* var triangular = require( './../../../../base/triangular' );
+	*
+	* var dtypes = [ 'float64', 'float32', 'generic' ];
+	* var defaultDType = 'float64';
+	*
+	* var rand = new RandomArray( triangular, dtypes, defaultDType );
+	*
+	* var v = rand.generate( 10, 2.0, 5.0, 3.33 );
+	* // returns <Float64Array>
+	*/
+	ternary: typeof ternary;
+
+	/**
+	* Constructor for creating arrays filled with pseudorandom values drawn from a unary PRNG.
+	*
+	* @param prng - unary pseudorandom value generator
+	* @param dtypes - list of supported output data types
+	* @param dtype - default output data type
+	* @returns instance
+	*
+	* @example
+	* var exponential = require( './../../../../base/exponential' );
+	*
+	* var dtypes = [ 'float64', 'float32', 'generic' ];
+	* var defaultDType = 'float64';
+	*
+	* var rand = new RandomArray( exponential, dtypes, defaultDType );
+	*
+	* var v = rand.generate( 10, 2.0 );
+	* // returns <Float64Array>
+	*/
+	unary: typeof unary;
+
 }
 
 /**
-* TODO
+* Pseudorandom number generator array creation function tools.
 */
 declare var ns: Namespace;
 

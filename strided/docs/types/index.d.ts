@@ -21,19 +21,26 @@
 /* eslint-disable max-lines */
 
 import arcsine = require( './../../../strided/arcsine' );
+import bernoulli = require( './../../../strided/bernoulli' );
 import beta = require( './../../../strided/beta' );
 import betaprime = require( './../../../strided/betaprime' );
+import chi = require( './../../../strided/chi' );
+import chisquare = require( './../../../strided/chisquare' );
 import cosine = require( './../../../strided/cosine' );
 import discreteUniform = require( './../../../strided/discrete-uniform' );
 import exponential = require( './../../../strided/exponential' );
 import gamma = require( './../../../strided/gamma' );
+import geometric = require( './../../../strided/geometric' );
 import invgamma = require( './../../../strided/invgamma' );
 import lognormal = require( './../../../strided/lognormal' );
 import minstd = require( './../../../strided/minstd' );
 import minstdShuffle = require( './../../../strided/minstd-shuffle' );
 import mt19937 = require( './../../../strided/mt19937' );
 import normal = require( './../../../strided/normal' );
+import poisson = require( './../../../strided/poisson' );
 import randu = require( './../../../strided/randu' );
+import rayleigh = require( './../../../strided/rayleigh' );
+import t = require( './../../../strided/t' );
 import uniform = require( './../../../strided/uniform' );
 import weibull = require( './../../../strided/weibull' );
 
@@ -76,6 +83,36 @@ interface Namespace {
 	* ns.arcsine.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 	*/
 	arcsine: typeof arcsine;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a Bernoulli distribution.
+	*
+	* @param N - number of indexed elements
+	* @param p - success probability
+	* @param sp - `p` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.bernoulli( out.length, [ 0.5 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.bernoulli.ndarray( out.length, [ 0.5 ], 0, 0, out, 1, 0 );
+	*/
+	bernoulli: typeof bernoulli;
 
 	/**
 	* Fills a strided array with pseudorandom numbers drawn from a beta distribution.
@@ -148,6 +185,66 @@ interface Namespace {
 	* ns.betaprime.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 	*/
 	betaprime: typeof betaprime;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a chi distribution.
+	*
+	* @param N - number of indexed elements
+	* @param k - degrees of freedom
+	* @param sk - `k` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.chi( out.length, [ 2.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.chi.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+	*/
+	chi: typeof chi;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a chi-square distribution.
+	*
+	* @param N - number of indexed elements
+	* @param k - degrees of freedom
+	* @param sk - `k` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.chisquare( out.length, [ 2.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.chisquare.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+	*/
+	chisquare: typeof chisquare;
 
 	/**
 	* Fills a strided array with pseudorandom numbers drawn from a raised cosine distribution.
@@ -286,6 +383,36 @@ interface Namespace {
 	* ns.gamma.ndarray( out.length, [ 2.0 ], 0, 0, [ 5.0 ], 0, 0, out, 1, 0 );
 	*/
 	gamma: typeof gamma;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a geometric distribution.
+	*
+	* @param N - number of indexed elements
+	* @param p - success probability
+	* @param sp - `p` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.geometric( out.length, [ 0.01 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.geometric.ndarray( out.length, [ 0.01 ], 0, 0, out, 1, 0 );
+	*/
+	geometric: typeof geometric;
 
 	/**
 	* Fills a strided array with pseudorandom numbers drawn from an inverse gamma distribution.
@@ -543,6 +670,36 @@ interface Namespace {
 	normal: typeof normal;
 
 	/**
+	* Fills a strided array with pseudorandom numbers drawn from a Poisson distribution.
+	*
+	* @param N - number of indexed elements
+	* @param lambda - mean parameter
+	* @param sl - `lambda` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.poisson( out.length, [ 2.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.poisson.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+	*/
+	poisson: typeof poisson;
+
+	/**
 	* Fills a strided array with uniformly distributed pseudorandom numbers between `0` and `1`.
 	*
 	* @param N - number of indexed elements
@@ -572,6 +729,66 @@ interface Namespace {
 	* ns.randu.ndarray( out.length, out, 1, 0 );
 	*/
 	randu: typeof randu;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a Rayleigh distribution.
+	*
+	* @param N - number of indexed elements
+	* @param sigma - scale parameter
+	* @param ss - `sigma` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.rayleigh( out.length, [ 2.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill the array with pseudorandom numbers:
+	* ns.rayleigh.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+	*/
+	rayleigh: typeof rayleigh;
+
+	/**
+	* Fills a strided array with pseudorandom numbers drawn from a Student's t distribution.
+	*
+	* @param N - number of indexed elements
+	* @param v - degrees of freedom
+	* @param sv - `v` stride length
+	* @param out - output array
+	* @param so - `out` stride length
+	* @returns output array
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill ns.the array with pseudorandom numbers:
+	* ns.t( out.length, [ 2.0 ], 0, out, 1 );
+	*
+	* @example
+	* var Float64Array = require( '@stdlib/array/float64' );
+	*
+	* // Create an array:
+	* var out = new Float64Array( 10 );
+	*
+	* // Fill ns.the array with pseudorandom numbers:
+	* ns.t.ndarray( out.length, [ 2.0 ], 0, 0, out, 1, 0 );
+	*/
+	t: typeof t;
 
 	/**
 	* Fills a strided array with pseudorandom numbers drawn from a continuous uniform distribution.

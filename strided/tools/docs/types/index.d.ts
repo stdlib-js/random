@@ -20,20 +20,19 @@
 
 /* eslint-disable max-lines */
 
-import binaryFactory = require( './../../../../array/tools/binary-factory' );
+import binaryFactory = require( './../../../../strided/tools/binary-factory' );
+import ternaryFactory = require( './../../../../strided/tools/ternary-factory' );
+import unaryFactory = require( './../../../../strided/tools/unary-factory' );
 
 /**
 * Interface describing the `tools` namespace.
 */
 interface Namespace {
-	/**
-	* TODO
-	*/
-	binaryFactory: typeof binaryFactory;
+
 }
 
 /**
-* TODO
+* Pseudorandom number generator strided array function tools.
 */
 declare var ns: Namespace;
 
