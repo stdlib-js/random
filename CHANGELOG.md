@@ -2,6 +2,16 @@
 
 > Package changelog.
 
+<section class="release" id="v0.3.1">
+
+## 0.3.1 (2024-08-18)
+
+No changes reported for this release.
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.0">
 
 ## 0.3.0 (2024-08-17)
@@ -10,7 +20,7 @@
 
 ### Packages
 
-<section class="package" id="random-array-tools-unreleased">
+<section class="package" id="random-array-tools-v0.3.0">
 
 #### [@stdlib/random/array/tools](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/array/tools)
 
@@ -44,7 +54,7 @@
 
 <!-- /.package -->
 
-<section class="package" id="random-base-unreleased">
+<section class="package" id="random-base-v0.3.0">
 
 #### [@stdlib/random/base](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base)
 
@@ -69,7 +79,7 @@
 
 <!-- /.package -->
 
-<section class="package" id="random-base-minstd-shuffle-unreleased">
+<section class="package" id="random-base-minstd-shuffle-v0.3.0">
 
 #### [@stdlib/random/base/minstd-shuffle](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/minstd-shuffle)
 
@@ -91,7 +101,7 @@
 
 <!-- /.package -->
 
-<section class="package" id="random-base-mt19937-unreleased">
+<section class="package" id="random-base-mt19937-v0.3.0">
 
 #### [@stdlib/random/base/mt19937](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/mt19937)
 
@@ -125,7 +135,7 @@ This release closes the following issue:
 
 <!-- /.package -->
 
-<section class="package" id="random-base-shared-unreleased">
+<section class="package" id="random-base-shared-v0.3.0">
 
 #### [@stdlib/random/base/shared](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/shared)
 
@@ -147,7 +157,7 @@ This release closes the following issue:
 
 <!-- /.package -->
 
-<section class="package" id="random-strided-unreleased">
+<section class="package" id="random-strided-v0.3.0">
 
 #### [@stdlib/random/strided](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/strided)
 
@@ -181,7 +191,7 @@ This release closes the following issue:
 
 <!-- /.package -->
 
-<section class="package" id="random-strided-tools-unreleased">
+<section class="package" id="random-strided-tools-v0.3.0">
 
 #### [@stdlib/random/strided/tools](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/strided/tools)
 
