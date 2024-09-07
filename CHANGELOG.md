@@ -18,10 +18,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Jenish Thapa
 -   Philipp Burckhardt
+-   Tirtadwipa Manunggal
 
 </section>
 
@@ -33,6 +34,7 @@ A total of 2 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`62bb1e0`](https://github.com/stdlib-js/stdlib/commit/62bb1e0759f54abf61b84bb48ebf74a97128f779) - **docs:** improve examples of `random/array` namespace _(by Tirtadwipa Manunggal, Philipp Burckhardt)_
 -   [`8e110d6`](https://github.com/stdlib-js/stdlib/commit/8e110d608afcc21dd633b7f1939f92ef7f3085e1) - **docs:** update examples for `random/array/tools` _(by Jenish Thapa, Philipp Burckhardt)_
 
 </details>
