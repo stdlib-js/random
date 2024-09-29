@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-09-07)
+## Unreleased (2024-09-29)
 
 <section class="packages">
 
@@ -34,6 +34,8 @@ A total of 3 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`2c4e5d8`](https://github.com/stdlib-js/stdlib/commit/2c4e5d824e0c5dc8fd536bf79ff565cee100ce46) - **build:** disable additional lint rule in TS tests _(by Philipp Burckhardt)_
+-   [`aad48ea`](https://github.com/stdlib-js/stdlib/commit/aad48eab1f19217854f4ffbfaed2a8be664b0f47) - **chore:** resolve lint errors _(by Philipp Burckhardt)_
 -   [`62bb1e0`](https://github.com/stdlib-js/stdlib/commit/62bb1e0759f54abf61b84bb48ebf74a97128f779) - **docs:** improve examples of `random/array` namespace _(by Tirtadwipa Manunggal, Philipp Burckhardt)_
 -   [`8e110d6`](https://github.com/stdlib-js/stdlib/commit/8e110d608afcc21dd633b7f1939f92ef7f3085e1) - **docs:** update examples for `random/array/tools` _(by Jenish Thapa, Philipp Burckhardt)_
 
@@ -8932,12 +8934,11 @@ A total of 5 issues were closed in this release:
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Amit Jimiwal
 -   Athan Reines
 -   Philipp Burckhardt
--   Philupp Burckhardt
 -   Yernar Yergaziyev
 
 </section>
