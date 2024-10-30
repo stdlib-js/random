@@ -4,11 +4,35 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-10-19)
+## Unreleased (2024-10-30)
 
 <section class="packages">
 
 ### Packages
+
+<section class="package" id="random-iter-unreleased">
+
+#### [@stdlib/random/iter](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/iter)
+
+<details>
+
+<section class="issues">
+
+##### Closed Issues
+
+This release closes the following issue:
+
+[#1607](https://github.com/stdlib-js/stdlib/issues/1607)
+
+</section>
+
+<!-- /.issues -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
 
 <section class="package" id="random-shuffle-unreleased">
 
@@ -52,9 +76,9 @@ This release closes the following issue:
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#2952](https://github.com/stdlib-js/stdlib/issues/2952)
+[#1607](https://github.com/stdlib-js/stdlib/issues/1607), [#2952](https://github.com/stdlib-js/stdlib/issues/2952)
 
 </section>
 
@@ -64,11 +88,12 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Jenish Thapa
 -   Philipp Burckhardt
 -   RISHAV
+-   Sai Srikar Dumpeti
 -   Tirtadwipa Manunggal
 
 </section>
@@ -81,6 +106,7 @@ A total of 4 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`80e8e4a`](https://github.com/stdlib-js/stdlib/commit/80e8e4a2866cdd9b906006a4b637c0572bdba256) - **docs:** update examples in `random/iter` [(#1769)](https://github.com/stdlib-js/stdlib/pull/1769) _(by Sai Srikar Dumpeti, Philipp Burckhardt)_
 -   [`93560b9`](https://github.com/stdlib-js/stdlib/commit/93560b988c750b47e68cf5a789cc5e9d74b8e2d8) - **fix:** ensure correct seed validation [(#3007)](https://github.com/stdlib-js/stdlib/pull/3007) _(by RISHAV)_
 -   [`2c4e5d8`](https://github.com/stdlib-js/stdlib/commit/2c4e5d824e0c5dc8fd536bf79ff565cee100ce46) - **build:** disable additional lint rule in TS tests _(by Philipp Burckhardt)_
 -   [`aad48ea`](https://github.com/stdlib-js/stdlib/commit/aad48eab1f19217854f4ffbfaed2a8be664b0f47) - **chore:** resolve lint errors _(by Philipp Burckhardt)_
