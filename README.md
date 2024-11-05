@@ -171,8 +171,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/random.svg
 [npm-url]: https://npmjs.org/package/@stdlib/random
 
-[test-image]: https://github.com/stdlib-js/random/actions/workflows/test.yml/badge.svg?branch=v0.3.2
-[test-url]: https://github.com/stdlib-js/random/actions/workflows/test.yml?query=branch:v0.3.2
+[test-image]: https://github.com/stdlib-js/random/actions/workflows/test.yml/badge.svg?branch=v0.3.3
+[test-url]: https://github.com/stdlib-js/random/actions/workflows/test.yml?query=branch:v0.3.3
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/random/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/random?branch=main
