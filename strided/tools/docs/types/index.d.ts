@@ -20,10 +20,6 @@
 
 /* eslint-disable max-lines */
 
-import binaryFactory = require( './../../../../strided/tools/binary-factory' );
-import ternaryFactory = require( './../../../../strided/tools/ternary-factory' );
-import unaryFactory = require( './../../../../strided/tools/unary-factory' );
-
 /**
 * Interface describing the `tools` namespace.
 */

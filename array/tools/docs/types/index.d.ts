@@ -21,12 +21,9 @@
 /* eslint-disable max-lines */
 
 import binary = require( './../../../../array/tools/binary' );
-import binaryFactory = require( './../../../../array/tools/binary-factory' );
 import nullary = require( './../../../../array/tools/nullary' );
 import ternary = require( './../../../../array/tools/ternary' );
-import ternaryFactory = require( './../../../../array/tools/ternary-factory' );
 import unary = require( './../../../../array/tools/unary' );
-import unaryFactory = require( './../../../../array/tools/unary-factory' );
 
 /**
 * Interface describing the `tools` namespace.

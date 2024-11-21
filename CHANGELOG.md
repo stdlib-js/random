@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-11-20)
+## Unreleased (2024-11-21)
 
 <section class="packages">
 
@@ -26,6 +26,16 @@
 
 <!-- /.features -->
 
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`83f2a61`](https://github.com/stdlib-js/stdlib/commit/83f2a613faa1661bdf1aebea1b4723044204f561) - remove unused imports
+
+</section>
+
+<!-- /.bug-fixes -->
+
 <section class="breaking-changes">
 
 ##### BREAKING CHANGES
@@ -37,6 +47,28 @@
 </section>
 
 <!-- /.breaking-changes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-strided-tools-unreleased">
+
+#### [@stdlib/random/strided/tools](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/strided/tools)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`1001ae3`](https://github.com/stdlib-js/stdlib/commit/1001ae384523b707ca5671a8932acccfb4d69a0c) - remove unused imports
+
+</section>
+
+<!-- /.bug-fixes -->
 
 </details>
 
@@ -64,8 +96,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Philipp Burckhardt
 
 </section>
@@ -78,6 +111,8 @@ A total of 1 person contributed to this release. Thank you to this contributor:
 
 <details>
 
+-   [`1001ae3`](https://github.com/stdlib-js/stdlib/commit/1001ae384523b707ca5671a8932acccfb4d69a0c) - **fix:** remove unused imports _(by Athan Reines)_
+-   [`83f2a61`](https://github.com/stdlib-js/stdlib/commit/83f2a613faa1661bdf1aebea1b4723044204f561) - **fix:** remove unused imports _(by Athan Reines)_
 -   [`8b1548f`](https://github.com/stdlib-js/stdlib/commit/8b1548fb45c1ff131f5edac20cb984344a2d28ec) - **feat:** update namespace TypeScript declarations [(#3190)](https://github.com/stdlib-js/stdlib/pull/3190) _(by stdlib-bot, Philipp Burckhardt)_
 
 </details>
