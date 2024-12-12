@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-11-28)
+## Unreleased (2024-12-12)
 
 <section class="packages">
 
@@ -121,6 +121,7 @@ A total of 2 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`cf7d38a`](https://github.com/stdlib-js/stdlib/commit/cf7d38ae3e7bce92cf47778f7b1c3da731121d77) - **docs:** update related packages sections [(#3527)](https://github.com/stdlib-js/stdlib/pull/3527) _(by stdlib-bot)_
 -   [`9818fa6`](https://github.com/stdlib-js/stdlib/commit/9818fa6dd8c90e045a147bfd1ba83cb1f693d17b) - **feat:** update namespace TypeScript declarations [(#3259)](https://github.com/stdlib-js/stdlib/pull/3259) _(by stdlib-bot, Philipp Burckhardt)_
 -   [`1001ae3`](https://github.com/stdlib-js/stdlib/commit/1001ae384523b707ca5671a8932acccfb4d69a0c) - **fix:** remove unused imports _(by Athan Reines)_
 -   [`83f2a61`](https://github.com/stdlib-js/stdlib/commit/83f2a613faa1661bdf1aebea1b4723044204f561) - **fix:** remove unused imports _(by Athan Reines)_
@@ -236,7 +237,7 @@ A total of 5 people contributed to this release. Thank you to the following cont
 
 -   Jenish Thapa
 -   Philipp Burckhardt
--   RISHAV
+-   Rishav
 -   Sai Srikar Dumpeti
 -   Tirtadwipa Manunggal
 
@@ -251,7 +252,7 @@ A total of 5 people contributed to this release. Thank you to the following cont
 <details>
 
 -   [`80e8e4a`](https://github.com/stdlib-js/stdlib/commit/80e8e4a2866cdd9b906006a4b637c0572bdba256) - **docs:** update examples in `random/iter` [(#1769)](https://github.com/stdlib-js/stdlib/pull/1769) _(by Sai Srikar Dumpeti, Philipp Burckhardt)_
--   [`93560b9`](https://github.com/stdlib-js/stdlib/commit/93560b988c750b47e68cf5a789cc5e9d74b8e2d8) - **fix:** ensure correct seed validation [(#3007)](https://github.com/stdlib-js/stdlib/pull/3007) _(by RISHAV)_
+-   [`93560b9`](https://github.com/stdlib-js/stdlib/commit/93560b988c750b47e68cf5a789cc5e9d74b8e2d8) - **fix:** ensure correct seed validation [(#3007)](https://github.com/stdlib-js/stdlib/pull/3007) _(by Rishav)_
 -   [`2c4e5d8`](https://github.com/stdlib-js/stdlib/commit/2c4e5d824e0c5dc8fd536bf79ff565cee100ce46) - **build:** disable additional lint rule in TS tests _(by Philipp Burckhardt)_
 -   [`aad48ea`](https://github.com/stdlib-js/stdlib/commit/aad48eab1f19217854f4ffbfaed2a8be664b0f47) - **chore:** resolve lint errors _(by Philipp Burckhardt)_
 -   [`62bb1e0`](https://github.com/stdlib-js/stdlib/commit/62bb1e0759f54abf61b84bb48ebf74a97128f779) - **docs:** improve examples of `random/array` namespace _(by Tirtadwipa Manunggal, Philipp Burckhardt)_
