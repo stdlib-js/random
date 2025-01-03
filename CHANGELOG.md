@@ -253,6 +253,7 @@ A total of 2 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`8c7dff3`](https://github.com/stdlib-js/stdlib/commit/8c7dff311a96451ecf52d7a08e17fd03bdf4a300) - **refactor:** move variable declaration _(by Athan Reines)_
 -   [`b082d29`](https://github.com/stdlib-js/stdlib/commit/b082d299748392a05be50b43351af6ac0cb7d418) - **fix:** update include paths and reorder includes _(by Athan Reines)_
 -   [`3c8a4d5`](https://github.com/stdlib-js/stdlib/commit/3c8a4d5c5d97979206090197ca00f39de3d19f06) - **docs:** update note _(by Athan Reines)_
 -   [`ee0c409`](https://github.com/stdlib-js/stdlib/commit/ee0c4092ad6995e68d53c384e6ef75d87bf36ac8) - **docs:** update note _(by Athan Reines)_
