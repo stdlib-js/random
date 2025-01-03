@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-01-01)
+## Unreleased (2025-01-03)
 
 <section class="packages">
 
@@ -47,6 +47,138 @@
 </section>
 
 <!-- /.breaking-changes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-minstd-unreleased">
+
+#### [@stdlib/random/base/minstd](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/minstd)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`51ab6ca`](https://github.com/stdlib-js/stdlib/commit/51ab6cac709c2c8a117eac6894b0594ef9184323) - update include paths and reorder includes
+
+</section>
+
+<!-- /.bug-fixes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-minstd-shuffle-unreleased">
+
+#### [@stdlib/random/base/minstd-shuffle](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/minstd-shuffle)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`7ef177c`](https://github.com/stdlib-js/stdlib/commit/7ef177c87922d543ab59c426c453996a9e51397d) - update include paths and reorder includes
+
+</section>
+
+<!-- /.bug-fixes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-mt19937-unreleased">
+
+#### [@stdlib/random/base/mt19937](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/mt19937)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`e1296c1`](https://github.com/stdlib-js/stdlib/commit/e1296c1c5634fbcf5e007695391c944fef27e6aa) - update include paths and reorder includes
+
+</section>
+
+<!-- /.bug-fixes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-randi-unreleased">
+
+#### [@stdlib/random/base/randi](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/randi)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`5939fb1`](https://github.com/stdlib-js/stdlib/commit/5939fb1afbdb5288ef65f449e448c77fe56c6dfd) - update include paths and refactor branching logic
+
+</section>
+
+<!-- /.bug-fixes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-randu-unreleased">
+
+#### [@stdlib/random/base/randu](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/randu)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`40b01fb`](https://github.com/stdlib-js/stdlib/commit/40b01fbc906831c1948d5287aa2b1fb176df0105) - update include paths and refactor branching logic
+
+</section>
+
+<!-- /.bug-fixes -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-base-uniform-unreleased">
+
+#### [@stdlib/random/base/uniform](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/base/uniform)
+
+<details>
+
+<section class="bug-fixes">
+
+##### Bug Fixes
+
+-   [`b082d29`](https://github.com/stdlib-js/stdlib/commit/b082d299748392a05be50b43351af6ac0cb7d418) - update include paths and reorder includes
+
+</section>
+
+<!-- /.bug-fixes -->
 
 </details>
 
@@ -121,6 +253,17 @@ A total of 2 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`b082d29`](https://github.com/stdlib-js/stdlib/commit/b082d299748392a05be50b43351af6ac0cb7d418) - **fix:** update include paths and reorder includes _(by Athan Reines)_
+-   [`3c8a4d5`](https://github.com/stdlib-js/stdlib/commit/3c8a4d5c5d97979206090197ca00f39de3d19f06) - **docs:** update note _(by Athan Reines)_
+-   [`ee0c409`](https://github.com/stdlib-js/stdlib/commit/ee0c4092ad6995e68d53c384e6ef75d87bf36ac8) - **docs:** update note _(by Athan Reines)_
+-   [`40b01fb`](https://github.com/stdlib-js/stdlib/commit/40b01fbc906831c1948d5287aa2b1fb176df0105) - **fix:** update include paths and refactor branching logic _(by Athan Reines)_
+-   [`5939fb1`](https://github.com/stdlib-js/stdlib/commit/5939fb1afbdb5288ef65f449e448c77fe56c6dfd) - **fix:** update include paths and refactor branching logic _(by Athan Reines)_
+-   [`5be9674`](https://github.com/stdlib-js/stdlib/commit/5be9674b6af6402f9c9f4833e31070574a716144) - **style:** update include order _(by Athan Reines)_
+-   [`e1296c1`](https://github.com/stdlib-js/stdlib/commit/e1296c1c5634fbcf5e007695391c944fef27e6aa) - **fix:** update include paths and reorder includes _(by Athan Reines)_
+-   [`1467fde`](https://github.com/stdlib-js/stdlib/commit/1467fde6e4523af5030c87ee50b9c0c9ea050668) - **docs:** fix include paths in examples _(by Athan Reines)_
+-   [`faa4da3`](https://github.com/stdlib-js/stdlib/commit/faa4da3f2c52be1b422d3b08c7ee6b659d848556) - **docs:** fix include paths in examples _(by Athan Reines)_
+-   [`7ef177c`](https://github.com/stdlib-js/stdlib/commit/7ef177c87922d543ab59c426c453996a9e51397d) - **fix:** update include paths and reorder includes _(by Athan Reines)_
+-   [`51ab6ca`](https://github.com/stdlib-js/stdlib/commit/51ab6cac709c2c8a117eac6894b0594ef9184323) - **fix:** update include paths and reorder includes _(by Athan Reines)_
 -   [`8a15baa`](https://github.com/stdlib-js/stdlib/commit/8a15baa639e8c4f45479821cf7331715e0546e86) - **docs:** update related packages sections [(#4425)](https://github.com/stdlib-js/stdlib/pull/4425) _(by stdlib-bot)_
 -   [`d88905f`](https://github.com/stdlib-js/stdlib/commit/d88905fbd9006bf223db7ce4959b46f02cf7d73e) - **docs:** fix parameter descriptions in Weibull distribution packages _(by Philipp Burckhardt)_
 -   [`b87254d`](https://github.com/stdlib-js/stdlib/commit/b87254d4535a3b90bf3d0068750ed6e9ca5dbc85) - **docs:** fix parameter descriptions in Weibull distribution packages _(by Philipp Burckhardt)_
