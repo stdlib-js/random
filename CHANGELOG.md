@@ -254,6 +254,10 @@ A total of 3 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`d9c2e28`](https://github.com/stdlib-js/stdlib/commit/d9c2e28c3c0298363e4e846e69d32c49252a14a7) - **docs:** update examples _(by Athan Reines)_
+-   [`05cdb8f`](https://github.com/stdlib-js/stdlib/commit/05cdb8f1e70b25fdd7fdaa822d8180fbf9588083) - **docs:** update examples _(by Athan Reines)_
+-   [`d2fa5d2`](https://github.com/stdlib-js/stdlib/commit/d2fa5d260975d98ecea0fb9ccd2e8a24756a1f96) - **docs:** update example _(by Athan Reines)_
+-   [`3eb6fa4`](https://github.com/stdlib-js/stdlib/commit/3eb6fa42360272e0e664c714766443ed90cb41b6) - **docs:** update examples _(by Athan Reines)_
 -   [`5260d13`](https://github.com/stdlib-js/stdlib/commit/5260d1347c8cd3f669d47dabe8cc6f954809bb27) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`08c640b`](https://github.com/stdlib-js/stdlib/commit/08c640bed04914d60a99a6da842e08cb57a0e4b8) - **test:** fix type bug _(by Athan Reines)_
 -   [`479c50a`](https://github.com/stdlib-js/stdlib/commit/479c50acd9a8ddaf50fc670f9eb6fa85f8de0bfb) - **test:** fix type bug _(by Athan Reines)_
