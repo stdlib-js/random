@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-17)
+## Unreleased (2025-03-21)
 
 <section class="packages">
 
@@ -186,6 +186,54 @@
 
 <!-- /.package -->
 
+<section class="package" id="random-streams-betaprime-unreleased">
+
+#### [@stdlib/random/streams/betaprime](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/streams/betaprime)
+
+<details>
+
+<section class="issues">
+
+##### Closed Issues
+
+This release closes the following issue:
+
+[#6213](https://github.com/stdlib-js/stdlib/issues/6213)
+
+</section>
+
+<!-- /.issues -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
+<section class="package" id="random-streams-discrete-uniform-unreleased">
+
+#### [@stdlib/random/streams/discrete-uniform](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/streams/discrete-uniform)
+
+<details>
+
+<section class="issues">
+
+##### Closed Issues
+
+This release closes the following issue:
+
+[#6213](https://github.com/stdlib-js/stdlib/issues/6213)
+
+</section>
+
+<!-- /.issues -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
 <section class="package" id="random-streams-laplace-unreleased">
 
 #### [@stdlib/random/streams/laplace](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/streams/laplace)
@@ -262,9 +310,9 @@ This release closes the following issue:
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213)
 
 </section>
 
@@ -274,8 +322,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
+-   AlyAbdelmoneim
 -   Athan Reines
 -   Gururaj Gurram
 -   Philipp Burckhardt
@@ -291,6 +340,7 @@ A total of 4 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`9ecb767`](https://github.com/stdlib-js/stdlib/commit/9ecb7670623af1f28ffcb635d6fdf27a630e37e5) - **chore:** fix EditorConfig lint errors [(#6215)](https://github.com/stdlib-js/stdlib/pull/6215) _(by AlyAbdelmoneim)_
 -   [`6010481`](https://github.com/stdlib-js/stdlib/commit/6010481a6f07f206d7b7c491dea4f21c785ea97b) - **chore:** fix EditorConfig lint errors [(#5940)](https://github.com/stdlib-js/stdlib/pull/5940) _(by Pulkit Gupta, Athan Reines)_
 -   [`d9c2e28`](https://github.com/stdlib-js/stdlib/commit/d9c2e28c3c0298363e4e846e69d32c49252a14a7) - **docs:** update examples _(by Athan Reines)_
 -   [`05cdb8f`](https://github.com/stdlib-js/stdlib/commit/05cdb8f1e70b25fdd7fdaa822d8180fbf9588083) - **docs:** update examples _(by Athan Reines)_
