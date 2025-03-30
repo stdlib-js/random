@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-21)
+## Unreleased (2025-03-30)
 
 <section class="packages">
 
@@ -340,6 +340,7 @@ A total of 5 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`a6dc859`](https://github.com/stdlib-js/stdlib/commit/a6dc8598c42abb4bbd5bbcf25cfc478d777c9a28) - **refactor:** use array base assertion utility _(by Athan Reines)_
 -   [`9ecb767`](https://github.com/stdlib-js/stdlib/commit/9ecb7670623af1f28ffcb635d6fdf27a630e37e5) - **chore:** fix EditorConfig lint errors [(#6215)](https://github.com/stdlib-js/stdlib/pull/6215) _(by AlyAbdelmoneim)_
 -   [`6010481`](https://github.com/stdlib-js/stdlib/commit/6010481a6f07f206d7b7c491dea4f21c785ea97b) - **chore:** fix EditorConfig lint errors [(#5940)](https://github.com/stdlib-js/stdlib/pull/5940) _(by Pulkit Gupta, Athan Reines)_
 -   [`d9c2e28`](https://github.com/stdlib-js/stdlib/commit/d9c2e28c3c0298363e4e846e69d32c49252a14a7) - **docs:** update examples _(by Athan Reines)_
