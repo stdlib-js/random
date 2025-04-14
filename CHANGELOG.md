@@ -282,6 +282,30 @@ This release closes the following issue:
 
 <!-- /.package -->
 
+<section class="package" id="random-streams-pareto-type1-unreleased">
+
+#### [@stdlib/random/streams/pareto-type1](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/streams/pareto-type1)
+
+<details>
+
+<section class="issues">
+
+##### Closed Issues
+
+This release closes the following issue:
+
+[#6663](https://github.com/stdlib-js/stdlib/issues/6663)
+
+</section>
+
+<!-- /.issues -->
+
+</details>
+
+</section>
+
+<!-- /.package -->
+
 <section class="package" id="random-strided-tools-unreleased">
 
 #### [@stdlib/random/strided/tools](https://github.com/stdlib-js/stdlib/tree/develop/lib/node_modules/%40stdlib/random/strided/tools)
@@ -334,9 +358,9 @@ This release closes the following issue:
 
 ### Closed Issues
 
-A total of 3 issues were closed in this release:
+A total of 4 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663)
 
 </section>
 
@@ -346,11 +370,12 @@ A total of 3 issues were closed in this release:
 
 ### Contributors
 
-A total of 7 people contributed to this release. Thank you to the following contributors:
+A total of 8 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   AlyAbdelmoneim
 -   Athan Reines
+-   Dipjyoti Das
 -   Gururaj Gurram
 -   MANI
 -   Philipp Burckhardt
@@ -366,6 +391,7 @@ A total of 7 people contributed to this release. Thank you to the following cont
 
 <details>
 
+-   [`9485c2b`](https://github.com/stdlib-js/stdlib/commit/9485c2b14a159557d8d097c2cfbd106db12a2210) - **chore:** fix EditorConfig lint errors (issue #6663) [(#6672)](https://github.com/stdlib-js/stdlib/pull/6672) _(by Dipjyoti Das)_
 -   [`a464a60`](https://github.com/stdlib-js/stdlib/commit/a464a60568b819f813aff054ba0c32476192d269) - **chore:** fix EditorConfig lint errors [(#6246)](https://github.com/stdlib-js/stdlib/pull/6246) _(by MANI, Athan Reines)_
 -   [`8805742`](https://github.com/stdlib-js/stdlib/commit/8805742fbac8884ef6727b4a177f1a0cc940bdce) - **chore:** resolve lint errors in `random/base/minstd` [(#6498)](https://github.com/stdlib-js/stdlib/pull/6498) _(by Abdul Kaium, Athan Reines)_
 -   [`03ee1fb`](https://github.com/stdlib-js/stdlib/commit/03ee1fba12581e0c4bdf79514ae8477d64ffe2fe) - **docs:** fix description _(by Athan Reines)_
