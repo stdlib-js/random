@@ -66,6 +66,7 @@ A total of 4 issues were closed in this release:
 
 <details>
 
+-   [`58747ab`](https://github.com/stdlib-js/stdlib/commit/58747abd76284c8096b73106b56cd580016d5701) - **docs:** update copy _(by Athan Reines)_
 -   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - **feat:** add `random/tools/unary-factory` _(by Athan Reines)_
 -   [`d7fb715`](https://github.com/stdlib-js/stdlib/commit/d7fb7153413ef9f20b751976d77ae5233a864b7e) - **feat:** add `random/tools/unary` _(by Athan Reines)_
 -   [`366925e`](https://github.com/stdlib-js/stdlib/commit/366925e14f08852288d1422041d5613c1aaddb28) - **chore:** minor clean-up _(by Philipp Burckhardt)_

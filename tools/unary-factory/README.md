@@ -63,7 +63,9 @@ var factory = createFactory( exponential, idt, odt, policies, options );
 
 The function has the following parameters:
 
--   **prng**: unary pseudorandom number generator. This function must have a `factory` method which returns a new unary pseudorandom number generator.
+-   **prng**: unary pseudorandom number generator. Must have the following methods:
+
+    -   **factory**: method which returns a new unary pseudorandom number generator.
 
 -   **idtypes**: list of supported input data types.
 
