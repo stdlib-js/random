@@ -1,12 +1,12 @@
 
 {{alias}}( prng, idtypes, odtypes, policies[, options] )
-    Returns an interface for creating ndarrays filled with pseudorandom numbers
-    drawn from a single-parameter probability distribution.
+    Returns an interface for creating ndarrays filled with pseudorandom values
+    drawn from a unary PRNG.
 
     Parameters
     ----------
     prng: Function
-        Unary pseudorandom number generator.
+        Unary pseudorandom value generator.
 
     idtypes: Array<string>
         List of supported input data types.
@@ -23,12 +23,12 @@
         Function options.
 
     options.order: string (optional)
-        Default memory layout order.
+        Default memory layout.
 
     Returns
     -------
     out: Object
-        Instance having methods for generating pseudorandom numbers.
+        Instance having methods for generating pseudorandom values.
 
     Examples
     --------
@@ -39,17 +39,16 @@
 
 
 {{alias}}.prototype.generate( shape, param1[, options] )
-    Returns an ndarray filled with pseudorandom numbers drawn from a probability
-    distribution.
+    Returns an ndarray filled with pseudorandom values drawn from a unary PRNG.
 
     Parameters
     ----------
     shape: Array<integer>
         Output shape.
 
-    param1: number|ComplexLike|ndarray
-        Distribution parameter. If an ndarray, must be broadcast compatible with
-        the specified output shape.
+    param1: ndarray|any
+        PRNG parameter. If an ndarray, must be broadcast compatible with the
+        specified output shape.
 
     options: Object (optional)
         Function options.
@@ -89,14 +88,13 @@
 
 
 {{alias}}.prototype.assign( param1, out[, options] )
-    Fills an ndarray with pseudorandom numbers drawn from a probability
-    distribution.
+    Fills an ndarray with pseudorandom values drawn from a unary PRNG.
 
     Parameters
     ----------
-    param1: number|ComplexLike|ndarray
-        Distribution parameter. If an ndarray, must be broadcast compatible with
-        the output ndarray.
+    param1: ndarray|any
+        PRNG parameter. If an ndarray, must be broadcast compatible with the
+        output ndarray.
 
     out: ndarray
         Output ndarray.

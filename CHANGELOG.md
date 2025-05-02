@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-01)
+## Unreleased (2025-05-02)
 
 <section class="features">
 
@@ -66,6 +66,8 @@ A total of 4 issues were closed in this release:
 
 <details>
 
+-   [`99288f7`](https://github.com/stdlib-js/stdlib/commit/99288f71645dbe3209e489e152c7775f86a3052a) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
+-   [`393c150`](https://github.com/stdlib-js/stdlib/commit/393c150c784d4e0fb903d7633924c18a93a4bedd) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
 -   [`65f6a65`](https://github.com/stdlib-js/stdlib/commit/65f6a65b799c493d707c6eb2d55574e42f6a0649) - **docs:** add REPL help _(by Athan Reines)_
 -   [`b928b26`](https://github.com/stdlib-js/stdlib/commit/b928b2608f992d71684869aaa0cccc457bbfdfb0) - **docs:** add REPL help _(by Athan Reines)_
 -   [`58747ab`](https://github.com/stdlib-js/stdlib/commit/58747abd76284c8096b73106b56cd580016d5701) - **docs:** update copy _(by Athan Reines)_

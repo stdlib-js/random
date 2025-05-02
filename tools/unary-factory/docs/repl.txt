@@ -1,14 +1,14 @@
 
 {{alias}}( prng, idtypes, odtypes, policies[, options] )
-    Returns a function for generating pseudorandom numbers drawn from single-
-    parameter probability distribution.
+    Returns a function for generating pseudorandom values drawn from a unary
+    PRNG.
 
     Parameters
     ----------
     prng: Function
-        Unary pseudorandom number generator. Must have the following methods:
+        Unary pseudorandom value generator. Must have the following methods:
 
-        - factory: returns a new unary pseudorandom number generator.
+        - factory: returns a new unary pseudorandom value generator.
 
     idtypes: Array<string>
         List of supported input data types.
@@ -30,9 +30,8 @@
     Returns
     -------
     fcn: Function
-        Factory function for generating pseudorandom numbers drawn from single-
-        parameter probability distribution. The function accepts a single
-        optional argument:
+        Factory function for generating pseudorandom values drawn from a unary
+        PRNG. The function accepts a single optional argument:
 
         - options: function options.
 
