@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`7d190e7`](https://github.com/stdlib-js/stdlib/commit/7d190e78f824e99bb43ad9c24eafa952386d19b2) - add TypeScript declarations
 -   [`3de82ab`](https://github.com/stdlib-js/stdlib/commit/3de82aba142ef3b9c16cd615175031305fa02237) - add `random/tools/unary-factory`
 -   [`d7fb715`](https://github.com/stdlib-js/stdlib/commit/d7fb7153413ef9f20b751976d77ae5233a864b7e) - add `random/tools/unary`
 -   [`9818fa6`](https://github.com/stdlib-js/stdlib/commit/9818fa6dd8c90e045a147bfd1ba83cb1f693d17b) - update namespace TypeScript declarations [(#3259)](https://github.com/stdlib-js/stdlib/pull/3259)
@@ -66,6 +67,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`7d190e7`](https://github.com/stdlib-js/stdlib/commit/7d190e78f824e99bb43ad9c24eafa952386d19b2) - **feat:** add TypeScript declarations _(by Athan Reines)_
 -   [`384672f`](https://github.com/stdlib-js/stdlib/commit/384672f535a570ae66d10e24d098a8d12657c9ba) - **chore:** fix EditorConfig lint errors [(#6904)](https://github.com/stdlib-js/stdlib/pull/6904) _(by Dipjyoti Das)_
 -   [`99288f7`](https://github.com/stdlib-js/stdlib/commit/99288f71645dbe3209e489e152c7775f86a3052a) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
 -   [`393c150`](https://github.com/stdlib-js/stdlib/commit/393c150c784d4e0fb903d7633924c18a93a4bedd) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
