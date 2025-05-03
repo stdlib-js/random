@@ -343,6 +343,15 @@ setReadOnly( ns, 'rayleigh', require( './../../array/rayleigh' ) );
 setReadOnly( ns, 't', require( './../../array/t' ) );
 
 /**
+* @name tools
+* @memberof ns
+* @readonly
+* @type {Namespace}
+* @see {@link module:@stdlib/random/array/tools}
+*/
+setReadOnly( ns, 'tools', require( './../../array/tools' ) );
+
+/**
 * @name triangular
 * @memberof ns
 * @readonly

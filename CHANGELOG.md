@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - add `tools` to namespace
 -   [`e5c7aa2`](https://github.com/stdlib-js/stdlib/commit/e5c7aa22bfe71828c59e5370499b1e420448ba60) - add `tools` to namespace
 -   [`fa668da`](https://github.com/stdlib-js/stdlib/commit/fa668da66016366690a9eaabbefcf3ef4659ef57) - add `random/tools` namespace
 -   [`9a53f4a`](https://github.com/stdlib-js/stdlib/commit/9a53f4ad90da183dfd68aa1e6dc9340aad955cca) - add TypeScript declarations
@@ -70,6 +71,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - **feat:** add `tools` to namespace _(by Athan Reines)_
 -   [`e5c7aa2`](https://github.com/stdlib-js/stdlib/commit/e5c7aa22bfe71828c59e5370499b1e420448ba60) - **feat:** add `tools` to namespace _(by Athan Reines)_
 -   [`fa668da`](https://github.com/stdlib-js/stdlib/commit/fa668da66016366690a9eaabbefcf3ef4659ef57) - **feat:** add `random/tools` namespace _(by Athan Reines)_
 -   [`fd431ff`](https://github.com/stdlib-js/stdlib/commit/fd431ff0ac7fcdea9de4fab41e441f32dab1868e) - **test:** fix typo _(by Athan Reines)_
