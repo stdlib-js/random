@@ -163,7 +163,7 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 	* @throws {TypeError} options argument must be an object
 	* @throws {TypeError} must provide valid options
 	* @throws {Error} must provide a valid state
-	* @returns {Function} function for creating arrays
+	* @returns {Function} function for creating ndarrays
 	*/
 	function factory() {
 		var random;

@@ -254,10 +254,10 @@ import Random = require( './index' );
 	random<number, number>( exponential ); // $ExpectError
 	random<number, number>( exponential, dtypes ); // $ExpectError
 	random<number, number>( exponential, dtypes, dtypes ); // $ExpectError
-	random<number, number>( exponential, dtypes, dtypes, polices, {}, {} ); // $ExpectError
+	random<number, number>( exponential, dtypes, dtypes, policies, {}, {} ); // $ExpectError
 }
 
-// The function returns an instance having a `generate` method which returns an array...
+// The function returns an instance having a `generate` method which returns an ndarray...
 {
 	const dtypes: Array<DataType> = [ 'float64', 'float32' ];
 	const policies = {
@@ -350,7 +350,7 @@ import Random = require( './index' );
 	r1.generate( [ 2, 2 ], 2.0, {}, {} ); // $ExpectError
 }
 
-// The function returns an instance having an `assign` method which returns an array...
+// The function returns an instance having an `assign` method which returns an ndarray...
 {
 	const dtypes: Array<DataType> = [ 'float64', 'float32' ];
 	const policies = {

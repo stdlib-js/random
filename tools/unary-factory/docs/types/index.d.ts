@@ -22,12 +22,12 @@
 
 import { DataType, Order, Mode, Shape, OutputPolicy, typedndarray } from '@stdlib/types/ndarray';
 import { ArrayLike } from '@stdlib/types/array';
-import { PRNG } from '@stdlib/types/random';
+import * as random from '@stdlib/types/random';
 
 /**
-* Interface defining constructor options.
+* Interface defining factory options.
 */
-interface ConstructorOptions {
+interface FactoryOptions {
 	/**
 	* Default memory layout.
 	*/
@@ -35,7 +35,32 @@ interface ConstructorOptions {
 }
 
 /**
-* Interface defining options.
+* Interface defining PRNG options.
+*/
+interface PRNGOptions {
+	/**
+	* Pseudorandom number generator which generates uniformly distributed pseudorandom numbers.
+	*/
+	prng?: random.PRNG;
+
+	/**
+	* Pseudorandom number generator seed.
+	*/
+	seed?: random.PRNGSeedMT19937;
+
+	/**
+	* Pseudorandom number generator state.
+	*/
+	state?: random.PRNGStateMT19937;
+
+	/**
+	* Specifies whether to copy a provided pseudorandom number generator state. Default: true.
+	*/
+	copy?: boolean;
+}
+
+/**
+* Interface defining options when generating pseudorandom values.
 */
 interface Options {
 	/**
@@ -83,9 +108,44 @@ interface Policies {
 }
 
 /**
+* Interface for PRNG properties and methods.
+*/
+interface PRNG {
+	/**
+	* Underlying pseudorandom number generator.
+	*/
+	readonly PRNG: random.PRNG;
+
+	/**
+	* PRNG seed.
+	*/
+	readonly seed: random.PRNGSeedMT19937 | null;
+
+	/**
+	* PRNG seed length.
+	*/
+	readonly seedLength: number | null;
+
+	/**
+	* PRNG state.
+	*/
+	state: random.PRNGStateMT19937 | null;
+
+	/**
+	* PRNG state length.
+	*/
+	readonly stateLength: number | null;
+
+	/**
+	* PRNG state size (in bytes).
+	*/
+	readonly byteLength: number | null;
+}
+
+/**
 * Interface for generating pseudorandom values drawn from a unary PRNG.
 */
-interface UnaryPRNG<T, U> extends PRNG {
+interface UnaryPRNG<T, U> extends random.PRNG {
 	/**
 	* Returns a pseudorandom value.
 	*
@@ -96,40 +156,9 @@ interface UnaryPRNG<T, U> extends PRNG {
 }
 
 /**
-* Class for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
+* Interface for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
 */
-declare class RandomArray<T, U> {
-	/**
-	* Constructor for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
-	*
-	* @param prng - unary pseudorandom value generator
-	* @param idtypes - list of supported input data types
-	* @param odtypes - list of supported output data types
-	* @param policies - dispatch policies
-	* @param options - function options
-	* @returns instance
-	*
-	* @example
-	* var dtypes = require( '@stdlib/ndarray/dtypes' );
-	* var exponential = require( './../../../../base/exponential' );
-	*
-	* var idt = dtypes( 'real_and_generic' );
-	* var odt = dtypes( 'real_floating_point_and_generic' );
-	*
-	* var policies = {
-	*     'output': 'real_floating_point_and_generic'
-	* };
-	* var options = {
-	*     'order': 'row-major'
-	* };
-	*
-	* var rand = new Random( exponential, idt, odt, policies, options );
-	*
-	* var v = rand.generate( [ 2, 2 ], 2.0 );
-	* // returns <ndarray>
-	*/
-	constructor( prng: UnaryPRNG<T, U>, idtypes: ArrayLike<DataType>, odtypes: ArrayLike<DataType>, policies: Policies, options?: ConstructorOptions );
-
+interface Random<T, U> extends PRNG {
 	/**
 	* Returns an ndarray filled with pseudorandom values drawn from a unary PRNG.
 	*
@@ -154,10 +183,10 @@ declare class RandomArray<T, U> {
 	*
 	* var rand = new Random( exponential, idt, odt, policies, options );
 	*
-	* var v = rand.generate( [ 2, 2 ], 2.0 );
+	* var v = rand( [ 2, 2 ], 2.0 );
 	* // returns <ndarray>
 	*/
-	generate( shape: Shape, param1: T | typedndarray<T>, options?: Options ): typedndarray<U>;
+	( shape: Shape, param1: T | typedndarray<T>, options?: Options ): typedndarray<U>;
 
 	/**
 	* Fills an ndarray with pseudorandom values drawn from a unary PRNG.
@@ -194,74 +223,15 @@ declare class RandomArray<T, U> {
 }
 
 /**
-* Interface defining a constructor which is both "newable" and "callable".
+* Returns a function for generating pseudorandom values drawn from a unary PRNG.
+*
+* @param options - function options
+* @returns function for creating ndarrays
 */
-interface RandomArrayConstructor {
-	/**
-	* Constructor for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
-	*
-	* @param prng - unary pseudorandom value generator
-	* @param idtypes - list of supported input data types
-	* @param odtypes - list of supported output data types
-	* @param policies - dispatch policies
-	* @param options - function options
-	* @returns instance
-	*
-	* @example
-	* var dtypes = require( '@stdlib/ndarray/dtypes' );
-	* var exponential = require( './../../../../base/exponential' );
-	*
-	* var idt = dtypes( 'real_and_generic' );
-	* var odt = dtypes( 'real_floating_point_and_generic' );
-	*
-	* var policies = {
-	*     'output': 'real_floating_point_and_generic'
-	* };
-	* var options = {
-	*     'order': 'row-major'
-	* };
-	*
-	* var rand = new Random( exponential, idt, odt, policies, options );
-	*
-	* var v = rand.generate( [ 2, 2 ], 2.0 );
-	* // returns <ndarray>
-	*/
-	new<T = unknown, U = unknown>( prng: UnaryPRNG<T, U>, idtypes: ArrayLike<DataType>, odtypes: ArrayLike<DataType>, policies: Policies, options?: ConstructorOptions ): RandomArray<T, U>;
-
-	/**
-	* Constructor for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
-	*
-	* @param prng - unary pseudorandom value generator
-	* @param idtypes - list of supported input data types
-	* @param odtypes - list of supported output data types
-	* @param policies - dispatch policies
-	* @param options - function options
-	* @returns instance
-	*
-	* @example
-	* var dtypes = require( '@stdlib/ndarray/dtypes' );
-	* var exponential = require( './../../../../base/exponential' );
-	*
-	* var idt = dtypes( 'real_and_generic' );
-	* var odt = dtypes( 'real_floating_point_and_generic' );
-	*
-	* var policies = {
-	*     'output': 'real_floating_point_and_generic'
-	* };
-	* var options = {
-	*     'order': 'row-major'
-	* };
-	*
-	* var rand = new Random( exponential, idt, odt, policies, options );
-	*
-	* var v = rand.generate( [ 2, 2 ], 2.0 );
-	* // returns <ndarray>
-	*/
-	<T = unknown, U = unknown>( prng: UnaryPRNG<T, U>, idtypes: ArrayLike<DataType>, odtypes: ArrayLike<DataType>, policies: Policies, options?: ConstructorOptions ): RandomArray<T, U>;
-}
+type Factory<T, U> = ( options?: PRNGOptions ) => Random<T, U>;
 
 /**
-* Constructor for creating ndarrays filled with pseudorandom values drawn from a unary PRNG.
+* Returns a function for generating pseudorandom values drawn from a unary PRNG.
 *
 * @param prng - unary pseudorandom value generator
 * @param idtypes - list of supported input data types
@@ -284,9 +254,12 @@ interface RandomArrayConstructor {
 *     'order': 'row-major'
 * };
 *
-* var rand = new Random( exponential, idt, odt, policies, options );
+* var factory = createFactory( exponential, idt, odt, policies, options );
 *
-* var v = rand.generate( [ 2, 2 ], 2.0 );
+* var rand = factory();
+* // returns <Function>
+*
+* var v = rand( [ 2, 2 ], 2.0 );
 * // returns <ndarray>
 *
 * @example
@@ -304,7 +277,10 @@ interface RandomArrayConstructor {
 *     'order': 'row-major'
 * };
 *
-* var rand = new Random( exponential, idt, odt, policies, options );
+* var factory = createFactory( exponential, idt, odt, policies, options );
+*
+* var rand = factory();
+* // returns <Function>
 *
 * var out = ndzeros( [ 2, 2 ] );
 * var v = rand.assign( 2.0, out );
@@ -313,9 +289,9 @@ interface RandomArrayConstructor {
 * var bool = ( v === out );
 * // returns true
 */
-declare var ctor: RandomArrayConstructor;
+declare function createFactory<T = unknown, U = unknown>( prng: UnaryPRNG<T, U>, idtypes: ArrayLike<DataType>, odtypes: ArrayLike<DataType>, policies: Policies, options?: FactoryOptions ): Factory<T, U>;
 
 
 // EXPORTS //
 
-export = ctor;
+export = createFactory;

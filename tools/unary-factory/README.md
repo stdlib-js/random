@@ -148,7 +148,7 @@ The function has the following parameters:
 The function accepts the following options:
 
 -   **dtype**: output ndarray data type. Setting this option overrides the output data type policy.
--   **order**: memory layout. Setting this option overrides the default memory layout order.
+-   **order**: memory layout. Setting this option overrides the default memory layout.
 -   **mode**: specifies how to handle indices which exceed ndarray dimensions.
 -   **submode**: specifies how to handle subscripts which exceed ndarray dimensions on a per dimension basis.
 -   **readonly**: boolean indicating whether an ndarray should be read-only.
