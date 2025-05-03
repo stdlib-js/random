@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-02)
+## Unreleased (2025-05-03)
 
 <section class="features">
 
@@ -52,9 +52,9 @@
 
 ### Closed Issues
 
-A total of 4 issues were closed in this release:
+A total of 5 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901)
 
 </section>
 
@@ -66,6 +66,7 @@ A total of 4 issues were closed in this release:
 
 <details>
 
+-   [`384672f`](https://github.com/stdlib-js/stdlib/commit/384672f535a570ae66d10e24d098a8d12657c9ba) - **chore:** fix EditorConfig lint errors [(#6904)](https://github.com/stdlib-js/stdlib/pull/6904) _(by Dipjyoti Das)_
 -   [`99288f7`](https://github.com/stdlib-js/stdlib/commit/99288f71645dbe3209e489e152c7775f86a3052a) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
 -   [`393c150`](https://github.com/stdlib-js/stdlib/commit/393c150c784d4e0fb903d7633924c18a93a4bedd) - **docs:** update descriptions to be more neutral regarding output values _(by Athan Reines)_
 -   [`65f6a65`](https://github.com/stdlib-js/stdlib/commit/65f6a65b799c493d707c6eb2d55574e42f6a0649) - **docs:** add REPL help _(by Athan Reines)_
