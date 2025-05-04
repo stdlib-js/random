@@ -95,7 +95,7 @@ import createFactory = require( './index' );
 	createFactory<number, number>( exponential, ( x: number ): number => x, dtypes, policies, {} ); // $ExpectError
 }
 
-// The compiler throws an error if the function is provided a third argument which is not a data type...
+// The compiler throws an error if the function is provided a third argument which is not a list of data types...
 {
 	const dtypes: Array<DataType> = [ 'float64', 'float32' ];
 	const policies = {
