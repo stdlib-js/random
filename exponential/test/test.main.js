@@ -22,8 +22,14 @@
 
 var tape = require( 'tape' );
 var isndarrayLike = require( '@stdlib/assert/is-ndarray-like' );
+var isReadOnly = require( '@stdlib/ndarray/base/assert/is-read-only' );
 var scalar2ndarray = require( '@stdlib/ndarray/base/from-scalar' );
 var array = require( '@stdlib/ndarray/array' );
+var getDType = require( '@stdlib/ndarray/dtype' );
+var getShape = require( '@stdlib/ndarray/shape' );
+var getOrder = require( '@stdlib/ndarray/order' );
+var getData = require( '@stdlib/ndarray/data-buffer' );
+var numel = require( '@stdlib/ndarray/numel' );
 var random = require( './../lib/main.js' );
 
 
@@ -94,60 +100,6 @@ tape( 'the function throws an error if provided a first argument which is not a 
 	function badValue( value ) {
 		return function badValue() {
 			random( value, PARAM1, {} );
-		};
-	}
-});
-
-tape( 'the function throws an error if provided a second argument which is not a valid distribution parameter', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		'5',
-		null,
-		true,
-		false,
-		void 0,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			random( [ 3, 3 ], value );
-		};
-	}
-});
-
-tape( 'the function throws an error if provided a second argument which is not a valid distribution parameter (options)', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		'5',
-		null,
-		true,
-		false,
-		void 0,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), TypeError, 'throws an error when provided '+values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			random( [ 3, 3 ], value, {} );
 		};
 	}
 });
@@ -245,10 +197,10 @@ tape( 'the function returns an ndarray containing pseudorandom numbers (default;
 	actual = random( shape, PARAM1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -266,10 +218,10 @@ tape( 'the function returns an ndarray containing pseudorandom numbers (default;
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -287,10 +239,10 @@ tape( 'the function returns an ndarray containing pseudorandom numbers (default;
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -308,10 +260,10 @@ tape( 'the function returns an ndarray containing pseudorandom numbers (default;
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -328,10 +280,10 @@ tape( 'the function supports specifying the output array data type (dtype=float6
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -351,10 +303,10 @@ tape( 'the function supports specifying the output array data type (dtype=float6
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -374,10 +326,10 @@ tape( 'the function supports specifying the output array data type (dtype=float6
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -397,10 +349,10 @@ tape( 'the function supports specifying the output array data type (dtype=float6
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -417,10 +369,10 @@ tape( 'the function supports specifying the output array data type (dtype=float3
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -440,10 +392,10 @@ tape( 'the function supports specifying the output array data type (dtype=float3
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -463,10 +415,10 @@ tape( 'the function supports specifying the output array data type (dtype=float3
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -486,10 +438,10 @@ tape( 'the function supports specifying the output array data type (dtype=float3
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -506,10 +458,10 @@ tape( 'the function supports specifying the output array data type (dtype=generi
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -529,10 +481,10 @@ tape( 'the function supports specifying the output array data type (dtype=generi
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -552,10 +504,10 @@ tape( 'the function supports specifying the output array data type (dtype=generi
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -575,10 +527,10 @@ tape( 'the function supports specifying the output array data type (dtype=generi
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	for ( i = 0; i < actual.length; i++ ) {
+	for ( i = 0; i < numel( actual ); i++ ) {
 		t.strictEqual( typeof actual.iget( i ), 'number', 'returns expected value for index '+i );
 	}
 	t.end();
@@ -594,8 +546,8 @@ tape( 'the function supports specifying the output array order (row-major; scala
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'row-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'row-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -613,8 +565,8 @@ tape( 'the function supports specifying the output array order (row-major; zero-
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'row-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'row-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -632,8 +584,8 @@ tape( 'the function supports specifying the output array order (row-major; ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'row-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'row-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -648,8 +600,8 @@ tape( 'the function supports specifying the output array order (column-major; sc
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'column-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'column-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -667,8 +619,8 @@ tape( 'the function supports specifying the output array order (column-major; ze
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'column-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'column-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -686,8 +638,8 @@ tape( 'the function supports specifying the output array order (column-major; nd
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.order, 'column-major', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getOrder( actual ), 'column-major', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.end();
 });
@@ -702,13 +654,13 @@ tape( 'the function supports specifying whether the output array is read-only (s
 		'readonly': false
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, false, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), false, 'returns expected value' );
 
 	actual = random( shape, PARAM1, {
 		'readonly': true
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, true, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), true, 'returns expected value' );
 
 	t.end();
 });
@@ -725,13 +677,13 @@ tape( 'the function supports specifying whether the output array is read-only (z
 		'readonly': false
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, false, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), false, 'returns expected value' );
 
 	actual = random( shape, param1, {
 		'readonly': true
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, true, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), true, 'returns expected value' );
 
 	t.end();
 });
@@ -748,13 +700,13 @@ tape( 'the function supports specifying whether the output array is read-only (n
 		'readonly': false
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, false, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), false, 'returns expected value' );
 
 	actual = random( shape, param1, {
 		'readonly': true
 	});
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.flags.READONLY, true, 'returns expected value' );
+	t.strictEqual( isReadOnly( actual ), true, 'returns expected value' );
 
 	t.end();
 });
@@ -767,8 +719,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	actual = random( shape, PARAM1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -784,8 +736,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -801,8 +753,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -820,8 +772,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -837,8 +789,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -856,8 +808,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -873,8 +825,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -892,8 +844,8 @@ tape( 'if provided an empty shape, the function returns a zero-dimensional ndarr
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	t.strictEqual( typeof actual.get(), 'number', 'returns expected value' );
 	t.end();
@@ -907,10 +859,10 @@ tape( 'if provided a shape having one or more dimensions of size zero, the funct
 	actual = random( shape, PARAM1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	t.strictEqual( actual.data.length, 0, 'returns expected value' );
+	t.strictEqual( numel( actual ), 0, 'returns expected value' );
 	t.end();
 });
 
@@ -924,10 +876,10 @@ tape( 'if provided a shape having one or more dimensions of size zero, the funct
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float64', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	t.strictEqual( actual.data.length, 0, 'returns expected value' );
+	t.strictEqual( numel( actual ), 0, 'returns expected value' );
 	t.end();
 });
 
@@ -941,10 +893,10 @@ tape( 'if provided a shape having one or more dimensions of size zero, the funct
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'float32', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'float32', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	t.strictEqual( actual.data.length, 0, 'returns expected value' );
+	t.strictEqual( numel( actual ), 0, 'returns expected value' );
 	t.end();
 });
 
@@ -958,10 +910,10 @@ tape( 'if provided a shape having one or more dimensions of size zero, the funct
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( actual.dtype, 'generic', 'returns expected value' );
-	t.deepEqual( actual.shape, shape, 'returns expected value' );
+	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
-	t.strictEqual( actual.data.length, 0, 'returns expected value' );
+	t.strictEqual( numel( actual ), 0, 'returns expected value' );
 	t.end();
 });
 
@@ -988,7 +940,7 @@ tape( 'the function supports setting the generator state', function test( t ) {
 
 	// Replay previously generated values:
 	arr2 = random( [ 10 ], PARAM1 );
-	t.deepEqual( arr2.data, arr1.data, 'returns expected value' );
+	t.deepEqual( getData( arr2 ), getData( arr1 ), 'returns expected value' );
 
 	t.end();
 });

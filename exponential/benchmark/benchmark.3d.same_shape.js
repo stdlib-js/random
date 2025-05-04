@@ -23,14 +23,21 @@
 var bench = require( '@stdlib/bench' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var pow = require( '@stdlib/math/base/special/pow' );
+var cbrt = require( '@stdlib/math/base/special/cbrt' );
+var floor = require( '@stdlib/math/base/special/floor' );
+var array = require( '@stdlib/ndarray/array' );
+var filledarray = require( '@stdlib/array/filled' );
+var dtypes = require( '@stdlib/ndarray/dtypes' );
+var orders = require( '@stdlib/ndarray/orders' );
 var pkg = require( './../package.json' ).name;
-var dtypes = require( './../lib/dtypes.js' );
 var random = require( './../lib' );
 
 
 // VARIABLES //
 
-var order = 'row-major';
+var DTYPES = dtypes( 'real_floating_point_and_generic' );
+var ORDERS = orders();
+var PARAM1 = 2.0;
 
 
 // FUNCTIONS //
@@ -42,10 +49,19 @@ var order = 'row-major';
 * @param {PositiveInteger} len - ndarray length
 * @param {NonNegativeIntegerArray} shape - ndarray shape
 * @param {string} dtype - output ndarray data type
+* @param {string} order - output ndarray memory layout
 * @returns {Function} benchmark function
 */
-function createBenchmark( len, shape, dtype ) {
-	var opts = {
+function createBenchmark( len, shape, dtype, order ) {
+	var param1;
+	var opts;
+
+	param1 = array( filledarray( PARAM1, len, dtype ), {
+		'shape': shape,
+		'order': order
+	});
+
+	opts = {
 		'dtype': dtype,
 		'order': order
 	};
@@ -63,7 +79,7 @@ function createBenchmark( len, shape, dtype ) {
 
 		b.tic();
 		for ( i = 0; i < b.iterations; i++ ) {
-			x = random( shape, 2.0, opts );
+			x = random( shape, param1, opts );
 			if ( isnan( x.data[ i%len ] ) ) {
 				b.fail( 'should not return NaN' );
 			}
@@ -89,23 +105,38 @@ function main() {
 	var len;
 	var min;
 	var max;
+	var ord;
 	var sh;
 	var t1;
 	var f;
 	var i;
 	var j;
+	var k;
 
 	min = 1; // 10^min
 	max = 6; // 10^max
 
-	for ( j = 0; j < dtypes.length; j++ ) {
-		t1 = dtypes[ j ];
-		for ( i = min; i <= max; i++ ) {
-			len = pow( 10, i );
+	for ( k = 0; k < ORDERS.length; k++ ) {
+		ord = ORDERS[ k ];
+		for ( j = 0; j < DTYPES.length; j++ ) {
+			t1 = DTYPES[ j ];
+			for ( i = min; i <= max; i++ ) {
+				len = pow( 10, i );
 
-			sh = [ len ];
-			f = createBenchmark( len, sh, t1 );
-			bench( pkg+':ndims='+sh.length+',len='+len+',shape=['+sh.join(',')+'],xorder='+order+',xtype='+t1, f );
+				sh = [ len/2, 2, 1 ];
+				f = createBenchmark( len, sh, t1, ord );
+				bench( pkg+'::same_shape:ndims='+sh.length+',len='+len+',shape=['+sh.join(',')+'],xorder='+ord+',xtype='+t1, f );
+
+				sh = [ 1, 2, len/2 ];
+				f = createBenchmark( len, sh, t1, ord );
+				bench( pkg+'::same_shape:ndims='+sh.length+',len='+len+',shape=['+sh.join(',')+'],xorder='+ord+',xtype='+t1, f );
+
+				len = floor( cbrt( len ) );
+				sh = [ len, len, len ];
+				len *= len * len;
+				f = createBenchmark( len, sh, t1, ord );
+				bench( pkg+'::same_shape:ndims='+sh.length+',len='+len+',shape=['+sh.join(',')+'],xorder='+ord+',xtype='+t1, f );
+			}
 		}
 	}
 }

@@ -40,10 +40,7 @@
 * @example
 * var exponential = require( '@stdlib/random/exponential' );
 *
-* var rand = exponential.factory({
-*     'dtype': 'generic',
-*     'order': 'column-major'
-* });
+* var rand = exponential.factory();
 * // returns <Function>
 *
 * var arr = rand( [ 10 ], 2.0 );
@@ -52,10 +49,7 @@
 * @example
 * var exponential = require( '@stdlib/random/exponential' );
 *
-* var rand = exponential.factory({
-*     'dtype': 'generic',
-*     'order': 'column-major'
-* });
+* var rand = exponential.factory();
 * // returns <Function>
 *
 * var arr = rand( [ 10 ], 2.0, {

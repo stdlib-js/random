@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-03)
+## Unreleased (2025-05-04)
 
 <section class="features">
 
@@ -45,6 +45,16 @@
 
 ### BREAKING CHANGES
 
+-   [`62ed403`](https://github.com/stdlib-js/stdlib/commit/62ed40363834199d5dfabb4968d9f63a6539b198): drop support for default options
+
+    -   Previously, the `factory` method supported providing defaults for
+        various ndarray options (e.g., readonly, mode, order, etc). These
+        options have been removed. Instead, users should pass them along
+        to the main API for generating pseudorandom numbers. To replicate
+        previous functionality, create your own wrapper which uses partial
+        application to pass a set of \"default\" options for each invocation
+        of the PRNG function.
+
 -   [`8b1548f`](https://github.com/stdlib-js/stdlib/commit/8b1548fb45c1ff131f5edac20cb984344a2d28ec): update namespace declarations
 
     -   To migrate, users should consult the corresponding packages containing the respective implementations to determine what is breaking. The primary breakages come from the `blas/*` namespace, where we recently refactored how top-level BLAS APIs operate on input arguments.
@@ -71,6 +81,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`62ed403`](https://github.com/stdlib-js/stdlib/commit/62ed40363834199d5dfabb4968d9f63a6539b198) - **refactor:** migrate to `random/tools/unary-factory` and drop support for default options _(by Athan Reines)_
 -   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - **feat:** add `tools` to namespace _(by Athan Reines)_
 -   [`e5c7aa2`](https://github.com/stdlib-js/stdlib/commit/e5c7aa22bfe71828c59e5370499b1e420448ba60) - **feat:** add `tools` to namespace _(by Athan Reines)_
 -   [`fa668da`](https://github.com/stdlib-js/stdlib/commit/fa668da66016366690a9eaabbefcf3ef4659ef57) - **feat:** add `random/tools` namespace _(by Athan Reines)_
