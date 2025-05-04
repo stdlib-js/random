@@ -48,12 +48,13 @@ The function has the following parameters:
 When provided a scalar distribution parameter, every element in the output [ndarray][@stdlib/ndarray/ctor] is drawn from the same distribution. To generate pseudorandom numbers drawn from different distributions, provide a distribution parameter argument as an [ndarray][@stdlib/ndarray/ctor]. The following example demonstrates broadcasting an [ndarray][@stdlib/ndarray/ctor] containing distribution parameters to generate sub-matrices drawn from different distributions.
 
 ```javascript
+var getShape = require( '@stdlib/ndarray/shape' );
 var array = require( '@stdlib/ndarray/array' );
 
 var lambda = array( [ [ [ 2.0 ] ], [ [ 5.0 ] ] ] );
 // returns <ndarray>
 
-var shape = lambda.shape;
+var shape = getShape( lambda );
 // returns [ 2, 1, 1 ]
 
 var arr = exponential( [ 2, 3, 3 ], lambda );
@@ -63,10 +64,12 @@ var arr = exponential( [ 2, 3, 3 ], lambda );
 If provided an empty shape, the function returns a zero-dimensional [ndarray][@stdlib/ndarray/ctor].
 
 ```javascript
+var getShape = require( '@stdlib/ndarray/shape' );
+
 var arr = exponential( [], 2.0 );
 // returns <ndarray>
 
-var shape = arr.shape;
+var shape = getShape( arr );
 // returns []
 
 var v = arr.get();
@@ -84,6 +87,8 @@ The function accepts the following options:
 By default, the function returns an [ndarray][@stdlib/ndarray/ctor] having a [data type][@stdlib/ndarray/dtypes] determined by the function's output data type [policy][@stdlib/ndarray/output-dtype-policies]. To override the default behavior, set the `dtype` option.
 
 ```javascript
+var getDType = require( '@stdlib/ndarray/dtype' );
+
 var opts = {
     'dtype': 'generic'
 };
@@ -91,7 +96,7 @@ var opts = {
 var arr = exponential( [ 3, 3 ], 2.0, opts );
 // returns <ndarray>
 
-var dt = arr.dtype;
+var dt = getDType( arr );
 // returns 'generic'
 ```
 
@@ -122,12 +127,14 @@ The method has the following parameters:
 Returns a function for generating pseudorandom numbers drawn from an [exponential][@stdlib/random/base/exponential] distribution.
 
 ```javascript
+var getShape = require( '@stdlib/ndarray/shape' );
+
 var random = exponential.factory();
 
 var out = random( [ 3, 3 ], 2.0 );
 // returns <ndarray>
 
-var sh = out.shape;
+var sh = getShape( out );
 // returns [ 3, 3 ]
 ```
 
