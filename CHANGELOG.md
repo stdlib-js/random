@@ -83,6 +83,8 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`283b1eb`](https://github.com/stdlib-js/stdlib/commit/283b1eb0ae0b7b750185f9d62a678820f937ce34) - **docs:** update copy _(by Athan Reines)_
+-   [`b1d7e8d`](https://github.com/stdlib-js/stdlib/commit/b1d7e8d50fc1d123e89d308607c366d96d713d61) - **docs:** update example _(by Athan Reines)_
 -   [`b8db168`](https://github.com/stdlib-js/stdlib/commit/b8db1682f82b5c08a2a09627a21804d1739cced4) - **docs:** use attribute accessors in examples _(by Athan Reines)_
 -   [`67aa7ca`](https://github.com/stdlib-js/stdlib/commit/67aa7ca9ea5da37363b35c20b79de1a378ed0e27) - **bench:** only test a limited set of dtypes _(by Athan Reines)_
 -   [`4bf3aff`](https://github.com/stdlib-js/stdlib/commit/4bf3affb16d7937ab4defb95176717591b09bfcd) - **chore:** update copyright years _(by Athan Reines)_
