@@ -83,6 +83,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`fc2fa6d`](https://github.com/stdlib-js/stdlib/commit/fc2fa6d9fd3d3ecdd5264fdb0a9f27973c8bdc7d) - **docs:** fix signature _(by Athan Reines)_
 -   [`13f2202`](https://github.com/stdlib-js/stdlib/commit/13f22029c084d4b5af8387a5fc2740be280e9bfc) - **test:** fix comment _(by Athan Reines)_
 -   [`4f24995`](https://github.com/stdlib-js/stdlib/commit/4f24995e799d0589bf1edb0c9bd9341d34ef0e9f) - **test:** fix comment _(by Athan Reines)_
 -   [`16bbff1`](https://github.com/stdlib-js/stdlib/commit/16bbff17124264210133382c5557b7016d85493a) - **bench:** explicitly set dtype _(by Athan Reines)_

@@ -87,7 +87,7 @@
     [...]
 
 
-{{alias}}.prototype.assign( param1, out[, options] )
+{{alias}}.prototype.assign( param1, out )
     Fills an ndarray with pseudorandom values drawn from a unary PRNG.
 
     Parameters
