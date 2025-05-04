@@ -171,7 +171,7 @@ var out = random( [ 3, 3 ], 2.0 );
 // returns <ndarray>
 ```
 
-The returned function has the same interface and accepts the same options as the `exponential` function above.
+The function returned by the `factory` method has the same interface and accepts the same options as the `exponential` function above.
 
 #### exponential.PRNG
 

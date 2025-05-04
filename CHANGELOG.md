@@ -83,6 +83,9 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`16bbff1`](https://github.com/stdlib-js/stdlib/commit/16bbff17124264210133382c5557b7016d85493a) - **bench:** explicitly set dtype _(by Athan Reines)_
+-   [`18e643f`](https://github.com/stdlib-js/stdlib/commit/18e643f8beca349ca4c6a48009cb49c5cb015060) - **bench:** explicitly set dtype _(by Athan Reines)_
+-   [`283b1eb`](https://github.com/stdlib-js/stdlib/commit/283b1eb0ae0b7b750185f9d62a678820f937ce34) - **docs:** update copy _(by Athan Reines)_
 -   [`b1d7e8d`](https://github.com/stdlib-js/stdlib/commit/b1d7e8d50fc1d123e89d308607c366d96d713d61) - **docs:** update example _(by Athan Reines)_
 -   [`b8db168`](https://github.com/stdlib-js/stdlib/commit/b8db1682f82b5c08a2a09627a21804d1739cced4) - **docs:** use attribute accessors in examples _(by Athan Reines)_
 -   [`67aa7ca`](https://github.com/stdlib-js/stdlib/commit/67aa7ca9ea5da37363b35c20b79de1a378ed0e27) - **bench:** only test a limited set of dtypes _(by Athan Reines)_
