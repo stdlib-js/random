@@ -28,6 +28,8 @@
 
 ### Bug Fixes
 
+-   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - add type check to ensure only options objects are passed to factory
+-   [`6fcba80`](https://github.com/stdlib-js/stdlib/commit/6fcba8015a623cccab4c4c60152ef680653be786) - ensure support for zero-dimensional ndarray distribution parameters
 -   [`b082d29`](https://github.com/stdlib-js/stdlib/commit/b082d299748392a05be50b43351af6ac0cb7d418) - update include paths and reorder includes
 -   [`40b01fb`](https://github.com/stdlib-js/stdlib/commit/40b01fbc906831c1948d5287aa2b1fb176df0105) - update include paths and refactor branching logic
 -   [`5939fb1`](https://github.com/stdlib-js/stdlib/commit/5939fb1afbdb5288ef65f449e448c77fe56c6dfd) - update include paths and refactor branching logic
@@ -81,6 +83,13 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`67aa7ca`](https://github.com/stdlib-js/stdlib/commit/67aa7ca9ea5da37363b35c20b79de1a378ed0e27) - **bench:** only test a limited set of dtypes _(by Athan Reines)_
+-   [`4bf3aff`](https://github.com/stdlib-js/stdlib/commit/4bf3affb16d7937ab4defb95176717591b09bfcd) - **chore:** update copyright years _(by Athan Reines)_
+-   [`85ef704`](https://github.com/stdlib-js/stdlib/commit/85ef7049f33b79c07dab1759a7598621f6487a2b) - **test:** add `factory` tests _(by Athan Reines)_
+-   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - **fix:** add type check to ensure only options objects are passed to factory _(by Athan Reines)_
+-   [`6fcba80`](https://github.com/stdlib-js/stdlib/commit/6fcba8015a623cccab4c4c60152ef680653be786) - **fix:** ensure support for zero-dimensional ndarray distribution parameters _(by Athan Reines)_
+-   [`70c65cc`](https://github.com/stdlib-js/stdlib/commit/70c65ccc932d3c5e6ed7022d9355cd0c17814c26) - **test:** add tests for `assign` method _(by Athan Reines)_
+-   [`d446f58`](https://github.com/stdlib-js/stdlib/commit/d446f589c82f39e212a4c0491d1e97e44e2293c8) - **test:** remove `float32` tests _(by Athan Reines)_
 -   [`62ed403`](https://github.com/stdlib-js/stdlib/commit/62ed40363834199d5dfabb4968d9f63a6539b198) - **refactor:** migrate to `random/tools/unary-factory` and drop support for default options _(by Athan Reines)_
 -   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - **feat:** add `tools` to namespace _(by Athan Reines)_
 -   [`e5c7aa2`](https://github.com/stdlib-js/stdlib/commit/e5c7aa22bfe71828c59e5370499b1e420448ba60) - **feat:** add `tools` to namespace _(by Athan Reines)_

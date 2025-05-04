@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2025 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@
 var bench = require( '@stdlib/bench' );
 var isnan = require( '@stdlib/math/base/assert/is-nan' );
 var pow = require( '@stdlib/math/base/special/pow' );
-var dtypes = require( '@stdlib/ndarray/dtypes' );
 var orders = require( '@stdlib/ndarray/orders' );
 var pkg = require( './../package.json' ).name;
 var random = require( './../lib' );
@@ -31,7 +30,10 @@ var random = require( './../lib' );
 
 // VARIABLES //
 
-var DTYPES = dtypes( 'real_floating_point_and_generic' );
+var DTYPES = [
+	'float64',
+	'generic'
+];
 var ORDERS = orders();
 var PARAM1 = 2.0;
 

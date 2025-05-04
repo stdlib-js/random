@@ -341,7 +341,7 @@ setReadOnly( Random.prototype, 'generate', function generate( shape, param1, opt
 	* @returns {(number|ComplexLike)} pseudorandom number
 	*/
 	function wrapper() {
-		return prng( param1 );
+		return prng( p1 );
 	}
 });
 

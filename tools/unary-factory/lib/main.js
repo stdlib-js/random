@@ -172,6 +172,9 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 
 		if ( arguments.length > 0 ) {
 			opts = arguments[ 0 ];
+			if ( !isPlainObject( opts ) ) {
+				throw new TypeError( format( 'invalid argument. Options argument must be an object. Value: `%s`.', opts ) );
+			}
 			base = prng.factory( opts );
 		} else {
 			opts = {};
