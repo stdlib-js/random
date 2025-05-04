@@ -40,7 +40,7 @@ limitations under the License.
 var createFactory = require( '@stdlib/random/tools/unary-factory' );
 ```
 
-#### createFactory( prng, idtypes odtypes, policies\[, options] )
+#### createFactory( prng, idtypes, odtypes, policies\[, options] )
 
 Returns a function for generating pseudorandom values drawn from a unary PRNG.
 
