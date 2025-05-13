@@ -87,6 +87,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`9b8f3a8`](https://github.com/stdlib-js/stdlib/commit/9b8f3a8e51b449803b683c7bf394d498de479a5f) - **docs:** update namespace table of contents [(#6996)](https://github.com/stdlib-js/stdlib/pull/6996) _(by stdlib-bot)_
 -   [`ffc0d94`](https://github.com/stdlib-js/stdlib/commit/ffc0d94f0d19a553d2e134cbf985ff8e6863c901) - **feat:** add `binaryFactory` to namespace _(by Athan Reines)_
 -   [`c1d2b7a`](https://github.com/stdlib-js/stdlib/commit/c1d2b7a1b8b1a692b05c69a137e4b1240653efdc) - **feat:** add `random/tools/binary-factory` _(by Athan Reines)_
 -   [`81f4209`](https://github.com/stdlib-js/stdlib/commit/81f420992213ea27fa5bf8e2c1930ce3be667e4b) - **docs:** fix documented errors _(by Athan Reines)_
