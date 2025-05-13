@@ -4,12 +4,14 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-05)
+## Unreleased (2025-05-13)
 
 <section class="features">
 
 ### Features
 
+-   [`fd2532a`](https://github.com/stdlib-js/stdlib/commit/fd2532a6faf2a890bf1fc9659a7d4856ca7366ed) - add `binary` to namespace
+-   [`e510ba5`](https://github.com/stdlib-js/stdlib/commit/e510ba559a7ce570c9ae1845b377fff798d56634) - add `random/tools/binary`
 -   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - add `tools` to namespace
 -   [`e5c7aa2`](https://github.com/stdlib-js/stdlib/commit/e5c7aa22bfe71828c59e5370499b1e420448ba60) - add `tools` to namespace
 -   [`fa668da`](https://github.com/stdlib-js/stdlib/commit/fa668da66016366690a9eaabbefcf3ef4659ef57) - add `random/tools` namespace
@@ -83,6 +85,8 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`fd2532a`](https://github.com/stdlib-js/stdlib/commit/fd2532a6faf2a890bf1fc9659a7d4856ca7366ed) - **feat:** add `binary` to namespace _(by Athan Reines)_
+-   [`e510ba5`](https://github.com/stdlib-js/stdlib/commit/e510ba559a7ce570c9ae1845b377fff798d56634) - **feat:** add `random/tools/binary` _(by Athan Reines)_
 -   [`1f2dd57`](https://github.com/stdlib-js/stdlib/commit/1f2dd578f43122d0735cb3b6a6168151f7e787c7) - **docs:** update namespace table of contents [(#6928)](https://github.com/stdlib-js/stdlib/pull/6928) _(by stdlib-bot)_
 -   [`7423599`](https://github.com/stdlib-js/stdlib/commit/74235999433f4fa850bc842988b53e3f3367d585) - **docs:** update namespace table of contents [(#6917)](https://github.com/stdlib-js/stdlib/pull/6917) _(by stdlib-bot)_
 -   [`ac07e90`](https://github.com/stdlib-js/stdlib/commit/ac07e9063a58953875c233620315566bf18b0692) - **docs:** fix signature _(by Athan Reines)_

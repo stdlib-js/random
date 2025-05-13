@@ -37,6 +37,15 @@ var setReadOnly = require( '@stdlib/utils/define-read-only-property' );
 var ns = {};
 
 /**
+* @name binary
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/tools/binary}
+*/
+setReadOnly( ns, 'binary', require( './../../tools/binary' ) );
+
+/**
 * @name unary
 * @memberof ns
 * @readonly
