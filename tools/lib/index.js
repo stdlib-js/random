@@ -46,6 +46,15 @@ var ns = {};
 setReadOnly( ns, 'binary', require( './../../tools/binary' ) );
 
 /**
+* @name binaryFactory
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/tools/binary-factory}
+*/
+setReadOnly( ns, 'binaryFactory', require( './../../tools/binary-factory' ) );
+
+/**
 * @name unary
 * @memberof ns
 * @readonly

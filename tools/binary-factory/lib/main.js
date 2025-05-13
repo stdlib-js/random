@@ -35,18 +35,18 @@ var hasOwnProp = require( '@stdlib/assert/has-own-property' );
 var everyBy = require( '@stdlib/array/base/every-by' );
 var constantFunction = require( '@stdlib/utils/constant-function' );
 var noop = require( '@stdlib/utils/noop' );
-var Random = require( './../../../tools/unary' );
+var Random = require( './../../../tools/binary' );
 var format = require( '@stdlib/string/format' );
 
 
 // MAIN //
 
 /**
-* Returns a function for generating pseudorandom values drawn from a unary PRNG.
+* Returns a function for generating pseudorandom values drawn from a binary PRNG.
 *
-* @param {Function} prng - unary pseudorandom value generator
-* @param {Function} prng.factory - method which returns a new unary pseudorandom value generator
-* @param {StringArray} idtypes - list of supported input data types
+* @param {Function} prng - binary pseudorandom value generator
+* @param {Function} prng.factory - method which returns a new binary pseudorandom value generator
+* @param {ArrayLikeObject<StringArray>} idtypes - list containing a list of supported input data types for each PRNG parameter
 * @param {StringArray} odtypes - list of supported output data types
 * @param {Object} policies - policies
 * @param {string} policies.output - output data type policy
@@ -54,7 +54,7 @@ var format = require( '@stdlib/string/format' );
 * @param {string} options.order - default memory layout (either row-major or column-major)
 * @throws {TypeError} first argument must be a function
 * @throws {TypeError} first argument must have a `factory` method
-* @throws {TypeError} second argument must be an array of supported data types
+* @throws {TypeError} second argument must be an array containing arrays of supported data types
 * @throws {TypeError} third argument must be an array of supported data types
 * @throws {TypeError} fourth argument must be an object
 * @throws {TypeError} must provide valid options
@@ -62,7 +62,7 @@ var format = require( '@stdlib/string/format' );
 *
 * @example
 * var dtypes = require( '@stdlib/ndarray/dtypes' );
-* var exponential = require( '@stdlib/random/base/exponential' );
+* var uniform = require( '@stdlib/random/base/uniform' );
 *
 * var idt = dtypes( 'real_and_generic' );
 * var odt = dtypes( 'real_floating_point_and_generic' );
@@ -74,18 +74,18 @@ var format = require( '@stdlib/string/format' );
 *     'order': 'row-major'
 * };
 *
-* var factory = createFactory( exponential, idt, odt, policies, options );
+* var factory = createFactory( uniform, [ idt, idt ], odt, policies, options );
 *
 * var rand = factory();
 * // returns <Function>
 *
-* var v = rand( [ 2, 2 ], 2.0 );
+* var v = rand( [ 2, 2 ], 0.0, 1.0 );
 * // returns <ndarray>
 *
 * @example
 * var dtypes = require( '@stdlib/ndarray/dtypes' );
 * var ndzeros = require( '@stdlib/ndarray/zeros' );
-* var exponential = require( '@stdlib/random/base/exponential' );
+* var uniform = require( '@stdlib/random/base/uniform' );
 *
 * var idt = dtypes( 'real_and_generic' );
 * var odt = dtypes( 'real_floating_point_and_generic' );
@@ -97,13 +97,13 @@ var format = require( '@stdlib/string/format' );
 *     'order': 'row-major'
 * };
 *
-* var factory = createFactory( exponential, idt, odt, policies, options );
+* var factory = createFactory( uniform, [ idt, idt ], odt, policies, options );
 *
 * var rand = factory();
 * // returns <Function>
 *
 * var out = ndzeros( [ 2, 2 ] );
-* var v = rand.assign( 2.0, out );
+* var v = rand.assign( 0.0, 1.0, out );
 * // returns <ndarray>
 *
 * var bool = ( v === out );
@@ -111,6 +111,7 @@ var format = require( '@stdlib/string/format' );
 */
 function createFactory( prng, idtypes, odtypes, policies, options ) {
 	var OPTIONS;
+	var i;
 
 	if ( !isFunction( prng ) ) {
 		throw new TypeError( format( 'invalid argument. First argument must be a function. Value: `%s`.', prng ) );
@@ -118,12 +119,17 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 	if ( !isMethodIn( prng, 'factory' ) ) {
 		throw new TypeError( format( 'invalid argument. First argument must have a `%s` method.', 'factory' ) );
 	}
-	if (
-		!isCollection( idtypes ) ||
-		idtypes.length < 1 ||
-		!everyBy( idtypes, isDataType )
-	) {
-		throw new TypeError( format( 'invalid argument. Second argument must be an array of data types. Value: `%s`.', idtypes ) );
+	if ( !isCollection( idtypes ) ) {
+		throw new TypeError( format( 'invalid argument. Second argument must be an array-like object. Value: `%s`.', idtypes ) );
+	}
+	for ( i = 0; i < idtypes.length; i++ ) {
+		if (
+			!isCollection( idtypes[ i ] ) ||
+			idtypes[ i ].length < 1 ||
+			!everyBy( idtypes[ i ], isDataType )
+		) {
+			throw new TypeError( format( 'invalid argument. Second argument must contain arrays of data types. Value: `%s`.', idtypes ) );
+		}
 	}
 	if (
 		!isCollection( odtypes ) ||
@@ -153,7 +159,7 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 	return factory;
 
 	/**
-	* Returns a function for generating pseudorandom values drawn from a unary PRNG.
+	* Returns a function for generating pseudorandom values drawn from a binary PRNG.
 	*
 	* @private
 	* @param {Options} [options] - function options
@@ -200,11 +206,12 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 		return rand;
 
 		/**
-		* Returns an ndarray filled with pseudorandom values drawn from a unary PRNG.
+		* Returns an ndarray filled with pseudorandom values drawn from a binary PRNG.
 		*
 		* @private
 		* @param {NonNegativeIntegerArray} shape - output ndarray shape
-		* @param {(ndarrayLike|*)} param1 - PRNG parameter
+		* @param {(ndarrayLike|*)} param1 - first PRNG parameter
+		* @param {(ndarrayLike|*)} param2 - second PRNG parameter
 		* @param {Options} [options] - function options
 		* @param {string} [options.dtype] - output data type
 		* @param {string} [options.order] - memory layout (either row-major or column-major)
@@ -218,26 +225,27 @@ function createFactory( prng, idtypes, odtypes, policies, options ) {
 		* @throws {TypeError} must provide valid options
 		* @returns {ndarray} output array
 		*/
-		function rand( shape, param1, options ) {
-			if ( arguments.length < 3 ) {
-				return random.generate( shape, param1 );
+		function rand( shape, param1, param2, options ) {
+			if ( arguments.length < 4 ) {
+				return random.generate( shape, param1, param2 );
 			}
-			return random.generate( shape, param1, options );
+			return random.generate( shape, param1, param2, options );
 		}
 
 		/**
-		* Fills an ndarray with pseudorandom values drawn from a unary PRNG.
+		* Fills an ndarray with pseudorandom values drawn from a binary PRNG.
 		*
 		* @private
-		* @param {(ndarrayLike|*)} param1 - PRNG parameter
+		* @param {(ndarrayLike|*)} param1 - first PRNG parameter
+		* @param {(ndarrayLike|*)} param2 - second PRNG parameter
 		* @param {ndarrayLike} out - output ndarray
-		* @throws {TypeError} second argument must be an ndarray
+		* @throws {TypeError} third argument must be an ndarray
 		* @throws {TypeError} must provide valid PRNG parameters
 		* @throws {TypeError} PRNG parameters and the output ndarray must be broadcast compatible
 		* @returns {ndarray} output ndarray
 		*/
-		function assign( param1, out ) {
-			return random.assign( param1, out );
+		function assign( param1, param2, out ) {
+			return random.assign( param1, param2, out );
 		}
 
 		/**

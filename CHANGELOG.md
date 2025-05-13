@@ -10,6 +10,8 @@
 
 ### Features
 
+-   [`ffc0d94`](https://github.com/stdlib-js/stdlib/commit/ffc0d94f0d19a553d2e134cbf985ff8e6863c901) - add `binaryFactory` to namespace
+-   [`c1d2b7a`](https://github.com/stdlib-js/stdlib/commit/c1d2b7a1b8b1a692b05c69a137e4b1240653efdc) - add `random/tools/binary-factory`
 -   [`fd2532a`](https://github.com/stdlib-js/stdlib/commit/fd2532a6faf2a890bf1fc9659a7d4856ca7366ed) - add `binary` to namespace
 -   [`e510ba5`](https://github.com/stdlib-js/stdlib/commit/e510ba559a7ce570c9ae1845b377fff798d56634) - add `random/tools/binary`
 -   [`fb571fb`](https://github.com/stdlib-js/stdlib/commit/fb571fb19db616c28378d0c658d6f68e8cb2a0e4) - add `tools` to namespace
@@ -85,6 +87,10 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`ffc0d94`](https://github.com/stdlib-js/stdlib/commit/ffc0d94f0d19a553d2e134cbf985ff8e6863c901) - **feat:** add `binaryFactory` to namespace _(by Athan Reines)_
+-   [`c1d2b7a`](https://github.com/stdlib-js/stdlib/commit/c1d2b7a1b8b1a692b05c69a137e4b1240653efdc) - **feat:** add `random/tools/binary-factory` _(by Athan Reines)_
+-   [`81f4209`](https://github.com/stdlib-js/stdlib/commit/81f420992213ea27fa5bf8e2c1930ce3be667e4b) - **docs:** fix documented errors _(by Athan Reines)_
+-   [`ac030bd`](https://github.com/stdlib-js/stdlib/commit/ac030bd3dcc70b76129892f94e0347b80469daec) - **style:** fix spacing _(by Athan Reines)_
 -   [`fd2532a`](https://github.com/stdlib-js/stdlib/commit/fd2532a6faf2a890bf1fc9659a7d4856ca7366ed) - **feat:** add `binary` to namespace _(by Athan Reines)_
 -   [`e510ba5`](https://github.com/stdlib-js/stdlib/commit/e510ba559a7ce570c9ae1845b377fff798d56634) - **feat:** add `random/tools/binary` _(by Athan Reines)_
 -   [`1f2dd57`](https://github.com/stdlib-js/stdlib/commit/1f2dd578f43122d0735cb3b6a6168151f7e787c7) - **docs:** update namespace table of contents [(#6928)](https://github.com/stdlib-js/stdlib/pull/6928) _(by stdlib-bot)_
