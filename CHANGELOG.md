@@ -10,6 +10,9 @@
 
 ### Features
 
+-   [`8715789`](https://github.com/stdlib-js/stdlib/commit/871578903679cbdfc5445af4fbd21c59399bfb61) - add `uniform` to namespace
+-   [`bcf158b`](https://github.com/stdlib-js/stdlib/commit/bcf158b2856967f2afed0a756007bfb797a3839d) - add `exponential` to namespace
+-   [`b831e5c`](https://github.com/stdlib-js/stdlib/commit/b831e5cb025fce01c8385d9fdcf4f43bd1f07158) - add `random/uniform`
 -   [`ffc0d94`](https://github.com/stdlib-js/stdlib/commit/ffc0d94f0d19a553d2e134cbf985ff8e6863c901) - add `binaryFactory` to namespace
 -   [`c1d2b7a`](https://github.com/stdlib-js/stdlib/commit/c1d2b7a1b8b1a692b05c69a137e4b1240653efdc) - add `random/tools/binary-factory`
 -   [`fd2532a`](https://github.com/stdlib-js/stdlib/commit/fd2532a6faf2a890bf1fc9659a7d4856ca7366ed) - add `binary` to namespace
@@ -87,6 +90,9 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`8715789`](https://github.com/stdlib-js/stdlib/commit/871578903679cbdfc5445af4fbd21c59399bfb61) - **feat:** add `uniform` to namespace _(by Athan Reines)_
+-   [`bcf158b`](https://github.com/stdlib-js/stdlib/commit/bcf158b2856967f2afed0a756007bfb797a3839d) - **feat:** add `exponential` to namespace _(by Athan Reines)_
+-   [`b831e5c`](https://github.com/stdlib-js/stdlib/commit/b831e5cb025fce01c8385d9fdcf4f43bd1f07158) - **feat:** add `random/uniform` _(by Athan Reines)_
 -   [`9b8f3a8`](https://github.com/stdlib-js/stdlib/commit/9b8f3a8e51b449803b683c7bf394d498de479a5f) - **docs:** update namespace table of contents [(#6996)](https://github.com/stdlib-js/stdlib/pull/6996) _(by stdlib-bot)_
 -   [`ffc0d94`](https://github.com/stdlib-js/stdlib/commit/ffc0d94f0d19a553d2e134cbf985ff8e6863c901) - **feat:** add `binaryFactory` to namespace _(by Athan Reines)_
 -   [`c1d2b7a`](https://github.com/stdlib-js/stdlib/commit/c1d2b7a1b8b1a692b05c69a137e4b1240653efdc) - **feat:** add `random/tools/binary-factory` _(by Athan Reines)_
