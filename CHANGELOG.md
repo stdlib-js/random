@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-13)
+## Unreleased (2025-05-14)
 
 <section class="features">
 
@@ -90,6 +90,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`271c180`](https://github.com/stdlib-js/stdlib/commit/271c180beff04bf162bcc6e4407c0b07defbf15b) - **docs:** update namespace table of contents [(#6999)](https://github.com/stdlib-js/stdlib/pull/6999) _(by stdlib-bot)_
 -   [`8715789`](https://github.com/stdlib-js/stdlib/commit/871578903679cbdfc5445af4fbd21c59399bfb61) - **feat:** add `uniform` to namespace _(by Athan Reines)_
 -   [`bcf158b`](https://github.com/stdlib-js/stdlib/commit/bcf158b2856967f2afed0a756007bfb797a3839d) - **feat:** add `exponential` to namespace _(by Athan Reines)_
 -   [`b831e5c`](https://github.com/stdlib-js/stdlib/commit/b831e5cb025fce01c8385d9fdcf4f43bd1f07158) - **feat:** add `random/uniform` _(by Athan Reines)_
