@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-14)
+## Unreleased (2025-06-02)
 
 <section class="features">
 
@@ -76,9 +76,9 @@
 
 ### Closed Issues
 
-A total of 5 issues were closed in this release:
+A total of 6 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148)
 
 </section>
 
@@ -90,6 +90,7 @@ A total of 5 issues were closed in this release:
 
 <details>
 
+-   [`45867ff`](https://github.com/stdlib-js/stdlib/commit/45867ff77862afa84e39f529328cd768d78444fe) - **chore:** fix EditorConfig lint errors [(#7179)](https://github.com/stdlib-js/stdlib/pull/7179) _(by Karan Vasudevamurthy, Athan Reines)_
 -   [`271c180`](https://github.com/stdlib-js/stdlib/commit/271c180beff04bf162bcc6e4407c0b07defbf15b) - **docs:** update namespace table of contents [(#6999)](https://github.com/stdlib-js/stdlib/pull/6999) _(by stdlib-bot)_
 -   [`8715789`](https://github.com/stdlib-js/stdlib/commit/871578903679cbdfc5445af4fbd21c59399bfb61) - **feat:** add `uniform` to namespace _(by Athan Reines)_
 -   [`bcf158b`](https://github.com/stdlib-js/stdlib/commit/bcf158b2856967f2afed0a756007bfb797a3839d) - **feat:** add `exponential` to namespace _(by Athan Reines)_
@@ -188,13 +189,14 @@ A total of 5 issues were closed in this release:
 
 ### Contributors
 
-A total of 8 people contributed to this release. Thank you to the following contributors:
+A total of 9 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   AlyAbdelmoneim
 -   Athan Reines
 -   Dipjyoti Das
 -   Gururaj Gurram
+-   Karan Vasudevamurthy
 -   MANI
 -   Philipp Burckhardt
 -   Pulkit Gupta
