@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-09)
+## Unreleased (2025-06-14)
 
 <section class="features">
 
@@ -76,9 +76,9 @@
 
 ### Closed Issues
 
-A total of 7 issues were closed in this release:
+A total of 8 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199), [#7349](https://github.com/stdlib-js/stdlib/issues/7349)
 
 </section>
 
@@ -90,6 +90,7 @@ A total of 7 issues were closed in this release:
 
 <details>
 
+-   [`eff9b74`](https://github.com/stdlib-js/stdlib/commit/eff9b74602cd76a308c6518e1de5bd383b24b138) - **chore:** fix EditorConfig lint errors [(#7356)](https://github.com/stdlib-js/stdlib/pull/7356) _(by Lokesh Ranjan)_
 -   [`3565318`](https://github.com/stdlib-js/stdlib/commit/3565318e3639b3e44890ed15ccd73560d3cac14c) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`d40eeed`](https://github.com/stdlib-js/stdlib/commit/d40eeedd3e34280593e10be51238e0d80cf2a7cf) - **chore:** fix EditorConfig lint errors [(#7205)](https://github.com/stdlib-js/stdlib/pull/7205) _(by Deepak Singh)_
 -   [`45867ff`](https://github.com/stdlib-js/stdlib/commit/45867ff77862afa84e39f529328cd768d78444fe) - **chore:** fix EditorConfig lint errors [(#7179)](https://github.com/stdlib-js/stdlib/pull/7179) _(by Karan Vasudevamurthy, Athan Reines)_
@@ -191,7 +192,7 @@ A total of 7 issues were closed in this release:
 
 ### Contributors
 
-A total of 10 people contributed to this release. Thank you to the following contributors:
+A total of 11 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   AlyAbdelmoneim
@@ -200,6 +201,7 @@ A total of 10 people contributed to this release. Thank you to the following con
 -   Dipjyoti Das
 -   Gururaj Gurram
 -   Karan Vasudevamurthy
+-   Lokesh Ranjan
 -   MANI
 -   Philipp Burckhardt
 -   Pulkit Gupta
