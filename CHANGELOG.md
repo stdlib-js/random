@@ -90,6 +90,7 @@ A total of 8 issues were closed in this release:
 
 <details>
 
+-   [`5c7040c`](https://github.com/stdlib-js/stdlib/commit/5c7040cb0423e40a639933fd4b156e5c63683136) - **docs:** fix method name in example code _(by Philipp Burckhardt)_
 -   [`0d7c7b1`](https://github.com/stdlib-js/stdlib/commit/0d7c7b148724969c79eef40805f7df7c5a61b32c) - **docs:** pass in proper argument in TSDoc example code for `random/array` packages _(by Philipp Burckhardt)_
 -   [`21ec206`](https://github.com/stdlib-js/stdlib/commit/21ec2060d7496322ce32d4f984230d0c131974cc) - **docs:** clean-up example code _(by Philipp Burckhardt)_
 -   [`8a6dbd7`](https://github.com/stdlib-js/stdlib/commit/8a6dbd7bf692bcd9ce166a7370eda0a7410da3b0) - **docs:** fix example code and return annotation values _(by Philipp Burckhardt)_
