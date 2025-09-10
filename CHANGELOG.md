@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-07)
+## Unreleased (2025-09-10)
 
 <section class="features">
 
@@ -35,6 +35,7 @@
 
 ### Bug Fixes
 
+-   [`266be21`](https://github.com/stdlib-js/stdlib/commit/266be21558c84e9f85880137704ebab60ba51661) - correct function signature of TypeScript declaration
 -   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - add type check to ensure only options objects are passed to factory
 -   [`6fcba80`](https://github.com/stdlib-js/stdlib/commit/6fcba8015a623cccab4c4c60152ef680653be786) - ensure support for zero-dimensional ndarray distribution parameters
 -   [`b082d29`](https://github.com/stdlib-js/stdlib/commit/b082d299748392a05be50b43351af6ac0cb7d418) - update include paths and reorder includes
@@ -90,6 +91,7 @@ A total of 8 issues were closed in this release:
 
 <details>
 
+-   [`266be21`](https://github.com/stdlib-js/stdlib/commit/266be21558c84e9f85880137704ebab60ba51661) - **fix:** correct function signature of TypeScript declaration _(by Philipp Burckhardt)_
 -   [`5c7040c`](https://github.com/stdlib-js/stdlib/commit/5c7040cb0423e40a639933fd4b156e5c63683136) - **docs:** fix method name in example code _(by Philipp Burckhardt)_
 -   [`0d7c7b1`](https://github.com/stdlib-js/stdlib/commit/0d7c7b148724969c79eef40805f7df7c5a61b32c) - **docs:** pass in proper argument in TSDoc example code for `random/array` packages _(by Philipp Burckhardt)_
 -   [`21ec206`](https://github.com/stdlib-js/stdlib/commit/21ec2060d7496322ce32d4f984230d0c131974cc) - **docs:** clean-up example code _(by Philipp Burckhardt)_
