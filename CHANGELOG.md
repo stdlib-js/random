@@ -4,12 +4,16 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-09-10)
+## Unreleased (2025-10-15)
 
 <section class="features">
 
 ### Features
 
+-   [`448d1b4`](https://github.com/stdlib-js/stdlib/commit/448d1b4d9963e8393bd6f7e88dfa89dfc967c290) - update `random/tools` TypeScript declarations
+-   [`60d130f`](https://github.com/stdlib-js/stdlib/commit/60d130f7a27b49b5bd5ec855f8212706c3fc5194) - update `random` TypeScript declarations
+-   [`45bea12`](https://github.com/stdlib-js/stdlib/commit/45bea1241929b3311ee455d626ae771f6b19a85f) - update `random/array/tools` TypeScript declarations
+-   [`77c44b5`](https://github.com/stdlib-js/stdlib/commit/77c44b59452f59f6a28f502475f0f48f3b4ce9c3) - update `random/array` TypeScript declarations
 -   [`8715789`](https://github.com/stdlib-js/stdlib/commit/871578903679cbdfc5445af4fbd21c59399bfb61) - add `uniform` to namespace
 -   [`bcf158b`](https://github.com/stdlib-js/stdlib/commit/bcf158b2856967f2afed0a756007bfb797a3839d) - add `exponential` to namespace
 -   [`b831e5c`](https://github.com/stdlib-js/stdlib/commit/b831e5cb025fce01c8385d9fdcf4f43bd1f07158) - add `random/uniform`
@@ -77,9 +81,9 @@
 
 ### Closed Issues
 
-A total of 8 issues were closed in this release:
+A total of 9 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199), [#7349](https://github.com/stdlib-js/stdlib/issues/7349)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199), [#7349](https://github.com/stdlib-js/stdlib/issues/7349), [#8200](https://github.com/stdlib-js/stdlib/issues/8200)
 
 </section>
 
@@ -91,6 +95,13 @@ A total of 8 issues were closed in this release:
 
 <details>
 
+-   [`345429d`](https://github.com/stdlib-js/stdlib/commit/345429db65e8f31d94686b07f664a065a763f12f) - **chore:** fix JavaScript lint errors [(#8220)](https://github.com/stdlib-js/stdlib/pull/8220) _(by Jenish, Athan Reines)_
+-   [`3f48135`](https://github.com/stdlib-js/stdlib/commit/3f48135698dc83762b7b304b748a783eb5813fed) - **docs:** clean-up code in TSDoc examples _(by Philipp Burckhardt)_
+-   [`448d1b4`](https://github.com/stdlib-js/stdlib/commit/448d1b4d9963e8393bd6f7e88dfa89dfc967c290) - **feat:** update `random/tools` TypeScript declarations _(by Philipp Burckhardt)_
+-   [`60d130f`](https://github.com/stdlib-js/stdlib/commit/60d130f7a27b49b5bd5ec855f8212706c3fc5194) - **feat:** update `random` TypeScript declarations _(by Philipp Burckhardt)_
+-   [`45bea12`](https://github.com/stdlib-js/stdlib/commit/45bea1241929b3311ee455d626ae771f6b19a85f) - **feat:** update `random/array/tools` TypeScript declarations _(by Philipp Burckhardt)_
+-   [`77c44b5`](https://github.com/stdlib-js/stdlib/commit/77c44b59452f59f6a28f502475f0f48f3b4ce9c3) - **feat:** update `random/array` TypeScript declarations _(by Philipp Burckhardt)_
+-   [`14fbe2a`](https://github.com/stdlib-js/stdlib/commit/14fbe2a5ced542c4183b6cae8a5d369462a6023a) - **docs:** clean-up TypeScript declarations example code _(by Philipp Burckhardt)_
 -   [`266be21`](https://github.com/stdlib-js/stdlib/commit/266be21558c84e9f85880137704ebab60ba51661) - **fix:** correct function signature of TypeScript declaration _(by Philipp Burckhardt)_
 -   [`5c7040c`](https://github.com/stdlib-js/stdlib/commit/5c7040cb0423e40a639933fd4b156e5c63683136) - **docs:** fix method name in example code _(by Philipp Burckhardt)_
 -   [`0d7c7b1`](https://github.com/stdlib-js/stdlib/commit/0d7c7b148724969c79eef40805f7df7c5a61b32c) - **docs:** pass in proper argument in TSDoc example code for `random/array` packages _(by Philipp Burckhardt)_
@@ -163,7 +174,7 @@ A total of 8 issues were closed in this release:
 -   [`03ee1fb`](https://github.com/stdlib-js/stdlib/commit/03ee1fba12581e0c4bdf79514ae8477d64ffe2fe) - **docs:** fix description _(by Athan Reines)_
 -   [`5fc6df0`](https://github.com/stdlib-js/stdlib/commit/5fc6df084a95993c26151ceadb663bcd5dce4d29) - **docs:** fix description _(by Athan Reines)_
 -   [`a6dc859`](https://github.com/stdlib-js/stdlib/commit/a6dc8598c42abb4bbd5bbcf25cfc478d777c9a28) - **refactor:** use array base assertion utility _(by Athan Reines)_
--   [`9ecb767`](https://github.com/stdlib-js/stdlib/commit/9ecb7670623af1f28ffcb635d6fdf27a630e37e5) - **chore:** fix EditorConfig lint errors [(#6215)](https://github.com/stdlib-js/stdlib/pull/6215) _(by AlyAbdelmoneim)_
+-   [`9ecb767`](https://github.com/stdlib-js/stdlib/commit/9ecb7670623af1f28ffcb635d6fdf27a630e37e5) - **chore:** fix EditorConfig lint errors [(#6215)](https://github.com/stdlib-js/stdlib/pull/6215) _(by Aly Abdelmoneim)_
 -   [`6010481`](https://github.com/stdlib-js/stdlib/commit/6010481a6f07f206d7b7c491dea4f21c785ea97b) - **chore:** fix EditorConfig lint errors [(#5940)](https://github.com/stdlib-js/stdlib/pull/5940) _(by Pulkit Gupta, Athan Reines)_
 -   [`d9c2e28`](https://github.com/stdlib-js/stdlib/commit/d9c2e28c3c0298363e4e846e69d32c49252a14a7) - **docs:** update examples _(by Athan Reines)_
 -   [`05cdb8f`](https://github.com/stdlib-js/stdlib/commit/05cdb8f1e70b25fdd7fdaa822d8180fbf9588083) - **docs:** update examples _(by Athan Reines)_
@@ -206,14 +217,15 @@ A total of 8 issues were closed in this release:
 
 ### Contributors
 
-A total of 11 people contributed to this release. Thank you to the following contributors:
+A total of 12 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
--   AlyAbdelmoneim
+-   Aly Abdelmoneim
 -   Athan Reines
 -   Deepak Singh
 -   Dipjyoti Das
 -   Gururaj Gurram
+-   Jenish
 -   Karan Vasudevamurthy
 -   Lokesh Ranjan
 -   MANI

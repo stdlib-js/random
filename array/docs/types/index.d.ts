@@ -54,6 +54,7 @@ import poisson = require( './../../../array/poisson' );
 import randu = require( './../../../array/randu' );
 import rayleigh = require( './../../../array/rayleigh' );
 import t = require( './../../../array/t' );
+import tools = require( './../../../array/tools' );
 import triangular = require( './../../../array/triangular' );
 import uniform = require( './../../../array/uniform' );
 import weibull = require( './../../../array/weibull' );
@@ -324,7 +325,7 @@ interface Namespace {
 	* // returns <Float64Array>
 	*
 	* @example
-	* var random = ns.f.ns.factory( 2.0, 5.0 );
+	* var random = ns.f.factory( 2.0, 5.0 );
 	*
 	* var out = random( 10 );
 	* // returns <Float64Array>
@@ -773,6 +774,11 @@ interface Namespace {
 	* // returns <Float64Array>
 	*/
 	t: typeof t;
+
+	/**
+	* Pseudorandom number generator array creation function tools.
+	*/
+	tools: typeof tools;
 
 	/**
 	* Returns an array containing pseudorandom numbers drawn from a triangular distribution.

@@ -22,11 +22,14 @@
 
 import array = require( './../../array' );
 import base = require( './../../base' );
+import exponential = require( './../../exponential' );
 import iterators = require( './../../iter' );
 import sample = require( './../../sample' );
 import shuffle = require( './../../shuffle' );
 import streams = require( './../../streams' );
 import strided = require( './../../strided' );
+import tools = require( './../../tools' );
+import uniform = require( './../../uniform' );
 
 /**
 * Interface describing the `random` namespace.
@@ -41,6 +44,39 @@ interface Namespace {
 	* Base pseudorandom number generators.
 	*/
 	base: typeof base;
+
+	/**
+	* Generates pseudorandom numbers drawn from an exponential distribution.
+	*
+	* @param shape - output shape
+	* @param lambda - rate parameter
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.exponential( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.exponential.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.exponential.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	exponential: typeof exponential;
 
 	/**
 	* Pseudorandom number generator iterators.
@@ -98,6 +134,45 @@ interface Namespace {
 	* Pseudorandom number generator strided array functions.
 	*/
 	strided: typeof strided;
+
+	/**
+	* Pseudorandom number generator ndarray creation function tools.
+	*/
+	tools: typeof tools;
+
+	/**
+	* Generates pseudorandom numbers drawn from a uniform distribution.
+	*
+	* @param shape - output shape
+	* @param a - minimum support (inclusive)
+	* @param b - maximum support (exclusive)
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.uniform( [ 3, 3 ], 0.0, 1.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.uniform.assign( 0.0, 1.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.uniform.factory();
+	*
+	* var out = random( [ 3, 3 ], 0.0, 1.0 );
+	* // returns <ndarray>
+	*/
+	uniform: typeof uniform;
 }
 
 /**
