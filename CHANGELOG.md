@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-10-15)
+## Unreleased (2025-12-05)
 
 <section class="features">
 
@@ -95,6 +95,8 @@ A total of 9 issues were closed in this release:
 
 <details>
 
+-   [`226d13a`](https://github.com/stdlib-js/stdlib/commit/226d13a6a47597b12d0fa70d6cfb0b333f540a68) - **docs:** set doctest alias and update example code _(by Philipp Burckhardt)_
+-   [`47088cc`](https://github.com/stdlib-js/stdlib/commit/47088cc299d84289a904dd2e7d2cdf0aee9057aa) - **docs:** fix TSDoc comments example code and return annotation values _(by Philipp Burckhardt)_
 -   [`345429d`](https://github.com/stdlib-js/stdlib/commit/345429db65e8f31d94686b07f664a065a763f12f) - **chore:** fix JavaScript lint errors [(#8220)](https://github.com/stdlib-js/stdlib/pull/8220) _(by Jenish, Athan Reines)_
 -   [`3f48135`](https://github.com/stdlib-js/stdlib/commit/3f48135698dc83762b7b304b748a783eb5813fed) - **docs:** clean-up code in TSDoc examples _(by Philipp Burckhardt)_
 -   [`448d1b4`](https://github.com/stdlib-js/stdlib/commit/448d1b4d9963e8393bd6f7e88dfa89dfc967c290) - **feat:** update `random/tools` TypeScript declarations _(by Philipp Burckhardt)_
