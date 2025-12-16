@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-05)
+## Unreleased (2025-12-16)
 
 <section class="features">
 
@@ -81,9 +81,9 @@
 
 ### Closed Issues
 
-A total of 9 issues were closed in this release:
+A total of 10 issues were closed in this release:
 
-[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199), [#7349](https://github.com/stdlib-js/stdlib/issues/7349), [#8200](https://github.com/stdlib-js/stdlib/issues/8200)
+[#5933](https://github.com/stdlib-js/stdlib/issues/5933), [#6213](https://github.com/stdlib-js/stdlib/issues/6213), [#6236](https://github.com/stdlib-js/stdlib/issues/6236), [#6663](https://github.com/stdlib-js/stdlib/issues/6663), [#6901](https://github.com/stdlib-js/stdlib/issues/6901), [#7148](https://github.com/stdlib-js/stdlib/issues/7148), [#7199](https://github.com/stdlib-js/stdlib/issues/7199), [#7349](https://github.com/stdlib-js/stdlib/issues/7349), [#8200](https://github.com/stdlib-js/stdlib/issues/8200), [#9072](https://github.com/stdlib-js/stdlib/issues/9072)
 
 </section>
 
@@ -95,6 +95,7 @@ A total of 9 issues were closed in this release:
 
 <details>
 
+-   [`a06cfdd`](https://github.com/stdlib-js/stdlib/commit/a06cfdd5151299614d8c9e2a895d22a18955a289) - **chore:** fix C lint errors [(#9073)](https://github.com/stdlib-js/stdlib/pull/9073) _(by Geo Daoyu, Athan Reines)_
 -   [`226d13a`](https://github.com/stdlib-js/stdlib/commit/226d13a6a47597b12d0fa70d6cfb0b333f540a68) - **docs:** set doctest alias and update example code _(by Philipp Burckhardt)_
 -   [`47088cc`](https://github.com/stdlib-js/stdlib/commit/47088cc299d84289a904dd2e7d2cdf0aee9057aa) - **docs:** fix TSDoc comments example code and return annotation values _(by Philipp Burckhardt)_
 -   [`345429d`](https://github.com/stdlib-js/stdlib/commit/345429db65e8f31d94686b07f664a065a763f12f) - **chore:** fix JavaScript lint errors [(#8220)](https://github.com/stdlib-js/stdlib/pull/8220) _(by Jenish, Athan Reines)_
@@ -219,13 +220,14 @@ A total of 9 issues were closed in this release:
 
 ### Contributors
 
-A total of 12 people contributed to this release. Thank you to the following contributors:
+A total of 13 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   Aly Abdelmoneim
 -   Athan Reines
 -   Deepak Singh
 -   Dipjyoti Das
+-   Geo Daoyu
 -   Gururaj Gurram
 -   Jenish
 -   Karan Vasudevamurthy
