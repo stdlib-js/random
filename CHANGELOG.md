@@ -10,6 +10,8 @@
 
 ### Features
 
+-   [`4556b18`](https://github.com/stdlib-js/stdlib/commit/4556b185641379c2a104f669e7b15ed8f4093bc1) - add `normal` to namespace
+-   [`00d6ad3`](https://github.com/stdlib-js/stdlib/commit/00d6ad385c3596a2285087fc1890bb6e3f8e04bb) - add `random/normal`
 -   [`448d1b4`](https://github.com/stdlib-js/stdlib/commit/448d1b4d9963e8393bd6f7e88dfa89dfc967c290) - update `random/tools` TypeScript declarations
 -   [`60d130f`](https://github.com/stdlib-js/stdlib/commit/60d130f7a27b49b5bd5ec855f8212706c3fc5194) - update `random` TypeScript declarations
 -   [`45bea12`](https://github.com/stdlib-js/stdlib/commit/45bea1241929b3311ee455d626ae771f6b19a85f) - update `random/array/tools` TypeScript declarations
@@ -95,6 +97,14 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`4556b18`](https://github.com/stdlib-js/stdlib/commit/4556b185641379c2a104f669e7b15ed8f4093bc1) - **feat:** add `normal` to namespace _(by Athan Reines)_
+-   [`c07940c`](https://github.com/stdlib-js/stdlib/commit/c07940c389b08067bd2f0846aac9ad2adb6cadea) - **docs:** fix parameter names _(by Athan Reines)_
+-   [`6c7a45f`](https://github.com/stdlib-js/stdlib/commit/6c7a45fe6e7d1dc9a3475cce8bffa88b4b50109a) - **build:** fix parameter names _(by Athan Reines)_
+-   [`00d6ad3`](https://github.com/stdlib-js/stdlib/commit/00d6ad385c3596a2285087fc1890bb6e3f8e04bb) - **feat:** add `random/normal` _(by Athan Reines)_
+-   [`ccab22a`](https://github.com/stdlib-js/stdlib/commit/ccab22a5db803e6047dde29f439b8b6567bc001a) - **chore:** fix config _(by Athan Reines)_
+-   [`3594a07`](https://github.com/stdlib-js/stdlib/commit/3594a07139c05f2d9bfe50964630a55f48adb6f2) - **build:** add configuration for normal distribution _(by Athan Reines)_
+-   [`b5a3d6b`](https://github.com/stdlib-js/stdlib/commit/b5a3d6b48dd6c26167fe42e09b2af26cf6ed25c2) - **build:** fix property names _(by Athan Reines)_
+-   [`ae58ac1`](https://github.com/stdlib-js/stdlib/commit/ae58ac1fc17d7f852db1f39e942d1931d20e48ef) - **build:** add scaffold for binary PRNGs _(by Athan Reines)_
 -   [`8a1514d`](https://github.com/stdlib-js/stdlib/commit/8a1514ddb499a960934f2feee6e3a66d72bbcc61) - **chore:** update descriptions and benchmarks _(by Athan Reines)_
 -   [`e158863`](https://github.com/stdlib-js/stdlib/commit/e1588639b9d50b894ba30d60e8b468fcde057b0b) - **docs:** fix comments _(by Athan Reines)_
 -   [`13c7491`](https://github.com/stdlib-js/stdlib/commit/13c7491896b549bc619ed3d9cd0f48a135bd3035) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
