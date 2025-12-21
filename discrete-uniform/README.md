@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# Uniform Random Numbers
+# Discrete Uniform Random Numbers
 
 > Generate pseudorandom numbers drawn from a [discrete uniform][@stdlib/random/base/discrete-uniform] distribution.
 

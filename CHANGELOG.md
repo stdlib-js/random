@@ -10,6 +10,41 @@
 
 ### Features
 
+-   [`131ec4f`](https://github.com/stdlib-js/stdlib/commit/131ec4fdb267f4cd9ae44924b36c378a82d5a7e7) - add `weibull` to namespace
+-   [`c8e66e1`](https://github.com/stdlib-js/stdlib/commit/c8e66e11e0ae9b908544864ace3bc3b4ccb2b863) - add `random/weibull`
+-   [`630d205`](https://github.com/stdlib-js/stdlib/commit/630d205e6782a5cfc45f03f24fa83d7855e0bed3) - add `pareto1` to namespace
+-   [`a9ef7e7`](https://github.com/stdlib-js/stdlib/commit/a9ef7e79f21e92edfe9fd0530710ff61a55ba1cf) - add `random/pareto-type1`
+-   [`90a6086`](https://github.com/stdlib-js/stdlib/commit/90a6086818ded19c2b525923f6329a65bd437dff) - add `negativeBinomial` to namespace
+-   [`7b9e0c3`](https://github.com/stdlib-js/stdlib/commit/7b9e0c31be4beb050a1cc0f23b64270c2496bb66) - add `random/negative-binomial`
+-   [`410d47c`](https://github.com/stdlib-js/stdlib/commit/410d47cd901bacbd22a553b9d087f4e8245ab341) - add `lognormal` to namespace
+-   [`23186c7`](https://github.com/stdlib-js/stdlib/commit/23186c703c79501e8407b847baa33cdf14193e38) - add `random/lognormal`
+-   [`5455bfd`](https://github.com/stdlib-js/stdlib/commit/5455bfd1bbbba6ac34985755b99b48429afdc83d) - add `logistic` to namespace
+-   [`17e1b56`](https://github.com/stdlib-js/stdlib/commit/17e1b5641f93f5f48d3d169fb0248113ad4590f7) - add `random/logistic`
+-   [`e67e70e`](https://github.com/stdlib-js/stdlib/commit/e67e70ed3636b4b33bdc5f631afb259d32363889) - add `levy` to namespace
+-   [`b3567e4`](https://github.com/stdlib-js/stdlib/commit/b3567e4a209b7939f3261c8b7ba1d31f34e436bd) - add `random/levy`
+-   [`493f98c`](https://github.com/stdlib-js/stdlib/commit/493f98ce374aa51722ba5947b73bc73900e75b23) - add `laplace` to namespace
+-   [`1919a5e`](https://github.com/stdlib-js/stdlib/commit/1919a5eebe3eab1a44acfa1518f38f83aec64a4a) - add `random/laplace`
+-   [`00eb024`](https://github.com/stdlib-js/stdlib/commit/00eb024558f526a0c60b5b21aece86c6e13ee8c9) - add `kumaraswamy` to namespace
+-   [`f3a2521`](https://github.com/stdlib-js/stdlib/commit/f3a2521e0e74f876e7ced3af1fae2d0f40808003) - add `random/kumaraswamy`
+-   [`35c849b`](https://github.com/stdlib-js/stdlib/commit/35c849b8b9f256922d214a95be736c860783e1fc) - add `invgamma` to namespace
+-   [`c1a109d`](https://github.com/stdlib-js/stdlib/commit/c1a109dd79ad4393f3a6213acbd2d4857472d5b8) - add `random/invgamma`
+-   [`b0b35d6`](https://github.com/stdlib-js/stdlib/commit/b0b35d6670ab74ceffae31107a5d3d4a3b8ec310) - add `gumbel` to namespace
+-   [`9617715`](https://github.com/stdlib-js/stdlib/commit/9617715fbff78c6eb55d3416775c1ebc8b43d8c5) - add `random/gumbel`
+-   [`5d469b6`](https://github.com/stdlib-js/stdlib/commit/5d469b6a72d2f7eca0df5e8caa268c6c10587dcb) - add `gamma` to namespace
+-   [`5d1548b`](https://github.com/stdlib-js/stdlib/commit/5d1548b0a155ba8b0b3774febdd99478af480d02) - add `random/gamma`
+-   [`39410b7`](https://github.com/stdlib-js/stdlib/commit/39410b7565ba6a9d01fb85824d92a6c8d1bbb6b6) - add `f` to namespace
+-   [`a14a24f`](https://github.com/stdlib-js/stdlib/commit/a14a24f42d2c693acfd1263f498f197302c94a89) - add `random/f`
+-   [`3cf0e30`](https://github.com/stdlib-js/stdlib/commit/3cf0e30310bdfeb187fbbd145de2e1285e548e77) - add `erlang` to namespace
+-   [`fbcf181`](https://github.com/stdlib-js/stdlib/commit/fbcf181ec5a1522d9c5f4c261feaed8b8e06d928) - add `random/erlang`
+-   [`156d8c8`](https://github.com/stdlib-js/stdlib/commit/156d8c85722578cb9364c6689ec08c96c231cc59) - add `cosine` to namespace
+-   [`0745106`](https://github.com/stdlib-js/stdlib/commit/0745106878f4b37ebfb202c934ba12cf7a06a950) - add `random/cosine`
+-   [`e147dab`](https://github.com/stdlib-js/stdlib/commit/e147dabadb3016b85dd078bd3566dd082bb65685) - add `cauchy` to namespace
+-   [`4b6fdac`](https://github.com/stdlib-js/stdlib/commit/4b6fdac17a50e01a3f8b195eafa574f7693ed87b) - add `random/cauchy`
+-   [`a4ef6b2`](https://github.com/stdlib-js/stdlib/commit/a4ef6b20c7a929576646482c4a79a2ffff87b859) - add `binomial` to namespace
+-   [`a2b124a`](https://github.com/stdlib-js/stdlib/commit/a2b124a611fb6b6ba9284b5310d2fd776cc2b0e8) - add `random/binomial`
+-   [`1f09273`](https://github.com/stdlib-js/stdlib/commit/1f092731df6172e6a1098e486ec6bd3dc3b6d643) - add `betaprime` to namespace
+-   [`fac97f8`](https://github.com/stdlib-js/stdlib/commit/fac97f8ca91354c9642d68c8c83e3429357f2458) - add `random/betaprime`
+-   [`71374bd`](https://github.com/stdlib-js/stdlib/commit/71374bd455a304afe009d297d68b06c36ad65b5d) - add `discreteUniform` to namespace
 -   [`737faf1`](https://github.com/stdlib-js/stdlib/commit/737faf1be9f42aaeac74cd3141abf855057b1948) - add `random/discrete-uniform`
 -   [`e1eec0f`](https://github.com/stdlib-js/stdlib/commit/e1eec0feded8681f6e17122dd72a05f03d20156a) - add `beta` to namespace
 -   [`f70c800`](https://github.com/stdlib-js/stdlib/commit/f70c8003414bea57688f453e13e4ebd6e4093938) - add `random/beta`
@@ -102,6 +137,51 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`7f63ca2`](https://github.com/stdlib-js/stdlib/commit/7f63ca2e79dfec53d1424d7c29704f0ec4cd7af7) - **bench:** reduce maximum array size _(by Athan Reines)_
+-   [`0783b86`](https://github.com/stdlib-js/stdlib/commit/0783b86b9ade65f21c5805579c3201ae0436d8d0) - **build:** reduce maximum size _(by Athan Reines)_
+-   [`4bf3633`](https://github.com/stdlib-js/stdlib/commit/4bf36333ac1de0c8bf338f0cfc98f8b305200778) - **test:** guard against edge case _(by Athan Reines)_
+-   [`a1536b0`](https://github.com/stdlib-js/stdlib/commit/a1536b0f5f0c8c5c1d79e3c06732e9ca8679b9bf) - **test:** guard against edge case _(by Athan Reines)_
+-   [`36d236e`](https://github.com/stdlib-js/stdlib/commit/36d236e438223bee95509ef8473b53387041a943) - **test:** guard against edge case _(by Athan Reines)_
+-   [`e98a1fd`](https://github.com/stdlib-js/stdlib/commit/e98a1fde84bd9246a9b4b728a412d6fcf78dcfee) - **chore:** add directory _(by Athan Reines)_
+-   [`7f98596`](https://github.com/stdlib-js/stdlib/commit/7f985969b961754eb553d6a8b66b01623442fd93) - **chore:** add directory _(by Athan Reines)_
+-   [`abbab8f`](https://github.com/stdlib-js/stdlib/commit/abbab8f5f67cdbef882cf592a73ab881103c6863) - **build:** fix configuration _(by Athan Reines)_
+-   [`b5e5d2e`](https://github.com/stdlib-js/stdlib/commit/b5e5d2e960022327279b859e583d6533e506a4ef) - **docs:** update heading _(by Athan Reines)_
+-   [`83bc2d5`](https://github.com/stdlib-js/stdlib/commit/83bc2d5199e87efc1ac927d2e4ee075b48d39289) - **build:** add configuration files _(by Athan Reines)_
+-   [`131ec4f`](https://github.com/stdlib-js/stdlib/commit/131ec4fdb267f4cd9ae44924b36c378a82d5a7e7) - **feat:** add `weibull` to namespace _(by Athan Reines)_
+-   [`c8e66e1`](https://github.com/stdlib-js/stdlib/commit/c8e66e11e0ae9b908544864ace3bc3b4ccb2b863) - **feat:** add `random/weibull` _(by Athan Reines)_
+-   [`630d205`](https://github.com/stdlib-js/stdlib/commit/630d205e6782a5cfc45f03f24fa83d7855e0bed3) - **feat:** add `pareto1` to namespace _(by Athan Reines)_
+-   [`a9ef7e7`](https://github.com/stdlib-js/stdlib/commit/a9ef7e79f21e92edfe9fd0530710ff61a55ba1cf) - **feat:** add `random/pareto-type1` _(by Athan Reines)_
+-   [`90a6086`](https://github.com/stdlib-js/stdlib/commit/90a6086818ded19c2b525923f6329a65bd437dff) - **feat:** add `negativeBinomial` to namespace _(by Athan Reines)_
+-   [`7b9e0c3`](https://github.com/stdlib-js/stdlib/commit/7b9e0c31be4beb050a1cc0f23b64270c2496bb66) - **feat:** add `random/negative-binomial` _(by Athan Reines)_
+-   [`410d47c`](https://github.com/stdlib-js/stdlib/commit/410d47cd901bacbd22a553b9d087f4e8245ab341) - **feat:** add `lognormal` to namespace _(by Athan Reines)_
+-   [`23186c7`](https://github.com/stdlib-js/stdlib/commit/23186c703c79501e8407b847baa33cdf14193e38) - **feat:** add `random/lognormal` _(by Athan Reines)_
+-   [`5455bfd`](https://github.com/stdlib-js/stdlib/commit/5455bfd1bbbba6ac34985755b99b48429afdc83d) - **feat:** add `logistic` to namespace _(by Athan Reines)_
+-   [`17e1b56`](https://github.com/stdlib-js/stdlib/commit/17e1b5641f93f5f48d3d169fb0248113ad4590f7) - **feat:** add `random/logistic` _(by Athan Reines)_
+-   [`e67e70e`](https://github.com/stdlib-js/stdlib/commit/e67e70ed3636b4b33bdc5f631afb259d32363889) - **feat:** add `levy` to namespace _(by Athan Reines)_
+-   [`b3567e4`](https://github.com/stdlib-js/stdlib/commit/b3567e4a209b7939f3261c8b7ba1d31f34e436bd) - **feat:** add `random/levy` _(by Athan Reines)_
+-   [`493f98c`](https://github.com/stdlib-js/stdlib/commit/493f98ce374aa51722ba5947b73bc73900e75b23) - **feat:** add `laplace` to namespace _(by Athan Reines)_
+-   [`1919a5e`](https://github.com/stdlib-js/stdlib/commit/1919a5eebe3eab1a44acfa1518f38f83aec64a4a) - **feat:** add `random/laplace` _(by Athan Reines)_
+-   [`00eb024`](https://github.com/stdlib-js/stdlib/commit/00eb024558f526a0c60b5b21aece86c6e13ee8c9) - **feat:** add `kumaraswamy` to namespace _(by Athan Reines)_
+-   [`f3a2521`](https://github.com/stdlib-js/stdlib/commit/f3a2521e0e74f876e7ced3af1fae2d0f40808003) - **feat:** add `random/kumaraswamy` _(by Athan Reines)_
+-   [`35c849b`](https://github.com/stdlib-js/stdlib/commit/35c849b8b9f256922d214a95be736c860783e1fc) - **feat:** add `invgamma` to namespace _(by Athan Reines)_
+-   [`c1a109d`](https://github.com/stdlib-js/stdlib/commit/c1a109dd79ad4393f3a6213acbd2d4857472d5b8) - **feat:** add `random/invgamma` _(by Athan Reines)_
+-   [`b0b35d6`](https://github.com/stdlib-js/stdlib/commit/b0b35d6670ab74ceffae31107a5d3d4a3b8ec310) - **feat:** add `gumbel` to namespace _(by Athan Reines)_
+-   [`9617715`](https://github.com/stdlib-js/stdlib/commit/9617715fbff78c6eb55d3416775c1ebc8b43d8c5) - **feat:** add `random/gumbel` _(by Athan Reines)_
+-   [`5d469b6`](https://github.com/stdlib-js/stdlib/commit/5d469b6a72d2f7eca0df5e8caa268c6c10587dcb) - **feat:** add `gamma` to namespace _(by Athan Reines)_
+-   [`5d1548b`](https://github.com/stdlib-js/stdlib/commit/5d1548b0a155ba8b0b3774febdd99478af480d02) - **feat:** add `random/gamma` _(by Athan Reines)_
+-   [`39410b7`](https://github.com/stdlib-js/stdlib/commit/39410b7565ba6a9d01fb85824d92a6c8d1bbb6b6) - **feat:** add `f` to namespace _(by Athan Reines)_
+-   [`a14a24f`](https://github.com/stdlib-js/stdlib/commit/a14a24f42d2c693acfd1263f498f197302c94a89) - **feat:** add `random/f` _(by Athan Reines)_
+-   [`3cf0e30`](https://github.com/stdlib-js/stdlib/commit/3cf0e30310bdfeb187fbbd145de2e1285e548e77) - **feat:** add `erlang` to namespace _(by Athan Reines)_
+-   [`fbcf181`](https://github.com/stdlib-js/stdlib/commit/fbcf181ec5a1522d9c5f4c261feaed8b8e06d928) - **feat:** add `random/erlang` _(by Athan Reines)_
+-   [`156d8c8`](https://github.com/stdlib-js/stdlib/commit/156d8c85722578cb9364c6689ec08c96c231cc59) - **feat:** add `cosine` to namespace _(by Athan Reines)_
+-   [`0745106`](https://github.com/stdlib-js/stdlib/commit/0745106878f4b37ebfb202c934ba12cf7a06a950) - **feat:** add `random/cosine` _(by Athan Reines)_
+-   [`e147dab`](https://github.com/stdlib-js/stdlib/commit/e147dabadb3016b85dd078bd3566dd082bb65685) - **feat:** add `cauchy` to namespace _(by Athan Reines)_
+-   [`4b6fdac`](https://github.com/stdlib-js/stdlib/commit/4b6fdac17a50e01a3f8b195eafa574f7693ed87b) - **feat:** add `random/cauchy` _(by Athan Reines)_
+-   [`a4ef6b2`](https://github.com/stdlib-js/stdlib/commit/a4ef6b20c7a929576646482c4a79a2ffff87b859) - **feat:** add `binomial` to namespace _(by Athan Reines)_
+-   [`a2b124a`](https://github.com/stdlib-js/stdlib/commit/a2b124a611fb6b6ba9284b5310d2fd776cc2b0e8) - **feat:** add `random/binomial` _(by Athan Reines)_
+-   [`1f09273`](https://github.com/stdlib-js/stdlib/commit/1f092731df6172e6a1098e486ec6bd3dc3b6d643) - **feat:** add `betaprime` to namespace _(by Athan Reines)_
+-   [`fac97f8`](https://github.com/stdlib-js/stdlib/commit/fac97f8ca91354c9642d68c8c83e3429357f2458) - **feat:** add `random/betaprime` _(by Athan Reines)_
+-   [`71374bd`](https://github.com/stdlib-js/stdlib/commit/71374bd455a304afe009d297d68b06c36ad65b5d) - **feat:** add `discreteUniform` to namespace _(by Athan Reines)_
 -   [`10ace78`](https://github.com/stdlib-js/stdlib/commit/10ace7899db8244d92240852d60f7ddb081cd13c) - **build:** fix template string for package name _(by Athan Reines)_
 -   [`737faf1`](https://github.com/stdlib-js/stdlib/commit/737faf1be9f42aaeac74cd3141abf855057b1948) - **feat:** add `random/discrete-uniform` _(by Athan Reines)_
 -   [`f8d9231`](https://github.com/stdlib-js/stdlib/commit/f8d9231f7d32d493676a62d4cc019a1f9113e62e) - **build:** fix parameter description wrapping _(by Athan Reines)_
