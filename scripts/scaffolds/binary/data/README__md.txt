@@ -345,7 +345,7 @@ random = {{ALIAS}}.factory({
 });
 
 // Generate a two-dimensional array which replicates the above pseudorandom number generation sequence:
-var x4 = random( [ 3, 5 ], 0.0, 1.0 );
+var x4 = random( [ 3, 5 ], {{PARAM_1_VALUE}}, {{PARAM_2_VALUE}} );
 
 // Convert to a list of nested arrays:
 var arr = ndarray2array( x4 );

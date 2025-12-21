@@ -18,32 +18,32 @@ limitations under the License.
 
 -->
 
-# Normal Random Numbers
+# Beta Random Numbers
 
-> Generate pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
+> Generate pseudorandom numbers drawn from a [beta][@stdlib/random/base/beta] distribution.
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var normal = require( '@stdlib/random/normal' );
+var beta = require( '@stdlib/random/beta' );
 ```
 
-#### normal( shape, mu, sigma\[, options] )
+#### beta( shape, a, b\[, options] )
 
-Returns an [ndarray][@stdlib/ndarray/ctor] containing pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
+Returns an [ndarray][@stdlib/ndarray/ctor] containing pseudorandom numbers drawn from a [beta][@stdlib/random/base/beta] distribution.
 
 ```javascript
-var arr = normal( [ 3, 3 ], 2.0, 5.0 );
+var arr = beta( [ 3, 3 ], 2.0, 5.0 );
 // returns <ndarray>
 ```
 
 The function has the following parameters:
 
 -   **shape**: output shape.
--   **mu**: mean. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output shape.
--   **sigma**: standard deviation. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output shape.
+-   **a**: first shape parameter. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output shape.
+-   **b**: second shape parameter. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the specified output shape.
 -   **options**: function options.
 
 When provided scalar distribution parameters, every element in the output [ndarray][@stdlib/ndarray/ctor] is drawn from the same distribution. To generate pseudorandom numbers drawn from different distributions, provide distribution parameter arguments as [ndarrays][@stdlib/ndarray/ctor]. The following example demonstrates broadcasting an [ndarray][@stdlib/ndarray/ctor] containing distribution parameters to generate sub-matrices drawn from different distributions.
@@ -52,16 +52,16 @@ When provided scalar distribution parameters, every element in the output [ndarr
 var getShape = require( '@stdlib/ndarray/shape' );
 var array = require( '@stdlib/ndarray/array' );
 
-var mu = array( [ [ [ 2.0 ] ], [ [ 20.0 ] ] ] );
+var a = array( [ [ [ 2.0 ] ], [ [ 10.0 ] ] ] );
 // returns <ndarray>
 
-var sigma = array( [ [ [ 5.0 ] ], [ [ 25.0 ] ] ] );
+var b = array( [ [ [ 5.0 ] ], [ [ 20.0 ] ] ] );
 // returns <ndarray>
 
-var shape = getShape( mu );
+var shape = getShape( a );
 // returns [ 2, 1, 1 ]
 
-var arr = normal( [ 2, 3, 3 ], mu, sigma );
+var arr = beta( [ 2, 3, 3 ], a, b );
 // returns <ndarray>
 ```
 
@@ -70,7 +70,7 @@ If provided an empty shape, the function returns a zero-dimensional [ndarray][@s
 ```javascript
 var getShape = require( '@stdlib/ndarray/shape' );
 
-var arr = normal( [], 2.0, 5.0 );
+var arr = beta( [], 2.0, 5.0 );
 // returns <ndarray>
 
 var shape = getShape( arr );
@@ -97,16 +97,16 @@ var opts = {
     'dtype': 'generic'
 };
 
-var arr = normal( [ 3, 3 ], 2.0, 5.0, opts );
+var arr = beta( [ 3, 3 ], 2.0, 5.0, opts );
 // returns <ndarray>
 
 var dt = String( getDType( arr ) );
 // returns 'generic'
 ```
 
-#### normal.assign( mu, sigma, out )
+#### beta.assign( a, b, out )
 
-Fills an [ndarray][@stdlib/ndarray/ctor] with pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
+Fills an [ndarray][@stdlib/ndarray/ctor] with pseudorandom numbers drawn from a [beta][@stdlib/random/base/beta] distribution.
 
 ```javascript
 var zeros = require( '@stdlib/ndarray/zeros' );
@@ -114,7 +114,7 @@ var zeros = require( '@stdlib/ndarray/zeros' );
 var out = zeros( [ 3, 3 ] );
 // returns <ndarray>
 
-var v = normal.assign( 2.0, 5.0, out );
+var v = beta.assign( 2.0, 5.0, out );
 // returns <ndarray>
 
 var bool = ( v === out );
@@ -123,18 +123,18 @@ var bool = ( v === out );
 
 The method has the following parameters:
 
--   **mu**: mean. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output [ndarray][@stdlib/ndarray/ctor].
--   **sigma**: standard deviation. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output [ndarray][@stdlib/ndarray/ctor].
+-   **a**: first shape parameter. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output [ndarray][@stdlib/ndarray/ctor].
+-   **b**: second shape parameter. May be either a scalar or an [ndarray][@stdlib/ndarray/ctor]. When providing an [ndarray][@stdlib/ndarray/ctor], the [ndarray][@stdlib/ndarray/ctor] must be [broadcast compatible][@stdlib/ndarray/base/broadcast-shapes] with the output [ndarray][@stdlib/ndarray/ctor].
 -   **out**: output [ndarray][@stdlib/ndarray/ctor].
 
-#### normal.factory( \[options] )
+#### beta.factory( \[options] )
 
-Returns a function for generating pseudorandom numbers drawn from a [normal][@stdlib/random/base/normal] distribution.
+Returns a function for generating pseudorandom numbers drawn from a [beta][@stdlib/random/base/beta] distribution.
 
 ```javascript
 var getShape = require( '@stdlib/ndarray/shape' );
 
-var random = normal.factory();
+var random = beta.factory();
 
 var out = random( [ 3, 3 ], 2.0, 5.0 );
 // returns <ndarray>
@@ -158,7 +158,7 @@ var minstd = require( '@stdlib/random/base/minstd' );
 var opts = {
     'prng': minstd.normalized
 };
-var random = normal.factory( opts );
+var random = beta.factory( opts );
 
 var out = random( [ 3, 3 ], 2.0, 5.0 );
 // returns <ndarray>
@@ -170,29 +170,29 @@ To seed the underlying pseudorandom number generator, set the `seed` option.
 var opts = {
     'seed': 12345
 };
-var random = normal.factory( opts );
+var random = beta.factory( opts );
 
 var out = random( [ 3, 3 ], 2.0, 5.0 );
 // returns <ndarray>
 ```
 
-The function returned by the `factory` method has the same interface and accepts the same options as the `normal` function above.
+The function returned by the `factory` method has the same interface and accepts the same options as the `beta` function above.
 
-#### normal.PRNG
+#### beta.PRNG
 
 The underlying pseudorandom number generator.
 
 ```javascript
-var prng = normal.PRNG;
+var prng = beta.PRNG;
 // returns <Function>
 ```
 
-#### normal.seed
+#### beta.seed
 
 The value used to seed the underlying pseudorandom number generator.
 
 ```javascript
-var seed = normal.seed;
+var seed = beta.seed;
 // returns <Uint32Array>
 ```
 
@@ -201,7 +201,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = normal.factory({
+var random = beta.factory({
     'prng': minstd
 });
 
@@ -209,12 +209,12 @@ var seed = random.seed;
 // returns null
 ```
 
-#### normal.seedLength
+#### beta.seedLength
 
 Length of underlying pseudorandom number generator seed.
 
 ```javascript
-var len = normal.seedLength;
+var len = beta.seedLength;
 // returns <number>
 ```
 
@@ -223,7 +223,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = normal.factory({
+var random = beta.factory({
     'prng': minstd
 });
 
@@ -231,12 +231,12 @@ var len = random.seedLength;
 // returns null
 ```
 
-#### normal.state
+#### beta.state
 
 Writable property for getting and setting the underlying pseudorandom number generator state.
 
 ```javascript
-var state = normal.state;
+var state = beta.state;
 // returns <Uint32Array>
 ```
 
@@ -245,7 +245,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = normal.factory({
+var random = beta.factory({
     'prng': minstd
 });
 
@@ -253,12 +253,12 @@ var state = random.state;
 // returns null
 ```
 
-#### normal.stateLength
+#### beta.stateLength
 
 Length of underlying pseudorandom number generator state.
 
 ```javascript
-var len = normal.stateLength;
+var len = beta.stateLength;
 // returns <number>
 ```
 
@@ -267,7 +267,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = normal.factory({
+var random = beta.factory({
     'prng': minstd
 });
 
@@ -275,12 +275,12 @@ var len = random.stateLength;
 // returns null
 ```
 
-#### normal.byteLength
+#### beta.byteLength
 
 Size (in bytes) of underlying pseudorandom number generator state.
 
 ```javascript
-var sz = normal.byteLength;
+var sz = beta.byteLength;
 // returns <number>
 ```
 
@@ -289,7 +289,7 @@ If the `factory` method is provided a PRNG for uniformly distributed numbers, th
 ```javascript
 var minstd = require( '@stdlib/random/base/minstd-shuffle' ).normalized;
 
-var random = normal.factory({
+var random = beta.factory({
     'prng': minstd
 });
 
@@ -322,11 +322,11 @@ var sz = random.byteLength;
 ```javascript
 var logEach = require( '@stdlib/console/log-each' );
 var ndarray2array = require( '@stdlib/ndarray/to-array' );
-var normal = require( '@stdlib/random/normal' );
+var beta = require( '@stdlib/random/beta' );
 
 // Create a function for generating random arrays originating from the same state:
-var random = normal.factory({
-    'state': normal.state,
+var random = beta.factory({
+    'state': beta.state,
     'copy': true
 });
 
@@ -339,8 +339,8 @@ var x3 = random( [ 5 ], 2.0, 5.0 );
 logEach( '%f, %f, %f', ndarray2array( x1 ), ndarray2array( x2 ), ndarray2array( x3 ) );
 
 // Create another function for generating random arrays with the original state:
-random = normal.factory({
-    'state': normal.state,
+random = beta.factory({
+    'state': beta.state,
     'copy': true
 });
 
@@ -371,7 +371,7 @@ logEach( '%f, %f, %f', arr[ 0 ], arr[ 1 ], arr[ 2 ] );
 
 <section class="links">
 
-[@stdlib/random/base/normal]: https://github.com/stdlib-js/random/tree/main/base/normal
+[@stdlib/random/base/beta]: https://github.com/stdlib-js/random/tree/main/base/beta
 
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 

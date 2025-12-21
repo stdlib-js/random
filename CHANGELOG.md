@@ -10,6 +10,10 @@
 
 ### Features
 
+-   [`e1eec0f`](https://github.com/stdlib-js/stdlib/commit/e1eec0feded8681f6e17122dd72a05f03d20156a) - add `beta` to namespace
+-   [`f70c800`](https://github.com/stdlib-js/stdlib/commit/f70c8003414bea57688f453e13e4ebd6e4093938) - add `random/beta`
+-   [`d5c02c8`](https://github.com/stdlib-js/stdlib/commit/d5c02c80ad41f7b93eff23d7c16aac3f14306952) - add `arcsine` to namespace
+-   [`d59b7e2`](https://github.com/stdlib-js/stdlib/commit/d59b7e2d377a3f41113daf4a96cc3ebb91f304f2) - add `random/arcsine`
 -   [`4556b18`](https://github.com/stdlib-js/stdlib/commit/4556b185641379c2a104f669e7b15ed8f4093bc1) - add `normal` to namespace
 -   [`00d6ad3`](https://github.com/stdlib-js/stdlib/commit/00d6ad385c3596a2285087fc1890bb6e3f8e04bb) - add `random/normal`
 -   [`448d1b4`](https://github.com/stdlib-js/stdlib/commit/448d1b4d9963e8393bd6f7e88dfa89dfc967c290) - update `random/tools` TypeScript declarations
@@ -97,6 +101,14 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`25bbc26`](https://github.com/stdlib-js/stdlib/commit/25bbc261aa4285c431416f5621c7bfea2faffe10) - **build:** fix template _(by Athan Reines)_
+-   [`4154b4c`](https://github.com/stdlib-js/stdlib/commit/4154b4c0113531cb3d992c62f826b68eb3ac3983) - **docs:** update example _(by Athan Reines)_
+-   [`b329dc5`](https://github.com/stdlib-js/stdlib/commit/b329dc519a845c56612d669ebd751304394958da) - **docs:** update example _(by Athan Reines)_
+-   [`6930e13`](https://github.com/stdlib-js/stdlib/commit/6930e135790498b762147b89b952c560484acb85) - **docs:** update example _(by Athan Reines)_
+-   [`e1eec0f`](https://github.com/stdlib-js/stdlib/commit/e1eec0feded8681f6e17122dd72a05f03d20156a) - **feat:** add `beta` to namespace _(by Athan Reines)_
+-   [`f70c800`](https://github.com/stdlib-js/stdlib/commit/f70c8003414bea57688f453e13e4ebd6e4093938) - **feat:** add `random/beta` _(by Athan Reines)_
+-   [`d5c02c8`](https://github.com/stdlib-js/stdlib/commit/d5c02c80ad41f7b93eff23d7c16aac3f14306952) - **feat:** add `arcsine` to namespace _(by Athan Reines)_
+-   [`d59b7e2`](https://github.com/stdlib-js/stdlib/commit/d59b7e2d377a3f41113daf4a96cc3ebb91f304f2) - **feat:** add `random/arcsine` _(by Athan Reines)_
 -   [`4556b18`](https://github.com/stdlib-js/stdlib/commit/4556b185641379c2a104f669e7b15ed8f4093bc1) - **feat:** add `normal` to namespace _(by Athan Reines)_
 -   [`c07940c`](https://github.com/stdlib-js/stdlib/commit/c07940c389b08067bd2f0846aac9ad2adb6cadea) - **docs:** fix parameter names _(by Athan Reines)_
 -   [`6c7a45f`](https://github.com/stdlib-js/stdlib/commit/6c7a45fe6e7d1dc9a3475cce8bffa88b4b50109a) - **build:** fix parameter names _(by Athan Reines)_
