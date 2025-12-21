@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`737faf1`](https://github.com/stdlib-js/stdlib/commit/737faf1be9f42aaeac74cd3141abf855057b1948) - add `random/discrete-uniform`
 -   [`e1eec0f`](https://github.com/stdlib-js/stdlib/commit/e1eec0feded8681f6e17122dd72a05f03d20156a) - add `beta` to namespace
 -   [`f70c800`](https://github.com/stdlib-js/stdlib/commit/f70c8003414bea57688f453e13e4ebd6e4093938) - add `random/beta`
 -   [`d5c02c8`](https://github.com/stdlib-js/stdlib/commit/d5c02c80ad41f7b93eff23d7c16aac3f14306952) - add `arcsine` to namespace
@@ -101,6 +102,8 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`10ace78`](https://github.com/stdlib-js/stdlib/commit/10ace7899db8244d92240852d60f7ddb081cd13c) - **build:** fix template string for package name _(by Athan Reines)_
+-   [`737faf1`](https://github.com/stdlib-js/stdlib/commit/737faf1be9f42aaeac74cd3141abf855057b1948) - **feat:** add `random/discrete-uniform` _(by Athan Reines)_
 -   [`f8d9231`](https://github.com/stdlib-js/stdlib/commit/f8d9231f7d32d493676a62d4cc019a1f9113e62e) - **build:** fix parameter description wrapping _(by Athan Reines)_
 -   [`44f6dfe`](https://github.com/stdlib-js/stdlib/commit/44f6dfe47b12e320db978ec6266aa46b30f7ad4b) - **style:** resolve lint failures _(by Athan Reines)_
 -   [`e1f06d3`](https://github.com/stdlib-js/stdlib/commit/e1f06d37a176aacdcec97dddd21c4245033f6b1b) - **build:** update to support wrapping a dtype kind description _(by Athan Reines)_
