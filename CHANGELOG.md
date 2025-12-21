@@ -101,6 +101,10 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`f8d9231`](https://github.com/stdlib-js/stdlib/commit/f8d9231f7d32d493676a62d4cc019a1f9113e62e) - **build:** fix parameter description wrapping _(by Athan Reines)_
+-   [`44f6dfe`](https://github.com/stdlib-js/stdlib/commit/44f6dfe47b12e320db978ec6266aa46b30f7ad4b) - **style:** resolve lint failures _(by Athan Reines)_
+-   [`e1f06d3`](https://github.com/stdlib-js/stdlib/commit/e1f06d37a176aacdcec97dddd21c4245033f6b1b) - **build:** update to support wrapping a dtype kind description _(by Athan Reines)_
+-   [`239d0a4`](https://github.com/stdlib-js/stdlib/commit/239d0a4ce9dcb2b57f09ff44449c567bf674147c) - **build:** fix templates to allow parameterization of dtype kind description _(by Athan Reines)_
 -   [`25bbc26`](https://github.com/stdlib-js/stdlib/commit/25bbc261aa4285c431416f5621c7bfea2faffe10) - **build:** fix template _(by Athan Reines)_
 -   [`4154b4c`](https://github.com/stdlib-js/stdlib/commit/4154b4c0113531cb3d992c62f826b68eb3ac3983) - **docs:** update example _(by Athan Reines)_
 -   [`b329dc5`](https://github.com/stdlib-js/stdlib/commit/b329dc519a845c56612d669ebd751304394958da) - **docs:** update example _(by Athan Reines)_
