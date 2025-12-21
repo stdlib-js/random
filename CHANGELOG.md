@@ -95,6 +95,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`8a1514d`](https://github.com/stdlib-js/stdlib/commit/8a1514ddb499a960934f2feee6e3a66d72bbcc61) - **chore:** update descriptions and benchmarks _(by Athan Reines)_
 -   [`e158863`](https://github.com/stdlib-js/stdlib/commit/e1588639b9d50b894ba30d60e8b468fcde057b0b) - **docs:** fix comments _(by Athan Reines)_
 -   [`13c7491`](https://github.com/stdlib-js/stdlib/commit/13c7491896b549bc619ed3d9cd0f48a135bd3035) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
 -   [`4e5528a`](https://github.com/stdlib-js/stdlib/commit/4e5528acdadde09fe516a95a4884d8f5d6ad249f) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
