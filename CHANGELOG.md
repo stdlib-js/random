@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-17)
+## Unreleased (2025-12-21)
 
 <section class="features">
 
@@ -95,6 +95,12 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`e158863`](https://github.com/stdlib-js/stdlib/commit/e1588639b9d50b894ba30d60e8b468fcde057b0b) - **docs:** fix comments _(by Athan Reines)_
+-   [`13c7491`](https://github.com/stdlib-js/stdlib/commit/13c7491896b549bc619ed3d9cd0f48a135bd3035) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
+-   [`4e5528a`](https://github.com/stdlib-js/stdlib/commit/4e5528acdadde09fe516a95a4884d8f5d6ad249f) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
+-   [`8addcf7`](https://github.com/stdlib-js/stdlib/commit/8addcf7841e7a1909fe3a315b496479fd44d4d18) - **chore:** move scaffold to `random/array` namespace _(by Athan Reines)_
+-   [`e369fa9`](https://github.com/stdlib-js/stdlib/commit/e369fa97fc9eafaedba962850f61b2bb9882bac6) - **build:** remove explicit dependence on `_tools` directory _(by Athan Reines)_
+-   [`3dda71a`](https://github.com/stdlib-js/stdlib/commit/3dda71a348148b38395cec9d523d88ddd62356ff) - **chore:** move scaffold to `random/strided` namespace _(by Athan Reines)_
 -   [`a06cfdd`](https://github.com/stdlib-js/stdlib/commit/a06cfdd5151299614d8c9e2a895d22a18955a289) - **chore:** fix C lint errors [(#9073)](https://github.com/stdlib-js/stdlib/pull/9073) _(by Geo Daoyu, Athan Reines)_
 -   [`226d13a`](https://github.com/stdlib-js/stdlib/commit/226d13a6a47597b12d0fa70d6cfb0b333f540a68) - **docs:** set doctest alias and update example code _(by Philipp Burckhardt)_
 -   [`47088cc`](https://github.com/stdlib-js/stdlib/commit/47088cc299d84289a904dd2e7d2cdf0aee9057aa) - **docs:** fix TSDoc comments example code and return annotation values _(by Philipp Burckhardt)_
