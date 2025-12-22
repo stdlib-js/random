@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`9e5f4c4`](https://github.com/stdlib-js/stdlib/commit/9e5f4c4af91aef48ae34941da884eb3b81c47f98) - update `random` TypeScript declarations [(#9302)](https://github.com/stdlib-js/stdlib/pull/9302)
 -   [`131ec4f`](https://github.com/stdlib-js/stdlib/commit/131ec4fdb267f4cd9ae44924b36c378a82d5a7e7) - add `weibull` to namespace
 -   [`c8e66e1`](https://github.com/stdlib-js/stdlib/commit/c8e66e11e0ae9b908544864ace3bc3b4ccb2b863) - add `random/weibull`
 -   [`630d205`](https://github.com/stdlib-js/stdlib/commit/630d205e6782a5cfc45f03f24fa83d7855e0bed3) - add `pareto1` to namespace
@@ -137,6 +138,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`9e5f4c4`](https://github.com/stdlib-js/stdlib/commit/9e5f4c4af91aef48ae34941da884eb3b81c47f98) - **feat:** update `random` TypeScript declarations [(#9302)](https://github.com/stdlib-js/stdlib/pull/9302) _(by stdlib-bot, Philipp Burckhardt)_
 -   [`6260a0a`](https://github.com/stdlib-js/stdlib/commit/6260a0a2b3a065eb4660697276fe15726a64a1e2) - **docs:** correct parameter descriptions in `random/weibull` _(by Philipp Burckhardt)_
 -   [`7f63ca2`](https://github.com/stdlib-js/stdlib/commit/7f63ca2e79dfec53d1424d7c29704f0ec4cd7af7) - **bench:** reduce maximum array size _(by Athan Reines)_
 -   [`0783b86`](https://github.com/stdlib-js/stdlib/commit/0783b86b9ade65f21c5805579c3201ae0436d8d0) - **build:** reduce maximum size _(by Athan Reines)_
