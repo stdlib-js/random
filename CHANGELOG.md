@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-21)
+## Unreleased (2025-12-22)
 
 <section class="features">
 
@@ -137,6 +137,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`6260a0a`](https://github.com/stdlib-js/stdlib/commit/6260a0a2b3a065eb4660697276fe15726a64a1e2) - **docs:** correct parameter descriptions in `random/weibull` _(by Philipp Burckhardt)_
 -   [`7f63ca2`](https://github.com/stdlib-js/stdlib/commit/7f63ca2e79dfec53d1424d7c29704f0ec4cd7af7) - **bench:** reduce maximum array size _(by Athan Reines)_
 -   [`0783b86`](https://github.com/stdlib-js/stdlib/commit/0783b86b9ade65f21c5805579c3201ae0436d8d0) - **build:** reduce maximum size _(by Athan Reines)_
 -   [`4bf3633`](https://github.com/stdlib-js/stdlib/commit/4bf36333ac1de0c8bf338f0cfc98f8b305200778) - **test:** guard against edge case _(by Athan Reines)_
