@@ -10,6 +10,20 @@
 
 ### Features
 
+-   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - add `t` to namespace
+-   [`ff7ce26`](https://github.com/stdlib-js/stdlib/commit/ff7ce26b04b6cc4795ae8618959a5ba663719b6d) - add `random/t`
+-   [`3645e6c`](https://github.com/stdlib-js/stdlib/commit/3645e6cbb0ba9697086ed14ff15b53847c7de441) - add `rayleigh` to namespace
+-   [`e4414c2`](https://github.com/stdlib-js/stdlib/commit/e4414c20cc5792b567d352976f47d8cf47ec6036) - add `random/rayleigh`
+-   [`662aff5`](https://github.com/stdlib-js/stdlib/commit/662aff512c7a5cc97379c1fe9fa47eeb88178293) - add `poisson` to namespace
+-   [`3307779`](https://github.com/stdlib-js/stdlib/commit/3307779cac88baebeb67009c47e73d9f232ad32a) - add `random/poisson`
+-   [`403cbb2`](https://github.com/stdlib-js/stdlib/commit/403cbb2d62a5f1fc3f7bb1594ed706f0766840e2) - add `geometric` to namespace
+-   [`75d85d7`](https://github.com/stdlib-js/stdlib/commit/75d85d76908055bd26de984d773db604d7210da5) - add `random/geometric`
+-   [`9f88603`](https://github.com/stdlib-js/stdlib/commit/9f886039ef12eac804c9eddbb6d1233ea9d0276c) - add `chisquare` to namespace
+-   [`4674606`](https://github.com/stdlib-js/stdlib/commit/4674606241a2a8237d1a4676d4d3e1fd9c4fcf0d) - add `random/chisquare`
+-   [`effce74`](https://github.com/stdlib-js/stdlib/commit/effce743b7dc57479850a0af8d0fe2baefbd4ef3) - add `chi` to namespace
+-   [`0f7ed03`](https://github.com/stdlib-js/stdlib/commit/0f7ed03a68da6c1c63b87833baa7c05fd2ba5687) - add `random/chi`
+-   [`6f0db86`](https://github.com/stdlib-js/stdlib/commit/6f0db86ea3bbfc4ad83cfa6d7166845595be4f6e) - add `bernoulli` to namespace
+-   [`11bb93d`](https://github.com/stdlib-js/stdlib/commit/11bb93d3acb674846c77bee38a6e54675549b900) - add `random/bernoulli`
 -   [`9e5f4c4`](https://github.com/stdlib-js/stdlib/commit/9e5f4c4af91aef48ae34941da884eb3b81c47f98) - update `random` TypeScript declarations [(#9302)](https://github.com/stdlib-js/stdlib/pull/9302)
 -   [`131ec4f`](https://github.com/stdlib-js/stdlib/commit/131ec4fdb267f4cd9ae44924b36c378a82d5a7e7) - add `weibull` to namespace
 -   [`c8e66e1`](https://github.com/stdlib-js/stdlib/commit/c8e66e11e0ae9b908544864ace3bc3b4ccb2b863) - add `random/weibull`
@@ -138,6 +152,20 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - **feat:** add `t` to namespace _(by Athan Reines)_
+-   [`ff7ce26`](https://github.com/stdlib-js/stdlib/commit/ff7ce26b04b6cc4795ae8618959a5ba663719b6d) - **feat:** add `random/t` _(by Athan Reines)_
+-   [`3645e6c`](https://github.com/stdlib-js/stdlib/commit/3645e6cbb0ba9697086ed14ff15b53847c7de441) - **feat:** add `rayleigh` to namespace _(by Athan Reines)_
+-   [`e4414c2`](https://github.com/stdlib-js/stdlib/commit/e4414c20cc5792b567d352976f47d8cf47ec6036) - **feat:** add `random/rayleigh` _(by Athan Reines)_
+-   [`662aff5`](https://github.com/stdlib-js/stdlib/commit/662aff512c7a5cc97379c1fe9fa47eeb88178293) - **feat:** add `poisson` to namespace _(by Athan Reines)_
+-   [`3307779`](https://github.com/stdlib-js/stdlib/commit/3307779cac88baebeb67009c47e73d9f232ad32a) - **feat:** add `random/poisson` _(by Athan Reines)_
+-   [`403cbb2`](https://github.com/stdlib-js/stdlib/commit/403cbb2d62a5f1fc3f7bb1594ed706f0766840e2) - **feat:** add `geometric` to namespace _(by Athan Reines)_
+-   [`75d85d7`](https://github.com/stdlib-js/stdlib/commit/75d85d76908055bd26de984d773db604d7210da5) - **feat:** add `random/geometric` _(by Athan Reines)_
+-   [`9f88603`](https://github.com/stdlib-js/stdlib/commit/9f886039ef12eac804c9eddbb6d1233ea9d0276c) - **feat:** add `chisquare` to namespace _(by Athan Reines)_
+-   [`4674606`](https://github.com/stdlib-js/stdlib/commit/4674606241a2a8237d1a4676d4d3e1fd9c4fcf0d) - **feat:** add `random/chisquare` _(by Athan Reines)_
+-   [`effce74`](https://github.com/stdlib-js/stdlib/commit/effce743b7dc57479850a0af8d0fe2baefbd4ef3) - **feat:** add `chi` to namespace _(by Athan Reines)_
+-   [`0f7ed03`](https://github.com/stdlib-js/stdlib/commit/0f7ed03a68da6c1c63b87833baa7c05fd2ba5687) - **feat:** add `random/chi` _(by Athan Reines)_
+-   [`6f0db86`](https://github.com/stdlib-js/stdlib/commit/6f0db86ea3bbfc4ad83cfa6d7166845595be4f6e) - **feat:** add `bernoulli` to namespace _(by Athan Reines)_
+-   [`11bb93d`](https://github.com/stdlib-js/stdlib/commit/11bb93d3acb674846c77bee38a6e54675549b900) - **feat:** add `random/bernoulli` _(by Athan Reines)_
 -   [`9446418`](https://github.com/stdlib-js/stdlib/commit/9446418669fdcae9b9b9b9ba0599aea38e2e4f29) - **chore:** clean-up tests, benchmarks, and examples _(by Athan Reines)_
 -   [`c4b6444`](https://github.com/stdlib-js/stdlib/commit/c4b644443320a41b3342c9ec49ddc78a42657b82) - **test:** serialize returned dtype to string and fix defaults _(by Athan Reines)_
 -   [`28e03f0`](https://github.com/stdlib-js/stdlib/commit/28e03f081caf45695c941a8c2e279b6eab189460) - **test:** serialize returned dtype to string _(by Athan Reines)_
