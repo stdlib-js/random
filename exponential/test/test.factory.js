@@ -421,7 +421,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, PARAM1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -445,7 +445,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -469,7 +469,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -493,7 +493,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -516,7 +516,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -542,7 +542,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -568,7 +568,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -594,7 +594,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -617,7 +617,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -643,7 +643,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -669,7 +669,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -695,7 +695,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -983,7 +983,9 @@ tape( 'the function returns a function which supports setting the generator stat
 	state = random.state;
 
 	// Move to a future state...
-	arr1 = random( [ 10 ], PARAM1 );
+	arr1 = random( [ 10 ], PARAM1, {
+		'dtype': 'float64'
+	});
 	for ( i = 0; i < 100; i++ ) {
 		random( [ 2 ], PARAM1 );
 	}
@@ -991,7 +993,9 @@ tape( 'the function returns a function which supports setting the generator stat
 	random.state = state;
 
 	// Replay previously generated values:
-	arr2 = random( [ 10 ], PARAM1 );
+	arr2 = random( [ 10 ], PARAM1, {
+		'dtype': 'float64'
+	});
 	t.strictEqual( isSameFloat64Array( getData( arr2 ), getData( arr1 ) ), true, 'returns expected value' );
 
 	t.end();
@@ -1039,8 +1043,12 @@ tape( 'the function supports providing a seeded underlying PRNG', function test(
 
 	t.notEqual( random1, random2, 'separate generators' );
 
-	arr1 = random1( [ 10 ], PARAM1 );
-	arr2 = random2( [ 10 ], PARAM1 );
+	arr1 = random1( [ 10 ], PARAM1, {
+		'dtype': 'float64'
+	});
+	arr2 = random2( [ 10 ], PARAM1, {
+		'dtype': 'float64'
+	});
 	t.strictEqual( isSameFloat64Array( getData( arr1 ), getData( arr2 ) ), true, 'returns expected value' );
 
 	t.end();

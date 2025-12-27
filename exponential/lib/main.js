@@ -26,7 +26,7 @@ var factory = require( './factory.js' );
 // MAIN //
 
 /**
-* Returns pseudorandom numbers drawn from an exponential distribution with rate parameter `lambda`.
+* Returns pseudorandom numbers drawn from an exponential distribution.
 *
 * @name exponential
 * @type {Function}

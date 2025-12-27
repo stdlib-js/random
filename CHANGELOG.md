@@ -138,6 +138,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`9446418`](https://github.com/stdlib-js/stdlib/commit/9446418669fdcae9b9b9b9ba0599aea38e2e4f29) - **chore:** clean-up tests, benchmarks, and examples _(by Athan Reines)_
 -   [`c4b6444`](https://github.com/stdlib-js/stdlib/commit/c4b644443320a41b3342c9ec49ddc78a42657b82) - **test:** serialize returned dtype to string and fix defaults _(by Athan Reines)_
 -   [`28e03f0`](https://github.com/stdlib-js/stdlib/commit/28e03f081caf45695c941a8c2e279b6eab189460) - **test:** serialize returned dtype to string _(by Athan Reines)_
 -   [`bd0b5c8`](https://github.com/stdlib-js/stdlib/commit/bd0b5c89bbe77c87ce21f3fe1fa65dbce54832be) - **build:** fix descriptions _(by Athan Reines)_

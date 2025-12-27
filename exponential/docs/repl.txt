@@ -1,6 +1,7 @@
 
 {{alias}}( shape, lambda[, options] )
-    Generates pseudorandom numbers drawn from an exponential distribution.
+    Returns an ndarray containing pseudorandom numbers drawn from an exponential
+    distribution.
 
     Parameters
     ----------
