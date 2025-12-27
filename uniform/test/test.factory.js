@@ -424,7 +424,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, PARAM1, PARAM2 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -450,7 +450,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1, param2 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -476,7 +476,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1, param2 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -502,7 +502,7 @@ tape( 'the function returns a function which returns an ndarray containing pseud
 	actual = random( shape, param1, param2 );
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -525,7 +525,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -553,7 +553,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -581,7 +581,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -609,7 +609,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'float64', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'float64', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -632,7 +632,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -660,7 +660,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -688,7 +688,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {
@@ -716,7 +716,7 @@ tape( 'the function returns a function which supports specifying the output arra
 	});
 
 	t.strictEqual( isndarrayLike( actual ), true, 'returns expected value' );
-	t.strictEqual( getDType( actual ), 'generic', 'returns expected value' );
+	t.strictEqual( String( getDType( actual ) ), 'generic', 'returns expected value' );
 	t.deepEqual( getShape( actual ), shape, 'returns expected value' );
 
 	for ( i = 0; i < numel( actual ); i++ ) {

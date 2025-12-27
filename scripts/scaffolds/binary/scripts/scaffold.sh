@@ -117,7 +117,7 @@ param_2_dtype_kind=${PARAM_2_DTYPE_KIND:-'real_and_generic'}
 output_ts_dtype=${OUTPUT_TS_DTYPE:-'RealFloatingPointAndGenericDataType'}
 
 # Define the output ndarray TypeScript typed ndarray type definition:
-output_ts_typed_ndarray=${OUTPUT_TS_TYPED_NDARRAY:-'floatndrray'}
+output_ts_typed_ndarray=${OUTPUT_TS_TYPED_NDARRAY:-'floatndarray'}
 
 # Define the output array data type kind:
 output_dtype_kind=${OUTPUT_DTYPE_KIND:-'real_floating_point_and_generic'}
@@ -132,7 +132,7 @@ default_dtype=${DEFAULT_DTYPE:-'float64'}
 default_dtype_kind=${DEFAULT_DTYPE_KIND:-'real_floating_point'}
 
 # Define a description fragment:
-from_desc=${FROM_DESC:-'a uniform distribution'}
+from_desc=${FROM_DESC:-'a continuous uniform distribution'}
 
 # Define a description fragment for use in the README:
 readme_from_desc=${README_FROM_DESC:-'a continuous [uniform][@stdlib/random/base/uniform] distribution'}

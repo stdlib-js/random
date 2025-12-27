@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-22)
+## Unreleased (2025-12-27)
 
 <section class="features">
 
@@ -138,6 +138,12 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`c4b6444`](https://github.com/stdlib-js/stdlib/commit/c4b644443320a41b3342c9ec49ddc78a42657b82) - **test:** serialize returned dtype to string and fix defaults _(by Athan Reines)_
+-   [`28e03f0`](https://github.com/stdlib-js/stdlib/commit/28e03f081caf45695c941a8c2e279b6eab189460) - **test:** serialize returned dtype to string _(by Athan Reines)_
+-   [`bd0b5c8`](https://github.com/stdlib-js/stdlib/commit/bd0b5c89bbe77c87ce21f3fe1fa65dbce54832be) - **build:** fix descriptions _(by Athan Reines)_
+-   [`227e178`](https://github.com/stdlib-js/stdlib/commit/227e178f31773ac54be3bf6d1bec60558d4840af) - **build:** fix descriptions _(by Athan Reines)_
+-   [`67e1d65`](https://github.com/stdlib-js/stdlib/commit/67e1d655fa1434e8254da754fb5937413d962843) - **build:** fix descriptions _(by Athan Reines)_
+-   [`52c06ee`](https://github.com/stdlib-js/stdlib/commit/52c06ee983435127aa03eb89a0478a490e090385) - **docs:** fix descriptions _(by Athan Reines)_
 -   [`9e5f4c4`](https://github.com/stdlib-js/stdlib/commit/9e5f4c4af91aef48ae34941da884eb3b81c47f98) - **feat:** update `random` TypeScript declarations [(#9302)](https://github.com/stdlib-js/stdlib/pull/9302) _(by stdlib-bot, Philipp Burckhardt)_
 -   [`6260a0a`](https://github.com/stdlib-js/stdlib/commit/6260a0a2b3a065eb4660697276fe15726a64a1e2) - **docs:** correct parameter descriptions in `random/weibull` _(by Philipp Burckhardt)_
 -   [`7f63ca2`](https://github.com/stdlib-js/stdlib/commit/7f63ca2e79dfec53d1424d7c29704f0ec4cd7af7) - **bench:** reduce maximum array size _(by Athan Reines)_
