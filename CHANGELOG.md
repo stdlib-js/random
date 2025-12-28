@@ -152,6 +152,8 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`5da1e4c`](https://github.com/stdlib-js/stdlib/commit/5da1e4cb3d745fb99d24acb4d68b9de1bc43fefc) - **docs:** fix description _(by Athan Reines)_
+-   [`23f974f`](https://github.com/stdlib-js/stdlib/commit/23f974ffa57178111668017ede5e5d29ad1def66) - **docs:** fix description _(by Athan Reines)_
 -   [`1632bdd`](https://github.com/stdlib-js/stdlib/commit/1632bdd2064fd9dcb07d57191c9bab75d2fff493) - **build:** add scaffold for unary PRNGs _(by Athan Reines)_
 -   [`7cd701d`](https://github.com/stdlib-js/stdlib/commit/7cd701dc8bcd6c438d99bf1c351ef5a765e0e699) - **chore:** update package meta data [(#9404)](https://github.com/stdlib-js/stdlib/pull/9404) _(by stdlib-bot)_
 -   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - **feat:** add `t` to namespace _(by Athan Reines)_

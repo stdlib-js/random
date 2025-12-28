@@ -504,7 +504,7 @@ setReadOnly( Random.prototype, 'generate', function generate( shape, param1, par
 * @param {(ndarrayLike|*)} param1 - first PRNG parameter
 * @param {(ndarrayLike|*)} param2 - second PRNG parameter
 * @param {ndarrayLike} out - output ndarray
-* @throws {TypeError} second argument must be an ndarray
+* @throws {TypeError} third argument must be an ndarray
 * @throws {TypeError} must provide valid PRNG parameters
 * @throws {TypeError} PRNG parameters and the output ndarray must be broadcast compatible
 * @throws {Error} cannot write to a read-only ndarray
