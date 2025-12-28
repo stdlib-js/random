@@ -152,6 +152,10 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`54dedc8`](https://github.com/stdlib-js/stdlib/commit/54dedc875b59bba13e20c72a81f29bcf6df650be) - **docs:** update example _(by Athan Reines)_
+-   [`4abc1e5`](https://github.com/stdlib-js/stdlib/commit/4abc1e583d211d7835a3c91e2b5d1561a16284e4) - **docs:** update example _(by Athan Reines)_
+-   [`8b67e65`](https://github.com/stdlib-js/stdlib/commit/8b67e657187346504d985ad7b6cd9415f6514705) - **docs:** update example _(by Athan Reines)_
+-   [`29770ff`](https://github.com/stdlib-js/stdlib/commit/29770ff2a7af5c4e79df472a846300c0420b44b0) - **docs:** update example _(by Athan Reines)_
 -   [`5da1e4c`](https://github.com/stdlib-js/stdlib/commit/5da1e4cb3d745fb99d24acb4d68b9de1bc43fefc) - **docs:** fix description _(by Athan Reines)_
 -   [`23f974f`](https://github.com/stdlib-js/stdlib/commit/23f974ffa57178111668017ede5e5d29ad1def66) - **docs:** fix description _(by Athan Reines)_
 -   [`1632bdd`](https://github.com/stdlib-js/stdlib/commit/1632bdd2064fd9dcb07d57191c9bab75d2fff493) - **build:** add scaffold for unary PRNGs _(by Athan Reines)_
