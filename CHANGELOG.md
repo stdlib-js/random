@@ -153,6 +153,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`2ae99ef`](https://github.com/stdlib-js/stdlib/commit/2ae99ef57a08b712bbe90341063df30854950e43) - **docs:** fix usage comments in scaffold scripts and indentation _(by Philipp Burckhardt)_
 -   [`2926fcd`](https://github.com/stdlib-js/stdlib/commit/2926fcdf41648e14219bf8683328b3e630260c2a) - **feat:** update `random` TypeScript declarations [(#9407)](https://github.com/stdlib-js/stdlib/pull/9407) _(by stdlib-bot)_
 -   [`54dedc8`](https://github.com/stdlib-js/stdlib/commit/54dedc875b59bba13e20c72a81f29bcf6df650be) - **docs:** update example _(by Athan Reines)_
 -   [`4abc1e5`](https://github.com/stdlib-js/stdlib/commit/4abc1e583d211d7835a3c91e2b5d1561a16284e4) - **docs:** update example _(by Athan Reines)_
