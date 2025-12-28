@@ -23,16 +23,20 @@
 import arcsine = require( './../../arcsine' );
 import array = require( './../../array' );
 import base = require( './../../base' );
+import bernoulli = require( './../../bernoulli' );
 import beta = require( './../../beta' );
 import betaprime = require( './../../betaprime' );
 import binomial = require( './../../binomial' );
 import cauchy = require( './../../cauchy' );
+import chi = require( './../../chi' );
+import chisquare = require( './../../chisquare' );
 import cosine = require( './../../cosine' );
 import discreteUniform = require( './../../discrete-uniform' );
 import erlang = require( './../../erlang' );
 import exponential = require( './../../exponential' );
 import f = require( './../../f' );
 import gamma = require( './../../gamma' );
+import geometric = require( './../../geometric' );
 import gumbel = require( './../../gumbel' );
 import invgamma = require( './../../invgamma' );
 import iterators = require( './../../iter' );
@@ -44,10 +48,13 @@ import lognormal = require( './../../lognormal' );
 import negativeBinomial = require( './../../negative-binomial' );
 import normal = require( './../../normal' );
 import pareto1 = require( './../../pareto-type1' );
+import poisson = require( './../../poisson' );
+import rayleigh = require( './../../rayleigh' );
 import sample = require( './../../sample' );
 import shuffle = require( './../../shuffle' );
 import streams = require( './../../streams' );
 import strided = require( './../../strided' );
+import t = require( './../../t' );
 import tools = require( './../../tools' );
 import uniform = require( './../../uniform' );
 import weibull = require( './../../weibull' );
@@ -99,6 +106,39 @@ interface Namespace {
 	* Base pseudorandom number generators.
 	*/
 	base: typeof base;
+
+	/**
+	* Generates pseudorandom numbers drawn from a Bernoulli distribution.
+	*
+	* @param shape - output shape
+	* @param p - success probability
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.bernoulli( [ 3, 3 ], 0.5 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.bernoulli.assign( 0.5, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.bernoulli.factory();
+	*
+	* var out = random( [ 3, 3 ], 0.5 );
+	* // returns <ndarray>
+	*/
+	bernoulli: typeof bernoulli;
 
 	/**
 	* Generates pseudorandom numbers drawn from a beta distribution.
@@ -235,6 +275,72 @@ interface Namespace {
 	* // returns <ndarray>
 	*/
 	cauchy: typeof cauchy;
+
+	/**
+	* Generates pseudorandom numbers drawn from a chi distribution.
+	*
+	* @param shape - output shape
+	* @param k - degrees of freedom
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.chi( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.chi.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.chi.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	chi: typeof chi;
+
+	/**
+	* Generates pseudorandom numbers drawn from a chi-square distribution.
+	*
+	* @param shape - output shape
+	* @param k - degrees of freedom
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.chisquare( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.chisquare.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.chisquare.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	chisquare: typeof chisquare;
 
 	/**
 	* Generates pseudorandom numbers drawn from a raised cosine distribution.
@@ -438,6 +544,39 @@ interface Namespace {
 	* // returns <ndarray>
 	*/
 	gamma: typeof gamma;
+
+	/**
+	* Generates pseudorandom numbers drawn from a geometric distribution.
+	*
+	* @param shape - output shape
+	* @param p - success probability
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.geometric( [ 3, 3 ], 0.01 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.geometric.assign( 0.01, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.geometric.factory();
+	*
+	* var out = random( [ 3, 3 ], 0.01 );
+	* // returns <ndarray>
+	*/
+	geometric: typeof geometric;
 
 	/**
 	* Generates pseudorandom numbers drawn from a Gumbel distribution.
@@ -785,6 +924,72 @@ interface Namespace {
 	pareto1: typeof pareto1;
 
 	/**
+	* Generates pseudorandom numbers drawn from a Poisson distribution.
+	*
+	* @param shape - output shape
+	* @param lambda - mean parameter
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.poisson( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.poisson.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.poisson.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	poisson: typeof poisson;
+
+	/**
+	* Generates pseudorandom numbers drawn from a Rayleigh distribution.
+	*
+	* @param shape - output shape
+	* @param sigma - scale parameter
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.rayleigh( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.rayleigh.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.rayleigh.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	rayleigh: typeof rayleigh;
+
+	/**
 	* Samples elements from an array-like object.
 	*
 	* @param x - array-like object from which to sample
@@ -835,6 +1040,39 @@ interface Namespace {
 	* Pseudorandom number generator strided array functions.
 	*/
 	strided: typeof strided;
+
+	/**
+	* Generates pseudorandom numbers drawn from a Student's t-distribution.
+	*
+	* @param shape - output shape
+	* @param v - degrees of freedom
+	* @param options - function options
+	* @throws distribution parameters and the output shape must be broadcast compatible
+	* @returns output ndarray
+	*
+	* @example
+	* var out = ns.t( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*
+	* @example
+	* var zeros = require( '@stdlib/ndarray/zeros' );
+	*
+	* var out = zeros( [ 3, 3 ] );
+	* // returns <ndarray>
+	*
+	* var v = ns.t.assign( 2.0, out );
+	* // returns <ndarray>
+	*
+	* var bool = ( v === out );
+	* // returns true
+	*
+	* @example
+	* var random = ns.t.factory();
+	*
+	* var out = random( [ 3, 3 ], 2.0 );
+	* // returns <ndarray>
+	*/
+	t: typeof t;
 
 	/**
 	* Pseudorandom number generator ndarray creation function tools.

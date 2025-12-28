@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`2926fcd`](https://github.com/stdlib-js/stdlib/commit/2926fcdf41648e14219bf8683328b3e630260c2a) - update `random` TypeScript declarations [(#9407)](https://github.com/stdlib-js/stdlib/pull/9407)
 -   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - add `t` to namespace
 -   [`ff7ce26`](https://github.com/stdlib-js/stdlib/commit/ff7ce26b04b6cc4795ae8618959a5ba663719b6d) - add `random/t`
 -   [`3645e6c`](https://github.com/stdlib-js/stdlib/commit/3645e6cbb0ba9697086ed14ff15b53847c7de441) - add `rayleigh` to namespace
@@ -152,6 +153,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`2926fcd`](https://github.com/stdlib-js/stdlib/commit/2926fcdf41648e14219bf8683328b3e630260c2a) - **feat:** update `random` TypeScript declarations [(#9407)](https://github.com/stdlib-js/stdlib/pull/9407) _(by stdlib-bot)_
 -   [`54dedc8`](https://github.com/stdlib-js/stdlib/commit/54dedc875b59bba13e20c72a81f29bcf6df650be) - **docs:** update example _(by Athan Reines)_
 -   [`4abc1e5`](https://github.com/stdlib-js/stdlib/commit/4abc1e583d211d7835a3c91e2b5d1561a16284e4) - **docs:** update example _(by Athan Reines)_
 -   [`8b67e65`](https://github.com/stdlib-js/stdlib/commit/8b67e657187346504d985ad7b6cd9415f6514705) - **docs:** update example _(by Athan Reines)_
