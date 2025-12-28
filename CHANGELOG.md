@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-27)
+## Unreleased (2025-12-28)
 
 <section class="features">
 
@@ -152,6 +152,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`7cd701d`](https://github.com/stdlib-js/stdlib/commit/7cd701dc8bcd6c438d99bf1c351ef5a765e0e699) - **chore:** update package meta data [(#9404)](https://github.com/stdlib-js/stdlib/pull/9404) _(by stdlib-bot)_
 -   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - **feat:** add `t` to namespace _(by Athan Reines)_
 -   [`ff7ce26`](https://github.com/stdlib-js/stdlib/commit/ff7ce26b04b6cc4795ae8618959a5ba663719b6d) - **feat:** add `random/t` _(by Athan Reines)_
 -   [`3645e6c`](https://github.com/stdlib-js/stdlib/commit/3645e6cbb0ba9697086ed14ff15b53847c7de441) - **feat:** add `rayleigh` to namespace _(by Athan Reines)_
