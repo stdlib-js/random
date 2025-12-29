@@ -97,6 +97,8 @@
 
 ### Bug Fixes
 
+-   [`db05364`](https://github.com/stdlib-js/stdlib/commit/db0536441924d78aec531bf5f87133b73f73a03e) - address broken test
+-   [`39d6e10`](https://github.com/stdlib-js/stdlib/commit/39d6e10f9bab5220b1f7135fb8ddb1dc1bff71c2) - address broken test
 -   [`1add791`](https://github.com/stdlib-js/stdlib/commit/1add791e319a6e7f32c776a070488fd085da010a) - resolve normalized data type
 -   [`266be21`](https://github.com/stdlib-js/stdlib/commit/266be21558c84e9f85880137704ebab60ba51661) - correct function signature of TypeScript declaration
 -   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - add type check to ensure only options objects are passed to factory
@@ -154,6 +156,9 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`db05364`](https://github.com/stdlib-js/stdlib/commit/db0536441924d78aec531bf5f87133b73f73a03e) - **fix:** address broken test _(by Athan Reines)_
+-   [`39d6e10`](https://github.com/stdlib-js/stdlib/commit/39d6e10f9bab5220b1f7135fb8ddb1dc1bff71c2) - **fix:** address broken test _(by Athan Reines)_
+-   [`5573d86`](https://github.com/stdlib-js/stdlib/commit/5573d863917a9eb155d9c3b7e6d4c5a15ce3c848) - **test:** fix broken tests _(by Athan Reines)_
 -   [`86003ad`](https://github.com/stdlib-js/stdlib/commit/86003ad3f29289795930f3d74bef5681f5d4d55f) - **docs:** update dtype type _(by Athan Reines)_
 -   [`13e7d2c`](https://github.com/stdlib-js/stdlib/commit/13e7d2cae0aeddfbc2ea6bbbb2a465909aeb5c31) - **refactor:** support data type instances _(by Athan Reines)_
 -   [`1add791`](https://github.com/stdlib-js/stdlib/commit/1add791e319a6e7f32c776a070488fd085da010a) - **fix:** resolve normalized data type _(by Athan Reines)_
