@@ -97,6 +97,7 @@
 
 ### Bug Fixes
 
+-   [`1add791`](https://github.com/stdlib-js/stdlib/commit/1add791e319a6e7f32c776a070488fd085da010a) - resolve normalized data type
 -   [`266be21`](https://github.com/stdlib-js/stdlib/commit/266be21558c84e9f85880137704ebab60ba51661) - correct function signature of TypeScript declaration
 -   [`2eaea4a`](https://github.com/stdlib-js/stdlib/commit/2eaea4af45fe8ae07759c35d6e8d13636df30637) - add type check to ensure only options objects are passed to factory
 -   [`6fcba80`](https://github.com/stdlib-js/stdlib/commit/6fcba8015a623cccab4c4c60152ef680653be786) - ensure support for zero-dimensional ndarray distribution parameters
@@ -153,6 +154,11 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`86003ad`](https://github.com/stdlib-js/stdlib/commit/86003ad3f29289795930f3d74bef5681f5d4d55f) - **docs:** update dtype type _(by Athan Reines)_
+-   [`13e7d2c`](https://github.com/stdlib-js/stdlib/commit/13e7d2cae0aeddfbc2ea6bbbb2a465909aeb5c31) - **refactor:** support data type instances _(by Athan Reines)_
+-   [`1add791`](https://github.com/stdlib-js/stdlib/commit/1add791e319a6e7f32c776a070488fd085da010a) - **fix:** resolve normalized data type _(by Athan Reines)_
+-   [`b5edd51`](https://github.com/stdlib-js/stdlib/commit/b5edd5182fea22360a0bd2b81ffe85e0aadaedcc) - **docs:** update parameter types _(by Athan Reines)_
+-   [`cb54e8e`](https://github.com/stdlib-js/stdlib/commit/cb54e8ef612afd4437f5748e72c31b304dadb655) - **refactor:** add support for data type instances _(by Athan Reines)_
 -   [`73f0550`](https://github.com/stdlib-js/stdlib/commit/73f055020dcc55a92d32c1cba59a7143d833813f) - **docs:** update dtype type _(by Athan Reines)_
 -   [`a10e596`](https://github.com/stdlib-js/stdlib/commit/a10e59675e66916e7fa9a143e0a0a28fc0018838) - **docs:** update dtype type _(by Athan Reines)_
 -   [`01483ec`](https://github.com/stdlib-js/stdlib/commit/01483ec4ed237c8517d1cebe0bf6274f523ac917) - **docs:** update dtype type _(by Athan Reines)_
