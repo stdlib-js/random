@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-28)
+## Unreleased (2025-12-29)
 
 <section class="features">
 
@@ -153,6 +153,9 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`73f0550`](https://github.com/stdlib-js/stdlib/commit/73f055020dcc55a92d32c1cba59a7143d833813f) - **docs:** update dtype type _(by Athan Reines)_
+-   [`a10e596`](https://github.com/stdlib-js/stdlib/commit/a10e59675e66916e7fa9a143e0a0a28fc0018838) - **docs:** update dtype type _(by Athan Reines)_
+-   [`01483ec`](https://github.com/stdlib-js/stdlib/commit/01483ec4ed237c8517d1cebe0bf6274f523ac917) - **docs:** update dtype type _(by Athan Reines)_
 -   [`2ae99ef`](https://github.com/stdlib-js/stdlib/commit/2ae99ef57a08b712bbe90341063df30854950e43) - **docs:** fix usage comments in scaffold scripts and indentation _(by Philipp Burckhardt)_
 -   [`2926fcd`](https://github.com/stdlib-js/stdlib/commit/2926fcdf41648e14219bf8683328b3e630260c2a) - **feat:** update `random` TypeScript declarations [(#9407)](https://github.com/stdlib-js/stdlib/pull/9407) _(by stdlib-bot)_
 -   [`54dedc8`](https://github.com/stdlib-js/stdlib/commit/54dedc875b59bba13e20c72a81f29bcf6df650be) - **docs:** update example _(by Athan Reines)_
