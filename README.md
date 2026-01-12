@@ -85,7 +85,13 @@ The namespace exports the following functions to sample and shuffle elements fro
 
 <!-- </toc> -->
 
-It also contains the following sub-namespaces:
+The namespace contains the following functions for generating pseudorandom values drawn from probability distributions:
+
+<!-- <toc pattern="-(array|base|iter|streams|strided),-(sample|shuffle),-tools"> -->
+
+<!-- </toc> -->
+
+The namespace contains the following sub-namespaces:
 
 <!-- <toc pattern="+(array|base|iter|streams|strided)" > -->
 
