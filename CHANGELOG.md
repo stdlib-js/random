@@ -162,6 +162,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`30ca17e`](https://github.com/stdlib-js/stdlib/commit/30ca17eb7931a0065e3ed1ef7fc4742316449106) - **docs:** remove extraneous comma in `random/frechet` function signature _(by Philipp Burckhardt)_
 -   [`cab5bb0`](https://github.com/stdlib-js/stdlib/commit/cab5bb08a4db8727097c61b4edb39c88137273eb) - **feat:** add `frechet` to namespace _(by Athan Reines)_
 -   [`73344ab`](https://github.com/stdlib-js/stdlib/commit/73344abe4ac57ef5a27e6879e4274882caf596d6) - **feat:** add `random/frechet` _(by Athan Reines)_
 -   [`fe91f02`](https://github.com/stdlib-js/stdlib/commit/fe91f02a931515c8dabe9e84a50fb9d124822111) - **feat:** add `ternaryFactory` to namespace _(by Athan Reines)_
