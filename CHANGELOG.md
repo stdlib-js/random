@@ -10,8 +10,6 @@
 
 ### Features
 
--   [`cab5bb0`](https://github.com/stdlib-js/stdlib/commit/cab5bb08a4db8727097c61b4edb39c88137273eb) - add `frechet` to namespace
--   [`73344ab`](https://github.com/stdlib-js/stdlib/commit/73344abe4ac57ef5a27e6879e4274882caf596d6) - add `random/frechet`
 -   [`fe91f02`](https://github.com/stdlib-js/stdlib/commit/fe91f02a931515c8dabe9e84a50fb9d124822111) - add `ternaryFactory` to namespace
 -   [`244addc`](https://github.com/stdlib-js/stdlib/commit/244addce1a75c839b48065f9ebf7f763163e8723) - add `ternary` to namespace
 -   [`36bb700`](https://github.com/stdlib-js/stdlib/commit/36bb70027e01d79ff0b0a42847df67deb0e22ce5) - add `random/tools/ternary-factory`
@@ -162,9 +160,6 @@ A total of 10 issues were closed in this release:
 
 <details>
 
--   [`30ca17e`](https://github.com/stdlib-js/stdlib/commit/30ca17eb7931a0065e3ed1ef7fc4742316449106) - **docs:** remove extraneous comma in `random/frechet` function signature _(by Philipp Burckhardt)_
--   [`cab5bb0`](https://github.com/stdlib-js/stdlib/commit/cab5bb08a4db8727097c61b4edb39c88137273eb) - **feat:** add `frechet` to namespace _(by Athan Reines)_
--   [`73344ab`](https://github.com/stdlib-js/stdlib/commit/73344abe4ac57ef5a27e6879e4274882caf596d6) - **feat:** add `random/frechet` _(by Athan Reines)_
 -   [`fe91f02`](https://github.com/stdlib-js/stdlib/commit/fe91f02a931515c8dabe9e84a50fb9d124822111) - **feat:** add `ternaryFactory` to namespace _(by Athan Reines)_
 -   [`244addc`](https://github.com/stdlib-js/stdlib/commit/244addce1a75c839b48065f9ebf7f763163e8723) - **feat:** add `ternary` to namespace _(by Athan Reines)_
 -   [`36bb700`](https://github.com/stdlib-js/stdlib/commit/36bb70027e01d79ff0b0a42847df67deb0e22ce5) - **feat:** add `random/tools/ternary-factory` _(by Athan Reines)_
