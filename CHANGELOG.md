@@ -166,6 +166,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`55a2f26`](https://github.com/stdlib-js/stdlib/commit/55a2f260629b5dca631ea8176ce8c3c1b0b78c8f) - **build:** add scaffold for ternary random packages _(by Athan Reines)_
 -   [`cfab032`](https://github.com/stdlib-js/stdlib/commit/cfab0325f798bcf48334e36d307ee33330824aff) - **feat:** add `triangular` to namespace _(by Athan Reines)_
 -   [`132493e`](https://github.com/stdlib-js/stdlib/commit/132493e15add93ab5e56eb89c7f42ec08f06c402) - **feat:** add `random/triangular` _(by Athan Reines)_
 -   [`a064afe`](https://github.com/stdlib-js/stdlib/commit/a064afe74bb89a7f835fafc63d16bb446e9f21e5) - **feat:** add `hypergeometric` to namespace _(by Athan Reines)_
