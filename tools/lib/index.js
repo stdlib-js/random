@@ -55,6 +55,24 @@ setReadOnly( ns, 'binary', require( './../../tools/binary' ) );
 setReadOnly( ns, 'binaryFactory', require( './../../tools/binary-factory' ) );
 
 /**
+* @name ternary
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/tools/ternary}
+*/
+setReadOnly( ns, 'ternary', require( './../../tools/ternary' ) );
+
+/**
+* @name ternaryFactory
+* @memberof ns
+* @readonly
+* @type {Function}
+* @see {@link module:@stdlib/random/tools/ternary-factory}
+*/
+setReadOnly( ns, 'ternaryFactory', require( './../../tools/ternary-factory' ) );
+
+/**
 * @name unary
 * @memberof ns
 * @readonly

@@ -4,12 +4,18 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-12-29)
+## Unreleased (2026-01-12)
 
 <section class="features">
 
 ### Features
 
+-   [`cab5bb0`](https://github.com/stdlib-js/stdlib/commit/cab5bb08a4db8727097c61b4edb39c88137273eb) - add `frechet` to namespace
+-   [`73344ab`](https://github.com/stdlib-js/stdlib/commit/73344abe4ac57ef5a27e6879e4274882caf596d6) - add `random/frechet`
+-   [`fe91f02`](https://github.com/stdlib-js/stdlib/commit/fe91f02a931515c8dabe9e84a50fb9d124822111) - add `ternaryFactory` to namespace
+-   [`244addc`](https://github.com/stdlib-js/stdlib/commit/244addce1a75c839b48065f9ebf7f763163e8723) - add `ternary` to namespace
+-   [`36bb700`](https://github.com/stdlib-js/stdlib/commit/36bb70027e01d79ff0b0a42847df67deb0e22ce5) - add `random/tools/ternary-factory`
+-   [`bb15dcc`](https://github.com/stdlib-js/stdlib/commit/bb15dcc572a4a67f7e7450919e7a0e3e915988dc) - add `random/tools/ternary`
 -   [`2926fcd`](https://github.com/stdlib-js/stdlib/commit/2926fcdf41648e14219bf8683328b3e630260c2a) - update `random` TypeScript declarations [(#9407)](https://github.com/stdlib-js/stdlib/pull/9407)
 -   [`974bdef`](https://github.com/stdlib-js/stdlib/commit/974bdef0d286a3d61cbbcdea1a7a16255608541b) - add `t` to namespace
 -   [`ff7ce26`](https://github.com/stdlib-js/stdlib/commit/ff7ce26b04b6cc4795ae8618959a5ba663719b6d) - add `random/t`
@@ -156,6 +162,16 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`cab5bb0`](https://github.com/stdlib-js/stdlib/commit/cab5bb08a4db8727097c61b4edb39c88137273eb) - **feat:** add `frechet` to namespace _(by Athan Reines)_
+-   [`73344ab`](https://github.com/stdlib-js/stdlib/commit/73344abe4ac57ef5a27e6879e4274882caf596d6) - **feat:** add `random/frechet` _(by Athan Reines)_
+-   [`fe91f02`](https://github.com/stdlib-js/stdlib/commit/fe91f02a931515c8dabe9e84a50fb9d124822111) - **feat:** add `ternaryFactory` to namespace _(by Athan Reines)_
+-   [`244addc`](https://github.com/stdlib-js/stdlib/commit/244addce1a75c839b48065f9ebf7f763163e8723) - **feat:** add `ternary` to namespace _(by Athan Reines)_
+-   [`36bb700`](https://github.com/stdlib-js/stdlib/commit/36bb70027e01d79ff0b0a42847df67deb0e22ce5) - **feat:** add `random/tools/ternary-factory` _(by Athan Reines)_
+-   [`b18f5a0`](https://github.com/stdlib-js/stdlib/commit/b18f5a066b3725837f844bc6aa57a15831267093) - **style:** resolve lint failure _(by Athan Reines)_
+-   [`4b0f789`](https://github.com/stdlib-js/stdlib/commit/4b0f78943f49adfc5e2867c951496ffea6b0702b) - **style:** resolve lint failure _(by Athan Reines)_
+-   [`41a6983`](https://github.com/stdlib-js/stdlib/commit/41a6983e5a9c2d152009806cf6614478d9e1d7f2) - **style:** resolve lint failure _(by Athan Reines)_
+-   [`c3ece9a`](https://github.com/stdlib-js/stdlib/commit/c3ece9ace946b87712312c74eb171252644fa0f4) - **style:** resolve lint failure _(by Athan Reines)_
+-   [`bb15dcc`](https://github.com/stdlib-js/stdlib/commit/bb15dcc572a4a67f7e7450919e7a0e3e915988dc) - **feat:** add `random/tools/ternary` _(by Athan Reines)_
 -   [`db05364`](https://github.com/stdlib-js/stdlib/commit/db0536441924d78aec531bf5f87133b73f73a03e) - **fix:** address broken test _(by Athan Reines)_
 -   [`39d6e10`](https://github.com/stdlib-js/stdlib/commit/39d6e10f9bab5220b1f7135fb8ddb1dc1bff71c2) - **fix:** address broken test _(by Athan Reines)_
 -   [`5573d86`](https://github.com/stdlib-js/stdlib/commit/5573d863917a9eb155d9c3b7e6d4c5a15ce3c848) - **test:** fix broken tests _(by Athan Reines)_
