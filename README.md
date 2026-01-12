@@ -35,29 +35,41 @@ limitations under the License.
 
 > Random numbers.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/random
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import random from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
+var ns = require( '@stdlib/random' );
 ```
 
-You can also import the following named exports from the package:
-
-```javascript
-import { arcsine, array, base, bernoulli, beta, betaprime, binomial, cauchy, chi, chisquare, cosine, discreteUniform, erlang, exponential, f, gamma, geometric, gumbel, invgamma, iterators, kumaraswamy, laplace, levy, logistic, lognormal, negativeBinomial, normal, pareto1, poisson, rayleigh, sample, shuffle, streams, strided, t, tools, uniform, weibull } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
-```
-
-#### random
+#### ns
 
 Namespace containing random number functionality.
 
 ```javascript
-var rand = random;
-// returns {...}
+var arr = ns.normal( [ 3, 3 ], 2.0, 5.0 );
+// returns <ndarray>
 ```
 
 The namespace exports the following functions to sample and shuffle elements from an array:
@@ -73,7 +85,13 @@ The namespace exports the following functions to sample and shuffle elements fro
 
 <!-- </toc> -->
 
-It also contains the following sub-namespaces:
+The namespace contains the following functions for generating pseudorandom values drawn from probability distributions:
+
+<!-- <toc pattern="-(array|base|iter|streams|strided),-(sample|shuffle),-tools"> -->
+
+<!-- </toc> -->
+
+The namespace contains the following sub-namespaces:
 
 <!-- <toc pattern="+(array|base|iter|streams|strided)" > -->
 
@@ -97,24 +115,42 @@ It also contains the following sub-namespaces:
 
 ## Examples
 
-<!-- TODO: better examples -->
-
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
+```javascript
+var logEach = require( '@stdlib/console/log-each' );
+var ndarray2array = require( '@stdlib/ndarray/to-array' );
+var ns = require( '@stdlib/random' );
 
-import objectKeys from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils/keys@esm/index.mjs';
-import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
+// Create a function for generating arrays originating from the same state:
+var random = ns.normal.factory({
+    'state': ns.normal.state,
+    'copy': true
+});
 
-console.log( objectKeys( ns ) );
+// Generate 3 one-dimensional arrays:
+var x1 = random( [ 5 ], 2.0, 5.0 );
+var x2 = random( [ 5 ], 2.0, 5.0 );
+var x3 = random( [ 5 ], 2.0, 5.0 );
 
-</script>
-</body>
-</html>
+// Print the contents:
+logEach( '%f, %f, %f', ndarray2array( x1 ), ndarray2array( x2 ), ndarray2array( x3 ) );
+
+// Create another function for generating random arrays with the original state:
+random = ns.normal.factory({
+    'state': ns.normal.state,
+    'copy': true
+});
+
+// Generate a two-dimensional array which replicates the above pseudorandom number generation sequence:
+var x4 = random( [ 3, 5 ], 2.0, 5.0 );
+
+// Convert to a list of nested arrays:
+var arr = ndarray2array( x4 );
+
+// Print the contents:
+console.log( '' );
+logEach( '%f, %f, %f', arr[ 0 ], arr[ 1 ], arr[ 2 ] );
 ```
 
 </section>
@@ -138,7 +174,7 @@ console.log( objectKeys( ns ) );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
