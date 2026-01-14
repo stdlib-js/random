@@ -10,6 +10,7 @@
 
 ### Features
 
+-   [`8b93c8d`](https://github.com/stdlib-js/stdlib/commit/8b93c8d51432c3ceb2a41f80bda77f77021e021e) - update `random/tools` TypeScript declarations [(#9718)](https://github.com/stdlib-js/stdlib/pull/9718)
 -   [`ef9c1b0`](https://github.com/stdlib-js/stdlib/commit/ef9c1b0b52ac28c95221d46d7cb0e4165343f893) - update `random` TypeScript declarations [(#9717)](https://github.com/stdlib-js/stdlib/pull/9717)
 -   [`cfab032`](https://github.com/stdlib-js/stdlib/commit/cfab0325f798bcf48334e36d307ee33330824aff) - add `triangular` to namespace
 -   [`132493e`](https://github.com/stdlib-js/stdlib/commit/132493e15add93ab5e56eb89c7f42ec08f06c402) - add `random/triangular`
@@ -167,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`8b93c8d`](https://github.com/stdlib-js/stdlib/commit/8b93c8d51432c3ceb2a41f80bda77f77021e021e) - **feat:** update `random/tools` TypeScript declarations [(#9718)](https://github.com/stdlib-js/stdlib/pull/9718) _(by stdlib-bot)_
 -   [`ef9c1b0`](https://github.com/stdlib-js/stdlib/commit/ef9c1b0b52ac28c95221d46d7cb0e4165343f893) - **feat:** update `random` TypeScript declarations [(#9717)](https://github.com/stdlib-js/stdlib/pull/9717) _(by stdlib-bot)_
 -   [`e35173c`](https://github.com/stdlib-js/stdlib/commit/e35173c604edc492ad422e05948fbc4352f40be7) - **docs:** update examples _(by Athan Reines)_
 -   [`4a75382`](https://github.com/stdlib-js/stdlib/commit/4a75382aef854b53f9629a570225662723fb83cb) - **docs:** update README _(by Athan Reines)_
