@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-01-12)
+## Unreleased (2026-01-14)
 
 <section class="features">
 
 ### Features
 
+-   [`ef9c1b0`](https://github.com/stdlib-js/stdlib/commit/ef9c1b0b52ac28c95221d46d7cb0e4165343f893) - update `random` TypeScript declarations [(#9717)](https://github.com/stdlib-js/stdlib/pull/9717)
 -   [`cfab032`](https://github.com/stdlib-js/stdlib/commit/cfab0325f798bcf48334e36d307ee33330824aff) - add `triangular` to namespace
 -   [`132493e`](https://github.com/stdlib-js/stdlib/commit/132493e15add93ab5e56eb89c7f42ec08f06c402) - add `random/triangular`
 -   [`a064afe`](https://github.com/stdlib-js/stdlib/commit/a064afe74bb89a7f835fafc63d16bb446e9f21e5) - add `hypergeometric` to namespace
@@ -166,6 +167,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`ef9c1b0`](https://github.com/stdlib-js/stdlib/commit/ef9c1b0b52ac28c95221d46d7cb0e4165343f893) - **feat:** update `random` TypeScript declarations [(#9717)](https://github.com/stdlib-js/stdlib/pull/9717) _(by stdlib-bot)_
 -   [`e35173c`](https://github.com/stdlib-js/stdlib/commit/e35173c604edc492ad422e05948fbc4352f40be7) - **docs:** update examples _(by Athan Reines)_
 -   [`4a75382`](https://github.com/stdlib-js/stdlib/commit/4a75382aef854b53f9629a570225662723fb83cb) - **docs:** update README _(by Athan Reines)_
 -   [`55a2f26`](https://github.com/stdlib-js/stdlib/commit/55a2f260629b5dca631ea8176ce8c3c1b0b78c8f) - **build:** add scaffold for ternary random packages _(by Athan Reines)_
