@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`8278221`](https://github.com/stdlib-js/stdlib/commit/827822124d84eb3bb20c27345217745db93cd214) - **bench:** refactor to use string interpolation in `random/base/exponential` [(#10230)](https://github.com/stdlib-js/stdlib/pull/10230) _(by Shubham)_
 -   [`f79b9dd`](https://github.com/stdlib-js/stdlib/commit/f79b9dd302d7278cb14028a3e847293a83403cf9) - **docs:** fix and regenerate `random` namespace README _(by Philipp Burckhardt)_
 -   [`68446dc`](https://github.com/stdlib-js/stdlib/commit/68446dcb55d7b08e39baf6efae7ba5ba038c923f) - **docs:** update namespace table of contents [(#9848)](https://github.com/stdlib-js/stdlib/pull/9848) _(by stdlib-bot)_
 -   [`0472076`](https://github.com/stdlib-js/stdlib/commit/04720767c484e6277ad9411dff3dc5a116c31378) - **docs:** remove duplicated words in documentation and comments _(by Philipp Burckhardt)_
@@ -434,7 +435,7 @@ A total of 10 issues were closed in this release:
 
 ### Contributors
 
-A total of 13 people contributed to this release. Thank you to the following contributors:
+A total of 14 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   Aly Abdelmoneim
@@ -449,6 +450,7 @@ A total of 13 people contributed to this release. Thank you to the following con
 -   MANI
 -   Philipp Burckhardt
 -   Pulkit Gupta
+-   Shubham
 
 </section>
 
