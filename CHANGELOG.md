@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-02-13)
+## Unreleased (2026-02-16)
 
 <section class="features">
 
@@ -171,6 +171,7 @@ A total of 10 issues were closed in this release:
 -   [`46881ca`](https://github.com/stdlib-js/stdlib/commit/46881ca28f2b7e02fafe36c3f436636015edac59) - **bench:** refactor to use string interpolation in`random/base/geometric` [(#10229)](https://github.com/stdlib-js/stdlib/pull/10229) _(by Shubham)_
 -   [`3a78025`](https://github.com/stdlib-js/stdlib/commit/3a7802537873ad795db7f3ecf9a78699f5488f16) - **bench:** refactor to use string interpolation in `random/base/frechet` [(#10231)](https://github.com/stdlib-js/stdlib/pull/10231) _(by Shubham)_
 -   [`8278221`](https://github.com/stdlib-js/stdlib/commit/827822124d84eb3bb20c27345217745db93cd214) - **bench:** refactor to use string interpolation in `random/base/exponential` [(#10230)](https://github.com/stdlib-js/stdlib/pull/10230) _(by Shubham)_
+-   [`5ba7ff8`](https://github.com/stdlib-js/stdlib/commit/5ba7ff8dfca15b98e7af533753bb6edebf0a05de) - **bench:** refactor to use string interpolation in `random/base/f` [(#10232)](https://github.com/stdlib-js/stdlib/pull/10232) _(by Shubham)_
 -   [`f79b9dd`](https://github.com/stdlib-js/stdlib/commit/f79b9dd302d7278cb14028a3e847293a83403cf9) - **docs:** fix and regenerate `random` namespace README _(by Philipp Burckhardt)_
 -   [`68446dc`](https://github.com/stdlib-js/stdlib/commit/68446dcb55d7b08e39baf6efae7ba5ba038c923f) - **docs:** update namespace table of contents [(#9848)](https://github.com/stdlib-js/stdlib/pull/9848) _(by stdlib-bot)_
 -   [`0472076`](https://github.com/stdlib-js/stdlib/commit/04720767c484e6277ad9411dff3dc5a116c31378) - **docs:** remove duplicated words in documentation and comments _(by Philipp Burckhardt)_
