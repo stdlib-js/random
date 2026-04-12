@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`f3146ac`](https://github.com/stdlib-js/stdlib/commit/f3146ac8176e5449bd3cdadad3af9570122587d2) - **bench:** refactor to use string interpolation in `@stdlib/random/array` [(#11417)](https://github.com/stdlib-js/stdlib/pull/11417) _(by Karan Anand)_
 -   [`c0ca8d9`](https://github.com/stdlib-js/stdlib/commit/c0ca8d9df8f891d7004c17fd671c411f2241d1db) - **bench:** refactor to use string interpolation in `@stdlib/random/array` [(#11415)](https://github.com/stdlib-js/stdlib/pull/11415) _(by Karan Anand)_
 -   [`c7c1e58`](https://github.com/stdlib-js/stdlib/commit/c7c1e58acd2234bad33581f3f8fd83722e259023) - **bench:** refactor to use string interpolation in `@stdlib/random/array` [(#11416)](https://github.com/stdlib-js/stdlib/pull/11416) _(by Karan Anand)_
 -   [`46881ca`](https://github.com/stdlib-js/stdlib/commit/46881ca28f2b7e02fafe36c3f436636015edac59) - **bench:** refactor to use string interpolation in`random/base/geometric` [(#10229)](https://github.com/stdlib-js/stdlib/pull/10229) _(by Shubham)_
