@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-10)
+## Unreleased (2026-04-12)
 
 <section class="features">
 
@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`c7c1e58`](https://github.com/stdlib-js/stdlib/commit/c7c1e58acd2234bad33581f3f8fd83722e259023) - **bench:** refactor to use string interpolation in `@stdlib/random/array` [(#11416)](https://github.com/stdlib-js/stdlib/pull/11416) _(by Karan Anand)_
 -   [`46881ca`](https://github.com/stdlib-js/stdlib/commit/46881ca28f2b7e02fafe36c3f436636015edac59) - **bench:** refactor to use string interpolation in`random/base/geometric` [(#10229)](https://github.com/stdlib-js/stdlib/pull/10229) _(by Shubham)_
 -   [`3a78025`](https://github.com/stdlib-js/stdlib/commit/3a7802537873ad795db7f3ecf9a78699f5488f16) - **bench:** refactor to use string interpolation in `random/base/frechet` [(#10231)](https://github.com/stdlib-js/stdlib/pull/10231) _(by Shubham)_
 -   [`8278221`](https://github.com/stdlib-js/stdlib/commit/827822124d84eb3bb20c27345217745db93cd214) - **bench:** refactor to use string interpolation in `random/base/exponential` [(#10230)](https://github.com/stdlib-js/stdlib/pull/10230) _(by Shubham)_
@@ -438,7 +439,7 @@ A total of 10 issues were closed in this release:
 
 ### Contributors
 
-A total of 14 people contributed to this release. Thank you to the following contributors:
+A total of 15 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   Aly Abdelmoneim
@@ -448,6 +449,7 @@ A total of 14 people contributed to this release. Thank you to the following con
 -   Geo Daoyu
 -   Gururaj Gurram
 -   Jenish
+-   Karan Anand
 -   Karan Vasudevamurthy
 -   Lokesh Ranjan
 -   MANI
