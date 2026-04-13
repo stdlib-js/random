@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`fddbb92`](https://github.com/stdlib-js/stdlib/commit/fddbb92925b8417c846356548ace38c51674a318) - **bench:** refactor to use string interpolation in `@stdlib/random/iter` [(#11424)](https://github.com/stdlib-js/stdlib/pull/11424) _(by Karan Anand)_
 -   [`b808ef2`](https://github.com/stdlib-js/stdlib/commit/b808ef25c4897fc1aa8dc32fde278de851bf3430) - **bench:** refactor to use string interpolation in `@stdlib/random/strided` [(#11426)](https://github.com/stdlib-js/stdlib/pull/11426) _(by Karan Anand)_
 -   [`3a9811b`](https://github.com/stdlib-js/stdlib/commit/3a9811bb771976b46a1d19009a4ea81ad03a2450) - **bench:** refactor to use string interpolation in `@stdlib/random/strided` [(#11425)](https://github.com/stdlib-js/stdlib/pull/11425) _(by Karan Anand)_
 -   [`75a9f4d`](https://github.com/stdlib-js/stdlib/commit/75a9f4dfad0a296d9d57a475e683cf023d977151) - **bench:** refactor to use string interpolation in `@stdlib/random/streams` [(#11422)](https://github.com/stdlib-js/stdlib/pull/11422) _(by Karan Anand)_
