@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-13)
+## Unreleased (2026-04-19)
 
 <section class="features">
 
@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`49fc241`](https://github.com/stdlib-js/stdlib/commit/49fc2415618fdc746ce1bb16654e5d291fb6db85) - **docs:** fix `options.seed` duplicate and add missing `options.copy` tags in `random/iter` [(#11558)](https://github.com/stdlib-js/stdlib/pull/11558) _(by Philipp Burckhardt)_
 -   [`fddbb92`](https://github.com/stdlib-js/stdlib/commit/fddbb92925b8417c846356548ace38c51674a318) - **bench:** refactor to use string interpolation in `@stdlib/random/iter` [(#11424)](https://github.com/stdlib-js/stdlib/pull/11424) _(by Karan Anand)_
 -   [`b808ef2`](https://github.com/stdlib-js/stdlib/commit/b808ef25c4897fc1aa8dc32fde278de851bf3430) - **bench:** refactor to use string interpolation in `@stdlib/random/strided` [(#11426)](https://github.com/stdlib-js/stdlib/pull/11426) _(by Karan Anand)_
 -   [`3a9811b`](https://github.com/stdlib-js/stdlib/commit/3a9811bb771976b46a1d19009a4ea81ad03a2450) - **bench:** refactor to use string interpolation in `@stdlib/random/strided` [(#11425)](https://github.com/stdlib-js/stdlib/pull/11425) _(by Karan Anand)_
