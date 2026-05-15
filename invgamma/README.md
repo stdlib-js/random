@@ -363,6 +363,14 @@ logEach( '%f, %f, %f', arr[ 0 ], arr[ 1 ], arr[ 2 ] );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/random/base/invgamma`][@stdlib/random/base/invgamma]</span><span class="delimiter">: </span><span class="description">inverse gamma distributed pseudorandom numbers.</span>
+-   <span class="package-name">[`@stdlib/random/array/invgamma`][@stdlib/random/array/invgamma]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from an inverse gamma distribution.</span>
+-   <span class="package-name">[`@stdlib/random/strided/invgamma`][@stdlib/random/strided/invgamma]</span><span class="delimiter">: </span><span class="description">fill a strided array with pseudorandom numbers drawn from an inverse gamma distribution.</span>
+
 </section>
 
 <!-- /.related -->
@@ -382,6 +390,14 @@ logEach( '%f, %f, %f', arr[ 0 ], arr[ 1 ], arr[ 2 ] );
 [@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
 [@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
+
+<!-- <related-links> -->
+
+[@stdlib/random/array/invgamma]: https://github.com/stdlib-js/random/tree/main/array/invgamma
+
+[@stdlib/random/strided/invgamma]: https://github.com/stdlib-js/random/tree/main/strided/invgamma
+
+<!-- </related-links> -->
 
 </section>
 

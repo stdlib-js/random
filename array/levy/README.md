@@ -358,6 +358,7 @@ logEach( '%f', x4 );
 
 ## See Also
 
+-   <span class="package-name">[`@stdlib/random/levy`][@stdlib/random/levy]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a Lévy distribution.</span>
 -   <span class="package-name">[`@stdlib/random/base/levy`][@stdlib/random/base/levy]</span><span class="delimiter">: </span><span class="description">Lévy distributed pseudorandom numbers.</span>
 
 </section>
@@ -375,6 +376,12 @@ logEach( '%f', x4 );
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+
+<!-- <related-links> -->
+
+[@stdlib/random/levy]: https://github.com/stdlib-js/random/tree/main/levy
+
+<!-- </related-links> -->
 
 </section>
 
