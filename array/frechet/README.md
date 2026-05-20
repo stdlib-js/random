@@ -361,6 +361,7 @@ logEach( '%f', x4 );
 ## See Also
 
 -   <span class="package-name">[`@stdlib/random/base/frechet`][@stdlib/random/base/frechet]</span><span class="delimiter">: </span><span class="description">Fréchet distributed pseudorandom numbers.</span>
+-   <span class="package-name">[`@stdlib/random/frechet`][@stdlib/random/frechet]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a Fréchet distribution.</span>
 
 </section>
 
@@ -377,6 +378,12 @@ logEach( '%f', x4 );
 [@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+
+<!-- <related-links> -->
+
+[@stdlib/random/frechet]: https://github.com/stdlib-js/random/tree/main/frechet
+
+<!-- </related-links> -->
 
 </section>
 
