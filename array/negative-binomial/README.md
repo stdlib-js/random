@@ -358,6 +358,7 @@ logEach( '%f', x4 );
 
 ## See Also
 
+-   <span class="package-name">[`@stdlib/random/negative-binomial`][@stdlib/random/negative-binomial]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a negative binomial distribution.</span>
 -   <span class="package-name">[`@stdlib/random/array/binomial`][@stdlib/random/array/binomial]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from a binomial distribution.</span>
 -   <span class="package-name">[`@stdlib/random/base/negative-binomial`][@stdlib/random/base/negative-binomial]</span><span class="delimiter">: </span><span class="description">negative binomial distributed pseudorandom numbers.</span>
 
@@ -378,6 +379,8 @@ logEach( '%f', x4 );
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 <!-- <related-links> -->
+
+[@stdlib/random/negative-binomial]: https://github.com/stdlib-js/random/tree/main/negative-binomial
 
 [@stdlib/random/array/binomial]: https://github.com/stdlib-js/random/tree/main/array/binomial
 
