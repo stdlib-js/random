@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`1eccb1f`](https://github.com/stdlib-js/stdlib/commit/1eccb1f90d38011172e465bac6b178fd815778e3) - **chore:** fix keyword [(#12410)](https://github.com/stdlib-js/stdlib/pull/12410) _(by Philipp Burckhardt)_
 -   [`eb16cda`](https://github.com/stdlib-js/stdlib/commit/eb16cda7c4554147bfa724f0ee9a24fcf0422d18) - **docs:** update related packages sections [(#12414)](https://github.com/stdlib-js/stdlib/pull/12414) _(by stdlib-bot)_
 -   [`9d35248`](https://github.com/stdlib-js/stdlib/commit/9d3524866ec6833c164e5f56bc6197d63faafb48) - **docs:** update related packages sections [(#12386)](https://github.com/stdlib-js/stdlib/pull/12386) _(by stdlib-bot)_
 -   [`754c21e`](https://github.com/stdlib-js/stdlib/commit/754c21edddd352771af86a91feda14240baddc75) - **docs:** update related packages sections [(#12360)](https://github.com/stdlib-js/stdlib/pull/12360) _(by stdlib-bot, Athan Reines)_
