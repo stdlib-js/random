@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-02)
+## Unreleased (2026-06-04)
 
 <section class="features">
 
@@ -168,6 +168,7 @@ A total of 10 issues were closed in this release:
 
 <details>
 
+-   [`fdfc2ba`](https://github.com/stdlib-js/stdlib/commit/fdfc2baa8874b677a28c89f8306d5a574e2d2d1e) - **docs:** normalize dtype description in `random/hypergeometric` [(#12523)](https://github.com/stdlib-js/stdlib/pull/12523) _(by Philipp Burckhardt)_
 -   [`6cb4896`](https://github.com/stdlib-js/stdlib/commit/6cb4896bb086d8bc095ffd06539a32ad59f71e1e) - **docs:** update related packages sections [(#12437)](https://github.com/stdlib-js/stdlib/pull/12437) _(by stdlib-bot)_
 -   [`1eccb1f`](https://github.com/stdlib-js/stdlib/commit/1eccb1f90d38011172e465bac6b178fd815778e3) - **chore:** fix keyword [(#12410)](https://github.com/stdlib-js/stdlib/pull/12410) _(by Philipp Burckhardt)_
 -   [`eb16cda`](https://github.com/stdlib-js/stdlib/commit/eb16cda7c4554147bfa724f0ee9a24fcf0422d18) - **docs:** update related packages sections [(#12414)](https://github.com/stdlib-js/stdlib/pull/12414) _(by stdlib-bot)_
