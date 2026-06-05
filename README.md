@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/random/tags). For example,
+
+```javascript
 import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { arcsine, array, base, bernoulli, beta, betaprime, binomial, cauchy, chi, chisquare, cosine, discreteUniform, erlang, exponential, f, frechet, gamma, geometric, gumbel, hypergeometric, invgamma, iterators, kumaraswamy, laplace, levy, logistic, lognormal, negativeBinomial, normal, pareto1, poisson, rayleigh, sample, shuffle, streams, strided, t, tools, triangular, uniform, weibull } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-deno/mod.js';
+import { arcsine, array, base, bernoulli, beta, betaprime, binomial, cauchy, chi, chisquare, cosine, discreteUniform, erlang, exponential, f, frechet, gamma, geometric, gumbel, hypergeometric, invgamma, iterators, kumaraswamy, laplace, levy, logistic, lognormal, negativeBinomial, normal, pareto1, poisson, rayleigh, sample, shuffle, streams, strided, t, tools, triangular, uniform, weibull } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
 ```
 
 #### ns
@@ -146,7 +151,7 @@ The namespace contains the following sub-namespaces:
 ```javascript
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console/log-each@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray/to-array@deno/mod.js';
-import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-deno/mod.js';
+import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@deno/mod.js';
 
 // Create a function for generating arrays originating from the same state:
 var random = ns.normal.factory({
