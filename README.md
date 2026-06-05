@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
+import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { arcsine, array, base, bernoulli, beta, betaprime, binomial, cauchy, chi, chisquare, cosine, discreteUniform, erlang, exponential, f, frechet, gamma, geometric, gumbel, hypergeometric, invgamma, iterators, kumaraswamy, laplace, levy, logistic, lognormal, negativeBinomial, normal, pareto1, poisson, rayleigh, sample, shuffle, streams, strided, t, tools, triangular, uniform, weibull } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
+import { arcsine, array, base, bernoulli, beta, betaprime, binomial, cauchy, chi, chisquare, cosine, discreteUniform, erlang, exponential, f, frechet, gamma, geometric, gumbel, hypergeometric, invgamma, iterators, kumaraswamy, laplace, levy, logistic, lognormal, negativeBinomial, normal, pareto1, poisson, rayleigh, sample, shuffle, streams, strided, t, tools, triangular, uniform, weibull } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-esm/index.mjs';
 ```
 
 #### ns
@@ -151,7 +151,7 @@ The namespace contains the following sub-namespaces:
 
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console/log-each@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray/to-array@esm/index.mjs';
-import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@esm/index.mjs';
+import ns from 'https://cdn.jsdelivr.net/gh/stdlib-js/random@v0.4.1-esm/index.mjs';
 
 // Create a function for generating arrays originating from the same state:
 var random = ns.normal.factory({
