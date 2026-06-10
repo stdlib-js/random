@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-08)
+## Unreleased (2026-06-10)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`58b187e`](https://github.com/stdlib-js/stdlib/commit/58b187ec024dd077805a2b07d8c86c67b7804f37) - **docs:** fix `assign` examples in `random/array` TypeScript declarations [(#12738)](https://github.com/stdlib-js/stdlib/pull/12738) _(by Philipp Burckhardt)_
 -   [`59f762d`](https://github.com/stdlib-js/stdlib/commit/59f762d987010b201b6807850129fa5d9f99ee7e) - **docs:** update related packages sections [(#12685)](https://github.com/stdlib-js/stdlib/pull/12685) _(by stdlib-bot)_
 -   [`51054b8`](https://github.com/stdlib-js/stdlib/commit/51054b800974a399efce175fdcdb841afaa475f5) - **docs:** update related packages sections [(#12653)](https://github.com/stdlib-js/stdlib/pull/12653) _(by stdlib-bot)_
 -   [`36d3027`](https://github.com/stdlib-js/stdlib/commit/36d3027eed9c6cb4369a9b6b576fd1bd35927140) - **docs:** update related packages sections [(#12574)](https://github.com/stdlib-js/stdlib/pull/12574) _(by stdlib-bot)_
@@ -21,6 +22,18 @@
 </section>
 
 <!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Philipp Burckhardt
+
+</section>
+
+<!-- /.contributors -->
 
 </section>
 
