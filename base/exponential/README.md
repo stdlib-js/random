@@ -405,6 +405,7 @@ for ( i = 0; i < 100; i++ ) {
 -   <span class="package-name">[`@stdlib/random/array/exponential`][@stdlib/random/array/exponential]</span><span class="delimiter">: </span><span class="description">create an array containing pseudorandom numbers drawn from an exponential distribution.</span>
 -   <span class="package-name">[`@stdlib/random/iter/exponential`][@stdlib/random/iter/exponential]</span><span class="delimiter">: </span><span class="description">create an iterator for generating pseudorandom numbers drawn from an exponential distribution.</span>
 -   <span class="package-name">[`@stdlib/random/streams/exponential`][@stdlib/random/streams/exponential]</span><span class="delimiter">: </span><span class="description">create a readable stream for generating pseudorandom numbers drawn from an exponential distribution.</span>
+-   <span class="package-name">[`@stdlib/random/exponential`][@stdlib/random/exponential]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from an exponential distribution.</span>
 
 </section>
 
@@ -425,6 +426,8 @@ for ( i = 0; i < 100; i++ ) {
 [@stdlib/random/iter/exponential]: https://github.com/stdlib-js/random/tree/main/iter/exponential
 
 [@stdlib/random/streams/exponential]: https://github.com/stdlib-js/random/tree/main/streams/exponential
+
+[@stdlib/random/exponential]: https://github.com/stdlib-js/random/tree/main/exponential
 
 <!-- </related-links> -->
 
