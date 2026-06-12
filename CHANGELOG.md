@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-11)
+## Unreleased (2026-06-12)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`730718e`](https://github.com/stdlib-js/stdlib/commit/730718ee9f523320a65d0a2bb765eaa225fbcabd) - **docs:** update related packages sections [(#12832)](https://github.com/stdlib-js/stdlib/pull/12832) _(by stdlib-bot)_
 -   [`4b35470`](https://github.com/stdlib-js/stdlib/commit/4b35470b5d827db631a59fba4f848aba4a44110c) - **docs:** update related packages sections [(#12823)](https://github.com/stdlib-js/stdlib/pull/12823) _(by stdlib-bot)_
 -   [`de39564`](https://github.com/stdlib-js/stdlib/commit/de395643f761c77298491ab507475a32ab8402e9) - **docs:** update related packages sections [(#12743)](https://github.com/stdlib-js/stdlib/pull/12743) _(by stdlib-bot)_
 -   [`cbca832`](https://github.com/stdlib-js/stdlib/commit/cbca832ed0a7783d21723ccc4eda5627fe257878) - **fix:** add missing `prng` option [(#12566)](https://github.com/stdlib-js/stdlib/pull/12566) _(by Philipp Burckhardt)_

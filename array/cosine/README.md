@@ -358,6 +358,7 @@ logEach( '%f', x4 );
 
 ## See Also
 
+-   <span class="package-name">[`@stdlib/random/cosine`][@stdlib/random/cosine]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a raised cosine distribution.</span>
 -   <span class="package-name">[`@stdlib/random/base/cosine`][@stdlib/random/base/cosine]</span><span class="delimiter">: </span><span class="description">raised cosine distributed pseudorandom numbers.</span>
 -   <span class="package-name">[`@stdlib/random/strided/cosine`][@stdlib/random/strided/cosine]</span><span class="delimiter">: </span><span class="description">fill a strided array with pseudorandom numbers drawn from a raised cosine distribution.</span>
 
@@ -378,6 +379,8 @@ logEach( '%f', x4 );
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 <!-- <related-links> -->
+
+[@stdlib/random/cosine]: https://github.com/stdlib-js/random/tree/main/cosine
 
 [@stdlib/random/strided/cosine]: https://github.com/stdlib-js/random/tree/main/strided/cosine
 
