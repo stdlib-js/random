@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-14)
+## Unreleased (2026-06-15)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`7dabae1`](https://github.com/stdlib-js/stdlib/commit/7dabae1dcb24ce8c06f4dcdc611dc4d3c1354d73) - **docs:** update related packages sections [(#12891)](https://github.com/stdlib-js/stdlib/pull/12891) _(by stdlib-bot)_
 -   [`781d1d6`](https://github.com/stdlib-js/stdlib/commit/781d1d64f3edba9bb65baea3b4160ab2961faa1d) - **docs:** update related packages sections [(#12860)](https://github.com/stdlib-js/stdlib/pull/12860) _(by stdlib-bot)_
 -   [`067dba8`](https://github.com/stdlib-js/stdlib/commit/067dba8e8ee04326765027936f8deb36a943e458) - **docs:** update related packages sections [(#12843)](https://github.com/stdlib-js/stdlib/pull/12843) _(by stdlib-bot)_
 -   [`730718e`](https://github.com/stdlib-js/stdlib/commit/730718ee9f523320a65d0a2bb765eaa225fbcabd) - **docs:** update related packages sections [(#12832)](https://github.com/stdlib-js/stdlib/pull/12832) _(by stdlib-bot)_
