@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-30)
+## Unreleased (2026-07-01)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`9285d3b`](https://github.com/stdlib-js/stdlib/commit/9285d3b0779f12643258d2c8f147bafa47a2e67f) - **docs:** update related packages sections [(#13211)](https://github.com/stdlib-js/stdlib/pull/13211) _(by stdlib-bot)_
 -   [`99276e8`](https://github.com/stdlib-js/stdlib/commit/99276e802dbb6588137ff27b4175a0a54219ddc0) - **docs:** update related packages sections [(#13202)](https://github.com/stdlib-js/stdlib/pull/13202) _(by stdlib-bot)_
 -   [`3db7157`](https://github.com/stdlib-js/stdlib/commit/3db715718dab455d9a2369b19321c71108315b9f) - **docs:** update documented `submode` option default _(by Athan Reines)_
 -   [`1977f92`](https://github.com/stdlib-js/stdlib/commit/1977f92944b56c40c27b23d74570f2958adc7a39) - **docs:** update documented default value for `submode` option [(#13106)](https://github.com/stdlib-js/stdlib/pull/13106) _(by Philipp Burckhardt)_
