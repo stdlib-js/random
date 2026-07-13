@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`059dffa`](https://github.com/stdlib-js/stdlib/commit/059dffa1f48e361055345bfeba6bd8f7dfe08d3b) - **chore:** clean-up [(#13450)](https://github.com/stdlib-js/stdlib/pull/13450) _(by Philipp Burckhardt, Athan Reines)_
 -   [`d63425b`](https://github.com/stdlib-js/stdlib/commit/d63425b1f74a2f6a1bd1a7ac2e0cfb02b66ae7d0) - **docs:** update namespace table of contents [(#13441)](https://github.com/stdlib-js/stdlib/pull/13441) _(by stdlib-bot)_
 -   [`b59aade`](https://github.com/stdlib-js/stdlib/commit/b59aade7c8f532f93f105ef75c0b165b18dc759a) - **docs:** update descriptions [(#13438)](https://github.com/stdlib-js/stdlib/pull/13438) _(by Philipp Burckhardt)_
 -   [`a9ded39`](https://github.com/stdlib-js/stdlib/commit/a9ded39203d2cbc9ff79b0cc96f0fbd2a962b36f) - **chore:** clean-up [(#12446)](https://github.com/stdlib-js/stdlib/pull/12446) _(by Philipp Burckhardt, Athan Reines)_
