@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`01a20c0`](https://github.com/stdlib-js/stdlib/commit/01a20c0a25103830414ec613971c0088fc65a2b6) - **style:** remove extraneous whitespace [(#13654)](https://github.com/stdlib-js/stdlib/pull/13654) _(by Philipp Burckhardt)_
 -   [`0239983`](https://github.com/stdlib-js/stdlib/commit/0239983734f08c9fc09d88003cb56d6cd25694a6) - **docs:** update related packages sections [(#13661)](https://github.com/stdlib-js/stdlib/pull/13661) _(by stdlib-bot)_
 -   [`2dbb3ae`](https://github.com/stdlib-js/stdlib/commit/2dbb3ae01a5343eeb2a8a9a394cd28e0dd4e6c6c) - **docs:** update related packages sections [(#13605)](https://github.com/stdlib-js/stdlib/pull/13605) _(by stdlib-bot)_
 -   [`1d0ff56`](https://github.com/stdlib-js/stdlib/commit/1d0ff567adfa251660560b37e0019bd39e4f0ca5) - **docs:** update related packages sections [(#13476)](https://github.com/stdlib-js/stdlib/pull/13476) _(by stdlib-bot)_
