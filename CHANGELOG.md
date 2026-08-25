@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-20)
+## Unreleased (2026-08-25)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2929ca7`](https://github.com/stdlib-js/stdlib/commit/2929ca7c5865a6e434ca51ae89873228d9ea6ee7) - **docs:** add missing throws annotation [(#14590)](https://github.com/stdlib-js/stdlib/pull/14590) _(by Philipp Burckhardt)_
 -   [`2a7f1a4`](https://github.com/stdlib-js/stdlib/commit/2a7f1a4ad898f4c092e3085b7b8f0e7170d7c465) - **docs:** update related packages sections [(#14114)](https://github.com/stdlib-js/stdlib/pull/14114) _(by stdlib-bot)_
 -   [`58556f4`](https://github.com/stdlib-js/stdlib/commit/58556f408eedf1737bc4795fb2734ef4dd2a6b32) - **chore:** clean-up [(#13978)](https://github.com/stdlib-js/stdlib/pull/13978) _(by Philipp Burckhardt)_
 -   [`4db26c0`](https://github.com/stdlib-js/stdlib/commit/4db26c0ab2b51a6279793c99f5eaceb8e452599a) - **docs:** fix inconsistent JSDoc annotations [(#13959)](https://github.com/stdlib-js/stdlib/pull/13959) _(by Philipp Burckhardt)_
