@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`81433de`](https://github.com/stdlib-js/stdlib/commit/81433de4f15e8160345a1c21e7bacfafd456271e) - **docs:** update examples [(#14952)](https://github.com/stdlib-js/stdlib/pull/14952) _(by stdlib-bot)_
 -   [`59fcfed`](https://github.com/stdlib-js/stdlib/commit/59fcfed7316f0575738c6e72c62863754138e95d) - **fix:** add missing method [(#14943)](https://github.com/stdlib-js/stdlib/pull/14943) _(by Abdul Kaium)_
 -   [`2929ca7`](https://github.com/stdlib-js/stdlib/commit/2929ca7c5865a6e434ca51ae89873228d9ea6ee7) - **docs:** add missing throws annotation [(#14590)](https://github.com/stdlib-js/stdlib/pull/14590) _(by Philipp Burckhardt)_
 -   [`2a7f1a4`](https://github.com/stdlib-js/stdlib/commit/2a7f1a4ad898f4c092e3085b7b8f0e7170d7c465) - **docs:** update related packages sections [(#14114)](https://github.com/stdlib-js/stdlib/pull/14114) _(by stdlib-bot)_
