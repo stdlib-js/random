@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-25)
+## Unreleased (2026-09-04)
 
 <section class="bug-fixes">
 
 ### Bug Fixes
 
+-   [`59fcfed`](https://github.com/stdlib-js/stdlib/commit/59fcfed7316f0575738c6e72c62863754138e95d) - add missing method [(#14943)](https://github.com/stdlib-js/stdlib/pull/14943)
 -   [`cbca832`](https://github.com/stdlib-js/stdlib/commit/cbca832ed0a7783d21723ccc4eda5627fe257878) - add missing `prng` option [(#12566)](https://github.com/stdlib-js/stdlib/pull/12566)
 
 </section>
@@ -22,6 +23,7 @@
 
 <details>
 
+-   [`59fcfed`](https://github.com/stdlib-js/stdlib/commit/59fcfed7316f0575738c6e72c62863754138e95d) - **fix:** add missing method [(#14943)](https://github.com/stdlib-js/stdlib/pull/14943) _(by Abdul Kaium)_
 -   [`2929ca7`](https://github.com/stdlib-js/stdlib/commit/2929ca7c5865a6e434ca51ae89873228d9ea6ee7) - **docs:** add missing throws annotation [(#14590)](https://github.com/stdlib-js/stdlib/pull/14590) _(by Philipp Burckhardt)_
 -   [`2a7f1a4`](https://github.com/stdlib-js/stdlib/commit/2a7f1a4ad898f4c092e3085b7b8f0e7170d7c465) - **docs:** update related packages sections [(#14114)](https://github.com/stdlib-js/stdlib/pull/14114) _(by stdlib-bot)_
 -   [`58556f4`](https://github.com/stdlib-js/stdlib/commit/58556f408eedf1737bc4795fb2734ef4dd2a6b32) - **chore:** clean-up [(#13978)](https://github.com/stdlib-js/stdlib/pull/13978) _(by Philipp Burckhardt)_
@@ -73,8 +75,9 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Abdul Kaium
 -   Athan Reines
 -   Philipp Burckhardt
 
