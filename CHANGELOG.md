@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-04)
+## Unreleased (2026-09-09)
 
 <section class="bug-fixes">
 
@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`448b573`](https://github.com/stdlib-js/stdlib/commit/448b57332b5deb707665dd500f8592b01b3be31e) - **bench:** bound seed growth in `factory` benchmark [(#15108)](https://github.com/stdlib-js/stdlib/pull/15108) _(by Philipp Burckhardt)_
 -   [`81433de`](https://github.com/stdlib-js/stdlib/commit/81433de4f15e8160345a1c21e7bacfafd456271e) - **docs:** update examples [(#14952)](https://github.com/stdlib-js/stdlib/pull/14952) _(by stdlib-bot)_
 -   [`59fcfed`](https://github.com/stdlib-js/stdlib/commit/59fcfed7316f0575738c6e72c62863754138e95d) - **fix:** add missing method [(#14943)](https://github.com/stdlib-js/stdlib/pull/14943) _(by Abdul Kaium)_
 -   [`2929ca7`](https://github.com/stdlib-js/stdlib/commit/2929ca7c5865a6e434ca51ae89873228d9ea6ee7) - **docs:** add missing throws annotation [(#14590)](https://github.com/stdlib-js/stdlib/pull/14590) _(by Philipp Burckhardt)_
