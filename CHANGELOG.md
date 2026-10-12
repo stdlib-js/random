@@ -4,12 +4,13 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-05)
+## Unreleased (2026-10-12)
 
 <section class="bug-fixes">
 
 ### Bug Fixes
 
+-   [`fe9b0b9`](https://github.com/stdlib-js/stdlib/commit/fe9b0b98adf6106e4a7fe9e0f54afb718d4e5397) - update error message [(#15894)](https://github.com/stdlib-js/stdlib/pull/15894)
 -   [`20f2bbe`](https://github.com/stdlib-js/stdlib/commit/20f2bbe30b227a3b17b5bfa509b2f014dbf18cbf) - update require path [(#15155)](https://github.com/stdlib-js/stdlib/pull/15155)
 -   [`59fcfed`](https://github.com/stdlib-js/stdlib/commit/59fcfed7316f0575738c6e72c62863754138e95d) - add missing method [(#14943)](https://github.com/stdlib-js/stdlib/pull/14943)
 -   [`cbca832`](https://github.com/stdlib-js/stdlib/commit/cbca832ed0a7783d21723ccc4eda5627fe257878) - add missing `prng` option [(#12566)](https://github.com/stdlib-js/stdlib/pull/12566)
@@ -24,6 +25,7 @@
 
 <details>
 
+-   [`fe9b0b9`](https://github.com/stdlib-js/stdlib/commit/fe9b0b98adf6106e4a7fe9e0f54afb718d4e5397) - **fix:** update error message [(#15894)](https://github.com/stdlib-js/stdlib/pull/15894) _(by Philipp Burckhardt, Athan Reines)_
 -   [`20f2bbe`](https://github.com/stdlib-js/stdlib/commit/20f2bbe30b227a3b17b5bfa509b2f014dbf18cbf) - **fix:** update require path [(#15155)](https://github.com/stdlib-js/stdlib/pull/15155) _(by Philipp Burckhardt)_
 -   [`d083c3f`](https://github.com/stdlib-js/stdlib/commit/d083c3ff225ae0139f390869d1eb89c84951e013) - **bench:** bound seed growth in `random/base/*` factory benchmarks [(#15130)](https://github.com/stdlib-js/stdlib/pull/15130) _(by Philipp Burckhardt)_
 -   [`448b573`](https://github.com/stdlib-js/stdlib/commit/448b57332b5deb707665dd500f8592b01b3be31e) - **bench:** bound seed growth in `factory` benchmark [(#15108)](https://github.com/stdlib-js/stdlib/pull/15108) _(by Philipp Burckhardt)_
