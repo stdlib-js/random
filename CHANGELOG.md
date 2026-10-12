@@ -25,6 +25,7 @@
 
 <details>
 
+-   [`8f62240`](https://github.com/stdlib-js/stdlib/commit/8f622403b8f6ff3781a17dc7ceb077e341e91aa3) - **docs:** clean-up [(#16084)](https://github.com/stdlib-js/stdlib/pull/16084) _(by Philipp Burckhardt)_
 -   [`fe9b0b9`](https://github.com/stdlib-js/stdlib/commit/fe9b0b98adf6106e4a7fe9e0f54afb718d4e5397) - **fix:** update error message [(#15894)](https://github.com/stdlib-js/stdlib/pull/15894) _(by Philipp Burckhardt, Athan Reines)_
 -   [`20f2bbe`](https://github.com/stdlib-js/stdlib/commit/20f2bbe30b227a3b17b5bfa509b2f014dbf18cbf) - **fix:** update require path [(#15155)](https://github.com/stdlib-js/stdlib/pull/15155) _(by Philipp Burckhardt)_
 -   [`d083c3f`](https://github.com/stdlib-js/stdlib/commit/d083c3ff225ae0139f390869d1eb89c84951e013) - **bench:** bound seed growth in `random/base/*` factory benchmarks [(#15130)](https://github.com/stdlib-js/stdlib/pull/15130) _(by Philipp Burckhardt)_
