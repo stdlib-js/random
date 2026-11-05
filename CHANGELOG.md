@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-13)
+## Unreleased (2026-11-05)
 
 <section class="bug-fixes">
 
@@ -26,6 +26,7 @@
 
 <details>
 
+-   [`7cf5642`](https://github.com/stdlib-js/stdlib/commit/7cf56423a8fe3e959bd334981a00f8428d086127) - **chore:** clean-up [(#16491)](https://github.com/stdlib-js/stdlib/pull/16491) _(by Philipp Burckhardt)_
 -   [`ebec084`](https://github.com/stdlib-js/stdlib/commit/ebec0844648d51499375251f2da71a7016528245) - **fix:** clamp only the upper bound and clean-up [(#16108)](https://github.com/stdlib-js/stdlib/pull/16108) _(by Philipp Burckhardt)_
 -   [`8f62240`](https://github.com/stdlib-js/stdlib/commit/8f622403b8f6ff3781a17dc7ceb077e341e91aa3) - **docs:** clean-up [(#16084)](https://github.com/stdlib-js/stdlib/pull/16084) _(by Philipp Burckhardt)_
 -   [`fe9b0b9`](https://github.com/stdlib-js/stdlib/commit/fe9b0b98adf6106e4a7fe9e0f54afb718d4e5397) - **fix:** update error message [(#15894)](https://github.com/stdlib-js/stdlib/pull/15894) _(by Philipp Burckhardt, Athan Reines)_
