@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-11-22)
+## Unreleased (2026-11-27)
 
 <section class="bug-fixes">
 
@@ -26,6 +26,7 @@
 
 <details>
 
+-   [`232288f`](https://github.com/stdlib-js/stdlib/commit/232288fede756ba6d545960d5bcbd16271b63073) - **refactor:** use `constants/float64/nan` in `random/base/uniform` [(#16791)](https://github.com/stdlib-js/stdlib/pull/16791) _(by Chirag Anand)_
 -   [`7cf5642`](https://github.com/stdlib-js/stdlib/commit/7cf56423a8fe3e959bd334981a00f8428d086127) - **chore:** clean-up [(#16491)](https://github.com/stdlib-js/stdlib/pull/16491) _(by Philipp Burckhardt)_
 -   [`ebec084`](https://github.com/stdlib-js/stdlib/commit/ebec0844648d51499375251f2da71a7016528245) - **fix:** clamp only the upper bound and clean-up [(#16108)](https://github.com/stdlib-js/stdlib/pull/16108) _(by Philipp Burckhardt)_
 -   [`8f62240`](https://github.com/stdlib-js/stdlib/commit/8f622403b8f6ff3781a17dc7ceb077e341e91aa3) - **docs:** clean-up [(#16084)](https://github.com/stdlib-js/stdlib/pull/16084) _(by Philipp Burckhardt)_
@@ -86,10 +87,11 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Abdul Kaium
 -   Athan Reines
+-   Chirag Anand
 -   Philipp Burckhardt
 
 </section>
